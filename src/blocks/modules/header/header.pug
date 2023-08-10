@@ -1,1 +1,50 @@
-p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eum voluptate expedita id libero doloremque totam excepturi, consequuntur optio ad, a eos eveniet error exercitationem, corporis deleniti numquam consequatur esse.
+header.header
+  .container
+    .header__body 
+      a(href='#!').header__logo.logo
+          svg
+            use(xlink:href='#logo')
+          p lorem
+      nav.header__menu.menu
+        .header__close
+          svg
+            use(xlink:href='#x-lg')
+        ul.menu__list
+          li.menu__item.rel
+            .menu__link.menu-link-js.menu__link--active buy
+              svg
+                use(xlink:href='#caret-down')
+            .menu__tab.menu-tab
+                a(href="#!").menu-tab__item Category number one
+                a(href="#!").menu-tab__item Apartments in Dubai
+                a(href="#!").menu-tab__item Category number twenty five
+                include ../side-menu/side-menu.pug
+
+          li.menu__item
+            a.menu__link(href='#!' rel='#posts') Posts
+          li.menu__item
+            a.menu__link(href='#!' rel='#galery') Projects
+          li.menu__item.rel
+            .menu__link.menu-link-js buy
+              svg
+                use(xlink:href='#caret-down')
+            .menu__tab.menu-tab
+                a(href="#!").menu-tab__item Category number one
+                include ../side-menu/side-menu.pug
+      .header__info.info
+        a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
+        form.info__search
+          input(placeholder='Поиск')
+          input(type='submit')
+          svg
+            use(xlink:href='#search')
+        .header__lang.header-lang
+          input(type="radio" id="boxen" name='boxlang'  val='en' checked)
+          label(for="boxen")._hover.ttu  en
+          input(type="radio" id="boxru" name='boxlang' val='ru')
+          label(for="boxru")._hover.ttu  ru
+        a.header__button.btn.btn--success.but-wave.popups-init-js(rel='#popup1' href='#!') form
+      .header__burger.icon
+        svg
+          use(xlink:href='#list')
+

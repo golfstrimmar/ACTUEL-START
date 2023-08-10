@@ -12,6 +12,9 @@ import newer from "gulp-newer";
 import debug from "gulp-debug";
 import browsersync from "browser-sync";
 import yargs from "yargs";
+import imageminWebp from "imagemin-webp";
+import webp from "gulp-webp";
+
 
 const argv = yargs.argv,
     production = !!argv.production;
@@ -20,6 +23,19 @@ gulp.task("images", () => {
     return gulp
       .src(paths.images.src)
       .pipe(newer(paths.images.dist))
+      .pipe(newer(paths.images.dist))
+      .pipe(
+        webp(
+          gulpif(
+            production,
+            imageminWebp({
+              lossless: true,
+              quality: 100,
+              alphaQuality: 100,
+            })
+          )
+        )
+      )
       .pipe(
         gulpif(
           production,

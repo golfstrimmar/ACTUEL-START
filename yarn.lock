@@ -3893,6 +3893,15 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"bufferstreams@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "bufferstreams@npm:3.0.0"
+  dependencies:
+    readable-stream: ^3.4.0
+  checksum: ad479dc918b7a951d0dfa26bcc8983ed4992015084697a36df90ed4de05da763078b61e645f6fd5d8f4b8b56f7c85ff323679334c95368f51a7c471256d2689e
+  languageName: node
+  linkType: hard
+
 "bytes@npm:3.1.2":
   version: 3.1.2
   resolution: "bytes@npm:3.1.2"
@@ -6939,6 +6948,15 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"fonteditor-core@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "fonteditor-core@npm:1.0.5"
+  dependencies:
+    xmldom: ~0.1.19
+  checksum: bd82b46040e77b3c707a65e42acd4d15ae9d2c98911bb954f0cc0cbf6d55bf3b70c4fa4cc56a8320af9e7cd50929b193507fdf8582dcc3475ea102c7e5e2c0f9
+  languageName: node
+  linkType: hard
+
 "for-each@npm:^0.3.3":
   version: 0.3.3
   resolution: "for-each@npm:0.3.3"
@@ -7872,6 +7890,15 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"gulp-fonter@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "gulp-fonter@npm:0.3.0"
+  dependencies:
+    fonteditor-core: ^1.0.5
+  checksum: c0ea348e9c2cf7ea1282738736ec7539d1243604f22d7ed1a3b78a3f99c64e1978c6c45f926c895477e31848ea240597f5927b01ffae548c0be3f3fbcd48ea7e
+  languageName: node
+  linkType: hard
+
 "gulp-group-css-media-queries@npm:^1.2.2":
   version: 1.2.2
   resolution: "gulp-group-css-media-queries@npm:1.2.2"
@@ -7979,6 +8006,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     gulp-clean-css: ^4.3.0
     gulp-debug: ^4.0.0
     gulp-favicons: ^3.0.0
+    gulp-fonter: ^0.3.0
     gulp-group-css-media-queries: ^1.2.2
     gulp-if: ^3.0.0
     gulp-imagemin: ^7.1.0
@@ -7990,6 +8018,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     gulp-sass: ^5.1.0
     gulp-sourcemaps: ^3.0.0
     gulp-svg-sprite: ^1.5.0
+    gulp-ttf2woff2: ^4.0.1
     gulp-watch: ^5.0.1
     gulp-webp: ^4.0.1
     husky: ^7.0.4
@@ -8109,6 +8138,20 @@ bem-tools-create@bem-tools/bem-tools-create:
     svg-sprite: ^1.5.0
     through2: ^2.0.3
   checksum: 0fa8cc260d15c76b6fb336ab00057a70162bbdf8d3492491b02f46da082fbe02dfba0ae3bced3ab174aa1e21e0213c730f96b90e077dd2153dbefd2a26a81bb0
+  languageName: node
+  linkType: hard
+
+"gulp-ttf2woff2@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "gulp-ttf2woff2@npm:4.0.1"
+  dependencies:
+    bufferstreams: ^3.0.0
+    plugin-error: ^1.0.1
+    readable-stream: ^3.6.0
+    replace-ext: ^2.0.0
+    ttf2woff2: ^4.0.1
+    vinyl: ^2.2.0
+  checksum: 6410bf710fbdb1dbaae9dc7912b8e8dc289c57a5edba9048f4cc6e0091264ff04f5104c81519138526ce134703d1a153cd66357d389a803010953fcaad9f97eb
   languageName: node
   linkType: hard
 
@@ -11231,7 +11274,7 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"nan@npm:^2.12.1":
+"nan@npm:^2.12.1, nan@npm:^2.14.2":
   version: 2.17.0
   resolution: "nan@npm:2.17.0"
   dependencies:
@@ -11337,7 +11380,7 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"node-gyp@npm:latest":
+"node-gyp@npm:^9.0.0, node-gyp@npm:latest":
   version: 9.4.0
   resolution: "node-gyp@npm:9.4.0"
   dependencies:
@@ -15565,6 +15608,20 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"ttf2woff2@npm:^4.0.1":
+  version: 4.0.5
+  resolution: "ttf2woff2@npm:4.0.5"
+  dependencies:
+    bindings: ^1.5.0
+    bufferstreams: ^3.0.0
+    nan: ^2.14.2
+    node-gyp: ^9.0.0
+  bin:
+    ttf2woff2: bin/ttf2woff2.js
+  checksum: 83ff12189f64a756e5bcd2bf5f4cc3a778cde57f4ec291f152f17a71d0636bf326e5d9e13bf160407d6c432108d4dbc41d67feadd088f06db4357c1e09f91982
+  languageName: node
+  linkType: hard
+
 "tunnel-agent@npm:^0.4.0":
   version: 0.4.3
   resolution: "tunnel-agent@npm:0.4.3"
@@ -16231,7 +16288,7 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"vinyl@npm:^2.0.0, vinyl@npm:^2.1.0, vinyl@npm:^2.2.1":
+"vinyl@npm:^2.0.0, vinyl@npm:^2.1.0, vinyl@npm:^2.2.0, vinyl@npm:^2.2.1":
   version: 2.2.1
   resolution: "vinyl@npm:2.2.1"
   dependencies:
@@ -16585,6 +16642,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   version: 11.0.1
   resolution: "xmlbuilder@npm:11.0.1"
   checksum: 7152695e16f1a9976658215abab27e55d08b1b97bca901d58b048d2b6e106b5af31efccbdecf9b07af37c8377d8e7e821b494af10b3a68b0ff4ae60331b415b0
+  languageName: node
+  linkType: hard
+
+"xmldom@npm:~0.1.19":
+  version: 0.1.31
+  resolution: "xmldom@npm:0.1.31"
+  checksum: 3073ca4a096892f86991ad0fce9aa1e874f16a974aa2c0911b1a218922d80fe3762b56aa3a2d9fe4a46d61416193c6dc0839776748b24e0cfb56197babf77a94
   languageName: node
   linkType: hard
 

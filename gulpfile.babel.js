@@ -5,14 +5,17 @@ import gulp from "gulp";
 const requireDir = require("require-dir"),
   paths = {
     views: {
-      src: ["./src/views/index.pug", "./src/views/pages/*.pug"],
+      src: ["./src/views/*.pug"],
       dist: "./dist/",
       watch: ["./src/blocks/**/*.pug", "./src/views/**/*.pug"],
     },
     styles: {
-      src: "./src/styles/main.{scss,sass}",
+      src: "./src/styles/main.{scss,sass,css}",
       dist: "./dist/styles/",
-      watch: ["./src/blocks/**/*.{scss,sass}", "./src/styles/**/*.{scss,sass}"],
+      watch: [
+        "./src/blocks/**/*.{scss,sass}",
+        "./src/styles/**/*.{scss,sass}"
+      ],
     },
     scripts: {
       src: "./src/js/index.js",
@@ -21,16 +24,16 @@ const requireDir = require("require-dir"),
     },
     images: {
       src: [
-        "./src/img/**/*.{jpg,jpeg,png,gif,tiff,svg}",
+        "./src/img/**/*.{jpg,jpeg,png,gif,tiff}",
         "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}",
       ],
       dist: "./dist/img/",
-      watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg}",
+      watch: "./src/img/**/*.{jpg,jpeg,png,gif,tiff}",
     },
     sprites: {
-      src: "./src/img/svg/*.svg",
-      dist: "./dist/img/sprites/",
-      watch: "./src/img/svg/*.svg",
+      src: ["./src/img/svg/*.svg", "!./src/img/svg/sprite.svg"],
+      dist: "./src/img/svg/",
+      watch: ["./src/img/svg/*.svg", "!./src/img/svg/sprite.svg"],
     },
     fonts: {
       src: "./src/fonts/**/*",
@@ -56,9 +59,21 @@ requireDir("./gulp-tasks/");
 
 export { paths };
 
-export const development = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", 'video', "favicons"]),
-    gulp.parallel("serve"));
+export const development = gulp.series(
+  "clean",
+  gulp.parallel([
+    "views",
+    "styles",
+    "scripts",
+    "images",
+    "webp",
+    "sprites",
+    "fonts",
+    "video",
+    "favicons",
+  ]),
+  gulp.parallel("serve")
+);
 
 export const prod = gulp.series(
   "clean",
