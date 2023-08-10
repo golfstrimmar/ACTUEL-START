@@ -14,11 +14,6 @@ const requireDir = require("require-dir"),
       dist: "./dist/styles/",
       watch: "./src/blocks/**/*.{scss,sass}",
     },
-    concatCss: {
-      src: ["./dist/styles/*.css","!./dist/styles/maps/*"],
-      dist: "./dist/styles/",
-      // watch: ["./dist/styles/*.css"],
-    },
     scripts: {
       src: "./src/js/index.js",
       dist: "./dist/js/",
@@ -65,6 +60,7 @@ export const development = gulp.series(
   "clean",
   gulp.parallel([
     "views",
+    "styles",
     "scripts",
     "images",
     "webp",
@@ -73,8 +69,7 @@ export const development = gulp.series(
     "video",
     "favicons",
   ]),
-  "styles",
-  "concatCss",
+
   gulp.parallel("serve")
 );
 
@@ -82,6 +77,7 @@ export const prod = gulp.series(
   "clean",
   gulp.parallel([
     "views",
+    "styles",
     "scripts",
     "images",
     "webp",
@@ -91,8 +87,7 @@ export const prod = gulp.series(
     "favicons",
     "gzip",
   ]),
-  "styles",
-  "concatCss"
+
 );
 
 export default development;
