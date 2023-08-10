@@ -1,2 +1,3 @@
-import "%modules%/header/header";
-import "%modules%/footer/footer";
+
+import { Header} from "%modules%/header/header";
+Header();

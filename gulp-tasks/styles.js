@@ -14,6 +14,9 @@ import plumber from "gulp-plumber";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
+// import cssconcat from "fd-gulp-cssconcat";
+// const cssConcat = require("fd-gulp-cssconcat");
+// const { src} = require("gulp");
 
 const sass = gulpsass(dartsass);
 const argv = yargs.argv,
@@ -26,6 +29,7 @@ gulp.task("styles", () => {
       .pipe(plumber())
       .pipe(sass.sync({ outputStyle: "compressed" }).on("error", sass.logError))
       .pipe(groupmedia())
+
       .pipe(
         gulpif(
           production,
@@ -67,7 +71,7 @@ gulp.task("styles", () => {
         )
       )
       .pipe(plumber.stop())
-      .pipe(gulpif(!production, sourcemaps.write("./maps/")))
+      .pipe(gulpif(!production, sourcemaps.write("./maps")))
       .pipe(gulp.dest(paths.styles.dist))
       .pipe(
         debug({
