@@ -1,10 +1,11 @@
+@import "vendor/normalize";
+@import "vendor/null";
+
 // Переменные, миксины, функции
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
 
-// CSS-файлы библиотек
-@import "vendor/libs";
 
 // Основное
 @import "base/common";
@@ -14,7 +15,11 @@
 @import "base/colors";
 @import "base/marque";
 
-// БЭМ-блоки
+// БЭМ-components
+@import "../blocks/components/button-success/button-success";
+@import "../blocks/components/button-wave/button-wave";
+
+// БЭМ-blocks
 @import "../blocks/modules/header/header";
 @import "../blocks/modules/bunner/bunner";
 @import "../blocks/modules/bunner/bunner-slider";
