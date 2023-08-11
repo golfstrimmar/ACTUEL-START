@@ -83,7 +83,7 @@ export const GalCases = () => {
           this.buttonActive(),
             setTimeout(() => {
               this.addItems();
-            }, 300);
+            }, 200);
         }
       });
     }

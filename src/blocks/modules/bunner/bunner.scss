@@ -18,7 +18,7 @@
     font-size: 60px;
     font-family: "Lobster-Regular";
     color: #1763b2;
-    text-shadow:  0px 0px 4px #bdd8f5;
+    text-shadow: 0px 0px 4px #bdd8f5;
   }
 }
 .bunner__text {
@@ -28,6 +28,12 @@
 
 .bunner__button {
   min-height: 40px;
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #fbfbfc;
+    margin: 0 0 0 10px;
+  }
 }
 // .slider-main-js {
 //   max-height: 100%;

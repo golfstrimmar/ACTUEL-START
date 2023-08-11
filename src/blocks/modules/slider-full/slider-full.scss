@@ -1,14 +1,16 @@
 .slider-full {
   position: relative;
+  max-width: 100vw;
+  overflow: hidden;
 }
-.slider-full .swiper-slide{
-min-height: 200px;
+.slider-full .swiper-slide {
+  min-height: 200px;
 }
-.full-prev{
-left: 40px;
+.full-prev {
+  left: 40px;
 }
-.full-next{
-right:40px
+.full-next {
+  right: 40px;
 }
 .controls {
   width: 100px;
@@ -26,7 +28,6 @@ right:40px
     transform: translate(-50%, -50%) rotate(-500deg) scale(1.2);
   }
 }
-
 
 // .popup__content--plyr{
 //   display: block;

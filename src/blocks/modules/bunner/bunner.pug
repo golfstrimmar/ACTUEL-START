@@ -4,13 +4,14 @@ section#bunner.bunner
       source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
       source(srcset='./img/paralax.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
       source(srcset='./img/paralax.webp' type='image/webp' media='(max-width: 999px)')
-    img(src='./img/paralax.webp'  alt='img')
-     
+    img(src='./img/paralax.webp' alt='img')
+
   .container
     .bunner__body
       .bunner__title
         h1 Lorem ipsum dolor sit amet.
       .bunner__text
         p Lorem ipsum .
-      a.btn.btn--success.but-wave.popups-init-js(rel='#popupPlyr1' href='#!').bunner__button
-          p video1
+      +btn('bunner__button','#popupPlyr1','video1')
+        svg
+          use(xlink:href='#right')

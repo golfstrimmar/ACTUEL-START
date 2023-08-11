@@ -1,8 +1,23 @@
-# gulp-pug-starter
+
 
 !!! при загрузке пакетов с npm --- перейти слева на комиты и убрать из changes  файл 'yarn lock'
+      
+================ mixins pug
++btn('classblock','rel','text') 
+    svg                                
+       use(xlink:href='#right')
+
++btn-empty('classblock','text')
+    svg                                
+       use(xlink:href='#right')
 
 
+
+
+
+
+
+# gulp-pug-starter
 ![License](https://img.shields.io/github/license/andreyalexeich/gulp-pug-starter)
 ![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-pug-starter.svg?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/andreyalexeich/gulp-pug-starter.svg?style=social)<br>

@@ -1,0 +1,12 @@
+mixin btn(classblock,rel,text)
+  a.btn.btn--success.but-wave.popups-init-js(rel=rel href='#!' class=classblock)=text
+    if block
+      block
+    else 
+
+mixin btn-empty(classblock,text)
+  a.btn.btn--empty( href='#!' class=classblock)=text
+    if block
+      block
+    else 
+

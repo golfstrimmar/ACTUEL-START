@@ -21,31 +21,7 @@
   &__item {
     position: relative;
 
-    &._is-active {
-      & > .smenu-title-js {
-        background-color: aqua;
-        svg {
-          width: 15px;
-          height: 15px;
-          transform: rotate(90deg);
-        }
-      }
-      & > .smenu__hidden {
-        animation: pulse 0.3s linear;
-        animation-fill-mode: forwards;
-      }
-    }
-    &._not-active {
-      & > .smenu-title-js > svg {
-        transform: rotate(-90deg);
-        z-index: -1;
-      }
-      & > .smenu__hidden {
-        animation: not-pulse 0.3s linear;
-        animation-fill-mode: forwards;
-      }
-    }
-// !!! если нужно открытие пунктов по ховеру а не по клику, то скрипт нужно отключать и добавлять это
+    // !!! если нужно открытие пунктов по ховеру а не по клику, то скрипт нужно отключать и добавлять это
     // &:hover {
     //   & > .smenu-title-js {
     //     background: rgb(147, 240, 185);
@@ -69,9 +45,9 @@
     background: rgb(65, 241, 139);
     padding: 5px;
     z-index: 10;
-    transition: all .3s;
+    @include transition;
     cursor: pointer;
-    &:hover{
+    &:hover {
       background: rgb(147, 240, 185);
     }
     span {
@@ -144,5 +120,31 @@
     width: 100%;
     grid-template-rows: 0fr;
     overflow: hidden;
+  }
+}
+
+._smenu-item-js {
+  &._is-active {
+    & > ._smenu-title-js {
+      svg {
+        width: 15px;
+        height: 15px;
+        transform: rotate(90deg);
+      }
+    }
+    & > .smenu__hidden {
+      animation: pulse 0.3s linear;
+      animation-fill-mode: forwards;
+    }
+  }
+  &._not-active {
+    & > ._smenu-title-js > svg {
+      transform: rotate(-90deg);
+      z-index: -1;
+    }
+    & > .smenu__hidden {
+      animation: not-pulse 0.3s linear;
+      animation-fill-mode: forwards;
+    }
   }
 }

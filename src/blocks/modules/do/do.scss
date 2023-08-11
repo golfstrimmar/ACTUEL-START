@@ -80,7 +80,7 @@
   grid-column: 1/3;
   transform: scaleY(0);
   transform-origin: top;
-  transition: all 0.2s;
+  @include transition;
 }
 .do-item__footer {
   &:hover {

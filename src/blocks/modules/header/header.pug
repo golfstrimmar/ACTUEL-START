@@ -1,5 +1,7 @@
 header.header
   .container
+
+
     .header__body 
       a(href='#!').header__logo.logo
           svg
@@ -13,7 +15,7 @@ header.header
           li.menu__item.rel
             .menu__link.menu-link-js.menu__link--active buy
               svg
-                use(xlink:href='#caret-down')
+                use(xlink:href='#down')
             .menu__tab.menu-tab
                 a(href="#!").menu-tab__item Category number one
                 a(href="#!").menu-tab__item Apartments in Dubai
@@ -27,7 +29,7 @@ header.header
           li.menu__item.rel
             .menu__link.menu-link-js buy
               svg
-                use(xlink:href='#caret-down')
+                use(xlink:href='#down')
             .menu__tab.menu-tab
                 a(href="#!").menu-tab__item Category number one
                 include ../side-menu/side-menu.pug
@@ -38,13 +40,15 @@ header.header
           input(type='submit')
           svg
             use(xlink:href='#search')
-        .header__lang.header-lang
+        fildset.header__lang.header-lang
           input(type="radio" id="boxen" name='boxlang'  val='en' checked)
           label(for="boxen")._hover.ttu  en
           input(type="radio" id="boxru" name='boxlang' val='ru')
           label(for="boxru")._hover.ttu  ru
-        a.header__button.btn.btn--success.but-wave.popups-init-js(rel='#popup1' href='#!') form
+
+        +btn('header__button','#popup1','form')
       .header__burger.icon
         svg
           use(xlink:href='#list')
+
 
