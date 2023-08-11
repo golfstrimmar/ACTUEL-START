@@ -1,6 +1,6 @@
 .header {
   z-index: 50;
-  transition: all 0.2s ease-in-out;
+  @include transition;
   position: fixed;
   width: 100%;
   height: 80px;
@@ -37,14 +37,14 @@
 /*=====================*/
 .logo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 0 10px;
   svg {
     height: 50px;
     width: 50px;
   }
   p {
-    color: aliceblue;
+    color: rgb(138, 196, 250);
   }
 }
 
@@ -73,24 +73,24 @@
   display: flex;
   align-items: center;
   padding: 0 10px;
-  transition: all 0.2s ease-in-out;
+  @include transition;
   text-transform: uppercase;
   color: rgb(253, 253, 253);
   cursor: pointer;
   svg {
     width: 15px;
     height: 15px;
-    transition: all 0.2s ease-in-out;
+    @include transition;
     fill: white;
   }
 
   &:hover {
-    background: #ff9999;
+    background: #a1aeed;
     box-shadow: 0px 0px 20px white !important;
   }
 
   &--active {
-    background: #f73030 !important;
+    background: #a1aeed !important;
     box-shadow: 0px 0px 20px white !important;
   }
 
@@ -155,7 +155,7 @@
     padding: 0 20px;
     display: flex;
     align-items: center;
-    transition: all 0.3s;
+    @include transition;
     &:hover {
       background-color: rgb(54, 54, 56);
       color: rgb(182, 15, 15);
@@ -169,12 +169,12 @@
 .header-lang {
   input[type="radio"]:checked + label {
     color: #f10905;
-    transition: all 0.2s;
+    @include transition;
     padding: 0 0 0 0;
   }
   input[type="radio"]:not(:checked) + label {
     color: #f7a7a7;
-    transition: all 0.2s;
+    @include transition;
     padding: 0 0 0 0;
   }
   input[type="radio"]:checked + label:after,
@@ -241,7 +241,7 @@
   transform: translate(0%, -50%);
   right: 5px;
   // opacity: 0.4;
-  transition: all 0.3s;
+  @include transition;
 }
 
 .info__search input[type="submit"]:hover + svg {
@@ -326,8 +326,7 @@
     svg {
       width: 100%;
       height: 100%;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
+      @include transition;
       stroke: #fff;
       position: absolute;
     }
@@ -369,7 +368,7 @@
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(15px);
     z-index: 1000;
-    transition: all 0.2s ease-in-out;
+    @include transition;
   }
 
   .menu__list {
@@ -387,7 +386,7 @@
 
   .info.info-active {
     display: block !important;
-    transition: all 0.2s ease-in-out;
+    @include transition;
   }
 
   .info__search {

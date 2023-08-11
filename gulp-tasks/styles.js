@@ -60,6 +60,13 @@ gulp.task("styles", function () {
         })
       )
     )
+   
+
+  var cssStream = gulp.src("./src/styles/css/*.css");
+
+  return es
+    .merge(sassStream, cssStream)
+    .pipe(concat("main.css"))
     .pipe(
       gulpif(
         production,
@@ -67,15 +74,10 @@ gulp.task("styles", function () {
           suffix: ".min",
         })
       )
-    );
-
-  var cssStream = gulp.src("./src/styles/css/*.css");
-
-  return es
-    .merge(sassStream, cssStream)
-    .pipe(concat("main.css"))
+    )
     .pipe(plumber.stop())
     .pipe(gulpif(!production, sourcemaps.write("./maps")))
+
     .pipe(gulp.dest(paths.styles.dist))
     .pipe(
       debug({
@@ -84,64 +86,3 @@ gulp.task("styles", function () {
     )
     .on("end", browsersync.reload);
 });
-
-// gulp.task("styles", () => {
-//     return gulp
-//       .src(paths.styles.src)
-//       .pipe(gulpif(!production, sourcemaps.init()))
-//       .pipe(plumber())
-
-//       .pipe(sass.sync({ outputStyle: "compressed" }).on("error", sass.logError))
-
-//       .pipe(groupmedia())
-
-//       .pipe(
-//         gulpif(
-//           production,
-//           autoprefixer({
-//             cascade: false,
-//             grid: true,
-//           })
-//         )
-//       )
-//       .pipe(
-//         gulpif(
-//           production,
-//           mincss({
-//             compatibility: "ie8",
-//             level: {
-//               1: {
-//                 specialComments: 0,
-//                 removeEmpty: true,
-//                 removeWhitespace: true,
-//               },
-//               2: {
-//                 mergeMedia: true,
-//                 removeEmpty: true,
-//                 removeDuplicateFontRules: true,
-//                 removeDuplicateMediaBlocks: true,
-//                 removeDuplicateRules: true,
-//                 removeUnusedAtRules: false,
-//               },
-//             },
-//           })
-//         )
-//       )
-//       .pipe(
-//         gulpif(
-//           production,
-//           rename({
-//             suffix: ".min",
-//           })
-//         )
-//       )
-//       .pipe(plumber.stop())
-//       .pipe(gulpif(!production, sourcemaps.write("./maps")))
-//       .pipe(gulp.dest(paths.styles.dist))
-//       .pipe(
-//         debug({
-//           title: "CSS files",
-//         })
-//       )
-//       .on("end", browsersync.reload);
-// });

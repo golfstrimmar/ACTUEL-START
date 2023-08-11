@@ -1,0 +1,16 @@
+section#bunner.bunner
+  .bunner__bg.imgs
+    picture
+      source(srcset='./img/dist/paralax.jpg ' type='image/jpg' media='(min-width: 1200px)')
+      source(srcset='./img/dist/paralax.jpg' type='image/jpg' media='(min-width: 1000px) and (max-width: 1199px)')
+      source(srcset='./img/dist/paralax.jpg' type='image/jpg' media='(max-width: 999px)')
+      img(data='./img/dist/paralax.jpg' alt='img')
+      img(src='./img/dist/paralax.webp'  alt='img')
+  .container
+    .bunner__body
+      .bunner__title
+        h1 Lorem ipsum dolor sit amet.
+      .bunner__text
+        p Lorem ipsum .
+      a.btn.btn--success.but-wave.popups-init-js(rel='#popupPlyr1' href='#!').bunner__button
+          p video1

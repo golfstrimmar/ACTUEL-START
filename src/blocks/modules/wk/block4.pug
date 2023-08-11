@@ -1,0 +1,26 @@
+-
+  var block4 = [
+    {src: './img/dist/wk/img-4.webp',title:'Commercial property in Abu Dhabi ',text:'In Dubai, the final statistics of all transactions related to real estate for the first quarter has been confirmed '},
+    {src: './img/dist/wk/img-5.webp',title:'Lorem ipsum dolor sit',text:'ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad ratione in deleniti et, nostrum sapiente animi eos dolore repudiandae fuga impedit provident, tempore totam natus libero? Eos, ut nobis?'},
+    {src: './img/dist/wk/img-6.webp',title:'Lorem ipsum dolor sit',text:'ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad ratione in deleniti et, nostrum sapiente animi eos dolore repudiandae fuga impedit provident, tempore totam natus libero? Eos, ut nobis?'},
+    {src: './img/dist/wk/img-4.webp',title:'Commercial property in Abu Dhabi ',text:'In Dubai, the final statistics of all transactions related to real estate for the first quarter has been confirmed '},
+    {src: './img/dist/wk/img-5.webp',title:'Lorem ipsum dolor sit',text:'ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad ratione in deleniti et, nostrum sapiente animi eos dolore repudiandae fuga impedit provident, tempore totam natus libero? Eos, ut nobis?'},
+    {src: './img/dist/wk/img-6.webp',title:'Lorem ipsum dolor sit',text:'ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad ratione in deleniti et, nostrum sapiente animi eos dolore repudiandae fuga impedit provident, tempore totam natus libero? Eos, ut nobis?'},
+    {src: './img/dist/wk/img-4.webp',title:'Commercial property in Abu Dhabi ',text:'In Dubai, the final statistics of all transactions related to real estate for the first quarter has been confirmed '},
+    {src: './img/dist/wk/img-5.webp',title:'Lorem ipsum dolor sit',text:'ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad ratione in deleniti et, nostrum sapiente animi eos dolore repudiandae fuga impedit provident, tempore totam natus libero? Eos, ut nobis?'},
+    {src: './img/dist/wk/img-6.webp',title:'Lorem ipsum dolor sit',text:'ipsum dolor sit amet consectetur adipisicing elit. Accusantium ad ratione in deleniti et, nostrum sapiente animi eos dolore repudiandae fuga impedit provident, tempore totam natus libero? Eos, ut nobis?'},
+  ];
+each block in block4
+  li.wk-slide__item.rel.center
+    .wk-slide__img.rel
+      .imgs
+        img(src=block.src alt='img')
+    .wk-slide__low
+      .wk-slide__title
+        h3=block.title
+      .wk-slide__text
+        p=block.text
+      a.btn.btn--empty( href='#!')._hover.wk-slide__link
+        p Learn more
+        svg
+          use(xlink:href='#chevron-right')

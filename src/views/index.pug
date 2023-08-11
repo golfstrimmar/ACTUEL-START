@@ -6,8 +6,15 @@ block variables
 
 block content
 	include ../blocks/modules/header/header
-	img.__img(src='./img/img-5.webp'  alt='img')
-	include ../blocks/modules/footer/footer
+	main.inner
+			include ../blocks/modules/header/header
+			include ../blocks/modules/bunner/bunner
+			include ../blocks/modules/bunner/bunner-slider
+			include ../blocks/modules/marque/marque
+			include ../blocks/modules/title/title
+			include ../blocks/modules/do/do
+			include ../blocks/modules/wk/wk
+			include ../blocks/modules/footer/footer
 
 block scripts
 	script(src="js/vendor.js")

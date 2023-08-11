@@ -1,0 +1,25 @@
+section(id='wk').wk
+  .container
+    .swiper.wk__body.rel
+        .slider-arrow.arrow-next-wk
+          svg
+            use(xlink:href='#right')
+        .slider-arrow.arrow-prev-wk 
+          svg
+            use(xlink:href='#left') 
+
+        #swiperwk.swiper.swiper-container
+          .swiper-wrapper
+              ul.swiper-slide.wk-slide
+                include block1.pug
+              ul.swiper-slide.wk-slide
+                include block2.pug
+              ul.swiper-slide.wk-slide
+                include block3.pug
+              ul.swiper-slide.wk-slide
+                include block4.pug
+              ul.swiper-slide.wk-slide
+                include block5.pug
+           
+
+        .swiper-pagination-wk
