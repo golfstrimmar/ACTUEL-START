@@ -12,7 +12,7 @@
        use(xlink:href='#right')
 
 
-
+./src/img/ /i-2.png
 
 
 
