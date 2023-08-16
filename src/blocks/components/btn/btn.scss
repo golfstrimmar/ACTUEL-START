@@ -1,19 +1,61 @@
-.btn {
-  border: 1px solid transparent;
-  outline: none;
-  @include flex-center;
-  cursor: pointer;
-  @include transition;
-}
+// .btn {
+//   border: 1px solid transparent;
+//   outline: none;
+//   @include flex-center;
+//   cursor: pointer;
+//   @include transition;
+//   &--white {
+//     color: white;
+//     background: #50b5f8;
+//     &:hover {
+//       box-shadow: 0 10px 20px rgba(36, 189, 250, 0.5),
+//         inset 0 0 15px rgba(255, 255, 255, 1);
+//     }
+//   }
+// }
 
-.btn--success {
-  color: white;
-  background: #50b5f8;
-  &:hover {
-    box-shadow: 0 10px 20px rgba(36, 189, 250, 0.5),
-      inset 0 0 15px rgba(255, 255, 255, 1);
+.btn {
+  padding: 16px 32px;
+  width: 170px;
+  height: 56px;
+  @include flex-center;
+  transition: all 0.2s;
+  cursor: pointer;
+  @include BodyMedium;
+  background-color: $light-grey;
+  &--light {
+    color: $dark-primary;
+    background-color: $light-grey;
+    &:hover {
+      box-shadow: inset 0 0 8px darken($light-grey, 20%);
+    }
+  }
+
+  &--white {
+    color: $dark-primary;
+    background-color: $white;
+    &:hover {
+      box-shadow: inset 0 0 8px darken($light-grey, 40%);
+    }
+  }
+
+  &--dark {
+    color: $white;
+    background-color: $light-grey-15;
+    &:hover {
+      box-shadow: inset 0 0 8px $white;
+    }
+  }
+
+  &--dark-deep {
+    color: $white;
+    background-color: $dark-primary;
+    &:hover {
+      box-shadow: inset 0 0 8px $white;
+    }
   }
 }
+
 /* .btn--success:focus {
   border: 1px solid #2b2b63;
   background: #d6a6f7;
@@ -30,8 +72,6 @@
 // .btn--light:hover svg {
 //   fill: var(--red);
 // }
-
-
 
 // .btn--empty:focus {
 //   border: 1px solid #0000cc;
@@ -70,4 +110,3 @@
 //   color: white;
 //   fill: white;
 // }
-

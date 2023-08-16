@@ -15,13 +15,14 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background:rgb(225, 228, 250);
+  font-family: "Satoshi", sans-serif;
+  //  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
-
 .container {
-  // outline: 1px solid #4164ff;
-  max-width: 1200px;
+  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -33,11 +34,14 @@ body {
 .svgSpriteWrap{
   position: absolute;
 }
+
 a {
+  text-decoration: none;
+  color: inherit;
   display: inline-block;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  color: rgb(72, 89, 245);
+  color: $dark;
 }
 
 .imgs {
@@ -91,55 +95,10 @@ a {
 }
 ._hover {
   &:hover {
-    color: lighten(rgba(9, 72, 207), 25%);
-    text-shadow: 0 0  14px white;
+    color: white;
+    text-shadow: 0 0 14px lighten($primary, 25%);
   }
 }
-/* +++++++++++++++++++++++++++++++++++++ */
-@media (prefers-reduced-motion: no-preference) {
-  .top-animation {
-    animation: wipe-enter 1.5s;
-  }
-  @keyframes wipe-enter {
-    0% {
-      transform: translate(0, -100px);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
-  }
-
-  .left-animation {
-    animation: left-enter 1.5s;
-  }
-  @keyframes left-enter {
-    0% {
-      transform: translate(-200px, 0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
-  }
-
-  .right-animation {
-    animation: right-enter 1.5s;
-  }
-  @keyframes right-enter {
-    0% {
-      transform: translate(200px, 0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
-  }
-}
-/* +++++++++++++++++++++++++++++++++++++ */
 
 .lock {
   overflow: hidden;
@@ -147,6 +106,52 @@ a {
 .ttu {
   text-transform: uppercase;
 }
+/* +++++++++++++++++++++++++++++++++++++ */
+// @media (prefers-reduced-motion: no-preference) {
+//   .top-animation {
+//     animation: wipe-enter 1.5s;
+//   }
+//   @keyframes wipe-enter {
+//     0% {
+//       transform: translate(0, -100px);
+//       opacity: 0;
+//     }
+//     100% {
+//       transform: translate(0, 0);
+//       opacity: 1;
+//     }
+//   }
+
+//   .left-animation {
+//     animation: left-enter 1.5s;
+//   }
+//   @keyframes left-enter {
+//     0% {
+//       transform: translate(-200px, 0);
+//       opacity: 0;
+//     }
+//     100% {
+//       transform: translate(0, 0);
+//       opacity: 1;
+//     }
+//   }
+
+//   .right-animation {
+//     animation: right-enter 1.5s;
+//   }
+//   @keyframes right-enter {
+//     0% {
+//       transform: translate(200px, 0);
+//       opacity: 0;
+//     }
+//     100% {
+//       transform: translate(0, 0);
+//       opacity: 1;
+//     }
+//   }
+// }
+/* +++++++++++++++++++++++++++++++++++++ */
+
 // a.common__link {
 //   width: 104px;
 //   height: 104px;
