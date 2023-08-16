@@ -42,6 +42,9 @@ a {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   color: $dark;
+  &:hover {
+    text-shadow: 0 0 8px lighten($primary, 25%);
+  }
 }
 
 .imgs {
@@ -106,6 +109,30 @@ a {
 .ttu {
   text-transform: uppercase;
 }
+
+@media (min-width: 768px) and (max-width: 1340px) {
+  .container {
+    margin: 0 20px;
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 0 25px;
+    max-width: calc(100% - 50px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 /* +++++++++++++++++++++++++++++++++++++ */
 // @media (prefers-reduced-motion: no-preference) {
 //   .top-animation {
@@ -175,16 +202,3 @@ a {
 //     }
 //   }
 // }
-@media (min-width: 901px) and (max-width: 1259px) {
-  .container {
-    margin: 0 20px;
-    max-width: calc(100% - 40px);
-  }
-}
-
-@media (max-width: 900px) {
-  .container {
-    margin: 0 10px;
-    max-width: calc(100% - 20px);
-  }
-}

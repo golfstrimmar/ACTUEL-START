@@ -5,9 +5,13 @@ block variables
   - const title = "INDEX"
 
 block content
-  //- include ../blocks/modules/header/header
+  include ../blocks/modules/header/header
   main.inner
-      include ../blocks/modules/bunner/bunner
+      include ../blocks/modules/hero/hero
+      include ../blocks/modules/aboutBrand/aboutBrand
+      include ../blocks/modules/products/products
+      include ../blocks/modules/ideas/ideas
+      include ../blocks/modules/join/join
       //- include ../blocks/modules/bunner/bunner-slider
       //- include ../blocks/modules/marque/marque
       //- include ../blocks/modules/title/title
@@ -32,7 +36,7 @@ block content
       //- include ../blocks/modules/form/popup-form
       //- include ../blocks/modules/typed/typedHover
       //- include ../blocks/modules/typed/typedScroll
-      //- include ../blocks/modules/footer/footer
+      include ../blocks/modules/footer/footer
       //- include ../blocks/modules/popup/popup
 block scripts
   //- script(src="js/vendor.js")

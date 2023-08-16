@@ -1,0 +1,28 @@
+section(id='join').join.rel
+  .imgs
+    picture
+      source(srcset='./img/join-bg.webp ' type='image/webp' media='(min-width: 1200px)')
+      source(srcset='./img/join-bg.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+      source(srcset='./img/join-bg-sm.webp' type='image/webp' media='(max-width: 767px)')
+      img(src='./img/join-bg.webp' alt='img')
+  .container
+    .join__body
+      .join__title
+        h2 Join the club and get the benefits
+      .join__text Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more
+      .join__blocks
+        .join__block
+          svg
+            use(xlink:href='#Vector')
+          span Exclusive offers
+        .join__block
+          svg
+            use(xlink:href='#Vector')
+          span Free events
+        .join__block
+          svg
+            use(xlink:href='#Vector')
+          span Large discounts
+      form.join__form.join-form
+        input(type='text' placeholder="your@email.com").white
+        a(href='#!').btn.btn--dark-deep.join-form__button Sign up

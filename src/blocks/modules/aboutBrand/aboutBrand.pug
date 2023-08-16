@@ -1,0 +1,34 @@
+section#about-brand.about-brand
+      .container
+        .about-brand__title 
+          h3 What makes our brand different
+        .about-brand__body
+          -
+            var blocks = [
+              {
+                src: '#i-1',
+                title: 'Next day as standard',
+                text: 'Order before 3pm and get your order the next day as standard'
+              },
+              {
+                src: '#i-2',
+                title: 'Made by true artisans',
+                text: 'Handmade crafted goods made with real passion and craftmanship'
+              },
+              {
+                src: '#i-3',
+                title: 'Unbeatable prices',
+                text: 'For our materials and quality you won’t find better prices anywhere'
+              },
+              {
+                src: '#i-4',
+                title: 'Recycled packaging',
+                text: 'We use 100% recycled to ensure our footprint is more manageable'
+              },
+            ];
+          each block in blocks
+            .about-brand__item
+              svg
+                use(xlink:href=block.src)
+              h4=block.title
+              p=block.text

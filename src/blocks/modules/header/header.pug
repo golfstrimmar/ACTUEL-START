@@ -1,54 +1,83 @@
 header.header
-  .container
-
-
-    .header__body 
-      a(href='#!').header__logo.logo
-          svg
-            use(xlink:href='#logo')
-          p.ttu slogan
-      nav.header__menu.menu
-        .header__close
-          svg
-            use(xlink:href='#x-lg')
-        ul.menu__list
-          li.menu__item.rel
-            .menu__link.menu-link-js.menu__link--active buy
-              svg
-                use(xlink:href='#down')
-            .menu__tab.menu-tab
-                a(href="#!").menu-tab__item Category number one
-                a(href="#!").menu-tab__item Apartments in Dubai
-                a(href="#!").menu-tab__item Category number twenty five
-                include ../side-menu/side-menu.pug
-
-          li.menu__item
-            a.menu__link(href='#!' rel='#posts') Posts
-          li.menu__item
-            a.menu__link(href='#!' rel='#galery') Projects
-          li.menu__item.rel
-            .menu__link.menu-link-js buy
-              svg
-                use(xlink:href='#down')
-            .menu__tab.menu-tab
-                a(href="#!").menu-tab__item Category number one
-                include ../side-menu/side-menu.pug
-      .header__info.info
-        a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
-        form.info__search
-          input(placeholder='Поиск')
-          input(type='submit')
-          svg
-            use(xlink:href='#search')
-        fildset.header__lang.header-lang
-          input(type="radio" id="boxen" name='boxlang'  val='en' checked)
-          label(for="boxen")._hover.ttu  en
-          input(type="radio" id="boxru" name='boxlang' val='ru')
-          label(for="boxru")._hover.ttu  ru
-
-        +btn('header__button','#popup1','form')
-      .header__burger.icon
+  .header-top
+    .header-top-left
+      .header-top-search
         svg
-          use(xlink:href='#list')
+          use(xlink:href='#header-search')
+      .header-top-mobile-menu
+        svg
+          use(xlink:href='#Menu')
+    .header-logo Avion
+    .header-top-right
+      .header-top-right__cart
+          svg
+            use(xlink:href='#header-cart')
+      .header-top-right__user
+          svg
+            use(xlink:href='#header-user')
+  .header-menu
+    .header-menu__link Plant pots
+    .header-menu__link Ceramics
+    .header-menu__link Tables
+  .header-menu-mobile
+    .header-menu__link Plant pots
+    .header-menu__link Ceramics
+    .header-menu__link Tables
+
+
+
+
+//- header.header
+//-   .container
+
+
+//-     .header__body 
+//-       a(href='#!').header__logo.logo
+//-           svg
+//-             use(xlink:href='#logo')
+//-           p.ttu slogan
+//-       nav.header__menu.menu
+//-         .header__close
+//-           svg
+//-             use(xlink:href='#x-lg')
+//-         ul.menu__list
+//-           li.menu__item.rel
+//-             .menu__link.menu-link-js.menu__link--active buy
+//-               svg
+//-                 use(xlink:href='#down')
+//-             .menu__tab.menu-tab
+//-                 a(href="#!").menu-tab__item Category number one
+//-                 a(href="#!").menu-tab__item Apartments in Dubai
+//-                 a(href="#!").menu-tab__item Category number twenty five
+//-                 include ../side-menu/side-menu.pug
+
+//-           li.menu__item
+//-             a.menu__link(href='#!' rel='#posts') Posts
+//-           li.menu__item
+//-             a.menu__link(href='#!' rel='#galery') Projects
+//-           li.menu__item.rel
+//-             .menu__link.menu-link-js buy
+//-               svg
+//-                 use(xlink:href='#down')
+//-             .menu__tab.menu-tab
+//-                 a(href="#!").menu-tab__item Category number one
+//-                 include ../side-menu/side-menu.pug
+//-       .header__info.info
+//-         a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
+//-         form.info__search
+//-           input(placeholder='Поиск')
+//-           input(type='submit')
+//-           svg
+//-             use(xlink:href='#search')
+//-         fildset.header__lang.header-lang
+//-           input(type="radio" id="boxen" name='boxlang' val='en' checked)
+//-           label(for="boxen")._hover.ttu  en
+//-           input(type="radio" id="boxru" name='boxlang' val='ru')
+//-           label(for="boxru")._hover.ttu  ru
+
+//-         +btn('header__button','#popup1','form')
+//-       .header__burger.icon
+//-         svg
+//-           use(xlink:href='#list')
 
 

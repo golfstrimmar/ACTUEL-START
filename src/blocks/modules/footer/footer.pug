@@ -1,23 +1,55 @@
-footer#footer.footer
+section(id='footer').footer.rel
   .container
-    .footer__body
-      a(href="#!").footer__logo.logo
-          svg
-            use(xlink:href='#logo')
-          p.ttu slogan
-      .footer__col
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-      .footer__col
-        span Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-       
-      .footer__col.footer__col--info.info
-        a.info__phone(href='#!') +7(000) 123 45 65 67 
-        form.info__search.info__search--footer
-          input(placeholder='Поиск')
-          input(type='submit')
-          svg
-            use(xlink:href='#search')
-      svg.footer__cheap
-        use(xlink:href='#play')
-    .footer__low
-      a.footer__pol(href='#!') @Lorem ipsum dolor sit amet.
+    .footer-body
+      .footer-top
+        .footer-menu-column
+          span.router-menu-title Menu
+          .footer-menu__link New arrivals
+          .footer-menu__link Best sellers
+          .footer-menu__link Recently viewed
+          .footer-menu__link Popular this week
+          .footer-menu__link All products
+        .footer-menu-column
+          span.router-menu-title Categories
+          .footer-menu__link Crockery
+          .footer-menu__link Furniture
+          .footer-menu__link Homeware
+          .footer-menu__link Plant pots
+          .footer-menu__link Chairs
+          .footer-menu__link Crockery
+        .footer-menu-column
+          span.router-menu-title Our company
+          .footer-menu__link About us
+          .footer-menu__link Vacancies
+          .footer-menu__link Contact us
+          .footer-menu__link Privacy
+          .footer-menu__link Returns policy
+        .footer-menu-column
+          span.router-menu-title Join our mailing list
+          form.footer-form.join-form.footer-suscribe
+            input(type='text' placeholder="your@email.com").dark
+            a(href='#!').btn.btn--white.join-form__button Sign up
+      .footer-bottom
+        span.footer-bottom__copy Copyright 2022 Avion LTD
+        .footer-soc
+          a(href="#!").footer-soc__link
+            svg
+              use(xlink:href='#in') 
+          a(href="#!").footer-soc__link
+            svg
+              use(xlink:href='#fb')
+          a(href="#!").footer-soc__link
+            svg
+              use(xlink:href='#insta')
+          a(href="#!").footer-soc__link
+            svg
+              use(xlink:href='#scipe')
+          a(href="#!").footer-soc__link
+            svg
+              use(xlink:href='#twitter')
+          a(href="#!").footer-soc__link
+            svg
+              use(xlink:href='#pinterest')
+
+
+
