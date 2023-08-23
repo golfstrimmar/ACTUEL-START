@@ -17,7 +17,9 @@
     text-shadow: 0 0 14px lighten($grey-purple, 25%);
   }
 }
-
+@mixin transition{
+  transition: all .2s;
+}
 // =======================================
 
 @mixin Headings-H1 {
