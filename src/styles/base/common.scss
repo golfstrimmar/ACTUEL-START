@@ -4,24 +4,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  .imgs {
-    // z-index: +1;
-  }
 }
 
-* {
-  //  outline: 1px solid green;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  background:rgb(225, 228, 250);
-}
+// body {
+//   font-family: 'PT Serif', serif;
+//   @include Text-Style-25;
+//   background:rgb(225, 228, 250);
+// }
 
 .container {
   // outline: 1px solid #4164ff;
-  max-width: 1200px;
+  max-width: 1160px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -35,7 +28,7 @@ body {
 }
 a {
   display: inline-block;
-  transition: all 0.2s ease-in-out;
+  @include transition;
   cursor: pointer;
   color: rgb(72, 89, 245);
 }

@@ -1,12 +1,17 @@
 import { Button } from "%components%/btn-wave/btn-wave";
 import { Anim } from "../utils/animation";
 import { Lazy } from "../utils/lazy";
+import { DataPicker } from "../utils/datepicker";
 
 document.addEventListener("DOMContentLoaded", function () {
   //   // ==========Button=============
-  [...document.querySelectorAll(".but-wave")].forEach((cell) => {
-    cell.addEventListener("click", Button);
-  });
+  if (document.querySelector("#Anreise")){
+    DataPicker();
+  }
+    //   // ==========Button=============
+    [...document.querySelectorAll(".but-wave")].forEach((cell) => {
+      cell.addEventListener("click", Button);
+    });
 
   // ============появление текста================
   Anim();

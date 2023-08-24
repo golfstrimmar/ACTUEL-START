@@ -1,0 +1,23 @@
+.shild {
+  &__title {
+    h2{
+       @include Text-Style-30;
+       font-weight: 400;
+    }
+  }
+
+  &__body {
+    margin: 20px 0 0 0;
+    background-color: $light-blue-grey;
+    min-height: 168px;
+    @include flex-column;
+    justify-content: center;
+     border-radius: 10px;
+  }
+
+  &__text {
+    margin: 14px 0 0 0;
+     @include Text-Style-26;
+  }
+  
+}

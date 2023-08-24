@@ -1,0 +1,75 @@
+section(id='book').book.rel
+  .container
+    .book__title
+      h2 Пожалуйста, заполните анкету
+    .book-section
+      forma.book-section__form
+        input(type="text" name='name' placeholder='Имя')
+        input(type="text" name='name' placeholder='Фамилия')
+        input(type="text" name='name' placeholder='Год рождения')
+      h1 Оформление input в зависимости от состояния проверки
+      forma.book-section__form
+        //- .text-field
+        //-   label.text-field__label(for='city') City
+        //-   input#city.text-field__input(type='text' name='city').text-field__input_invalid
+        //-   .text-field__message Поле обязательно для заполнения
+
+
+
+        .text-field
+          input#firstname(type='text' name='firstname' value='' )
+          label.text-field__label(for='firstname') Имя
+          span Поле обязательно для заполнения
+        .text-field
+          input#name(type='text' name='name' value='' )
+          label.text-field__label(for='name') Фамилия
+          span Поле обязательно для заполнения
+
+
+
+        .text-field
+          input#firstname(type='text' name='firstname' value='' ).text-field-input_invalid
+          label.text-field__label(for='firstname') Имя
+          span Поле обязательно для заполнения
+        //- .text-field
+        //-   input#name(type='text' name='name' value='' ).text-field-input_invalid
+        //-   label.text-field__label(for='name') Фамилия
+        //-   span Поле обязательно для заполнения
+
+
+
+
+        .text-field
+          input#firstname(type='text' name='firstname' value="Джек Безз" ).text-field-input_valid
+          label.text-field__label(for='firstname') Имя
+          span Спасибо за предоствленную информацию!
+        //- .text-field
+        //-   input#name(type='text' name='name' value='' ).text-field-input_valid
+        //-   label.text-field__label(for='name') Фамилия
+        //-   span Спасибо за предоствленную информацию!
+
+
+
+
+
+
+
+
+
+
+
+
+    //- .book__title 
+    //-   h3 Бронирование
+    //- input(type="text" name="out" placeholder='Заезд')#Anreise
+    //- input(type="text" name="out" placeholder='Выезд')#Ausfart
+    //- #app
+    //-   p Гости
+
+
+    //-   section
+    //-   input#gasts(type="text" placeholder='Количество гостей' v-model= 'message' )
+
+
+    //- a.btn.btn--success.but-wave.book__button(href='#!')
+    //-   p Найти

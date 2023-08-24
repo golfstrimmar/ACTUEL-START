@@ -1,33 +1,38 @@
 
+// @font-face {
+//   font-family: "Lobster-Regular";
+//   src: url("../fonts/Lobster-Regular.woff2");
+//   src: url("../fonts/Lobster-Regular.woff");
+//   font-weight: 400;
+//   font-style: normal;
+//   font-stretch: normal;
+// }
+
 @font-face {
-  font-family: "Lobster-Regular";
-  src: url("../fonts/Lobster-Regular.woff2");
-  src: url("../fonts/Lobster-Regular.woff");
+  font-family: "Arial-Regular";
+  src: url("../fonts/arial-reg.woff2");
+  src: url("../fonts/arial-reg.woff");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
 }
-
 @font-face {
-  font-family: "DrukCyr-Bold";
-  src: url("../fonts/DrukCyr-Bold.woff2");
-  src: url("../fonts/DrukCyr-Bold.woff");
+  font-family: "Arial-Bold";
+  src: url("../fonts/arial-bold.woff2");
+  src: url("../fonts/arial-bold.woff");
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
 }
-@font-face {
-  font-family: "BricolageGrotesque-Medium";
-  src: url("../fonts/BricolageGrotesque_36pt_Condensed-Medium.woff2");
-  src: url("../fonts/BricolageGrotesque_36pt_Condensed-Medium.woff");
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-}
 
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
-// font-family: 'Open Sans', sans-serif;
-// font-family: "Lobster-Regular";
-// font-family: "DrukCyr-Bold", sans-serif;
-// font-family: "BricolageGrotesque-Medium", sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:wght@700&family=PT+Sans&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&family=Roboto+Slab:wght@700&display=swap');
+
+// font-family: 'Arial-Regular', sans-serif;
+// font-family: 'Arial-Bold', sans-serif;
+// font-family: 'Inter', sans-serif;
+// font-family: 'Noto Serif', serif;
+// font-family: 'PT Sans', sans-serif;
+// font-family: 'PT Serif', serif;
+// font-family: 'Roboto Flex', sans-serif;
+// font-family: 'Roboto Slab', serif;

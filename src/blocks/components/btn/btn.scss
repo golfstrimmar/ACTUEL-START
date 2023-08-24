@@ -7,10 +7,15 @@
 }
 
 .btn--success {
-  color: white;
-  background: #50b5f8;
+  flex-grow: 0;
+  border-radius: 10px;
+  border: solid 1px $white-16;
+  background-color: $jungle-green;
+  p {
+    @include Text-Style-29;
+  }
   &:hover {
-    box-shadow: 0 10px 20px rgba(36, 189, 250, 0.5),
+    box-shadow: 0 6px 10px lighten($jungle-green, 60%),
       inset 0 0 15px rgba(255, 255, 255, 1);
   }
 }
@@ -30,8 +35,6 @@
 // .btn--light:hover svg {
 //   fill: var(--red);
 // }
-
-
 
 // .btn--empty:focus {
 //   border: 1px solid #0000cc;
@@ -70,4 +73,3 @@
 //   color: white;
 //   fill: white;
 // }
-
