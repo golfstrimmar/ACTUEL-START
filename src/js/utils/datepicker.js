@@ -1,10 +1,13 @@
-import AirDatepicker from "air-datepicker";
-
-
-
 export const DataPicker = () => {
-  new AirDatepicker("#Anreise");
-  new AirDatepicker("#Ausfart");
- 
+
+
+$.datepicker.setDefaults($.datepicker.regional["ru"]);
+ $("#check-in").datepicker({
+   numberOfMonths: [1, 2],
+ });
+ $("#check-out").datepicker({
+   numberOfMonths: [1, 2],
+ });
+
 
 };

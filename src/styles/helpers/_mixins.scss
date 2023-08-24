@@ -197,7 +197,6 @@
   text-transform: uppercase;
 }
 
-
 @mixin Text-Style-26 {
   font-family: "Inter", sans-serif;
   font-size: 18px;
@@ -206,7 +205,6 @@
   font-weight: 400;
   line-height: 18px;
 }
-
 
 @mixin Text-Style-30 {
   font-family: "PT Serif", serif;
@@ -217,8 +215,12 @@
   line-height: 38px; /* 152% */
 }
 
-
-
+@mixin Text-Style-33 {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: $jungle-green;
+}
 
 @mixin Text-Style-31 {
   font-family: "PT Serif", serif;
@@ -226,4 +228,41 @@
   color: $black-two;
   font-weight: 400;
   opacity: 0.5;
+}
+
+@mixin Text-Style-32 {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: $black-two;
+}
+
+@mixin Text-Style-34 {
+  font-family: "PT Serif", serif;
+  font-size: 26px;
+  line-height: 1.31;
+  font-weight: 400;
+  color: $jungle-green;
+}
+@mixin Text-Style-35 {
+  font-family: "PT Serif", serif;
+  font-size: 26px;
+  line-height: 1.31;
+  font-weight: 400;
+  color: $black-two;
+  opacity: 0.3;
+}
+
+@mixin Text-Style-36 {
+  font-family: "PT Serif", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: $black-two;
+}
+@mixin Text-Style-37 {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: $jungle-green;
 }

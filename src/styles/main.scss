@@ -1,10 +1,10 @@
 @import "vendor/null";
 
+
 // Переменные, миксины, функции
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
-
 
 
 // Основное
@@ -13,7 +13,8 @@
 @import "base/sliders-swiper";
 @import "base/colors";
 @import "base/inputs";
-
+@import "vendor/datapicker";
+@import "base/fildset-switch";
 // БЭМ-components
 // @import "../blocks/components/btn/btn";
 // @import "../blocks/components/btn-wave/btn-wave";
@@ -43,7 +44,7 @@
 // @import "../blocks/modules/slider-full/slider-full";
 // @import "../blocks/modules/slider-double/sdouble";
 // @import "../blocks/modules/slider-scroll/slider-scroll";
-// @import "../blocks/modules/select/select";
+@import "../blocks/modules/select/select";
 // @import "../blocks/modules/form/form";
 // @import "../blocks/modules/typed/typedHover";
 

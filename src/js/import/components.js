@@ -3,9 +3,10 @@ import { Anim } from "../utils/animation";
 import { Lazy } from "../utils/lazy";
 import { DataPicker } from "../utils/datepicker";
 
+
 document.addEventListener("DOMContentLoaded", function () {
   //   // ==========Button=============
-  if (document.querySelector("#Anreise")){
+  if (document.querySelector("#check-in")) {
     DataPicker();
   }
     //   // ==========Button=============

@@ -2,74 +2,152 @@ section(id='book').book.rel
   .container
     .book__title
       h2 Пожалуйста, заполните анкету
+
     .book-section
-      forma.book-section__form
-        input(type="text" name='name' placeholder='Имя')
-        input(type="text" name='name' placeholder='Фамилия')
-        input(type="text" name='name' placeholder='Год рождения')
-      h1 Оформление input в зависимости от состояния проверки
-      forma.book-section__form
-        //- .text-field
-        //-   label.text-field__label(for='city') City
-        //-   input#city.text-field__input(type='text' name='city').text-field__input_invalid
-        //-   .text-field__message Поле обязательно для заполнения
+      forma.book-section-form
+        .book-section-form__field
+          .text-block
+            .text-field
+              input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington')
+              label.text-field__label(for='firstname') Имя
+              span Поле обязательно для заполнения
+            .text-field
+              input#name(type='text' name='name' value='' placeholder=' Denzel Washington')
+              label.text-field__label(for='name') Фамилия
+              span Поле обязательно для заполнения
+            .form-field
+              .select
+                button.dropdown-button
+                  p._drop-hidden Год рождения
+                  span Год рождения
+                  .form-field__area-svg
+                    svg
+                      use(xlink:href='#arrow-down')
+                ul.dropdown-list
+                  - let count = 1930;
+                  while   count < 2025
+                    li.dropdown-list__item(data-value=count)=count
+                    - count += 1;
+
+          h3 Даты проживания
+          .text-block
+            .form-field
+              input#check-in(type="text" placeholder='Заезд')
+              .form-field__area-svg
+                svg
+                  use(xlink:href='#arrow-down')
+            .form-field
+              input#check-out(type="text" placeholder='Выезд')
+              .form-field__area-svg
+                svg
+                  use(xlink:href='#arrow-down')
+
+
+          .text-block
+            .form-field
+              input(type="text" placeholder='Место проживания')
+              .form-field__area-svg
+                svg
+                  use(xlink:href='#arrow-down')
+
+        .book-section-form__field
+          .book-section-form__title 
+            h3 Гостиничный комплекс
+          .book-section-form-line
+            p Вежливость и корректность персонала?
+            ul.vidjets
+              li
+                svg
+                  use(xlink:href='#Star-1')
+              li
+                svg
+                  use(xlink:href='#Star-1')
+              li
+                svg
+                  use(xlink:href='#Star-1')
+              li
+                svg
+                  use(xlink:href='#Star-1')
+              li
+                svg
+                  use(xlink:href='#Star-1')
+          .book-section-form-line
+            p Скорость и качество поселения, расчета, выселения?
+            ul.vidjets
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-1')
+          .book-section-form-line
+            p Чистота в номере?
+            ul.vidjets
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+          .book-section-form-line
+            p Внешний вид персонала гостиницы?
+            ul.vidjets
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-2')
+              li
+                svg
+                  use(xlink:href='#Star-1')
+          .book-section-form-line
+            p Имеет ли для Вас значение возможность посещение клуба с вашими питомцами?
+            fildset.fildset-switch
+              input(type="radio" id="tieresyes" name='tieres' val='yes' checked)
+              label(for="tieresyes")  Да
+              span /
+              input(type="radio" id="tieresnot" name='tieres' val='not')
+              label(for="tieresnot")  Нет
+          .book-section-form-line.book-section-form-line--text
+            p Ваши предложения / пожелания
+            textarea#form-line(name="form-line"   placeholder="Введите текст")
 
 
 
-        .text-field
-          input#firstname(type='text' name='firstname' value='' )
-          label.text-field__label(for='firstname') Имя
-          span Поле обязательно для заполнения
-        .text-field
-          input#name(type='text' name='name' value='' )
-          label.text-field__label(for='name') Фамилия
-          span Поле обязательно для заполнения
+    //- h2(style='margin: 40px 0 0 0;') инпуту добавлен класс .input_invalid  
+    //- .text-field
+    //-   input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington').input_invalid
+    //-   label.text-field__label(for='firstname' ) Имя
+    //-   span Поле обязательно для заполнения
 
+    //- h2(style='margin: 40px 0 0 0;') инпуту добавлен класс .input_valid   
+    //- .text-field
+    //-   input#firstname(type='text' name='firstname' value="Джек Безз" placeholder=' Denzel Washington').input_valid
+    //-   label.text-field__label(for='firstname') Имя
+    //-   span Спасибо за предоствленную информацию!
 
-
-        .text-field
-          input#firstname(type='text' name='firstname' value='' ).text-field-input_invalid
-          label.text-field__label(for='firstname') Имя
-          span Поле обязательно для заполнения
-        //- .text-field
-        //-   input#name(type='text' name='name' value='' ).text-field-input_invalid
-        //-   label.text-field__label(for='name') Фамилия
-        //-   span Поле обязательно для заполнения
-
-
-
-
-        .text-field
-          input#firstname(type='text' name='firstname' value="Джек Безз" ).text-field-input_valid
-          label.text-field__label(for='firstname') Имя
-          span Спасибо за предоствленную информацию!
-        //- .text-field
-        //-   input#name(type='text' name='name' value='' ).text-field-input_valid
-        //-   label.text-field__label(for='name') Фамилия
-        //-   span Спасибо за предоствленную информацию!
-
-
-
-
-
-
-
-
-
-
-
-
-    //- .book__title 
-    //-   h3 Бронирование
-    //- input(type="text" name="out" placeholder='Заезд')#Anreise
-    //- input(type="text" name="out" placeholder='Выезд')#Ausfart
-    //- #app
-    //-   p Гости
-
-
-    //-   section
-    //-   input#gasts(type="text" placeholder='Количество гостей' v-model= 'message' )
-
-
-    //- a.btn.btn--success.but-wave.book__button(href='#!')
-    //-   p Найти

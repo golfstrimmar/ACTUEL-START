@@ -13,7 +13,7 @@ import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
-// import { Select } from "%modules%/select/select";
+import { Select } from "%modules%/select/select";
 // import { Look } from "%modules%/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
 // import { Popup } from "%modules%/popup/popup";
@@ -98,13 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
   //     MyRange(item);
   //   });
   // }
-  // //   // =======================
-  // const selects = [...document.querySelectorAll(".select-custom")];
-  // if (selects.length > 0) {
-  //   selects.forEach((select) => {
-  //     Select(select);
-  //   });
-  // }
+  // //   // =========Select==============
+  const selects = [...document.querySelectorAll(".select")];
+  if (selects.length > 0) {
+    selects.forEach((select) => {
+      Select(select);
+    });
+  }
 
   //   // =======================
 

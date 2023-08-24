@@ -36,12 +36,13 @@
   resize: none;
 }
 
-.form__item input:focus + label,
-.form__item input:not(:placeholder-shown) + label,
-.form__item input:-webkit-autofill + label,
-.form__item textarea:focus + label,
-.form__item textarea:not(:placeholder-shown) + label,
-.form__item textarea:-webkit-autofill + label {
+.form__item input:focus + label
+// .form__item input:not(:placeholder-shown) + label
+// .form__item input:-webkit-autofill + label,
+// .form__item textarea:focus + label,
+// .form__item textarea:not(:placeholder-shown) + label,
+// .form__item textarea:-webkit-autofill + label
+ {
   transform: translateY(-34px);
 }
 
@@ -66,29 +67,29 @@
 // }
 
 /* ------------------------ */
-.form__item input:focus + label {
-  transform: translateY(-34px);
-}
+// .form__item input:focus + label {
+//   transform: translateY(-34px);
+// }
 
-.form__item textarea:focus + label {
-  transform: translateY(-34px);
-}
+// .form__item textarea:focus + label {
+//   transform: translateY(-34px);
+// }
 
-.form__item input:not(:placeholder-shown) + label {
-  transform: translateY(-34px);
-}
+// .form__item input:not(:placeholder-shown) + label {
+//   transform: translateY(-34px);
+// }
 
-.form__item textarea:not(:placeholder-shown) + label {
-  transform: translateY(-34px);
-}
+// .form__item textarea:not(:placeholder-shown) + label {
+//   transform: translateY(-34px);
+// }
 
-.form__item input:-webkit-autofill + label {
-  transform: translateY(-34px);
-}
+// .form__item input:-webkit-autofill + label {
+//   transform: translateY(-34px);
+// }
 
-.form__item textarea:-webkit-autofill + label {
-  transform: translateY(-34px);
-}
+// .form__item textarea:-webkit-autofill + label {
+//   transform: translateY(-34px);
+// }
 
 /* -------------------------------------- */
 .form__item input::-webkit-input-placeholder,

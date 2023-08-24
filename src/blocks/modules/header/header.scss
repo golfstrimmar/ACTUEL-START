@@ -169,26 +169,7 @@ padding: 5px 10px;
   }
 }
 
-.header-lang {
-  input[type="radio"]:checked + label {
-    color: #5633f5;
-    @include transition;
-    padding: 0 0 0 0;
-  }
-  input[type="radio"]:not(:checked) + label {
-    color: #a7caf7;
-    @include transition;
-    padding: 0 0 0 0;
-  }
-  input[type="radio"]:checked + label:after,
-  input[type="radio"]:checked + label::before,
-  input[type="radio"]:not(:checked) + label:after,
-  input[type="radio"]:not(:checked) + label::before {
-    display: none;
-  }
-  display: flex;
-  column-gap: 5px;
-}
+
 /*=====================*/
 .info {
   display: flex;
