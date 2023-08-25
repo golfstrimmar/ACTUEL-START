@@ -17,11 +17,7 @@
       padding: 0px 20px;
       border-radius: 5px;
       border: solid 1px $greyish;
-      color: $black-two;
-      font-family: "PT Serif", serif;
-      font-size: 26px;
-      font-weight: 400;
-      line-height: 34px; /* 130.769% */
+
       z-index: 2;
       position: relative;
     }
@@ -33,7 +29,7 @@
     .form-field {
       float: left;
       position: relative;
-      max-width: 320px;
+      width: 320px;
       margin: 0 20px 30px 0;
     }
 
@@ -57,13 +53,22 @@
       input:focus {
         background: $focus;
         padding: 30px 20px 8px;
-
+        color: $black-two;
+        font-family: "PT Serif", serif;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 34px; /* 130.769% */
         & ~ label {
           z-index: 4;
           padding-bottom: 30px;
         }
       }
       input:not(:placeholder-shown) {
+        color: $black-two;
+        font-family: "PT Serif", serif;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 34px; /* 130.769% */
         background: $focus;
         padding: 30px 20px 8px;
         & ~ label {
@@ -110,10 +115,15 @@
           & ~ .form-field__area-svg {
             transform: translateY(-50%) rotate(180deg);
           }
-          //   background: $focus;
-          //   &::placeholder {
-          //     opacity: 0;
-          //   }
+        }
+
+        &:not(:placeholder-shown) {
+          color: $black-two;
+          font-family: "PT Serif", serif;
+          font-size: 26px;
+          font-weight: 400;
+          line-height: 34px; /* 130.769% */
+          background: $focus;
         }
       }
       &__area-svg {
@@ -128,7 +138,7 @@
         transform: translateY(-50%);
         @include flex-center;
         @include transition;
-
+        z-index: 2;
         svg {
           width: 13px;
           height: 7px;

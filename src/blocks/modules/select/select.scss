@@ -10,9 +10,13 @@
     padding: 0px 20px;
     border-radius: 5px;
     border: solid 1px $greyish;
+    @include transition;
     &._is-new {
       background: #edf1f7;
       padding: 8px 20px;
+      &~.dropdown-list{
+        top: 74px;
+      }
     }
     ._drop-hidden {
       @include Text-Style-31;
