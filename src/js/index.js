@@ -1,12 +1,12 @@
 import "./import/modules";
 import "./import/components";
-import Vue from "vue";
-import App from "../blocks/modules/rooms/App.vue";
+// import Vue from "vue";
+// import App from "../blocks/modules/rooms/App.vue";
 
-new Vue({
-  el: "#app",
-  render: (h) => h(App),
-});
+// new Vue({
+//   el: "#app",
+//   render: (h) => h(App),
+// });
 
 
 
