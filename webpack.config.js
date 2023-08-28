@@ -1,6 +1,6 @@
 const path = require("path");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
-
+// const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 module.exports = {
   entry: {
     main: "./src/js/index.js",
@@ -24,7 +24,10 @@ module.exports = {
       },
     },
   },
-
+  devServer: {
+    compress: true,
+    port: 8001,
+  },
   module: {
     rules: [
       {
@@ -40,11 +43,12 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: "vue-loader",
+        exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        use: ["vue-style-loader", "css-loader"],
-      },
+       {
+        test: /\.pug$/,
+        loader: 'vue-pug-loader'
+      }
     ],
   },
 
@@ -54,5 +58,5 @@ module.exports = {
       "%components%": path.resolve(__dirname, "src/blocks/components"),
     },
   },
-  plugins: [new VueLoaderPlugin()]
+  plugins: [new VueLoaderPlugin()],
 };

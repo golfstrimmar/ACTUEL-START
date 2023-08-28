@@ -1,13 +1,10 @@
 import "./import/modules";
 import "./import/components";
-// import Vue from "vue";
-// import App from "../blocks/modules/rooms/App.vue";
+import Vue from "vue";
+import { createApp } from "vue";
+import App from "../blocks/modules/rooms/App.vue";
 
-// new Vue({
-//   el: "#app",
-//   render: (h) => h(App),
-// });
-
+createApp(App).mount("#app");
 
 
 
