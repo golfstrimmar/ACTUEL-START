@@ -1,6 +1,5 @@
 import "./import/modules";
 import "./import/components";
-import Vue from "vue";
 import { createApp } from "vue";
 import App from "../blocks/modules/rooms/App.vue";
 

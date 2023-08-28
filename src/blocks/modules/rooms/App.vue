@@ -1,6 +1,5 @@
 <template lang="pug">
-.app
-  section.create-anzahl
+section.create-anzahl
     .create-anzahl__title
       h3 Количество гостей
     form(@submit.prevent)
@@ -43,6 +42,7 @@ const todos = ref([
     content_kinder: content_kinder.value
   }
 ])
+
 
 const incrErwachsene = (todo) => {
   todo.content_erwachsene += 1
