@@ -1,9 +1,13 @@
+
+
+
+
 section(id='book').book.rel
   .container
     .book__title
       h2 Пожалуйста, заполните анкету
 
-    .book-section
+    div.book-section
       forma.book-section-form
         .book-section-form__field
           .text-block
@@ -137,6 +141,11 @@ section(id='book').book.rel
             p Ваши предложения / пожелания
             textarea#form-line(name="form-line"   placeholder="Введите текст")
 
+        .book-section-form__field.book-section-form__field--text
+          p.form-fild-text Благодарим Вас за заполнение анкеты.
+          p.form-fild-text Это поможет сделать ваш отдых именно таким как вы того желаете
+          p.form-fild-text.form-fild-text--green Все пожелания и предложения вы можете сообщить по номеру телефона 
+            a(href="#!") +7 (961)511-66-14
 
 
     //- h2(style='margin: 40px 0 0 0;') инпуту добавлен класс .input_invalid  

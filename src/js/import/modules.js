@@ -14,6 +14,7 @@ import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
 import { Select } from "%modules%/select/select";
+// import { Rooms } from "%modules%/rooms/rooms";
 // import { Look } from "%modules%/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
 // import { Popup } from "%modules%/popup/popup";
@@ -25,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // if (document.querySelector("header")) {
   //   Header();
   // }
-  //   // ===Look=======
-  // if (document.querySelector("video")) {
-  //   Look();
+    // ===Look=======
+  // if (document.querySelector("#app")) {
+    // Rooms();
   // }
 
   //   // =========bunnerSwiper==============
