@@ -30,7 +30,10 @@ a {
   display: inline-block;
   @include transition;
   cursor: pointer;
-  color: rgb(72, 89, 245);
+  color: $jungle-green;
+  &:hover{
+    color: lighten($jungle-green, 25%);
+  }
 }
 
 .imgs {
@@ -84,8 +87,8 @@ a {
 }
 ._hover {
   &:hover {
-    color: lighten(rgba(9, 72, 207), 25%);
-    text-shadow: 0 0  14px white;
+    color: lighten($jungle-green, 25%);
+    // text-shadow: 0 0  14px white;
   }
 }
 /* +++++++++++++++++++++++++++++++++++++ */
