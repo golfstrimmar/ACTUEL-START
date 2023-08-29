@@ -45,10 +45,10 @@ module.exports = {
         loader: "vue-loader",
         exclude: /node_modules/,
       },
-       {
+      {
         test: /\.pug$/,
-        loader: 'vue-pug-loader'
-      }
+        loader: "vue-pug-loader",
+      },
     ],
   },
 
@@ -58,5 +58,5 @@ module.exports = {
       "%components%": path.resolve(__dirname, "src/blocks/components"),
     },
   },
-  plugins: [new VueLoaderPlugin()],
+  plugins: [new VueLoaderPlugin()]
 };

@@ -19,29 +19,24 @@ section(id='book').book.rel
               input#name(type='text' name='name' value='' placeholder=' Denzel Washington')
               label.text-field__label(for='name') Фамилия
               span Поле обязательно для заполнения
-            .form-field
-              .select
-                button.dropdown-button
-                  p._drop-hidden Год рождения
-                  span Год рождения
-                  .form-field__area-svg
-                    svg
-                      use(xlink:href='#arrow-down')
-                ul.dropdown-list
-                  - let count = 1930;
-                  while   count < 2025
-                    li.dropdown-list__item(data-value=count)=count
-                    - count += 1;
+            .form-field.form-field--year
+                span.form-field__span Год рождения
+                #check-year
+                .form-field__area-svg
+                  svg
+                    use(xlink:href='#arrow-down')
 
           h3 Даты проживания
           .text-block
             .form-field
-              input#check-in(type="text" placeholder='Заезд')
+              span.form-field__span Заезд
+              #check-in
               .form-field__area-svg
                 svg
                   use(xlink:href='#arrow-down')
             .form-field
-              input#check-out(type="text" placeholder='Выезд')
+              span.form-field__span Выезд
+              #check-out
               .form-field__area-svg
                 svg
                   use(xlink:href='#arrow-down')

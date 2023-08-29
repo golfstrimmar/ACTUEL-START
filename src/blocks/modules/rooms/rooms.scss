@@ -12,12 +12,13 @@
   }
 
   &__title {
+    margin: 0 0 16px 0;
     &--section {
       margin: 10px 0 0 0;
     }
 
-    h4 {
-      font-family: Arial;
+    h3 {
+      font-family: "Arial-Bold", sans-serif;
       font-size: 18px;
       font-weight: bold;
       line-height: 0.83;
@@ -26,7 +27,7 @@
 
     &--section {
       h4 {
-        font-family: Arial;
+        font-family: "Arial-Bold", sans-serif;
         font-size: 12px;
         font-weight: bold;
         line-height: 2.67;
@@ -37,49 +38,36 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 16px;
     margin: 8px 0 0 0;
   }
 
   &__item {
     position: relative;
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
     p {
-      font-family: Arial;
+      font-family: "Arial-Regular", sans-serif;
       font-size: 12px;
-      line-height: 1.25;
       text-align: left;
+      color: rgba(61, 61, 61, 0.8);
+      font-weight: 400;
+      line-height: 15px; /* 125% */
       color: rgba(61, 61, 61, 0.8);
     }
 
-    input {
-
+    span {
+      position: relative;
       margin: 5px 0 0 0;
-      font-family: Arial;
+      font-family: "Arial-Regular", sans-serif;
       font-size: 21px;
+      font-weight: 400;
       line-height: 1.9;
       color: #3d3d3d;
       border-radius: 3px;
       border: 1px solid rgba(61, 61, 61, 0.38);
-      background: #FFF;
-      text-align: center;
-      transition: all 0.2s ease-in-out;
-      width: 100%;
-      max-height: 40px;
-      cursor: pointer;
-    }
-    span{
-       position: relative;
-       margin: 5px 0 0 0;
-      font-family: Arial;
-      font-size: 21px;
-      line-height: 1.9;
-      color: #3d3d3d;
-      border-radius: 3px;
-      border: 1px solid rgba(61, 61, 61, 0.38);
-      background: #FFF;
+      background: #fff;
       text-align: center;
       transition: all 0.2s ease-in-out;
       width: 100%;
@@ -90,7 +78,7 @@ flex-direction: column;
     button {
       width: 24px;
       height: 24px;
-      color: #006B36;
+      color: #006b36;
       font-size: 20px;
       background-color: rgba(7, 91, 186, 0.09);
       position: absolute;
@@ -110,20 +98,20 @@ flex-direction: column;
     border-radius: 3px;
     background-color: rgba(7, 91, 186, 0.09);
     margin: 10px 0 0 0;
-    font-family: Arial;
+    font-family: "Arial-Regular", sans-serif;
     font-size: 12px;
-    line-height: 1.25;
-    text-align: left;
-    color: rgba(61, 61, 61, 0.8);
+    font-weight: 400;
+    line-height: 1;
+    color: #3d3d3d;
     padding: 5px 0;
     width: 100%;
     text-align: center;
   }
 
   &__button {
-    color: #006B36;
+    color: #006b36;
     text-align: center;
-    font-family: Arial;
+    font-family: "Arial-Regular", sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 15px;
@@ -133,13 +121,13 @@ flex-direction: column;
   }
 
   &__fertig {
-    font-family: Arial;
+    font-family: "Arial-Bold", sans-serif;
     font-size: 14px;
     font-weight: bold;
     line-height: 1.07;
     color: white;
     border-radius: 3px;
-    background: #006B36;
+    background: #006b36;
     display: flex;
     height: 40px;
     justify-content: center;

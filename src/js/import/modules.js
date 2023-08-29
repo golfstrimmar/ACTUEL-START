@@ -1,5 +1,5 @@
 // import { Header } from "%modules%/header/header";
-import { bunnerSwiper } from "%modules%/bunner/bunner";
+// import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
 // import { SideMenu } from "%modules%/side-menu/side-menu";
@@ -14,6 +14,8 @@ import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
 import { Select } from "%modules%/select/select";
+import { FormFields } from "%modules%/book/book";
+
 // import { Rooms } from "%modules%/rooms/rooms";
 // import { Look } from "%modules%/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
@@ -22,19 +24,23 @@ import { Select } from "%modules%/select/select";
 
 
 document.addEventListener("DOMContentLoaded", function () {
+  //   // ==========FormFields=============
+  if (document.querySelector(".form-field")) {
+    FormFields();
+  }
   // =====Header==================
   // if (document.querySelector("header")) {
   //   Header();
   // }
-    // ===Look=======
+  // ===Look=======
   // if (document.querySelector("#app")) {
-    // Rooms();
+  // Rooms();
   // }
 
   //   // =========bunnerSwiper==============
-  if (document.querySelector("#bunner-slider")) {
-    bunnerSwiper();
-  }
+  // if (document.querySelector("#bunner-slider")) {
+  //   bunnerSwiper();
+  // }
   // ========popup===============
   // if (document.querySelector(".popups-init-js")) {
   //   Popup();

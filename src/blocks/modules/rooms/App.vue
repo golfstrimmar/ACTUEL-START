@@ -89,7 +89,8 @@ const removeTodo = (todo) => {
 }
 
 onMounted(() => {
-  todos.value = JSON.parse(localStorage.getItem('todos'))
+  localStorage.setItem('todos', JSON.stringify(todos.value))
+  // todos.value = JSON.parse(localStorage.getItem('todos'))
 })
 
 
