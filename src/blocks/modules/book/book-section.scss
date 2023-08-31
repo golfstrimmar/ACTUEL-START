@@ -25,15 +25,52 @@
         }
       }
     }
+
     input {
       min-height: 51px;
-      padding: 0px 20px;
-      border-radius: 5px;
-      border: solid 1px $greyish;
 
       z-index: 2;
       position: relative;
+      background: transparent;
+      border: none;
+      transition: all 0.2s;
+      &::placeholder {
+        opacity: 0;
+      }
+      & ~ div {
+        display: none;
+      }
+      & ~ svg {
+        display: none;
+      }
+      &:focus {
+        // background: $focus;
+        padding: 30px 20px 8px;
+        color: $black-two;
+        font-family: "PT Serif", serif;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 34px;
+        & ~ label {
+          z-index: 4;
+          padding-bottom: 30px;
+        }
+      }
+      &:not(:placeholder-shown) {
+        color: $black-two;
+        font-family: "PT Serif", serif;
+        font-size: 26px;
+        font-weight: 400;
+        line-height: 34px;
+        // background: $focus;
+        padding: 30px 20px 8px;
+        & ~ label {
+          z-index: 4;
+          padding-bottom: 30px;
+        }
+      }
     }
+
     .text-block {
       display: table;
     }
@@ -44,16 +81,15 @@
       position: relative;
       width: 320px;
       margin: 0 20px 30px 0;
+      min-height: 51px;
+      border: solid 1px #b4b4b4;
+      border-radius: 5px;
     }
 
+    // ==================text-field======================
     .text-field {
       &:last-of-type {
         margin: 0 0 0 0;
-      }
-      input {
-        &::placeholder {
-          opacity: 0;
-        }
       }
       label {
         position: absolute;
@@ -64,32 +100,6 @@
         @include Text-Style-31;
         z-index: 2;
       }
-      input:focus {
-        background: $focus;
-        padding: 30px 20px 8px;
-        color: $black-two;
-        font-family: "PT Serif", serif;
-        font-size: 26px;
-        font-weight: 400;
-        line-height: 34px; /* 130.769% */
-        & ~ label {
-          z-index: 4;
-          padding-bottom: 30px;
-        }
-      }
-      input:not(:placeholder-shown) {
-        color: $black-two;
-        font-family: "PT Serif", serif;
-        font-size: 26px;
-        font-weight: 400;
-        line-height: 34px; /* 130.769% */
-        background: $focus;
-        padding: 30px 20px 8px;
-        & ~ label {
-          z-index: 4;
-          padding-bottom: 30px;
-        }
-      }
 
       span {
         position: absolute;
@@ -99,7 +109,11 @@
         display: inline-block;
         @include Text-Style-32;
       }
-
+      ._check {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
       .input_invalid {
         border: solid 1px #ff0000;
         & ~ label ~ span {
@@ -118,70 +132,30 @@
         }
       }
     }
+
+    // =================form-field=======================
+
     .form-field {
       position: relative;
-      border-radius: 5px;
-      border: solid 1px #b4b4b4;
-      @include flex-aligne-center;
-      &--year{
-        max-width: 230px;
-      }
-      #check-in,#check-out,#check-year {
+      box-sizing: content-box;
+      @include flex-column;
+      ._check {
         width: 100%;
         height: 100%;
         position: relative;
       }
-      &._is-active {
-        background: $focus;
-        color: $black-two;
-        font-family: "PT Serif", serif;
-        font-size: 26px;
-        font-weight: 400;
-        line-height: 34px; /* 130.769% */
-        input {
-          padding: 30px 20px 8px;
-        }
-        span.form-field__span {
-          z-index: 20;
-          padding-bottom: 30px;
-        }
-        .form-field__area-svg {
-          z-index: 20;
-          transform: translateY(calc(-50% - 15px)) rotate(180deg);
-        }
-      }
-      &._is-vertig {
-        background: $focus;
-      }
+     
 
-      input {
-        background: transparent;
-        border: none;
-        & ~ div {
-          display: none;
-        }
-        & ~ svg {
-          display: none;
-        }
 
-        &:not(:placeholder-shown) {
-          color: $black-two;
-          font-family: "PT Serif", serif;
-          font-size: 26px;
-          font-weight: 400;
-          line-height: 34px; /* 130.769% */
-          background: $focus;
-          padding: 30px 20px 8px;
-        }
-      }
+
       span.form-field__span {
         z-index: -20;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: 20px;
         @include Text-Style-31;
-        transition: all .5s;
+        transition: all 0.2s;
+        padding: 0 0 0 20px;
       }
       &__area-svg {
         z-index: -20;
@@ -195,13 +169,26 @@
         background-color: #eee;
         transform: translateY(-50%);
         @include flex-center;
-        transition: all .4s;
+        transition: all 0.2s;
         svg {
           width: 13px;
           height: 7px;
         }
       }
+      input {
+        border: none;
+      }
+      input:not(:placeholder-shown) {
+        padding: 7px 13px;
+      }
+       &--year {
+        max-width: 230px;
+         input:not(:placeholder-shown) {
+          padding: 7px 20px;
+        }
+      }
     }
+
     &-line {
       @include flex-aligne-center;
       margin: 43px 0 0 0;

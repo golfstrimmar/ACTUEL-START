@@ -15,13 +15,18 @@ section(id='book').book.rel
               input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington')
               label.text-field__label(for='firstname') Имя
               span Поле обязательно для заполнения
-            .text-field
-              input#name(type='text' name='name' value='' placeholder=' Denzel Washington')
-              label.text-field__label(for='name') Фамилия
-              span Поле обязательно для заполнения
+            //- .text-field
+            //-   input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington').input_invalid
+            //-   label.text-field__label(for='firstname' ) Имя
+            //-   span Поле обязательно для заполнения
+            //- .text-field
+            //-   input#firstname(type='text' name='firstname' value="Джек Безз" placeholder=' Denzel Washington').input_valid
+            //-   label.text-field__label(for='firstname') Имя
+            //-   span Спасибо за предоствленную информацию!
+            
             .form-field.form-field--year
                 span.form-field__span Год рождения
-                #check-year
+                #check-year._check
                 .form-field__area-svg
                   svg
                     use(xlink:href='#arrow-down')
@@ -30,13 +35,13 @@ section(id='book').book.rel
           .text-block
             .form-field
               span.form-field__span Заезд
-              #check-in
+              #check-in._check
               .form-field__area-svg
                 svg
                   use(xlink:href='#arrow-down')
             .form-field
               span.form-field__span Выезд
-              #check-out
+              #check-out._check
               .form-field__area-svg
                 svg
                   use(xlink:href='#arrow-down')

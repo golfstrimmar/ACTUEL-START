@@ -13,7 +13,7 @@
 // import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
-import { Select } from "%modules%/select/select";
+// import { Select } from "%modules%/select/select";
 import { FormFields } from "%modules%/book/book";
 
 // import { Rooms } from "%modules%/rooms/rooms";
@@ -106,12 +106,12 @@ document.addEventListener("DOMContentLoaded", function () {
   //   });
   // }
   // //   // =========Select==============
-  const selects = [...document.querySelectorAll(".select")];
-  if (selects.length > 0) {
-    selects.forEach((select) => {
-      Select(select);
-    });
-  }
+  // const selects = [...document.querySelectorAll(".select")];
+  // if (selects.length > 0) {
+  //   selects.forEach((select) => {
+  //     Select(select);
+  //   });
+  // }
 
   //   // =======================
 
