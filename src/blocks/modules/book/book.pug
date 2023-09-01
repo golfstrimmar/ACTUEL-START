@@ -11,14 +11,14 @@ section(id='book').book.rel
               input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington')
               label.text-field__label(for='firstname') Имя Фамилия
               span Поле обязательно для заполнения
-            //- .text-field
-            //-   input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington').input_invalid
-            //-   label.text-field__label(for='firstname' ) Имя
-            //-   span Поле обязательно для заполнения
-            //- .text-field
-            //-   input#firstname(type='text' name='firstname' value="Джек Безз" placeholder=' Denzel Washington').input_valid
-            //-   label.text-field__label(for='firstname') Имя
-            //-   span Спасибо за предоствленную информацию!
+            .text-field
+              input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington').input_invalid
+              label.text-field__label(for='firstname' ) .input_invalid
+              span Поле обязательно для заполнения
+            .text-field
+              input#firstname(type='text' name='firstname' value="Джек Безз" placeholder=' Denzel Washington').input_valid
+              label.text-field__label(for='firstname') .input_valid
+              span Спасибо за предоствленную информацию!
             
             //- .form-field.form-field--year
             //-     span.form-field__span Год рождения

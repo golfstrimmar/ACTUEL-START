@@ -3,29 +3,29 @@
     h3 Основания для выбора клуба
   .field--body
       .book-section-form-column
-        ul
-            li.form-check
+        .fildset-checkbox
+            .form-check
               input#cb1(type='checkbox')
               label(for='cb1') Любимое место
-            li.form-check
+            .form-check
               input#cb2(type='checkbox')
               label(for='cb2') Месторасположение
-            li.form-check
+            .form-check
               input#cb3(type='checkbox')
               label(for='cb3') Гость торжественного события
-            li.form-check
+            .form-check
               input#cb4(type='checkbox')
               label(for='cb4') Корпоративные мероприятия
-            li.form-check
+            .form-check
               input#cb5(type='checkbox')
               label(for='cb5') СПА комплекс
-            li.form-check
+            .form-check
               input#cb6(type='checkbox')
               label(for='cb6') Конный клуб
-            li.form-check
+            .form-check
               input#cb7(type='checkbox')
               label(for='cb7') Сервис
-            li.form-check
+            .form-check
               input#cb8(type='checkbox')
               label(for='cb8') Ресторан
         .book-section-form-line.book-section-form-line--text
@@ -35,7 +35,7 @@
       .book-section-form-column
         .form-column-title 
           h3 Укажите Ваш возраст
-        fildset.fildset-switch.fildset-switch--age
+        fildset.fildset-radio.fildset-radio--age
             .form-check
               input(type="radio" id="age1" name='age' val='16-25' checked)
               label(for="age1")  от 16-25
@@ -50,7 +50,7 @@
               label(for="age4")  от 45 и старше
         .form-column-title 
           h3 Ваш пол
-        fildset.fildset-switch.fildset-switch--sex
+        fildset.fildset-radio.fildset-radio--sex
             .form-check
               input(type="radio" id="man" name='sex' val='36-45')
               label(for="man")  Мужчина

@@ -6,11 +6,13 @@
   flex-direction: column;
 }
 
-// body {
+body {
 //   font-family: 'PT Serif', serif;
 //   @include Text-Style-25;
 //   background:rgb(225, 228, 250);
-// }
+background-color: $white;
+}
+
 
 .container {
   // outline: 1px solid #4164ff;

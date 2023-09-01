@@ -34,7 +34,7 @@
     }
 
     input {
-      min-height: 50px;
+      
       z-index: 5;
       &:not(:placeholder-shown) {
         padding: 30px 20px 8px;
@@ -64,13 +64,13 @@
       float: left;
       position: relative;
       margin: 0 20px 30px 0;
-      min-height: 50px;
-      border: solid 1px #b4b4b4;
-      border-radius: 5px;
+      
+      // border: solid 1px #b4b4b4;
+      // border-radius: 5px;
       @include transition;
       &:hover {
-        color: lighten($jungle-green, 25%);
-        border: solid 1px lighten($jungle-green, 25%);
+        // color: lighten($jungle-green, 25%);
+        // border: solid 1px lighten($jungle-green, 25%);
         label,
         p,
         button p {
@@ -88,14 +88,20 @@
     }
     .form-field {
       width: 182px;
+
       &:last-child {
         min-width: 320px;
       }
     }
     // ==================text-field======================
     .text-field {
+      border: none;
+      // min-height: 52px;
       &:last-of-type {
         margin: 0 0 0 0;
+      }
+      input{
+        min-height: 52px;
       }
       label {
         position: absolute;
@@ -121,36 +127,24 @@
         height: 100%;
         position: relative;
       }
-      .input_invalid {
-        border: solid 1px #ff0000;
-        & ~ label ~ span {
-          color: #ff0000;
-        }
-      }
-
-      .input_valid {
-        border: solid 1px $viridian;
-        padding-top: 30px;
-        & ~ label {
-          padding-bottom: 30px;
-        }
-        & ~ label ~ span {
-          color: $viridian;
-        }
-      }
     }
 
     // =================form-field=======================
 
     .form-field {
+      min-height: 50px;
       position: relative;
       box-sizing: content-box;
       @include transition;
       @include flex-column;
       padding: 0 0 0 20px;
-
+      border: solid 1px #b4b4b4;
+      border-radius: 5px;
       &._is-active {
         min-height: 75px;
+      }
+      &:hover{
+        border: solid 1px lighten($jungle-green, 25%);
       }
       ._check {
         width: 100%;
@@ -158,6 +152,7 @@
         position: relative;
       }
       input {
+        min-height: 50px;
         border: none;
         padding: 0 0 0 0;
         @include transition;
