@@ -18,9 +18,16 @@
   }
 }
 @mixin transition {
-  transition: all 0.2s;
+  transition: all .2s;
 }
 // =======================================
+@mixin Text-Style-38 {
+  font-family: Arial;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  color: $jungle-green;
+}
 
 @mixin Text-Style-12 {
   font-family: "PT Serif", serif;
@@ -55,6 +62,7 @@
   font-size: 20px;
   font-weight: 500;
   color: $jungle-green;
+  letter-spacing: .001rem;
 }
 
 @mixin Text-Style-31 {
@@ -67,7 +75,7 @@
 }
 
 @mixin Text-Style-32 {
-  font-family: "PT Serif", serif;
+  font-family: PT Sans;
   font-weight: 400;
   font-size: 14px;
   color: $black-two;

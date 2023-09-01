@@ -1,0 +1,84 @@
+.book-section-form__field--info {
+  .field--body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0 0 0;
+    column-gap: 28px;
+  }
+}
+.book-section-form-column {
+  &:last-child {
+    margin: -10px 0 0 0;
+  }
+  .form-column-title {
+    h3 {
+      @include Text-Style-33;
+      margin: 0 0 0 0;
+    }
+    margin: 0 0 21px 0;
+  }
+  .form-check {
+    @include flex-aligne-center;
+    margin: 0 0 30px 0;
+    position: relative;
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+    input[type="checkbox"]:not(:checked) + label::before {
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      border: solid 2.4px #bababa;
+      background-color: $white;
+    }
+    input[type="checkbox"]:checked + label::before {
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      background-color: $white;
+      border: solid 2px $dark-sea-green;
+    }
+
+    input[type="checkbox"]:checked + label::after,
+    input[type="checkbox"]:not(:checked) + label::after {
+      width: 14px;
+      height: 14px;
+      border-radius: 100%;
+      top: 0;
+      left: 0;
+      transform: translate(6px, 6px);
+      border: solid 2px $jungle-green;
+      background-color: $jungle-green;
+    }
+    input[type="checkbox"]:checked + label::after {
+      opacity: 1;
+    }
+    input[type="checkbox"]:not(:checked) + label::after {
+      opacity: 0;
+    }
+    input[type="checkbox"] + label {
+      @include Text-Style-36;
+      padding: 0 0 0 46px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1259px) {
+.book-section-form-column:last-child {
+  margin: -10px 0 0 -235px;
+}
+}
+@media (max-width: 767px) {
+ 
+.book-section-form__field--info .field--body {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 30px 0 0 0;
+  column-gap: 0px;
+  row-gap: 30px;
+}
+.book-section-form-column:last-child {
+  margin: -42px 0 0 0;
+}
+}

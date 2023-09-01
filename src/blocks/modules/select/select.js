@@ -28,7 +28,7 @@ export const Select = (select) => {
           e.stopPropagation();
           $button.querySelector("span").innerHTML = item.innerHTML;
           $button.querySelector("span").classList.add("_is-new");
-          $dropHidden.classList.add("_is-active");
+          // $dropHidden.classList.add("_is-active");
           $button.classList.add("_is-new");
           $list.classList.remove("_is-active");
           $button.classList.remove("dropdown-button-active");

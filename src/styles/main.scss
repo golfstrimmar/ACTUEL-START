@@ -13,7 +13,7 @@
 @import "base/sliders-swiper";
 @import "base/colors";
 @import "base/inputs";
-@import "vendor/datapicker";
+// @import "vendor/datapicker";
 @import "base/fildset-switch";
 // @import "../../node_modules/@vuepic/vue-datepicker/dist/main.css";
 
@@ -21,15 +21,18 @@
 
 
 // БЭМ-components
-// @import "../blocks/components/btn/btn";
+@import "base/btn";
 // @import "../blocks/components/btn-wave/btn-wave";
-// @import "../blocks/components/btn-empty/btn-empty";
+@import "base/btn-empty";
 
 // БЭМ-modules
 // @import "../blocks/modules/header/header";
 @import "../blocks/modules/shild/shild";
-@import "../blocks/modules/book/book";
+// @import "../blocks/modules/book/book";
 @import "../blocks/modules/book/book-section";
+@import "../blocks/modules/book/info";
+@import "../blocks/modules/book/choise";
+@import "../blocks/modules/book/contacts";
 @import "../blocks/modules/rooms/rooms";
 // @import "../blocks/modules/bunner/bunner";
 // @import "../blocks/modules/bunner/bunner-slider";
@@ -50,7 +53,7 @@
 // @import "../blocks/modules/slider-full/slider-full";
 // @import "../blocks/modules/slider-double/sdouble";
 // @import "../blocks/modules/slider-scroll/slider-scroll";
-// @import "../blocks/modules/select/select";
+@import "../blocks/modules/select/select";
 // @import "../blocks/modules/form/form";
 // @import "../blocks/modules/typed/typedHover";
 

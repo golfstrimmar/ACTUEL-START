@@ -1,7 +1,3 @@
-
-
-
-
 section(id='book').book.rel
   .container
     .book__title
@@ -13,7 +9,7 @@ section(id='book').book.rel
           .text-block
             .text-field
               input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington')
-              label.text-field__label(for='firstname') Имя
+              label.text-field__label(for='firstname') Имя Фамилия
               span Поле обязательно для заполнения
             //- .text-field
             //-   input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington').input_invalid
@@ -24,125 +20,57 @@ section(id='book').book.rel
             //-   label.text-field__label(for='firstname') Имя
             //-   span Спасибо за предоствленную информацию!
             
-            .form-field.form-field--year
-                span.form-field__span Год рождения
-                #check-year._check
-                .form-field__area-svg
-                  svg
-                    use(xlink:href='#arrow-down')
+            //- .form-field.form-field--year
+            //-     span.form-field__span Год рождения
+            //-     #check-year._check
+            //-     .form-field__area-svg
+            //-       svg
+            //-         use(xlink:href='#arrow-down')
 
-          h3 Даты проживания
           .text-block
             .form-field
-              span.form-field__span Заезд
               #check-in._check
               .form-field__area-svg
                 svg
                   use(xlink:href='#arrow-down')
             .form-field
-              span.form-field__span Выезд
               #check-out._check
               .form-field__area-svg
                 svg
                   use(xlink:href='#arrow-down')
+            .form-field.form-field--select
+              .select
+                button.dropdown-button
+                  p Место проживания
+                  span 
+                  .form-field__area-svg
+                    svg
+                      use(xlink:href='#arrow-down')
+                ul.dropdown-list
+                  -
+                    var blocks = [
+                      {text: 'коттеджи 2-х местные' },
+                      {text: 'дом Лесника' },
+                      {text: 'дом Охотника' },
+                      {text: 'дом Рыбака №1' },
+                      {text: 'дом Рыбака №2' },
+                      {text: 'отель "Усадьба Фамилия"' },
+                      {text: 'гостиница с зоной барбекю' },
+                      {text: 'гостиница "Lafe-арена"' },
+                      {text: 'SPA-отель' },
+                      {text: 'VIP отель' },
+                      {text: 'VIP дом №1' },
+                      {text: 'VIP дом №2' },
+                      {text: 'VIP дом №3' },
+                    ];
+                  each block in blocks
+                    li.dropdown-list__item(data-value=block.text)=block.text
 
-
-          .text-block
-            .form-field
-              input(type="text" placeholder='Место проживания')
-              .form-field__area-svg
-                svg
-                  use(xlink:href='#arrow-down')
-
-        .book-section-form__field
-          .book-section-form__title 
-            h3 Гостиничный комплекс
-          .book-section-form-line
-            p Вежливость и корректность персонала?
-            ul.vidjets
-              li
-                svg
-                  use(xlink:href='#Star-1')
-              li
-                svg
-                  use(xlink:href='#Star-1')
-              li
-                svg
-                  use(xlink:href='#Star-1')
-              li
-                svg
-                  use(xlink:href='#Star-1')
-              li
-                svg
-                  use(xlink:href='#Star-1')
-          .book-section-form-line
-            p Скорость и качество поселения, расчета, выселения?
-            ul.vidjets
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-1')
-          .book-section-form-line
-            p Чистота в номере?
-            ul.vidjets
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-          .book-section-form-line
-            p Внешний вид персонала гостиницы?
-            ul.vidjets
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-2')
-              li
-                svg
-                  use(xlink:href='#Star-1')
-          .book-section-form-line
-            p Имеет ли для Вас значение возможность посещение клуба с вашими питомцами?
-            fildset.fildset-switch
-              input(type="radio" id="tieresyes" name='tieres' val='yes' checked)
-              label(for="tieresyes")  Да
-              span /
-              input(type="radio" id="tieresnot" name='tieres' val='not')
-              label(for="tieresnot")  Нет
-          .book-section-form-line.book-section-form-line--text
-            p Ваши предложения / пожелания
-            textarea#form-line(name="form-line"   placeholder="Введите текст")
-
+        include ./info.pug
+        include ./choise.pug
+        include ./contacts.pug
         .book-section-form__field.book-section-form__field--text
-          p.form-fild-text Благодарим Вас за заполнение анкеты.
+          p.form-fild-text Благодарим Вас <br class='_sm-visible'> за заполнение анкеты.
           p.form-fild-text Это поможет сделать ваш отдых именно таким как вы того желаете
           p.form-fild-text.form-fild-text--green Все пожелания и предложения вы можете сообщить по номеру телефона 
             a(href="#!") +7 (961)511-66-14

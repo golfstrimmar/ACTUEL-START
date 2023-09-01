@@ -4,6 +4,7 @@
   @include flex-center;
   cursor: pointer;
   @include transition;
+  display: inline-block;
 }
 
 .btn--success {
@@ -11,9 +12,9 @@
   border-radius: 10px;
   border: solid 1px $white-16;
   background-color: $jungle-green;
-  p {
-    @include Text-Style-29;
-  }
+  // p {
+  //   @include Text-Style-29;
+  // }
   &:hover {
     box-shadow: 0 6px 10px lighten($jungle-green, 60%),
       inset 0 0 15px rgba(255, 255, 255, 1);

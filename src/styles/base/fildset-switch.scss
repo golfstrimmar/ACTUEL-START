@@ -1,28 +1,95 @@
 .fildset-switch {
-  @include flex-aligne-center;
-  input[type="radio"]:checked + label {
-    color: $jungle-green;
-    @include transition;
-    @include Text-Style-34;
-    padding: 0 0 0 0;
+  &--tiers {
+    @include flex-aligne-center;
+    input[type="radio"]:checked + label {
+      color: $jungle-green;
+      @include transition;
+      @include Text-Style-34;
+      padding: 0 0 0 0;
+    }
+    input[type="radio"]:not(:checked) + label {
+      @include transition;
+      @include Text-Style-35;
+      padding: 0 0 0 0;
+    }
+    input[type="radio"]:checked + label:after,
+    input[type="radio"]:checked + label::before,
+    input[type="radio"]:not(:checked) + label:after,
+    input[type="radio"]:not(:checked) + label::before {
+      display: none;
+    }
+    @include flex-aligne-center;
+    span {
+      @include Text-Style-35;
+    }
+    input {
+      position: fixed !important;
+    }
+    column-gap: 5px;
   }
-  input[type="radio"]:not(:checked) + label {
-    @include transition;
-    @include Text-Style-35;
-    padding: 0 0 0 0;
+
+  &--age,
+  &--sex {
+    @include flex-column;
+    align-items: flex-start;
+
+    input[type="radio"]:checked + label,
+    input[type="radio"]:not(:checked) + label {
+      opacity: 1;
+      @include Text-Style-36;
+      padding: 0 0 0 46px;
+      line-height: 26px;
+    }
   }
-  input[type="radio"]:checked + label:after,
-  input[type="radio"]:checked + label::before,
-  input[type="radio"]:not(:checked) + label:after,
-  input[type="radio"]:not(:checked) + label::before {
-    display: none;
+  &--age {
+    margin: 0 0 19px 0;
   }
-  
-  span {
-    @include Text-Style-35;
+  &--sex {
+    input[type="radio"]:not(:checked) + label::before {
+      border-radius: 5px;
+    }
+    input[type="radio"]:checked + label::before,
+    input[type="radio"]:not(:checked) + label::before {
+      border-radius: 5px;
+    }
+
+    input[type="radio"]:checked + label:after,
+    input[type="radio"]:not(:checked) + label:after {
+      display: none;
+    }
+    input[type="radio"]:checked + label + svg,
+    input[type="radio"]:not(:checked) + label + svg {
+      display: inline-block !important;
+      width: 14px;
+      transform: translate(6px, 6px);
+      height: 14px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include transition;
+    }
+    input[type="radio"]:checked + label + svg {
+      opacity: 1;
+    }
+    input[type="radio"]:not(:checked) + label + svg {
+      opacity: 0;
+    }
   }
-  input{
-    position: fixed!important;
+}
+
+@media (max-width: 767px) {
+  .book-section-form-column {
+    .fildset-switch--sex {
+      // display: flex;
+      // flex-direction: row;
+      // align-items: flex-start;
+      display: grid;
+      grid-template-columns:  repeat(auto-fill, 170px) ;
+      column-gap: 10px;
+      row-gap: 20px;
+      .form-check {
+        margin: 0 0 0 0;
+      }
+    }
   }
-  column-gap: 5px;
 }

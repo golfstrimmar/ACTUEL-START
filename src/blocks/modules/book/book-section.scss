@@ -1,23 +1,30 @@
-.book-section {
-  &__form {
+.book {
+  &__title {
+    margin: 24px 0 19px 0;
+    h2 {
+      @include Text-Style-12;
+    }
   }
+}
 
-  // ==================
-  .book-section-form {
+.book-section {
+  &-form {
     h3 {
-      @include Text-Style-33;
+      @include Text-Style-37;
       margin: 18px 0 20px 0;
     }
 
     &__field {
-      padding: 40px 0 60px 0;
+      padding: 40px 0 27px 0;
       border-top: 1px solid $white-three;
       &--text {
+        margin: 93px 0 193px 0;
         .form-fild-text {
           @include Text-Style-25;
-          margin: 0 0 5px 0;
+          margin: 0 0 18px 0;
           &--green {
             @include Text-Style-26;
+            margin: -6px 0 0 0;
           }
           a {
             margin: 10px 0 0 0;
@@ -27,13 +34,11 @@
     }
 
     input {
-      min-height: 51px;
-
-      z-index: 2;
-      position: relative;
-      background: transparent;
-      border: none;
-      transition: all 0.2s;
+      min-height: 50px;
+      z-index: 5;
+      &:not(:placeholder-shown) {
+        padding: 30px 20px 8px;
+      }
       &::placeholder {
         opacity: 0;
       }
@@ -43,49 +48,50 @@
       & ~ svg {
         display: none;
       }
-      &:focus {
-        // background: $focus;
-        padding: 30px 20px 8px;
-        color: $black-two;
-        font-family: "PT Serif", serif;
-        font-size: 26px;
-        font-weight: 400;
-        line-height: 34px;
-        & ~ label {
-          z-index: 4;
-          padding-bottom: 30px;
-        }
-      }
-      &:not(:placeholder-shown) {
-        color: $black-two;
-        font-family: "PT Serif", serif;
-        font-size: 26px;
-        font-weight: 400;
-        line-height: 34px;
-        // background: $focus;
-        padding: 30px 20px 8px;
-        & ~ label {
-          z-index: 4;
-          padding-bottom: 30px;
-        }
-      }
     }
 
     .text-block {
       display: table;
+      width: 100%;
+      margin: 0 0 58px 0;
+      &:last-child {
+        margin: 0 0 0 0;
+      }
     }
 
     .text-field,
     .form-field {
       float: left;
       position: relative;
-      width: 320px;
       margin: 0 20px 30px 0;
-      min-height: 51px;
+      min-height: 50px;
       border: solid 1px #b4b4b4;
       border-radius: 5px;
+      @include transition;
+      &:hover {
+        color: lighten($jungle-green, 25%);
+        border: solid 1px lighten($jungle-green, 25%);
+        label,
+        p,
+        button p {
+          color: lighten($jungle-green, 25%);
+        }
+        .form-field__area-svg {
+          background: lighten($jungle-green, 45%);
+        }
+      }
     }
-
+    .text-field {
+      // min-width: 320px;
+      width: 100%;
+      max-width: 320px;
+    }
+    .form-field {
+      width: 182px;
+      &:last-child {
+        min-width: 320px;
+      }
+    }
     // ==================text-field======================
     .text-field {
       &:last-of-type {
@@ -108,6 +114,7 @@
         left: 0;
         display: inline-block;
         @include Text-Style-32;
+        opacity: 0.5;
       }
       ._check {
         width: 100%;
@@ -138,25 +145,40 @@
     .form-field {
       position: relative;
       box-sizing: content-box;
+      @include transition;
       @include flex-column;
+      padding: 0 0 0 20px;
+
+      &._is-active {
+        min-height: 75px;
+      }
       ._check {
         width: 100%;
         height: 100%;
         position: relative;
       }
-     
-
-
-
-      span.form-field__span {
-        z-index: -20;
+      input {
+        border: none;
+        padding: 0 0 0 0;
+        @include transition;
+      }
+      input:not(:placeholder-shown) {
+        min-height: 0;
+        opacity: 1;
+        margin: 29px 0 10px;
+      }
+      p {
+        @include Text-Style-31;
+        @include transition;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        @include Text-Style-31;
-        transition: all 0.2s;
-        padding: 0 0 0 20px;
+        transform: translateY(-153%);
+        z-index: -20;
+        &._empty-data {
+          transform: translateY(-50%);
+        }
       }
+
       &__area-svg {
         z-index: -20;
         position: absolute;
@@ -175,70 +197,85 @@
           height: 7px;
         }
       }
-      input {
-        border: none;
-      }
-      input:not(:placeholder-shown) {
-        padding: 7px 13px;
-      }
-       &--year {
-        max-width: 230px;
-         input:not(:placeholder-shown) {
-          padding: 7px 20px;
-        }
-      }
-    }
-
-    &-line {
-      @include flex-aligne-center;
-      margin: 43px 0 0 0;
-      p {
-        @include Text-Style-36;
-        margin: 0 20px 0 0;
-        white-space: nowrap;
-      }
-      .vidjets {
-        @include flex-aligne-center;
-        column-gap: 5px;
-      }
-      svg {
-        width: 30px;
-        height: 30px;
-      }
-      &--text {
-        flex-direction: column;
-        align-items: flex-start;
-        textarea {
-          margin: 10px 0 0 0;
-          max-height: 86px;
-          padding: 15px 20px;
-          border-radius: 5px;
-          border: solid 1px $greyish;
-          background-color: $white;
-          @include Text-Style-32;
-          &::placeholder {
-            @include transition;
+      &--select {
+        min-width: 320px;
+        padding: 0 0 0 0;
+        .dropdown-button {
+          min-width: 320px;
+          min-height: 48px;
+          p {
             @include Text-Style-31;
-          }
-          &:focus {
-            background: $focus;
-            &::placeholder {
-              opacity: 0;
-            }
-          }
-          &:not(:placeholder-shown) {
-            background: $focus;
-            &::placeholder {
-              opacity: 0;
-            }
+            position: relative;
+            transform: translateY(0);
           }
         }
       }
+      // &--year {
+      //   max-width: 230px;
+      //   input:not(:placeholder-shown) {
+      //     padding: 7px 20px;
+      //   }
+      // }
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 833px) {
+  .book-section-form .text-field,
+  .book-section-form .form-field {
+    clear: both;
+  }
+}
+
+@media (max-width: 767px) {
+  .book {
     &__title {
-      h3 {
-        @include Text-Style-37;
-      }
+      display: none;
     }
+  }
+  .book-section-form .form-field {
+    width: calc(100% - 20px);
+    max-width: 330px;
+  }
+  .book-section-form__field {
+    padding: 33px 0 42px 0;
+    border-top: none;
+  }
+  .book-section-form__field--text .form-fild-text:first-child {
+    padding: 0 20px;
+  }
+  .book-section-form .text-field {
+    width: 100%;
+    max-width: 350px;
+  }
+  .book-section-form .text-field,
+  .book-section-form .form-field {
+    margin: 0 20px 16px 0;
+  }
+  .book-section-form .form-field:last-child {
+    width: 100%;
+    max-width: 350px;
+    min-width: 0;
+  }
+  .book-section-form .form-field--select .dropdown-button {
+    max-width: 350px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .book-section-form__field--text {
+    margin: 50px 0 12px 0;
+    border-top: 1px solid #d4d4d4;
+    padding: 91px 0 42px 0;
+  }
+  .book-section-form__field--text .form-fild-text {
+    line-height: 29px;
+    &--green {
+      margin: 19px 0 0 0;
+      line-height: 22px;
+    }
+  }
+  .book-section-form__field--text .form-fild-text a {
+    margin: 0px 0 0 0;
   }
 }
