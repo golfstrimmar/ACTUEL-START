@@ -41,10 +41,10 @@
 // БЭМ-modules
 @import "../blocks/modules/header/header";
 @import "../blocks/modules/bunner/bunner";
-// @import "../blocks/modules/bunner/bunner-slider";
-// @import "../blocks/modules/do/do";
-// @import "../blocks/modules/wk/wk";
-// @import "../blocks/modules/marque/marque";
+@import "../blocks/modules/bunner/bunner-slider";
+@import "../blocks/modules/do/do";
+@import "../blocks/modules/wk/wk";
+@import "../blocks/modules/marque/marque";
 
 // @import "../blocks/modules/tab/tab";
 @import "../blocks/modules/side-menu/side-menu";
@@ -64,4 +64,4 @@
 // @import "../blocks/modules/typed/typedHover";
 
 // @import "../blocks/modules/footer/footer";
-// @import "../blocks/modules/popup/popup";
+@import "../blocks/modules/popup/popup";

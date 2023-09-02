@@ -1,12 +1,12 @@
 import { Header } from "%modules%/header/header";
-// import { bunnerSwiper } from "%modules%/bunner/bunner";
+import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
 // import { SideMenu } from "%modules%/side-menu/side-menu";
 // import { CasesInit } from "%modules%/cases/cases";
 // import { GalleryInit } from "%modules%/galery/galery";
 // import { GalCases } from "%modules%/galCases/galCases";
-// import { Marque } from "%modules%/marque/marque";
+import { Marque } from "%modules%/marque/marque";
 // import { Swiperwk } from "%modules%/wk/wk";
 // import { Swiper1 } from "%modules%/swiper-1/swiper-1";
 // import { SwiperFull } from "%modules%/slider-full/slider-full";
@@ -20,14 +20,10 @@ import { Look } from "%modules%/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
 import { Popup } from "%modules%/popup/popup";
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
- alert("");
- 
   // =====Look==================
-  if (document.querySelector("#look")) {
-  Look();
+  if (document.querySelector("video")) {
+    Look();
   }
 
   // =====Header==================
@@ -35,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     Header();
   }
 
-  //   // =========bunnerSwiper==============
-  // if (document.querySelector("#bunner-slider")) {
-  //   bunnerSwiper();
-  // }
+  //   // =========bunner slider==============
+  if (document.querySelector("#bunner-slider")) {
+    bunnerSwiper();
+  }
   // ========popup===============
   if (document.querySelector(".popups-init-js")) {
     Popup();
@@ -80,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   Swiper1licens();
   // }
   //   // =======================
-  // if (document.querySelector(".marque")) {
-  //   Marque();
-  // }
+  if (document.querySelector(".marque")) {
+    Marque();
+  }
   // // ======slider-full=================
   // if (document.querySelector("#slider-full")) {
   //   SwiperFull();

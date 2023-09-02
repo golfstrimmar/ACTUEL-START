@@ -1,10 +1,13 @@
 div(style='clear: both; height: 20px; ')
 p -buttons-
-button(type='submit' value='Готово').create-anzahl__fertig.btn-success.but-wave Готово
+button(type='submit' value='Готово').btn-success.but-wave Готово
+div(style='clear: both; height: 20px; ')
+a(href="#!").btn.btn-success.but-wave Заказать
 div(style='clear: both; height: 20px; ')
 button(type='button').btn-blue Удалить номер из списка
+
 div(style='clear: both; height: 20px; ')
-button.btn.btn--empty.submit-button(  type='submit' name='send' ) Отправить
+button.btn.btn--empty(  type='submit' name='send' ) Отправить
 
 div(style='clear: both; height: 20px; ')
 p -inputs-
@@ -22,7 +25,12 @@ div(style='clear: both; height: 50px; ')
   input#firstname(type='text' name='firstname' value="Джек Безз" placeholder=' Denzel Washington').input_valid
   label.text-field__label(for='firstname') .input_valid
   span Спасибо за предоствленную информацию!
-
+div(style='clear: both; height: 50px; ')
+form.info__search
+  input(type='text' placeholder='Поиск')
+  input(type='submit')
+  svg
+    use(xlink:href='#search')
 div(style='clear: both; height: 50px; ')
 
 textarea#4(name="4" row='20' placeholder="Введите текст")
@@ -92,13 +100,9 @@ div(style='clear: both; height: 50px; ')
   svg
     use(xlink:href='#logo')
   p slogan
+
 div(style='clear: both; height: 50px; ')
-form.info__search
-  input(type='text' placeholder='Поиск')
-  input(type='submit')
-  svg
-    use(xlink:href='#search')
-div(style='clear: both; height: 50px; ')
+p -picture-
 picture
     source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
     source(srcset='./img/img-1.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')

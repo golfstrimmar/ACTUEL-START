@@ -33,8 +33,12 @@ section#bunner-slider.bunner-slider
                 p.slider-card__text Lorem ipsum .
                 a.btn.btn--success.but-wave.popups-init-js(rel='#popup1' href='#!')
                   p form
-  form.bunner-slider__search.bunner-search
-    input(type='text' placeholder='Leškoti...')
-    button(type='submit')
-      svg.icon
-        use(xlink:href='#search')
+
+
+  form.info__search.bunner-slider__search.bunner-search
+    .text-field
+      input#search1(type='text' name='search1' value='' placeholder=' Denzel Washington')
+      label.text-field__label(for='search1') Leškoti...
+    input(type='submit')
+    svg
+      use(xlink:href='#search')
