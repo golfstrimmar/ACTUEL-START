@@ -11,19 +11,19 @@ section.create-anzahl
             p Взрослые
             //- input#content-erwachsene(type='text' name='content-erwachsene' v-model='content_erwachsene')
             span {{ todo.content_erwachsene }} 
-              button(type="button" @click.prevent='decrErwachsene(todo)') &minus;
-              button(type="button" @click.prevent='incrErwachsene(todo)') +
+              button(type="button" @click.prevent='decrErwachsene(todo)').btn-blue &minus;
+              button(type="button" @click.prevent='incrErwachsene(todo)').btn-blue +
 
           .create-anzahl__item
             p Дети младше 14 лет
             //- input#content-kinder(type='text' name='content-kinder' v-model='content_kinder')
             span {{ todo.content_kinder }}
-              button(type="button" @click.prevent='decrKinder(todo)') &minus;
-              button(type="button" @click.prevent='incrKinder(todo)') +
-        button.create-anzahl__delete(@click.prevent='removeTodo(todo)') Удалить номер из списка
+              button(type="button" @click.prevent='decrKinder(todo)').btn-blue &minus;
+              button(type="button" @click.prevent='incrKinder(todo)').btn-blue +
+        button.create-anzahl__delete.btn-blue(@click.prevent='removeTodo(todo)') Удалить номер из списка
       .create-anzahl__buttons
-        button(type='button' @click.prevent='addTodo').create-anzahl__button  + Добавить ещё номер 
-        input(type='submit' value='Готово').create-anzahl__fertig
+        button(type='button' @click.prevent='addTodo').create-anzahl__button.btn-blue  + Добавить ещё номер 
+        button(type='submit' value='Готово').create-anzahl__fertig.btn-success.but-wave Готово
 
 
 </template>

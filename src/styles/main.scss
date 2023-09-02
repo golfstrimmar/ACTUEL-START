@@ -2,38 +2,44 @@
 
 
 // Переменные, миксины, функции
-@import "helpers/variables";
+// @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
 
 
 // Основное
+@import "base/colors";
 @import "base/common";
 @import "base/fonts";
 @import "base/sliders-swiper";
-@import "base/colors";
-@import "base/inputs";
-// @import "vendor/datapicker";
-@import "base/fildset-switch";
-// @import "../../node_modules/@vuepic/vue-datepicker/dist/main.css";
-
-
-
+@import "base/inputs/text.scss";
+@import "base/inputs/textarea.scss";
+@import "base/inputs/submit.scss";
+@import "base/inputs/fildset-radio.scss";
+@import "base/inputs/fildset-checkbox.scss";
 
 // БЭМ-components
-@import "base/btn";
-// @import "../blocks/components/btn-wave/btn-wave";
-@import "base/btn-empty";
+@import "base/buttons/btn.scss";
+@import "base/buttons/btn-success.scss";
+@import "base/buttons/btn-empty.scss";
+@import "base/buttons/btn-blue.scss";
+@import "base/buttons/btn-wave.scss";
+
+
+@import "../familia/shild/shild.scss";
+@import "../familia/book/book-section";
+@import "../familia/book/info";
+@import "../familia/book/choise";
+@import "../familia/book/contacts";
+@import "../familia/rooms/rooms";
+
+
+
+
 
 // БЭМ-modules
 // @import "../blocks/modules/header/header";
-@import "../blocks/modules/shild/shild";
-// @import "../blocks/modules/book/book";
-@import "../blocks/modules/book/book-section";
-@import "../blocks/modules/book/info";
-@import "../blocks/modules/book/choise";
-@import "../blocks/modules/book/contacts";
-@import "../blocks/modules/rooms/rooms";
+
 // @import "../blocks/modules/bunner/bunner";
 // @import "../blocks/modules/bunner/bunner-slider";
 // @import "../blocks/modules/do/do";
