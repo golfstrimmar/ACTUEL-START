@@ -76,7 +76,7 @@ input:not([type="submit"]) {
 }
 
 .text-field {
-  float: left;
+  // float: left;
   position: relative;
 
   @include transition;
