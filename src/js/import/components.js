@@ -1,7 +1,6 @@
 import { Button } from "%components%/btn-wave/btn-wave";
 import { Anim } from "../utils/animation";
 import { Lazy } from "../utils/lazy";
-// import { DataPicker } from "../utils/datepicker";
 
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -14,7 +14,7 @@
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
 import { Select } from "%modules%/select/select";
-import { FormFields } from "%modules%/book/book";
+import { FormFields } from "../../familia/book/book";
 
 // import { Rooms } from "%modules%/rooms/rooms";
 // import { Look } from "%modules%/look/look";

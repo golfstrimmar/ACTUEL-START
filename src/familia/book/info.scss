@@ -26,11 +26,7 @@
       align-items: flex-start;
       margin: 30px 0 30px 0;
       textarea {
-        padding: 15px 20px;
         margin: 10px 0 0 0;
-        min-height: 85px;
-        max-width: 570px;
-        @include Text-Style-32;
       }
     }
   }
