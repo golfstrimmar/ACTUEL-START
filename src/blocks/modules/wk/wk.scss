@@ -1,26 +1,14 @@
 .wk {
   background: #272727;
-  &__body {
-  }
 
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-    display: inline-flex;
-    height: 24px;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 240px;
-    flex-shrink: 0;
-  }
+  // &__body {
+  //   display: inline-flex;
+  //   height: 24px;
+  //   justify-content: center;
+  //   align-items: center;
+  //   gap: 240px;
+  //   flex-shrink: 0;
+  // }
   .swiper-pagination-wk {
     display: inline-flex;
     height: 24px;
@@ -39,7 +27,6 @@
     background-color: transparent;
     opacity: 1;
     border-radius: 0;
-
   }
   .swiper-pagination-bullet-active {
     background: #fcd54c;
@@ -51,23 +38,22 @@
     border-radius: 0;
     box-shadow: none;
     border: none;
+  }
 
+  .slider-arrow {
     svg {
       width: 24px;
       height: 24px;
       z-index: 2;
-      fill: #ffffff;
+      fill: green;
     }
-  }
-  .arrow-next-wk {
-    left: auto;
-    right: 0;
-  }
-  .arrow-prev-wk {
-  }
-  .slider-arrow:not([disabled]):hover {
-    transform: scale(1) translate(0%, -50%);
-    box-shadow: none;
+    &:hover {
+      transform: scale(1) translate(0%, -50%);
+      box-shadow: none;
+      & > svg {
+        fill: lighten(green, 25%);
+      }
+    }
   }
 
   .swiper-button-disabled {
@@ -82,11 +68,18 @@
     }
   }
 
+  .arrow-next-wk {
+    left: auto;
+    right: 0;
+  }
+  .arrow-prev-wk {
+  }
+
   .wk-slide {
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px);
     gap: 30px;
-
+    justify-content: center;
     &__item {
       display: grid;
       grid-template-rows: 420px min-content;
@@ -129,9 +122,12 @@
     }
     &__link {
       display: inline-flex;
-      justify-content: left;
       gap: 10px;
       margin: 13px 0 0 0;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

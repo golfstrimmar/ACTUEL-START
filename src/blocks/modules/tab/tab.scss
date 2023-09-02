@@ -1,13 +1,9 @@
 .tab {
   background-color: bisque;
   &__body {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0px;
-    row-gap: 0px;
+    display: table;
   }
   .kab {
-    display: inline-table;
     outline: 1px solid grey;
     background-color: rgb(159, 159, 252);
     &__title {
@@ -52,6 +48,8 @@
 }
 
 ._kab-js {
+  float: left;
+  width: 50%;
   & > ._kab-hidden-js {
     overflow: hidden;
     @include transition;
