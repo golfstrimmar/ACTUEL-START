@@ -2,7 +2,7 @@ import { Header } from "%modules%/header/header";
 // import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
-import { SideMenu } from "%modules%/side-menu/side-menu";
+// import { SideMenu } from "%modules%/side-menu/side-menu";
 // import { CasesInit } from "%modules%/cases/cases";
 // import { GalleryInit } from "%modules%/galery/galery";
 // import { GalCases } from "%modules%/galCases/galCases";
@@ -13,7 +13,7 @@ import { SideMenu } from "%modules%/side-menu/side-menu";
 // import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
-import { Select } from "%modules%/select/select";
+// import { Select } from "%modules%/select/select";
 
 // import { Rooms } from "%modules%/rooms/rooms";
 import { Look } from "%modules%/look/look";
@@ -23,10 +23,11 @@ import { Popup } from "%modules%/popup/popup";
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  alert("");
+ alert("");
+ 
   // =====Look==================
-  if (document.querySelector("video")) {
-    Look();
+  if (document.querySelector("#look")) {
+  Look();
   }
 
   // =====Header==================
@@ -47,9 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   Tab();
   // }
   //   // =========sideMenu==============
-  if (document.querySelector("._smenu-js")) {
-    SideMenu();
-  }
+  // if (document.querySelector("._smenu-js")) {
+  //   SideMenu();
+  // }
   //   // ====Accords=====
   // if (document.querySelector(".accord")) {
   //   Accords();
@@ -103,12 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
   //   });
   // }
   // //   // =========Select==============
-  const selects = [...document.querySelectorAll(".select")];
-  if (selects.length > 0) {
-    selects.forEach((select) => {
-      Select(select);
-    });
-  }
+  // const selects = [...document.querySelectorAll(".select")];
+  // if (selects.length > 0) {
+  //   selects.forEach((select) => {
+  //     Select(select);
+  //   });
+  // }
 
   //   // =======================
 

@@ -12,4 +12,3 @@ import "./import/components";
 // createApp(Rooms).mount("#app");
 // createApp(CheckIn).component("VueDatePicker", VueDatePicker).mount("#check-in");
 // createApp(CheckOut).component("VueDatePicker", VueDatePicker).mount("#check-out");
-
