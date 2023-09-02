@@ -2,7 +2,9 @@ import { Button } from "%components%/btn-wave/btn-wave";
 import { Anim } from "../utils/animation";
 import { Lazy } from "../utils/lazy";
 
+
 document.addEventListener("DOMContentLoaded", function () {
+
   //   // ==========Button=============
   [...document.querySelectorAll(".but-wave")].forEach((cell) => {
     cell.addEventListener("click", Button);

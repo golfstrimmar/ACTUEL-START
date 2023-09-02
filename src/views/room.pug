@@ -1,0 +1,19 @@
+extends layouts/default
+include components/mixins
+
+block variables
+  - const title = "ROOM"
+
+block content
+  main.inner
+      //- include ../familia/rooms/rooms
+      include ../familia/shild/shild
+      include ../familia/book/book
+block scripts
+  script(src="js/vendor.js")
+  script(src="js/main.js")
+
+
+block spriteSvg 
+  .hidden
+    include ../img/svg/sprite.svg

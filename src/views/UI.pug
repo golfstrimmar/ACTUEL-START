@@ -1,0 +1,15 @@
+extends layouts/default
+include components/mixins
+
+block variables
+  - const title = "ui"
+
+block content
+  main.inner
+      include ../ui/ui
+block scripts
+  script(src="js/vendor.js")
+  script(src="js/main.js")
+block spriteSvg 
+  .hidden
+    include ../img/svg/sprite.svg
