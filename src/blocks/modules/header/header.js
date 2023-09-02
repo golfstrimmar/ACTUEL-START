@@ -1,6 +1,7 @@
 "use ctrict";
 
 export const Header = () => {
+  
   const menu = document.querySelector(".menu");
   const header = document.querySelector("header");
   const info = document.querySelector(".info");

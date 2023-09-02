@@ -1,12 +1,11 @@
 .btn--empty {
-  @include Text-Style-38;
   @include flex-center;
   border-radius: 5px;
-  border: solid 1px $jungle-green;
-  background-color: $white;
+  border: solid 1px green;
+  background-color: white;
   &:hover {
-    color: lighten($jungle-green, 25%);
-    border: solid 1px lighten($jungle-green, 25%);
+    color: lighten(green, 25%);
+    border: solid 1px lighten(green, 25%);
   }
 }
 

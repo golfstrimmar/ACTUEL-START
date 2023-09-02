@@ -12,7 +12,7 @@
   border: solid 1px transparent;
   @include flex-center; 
   &:hover {
-    color: lighten($jungle-green, 25%);
-    border: solid 1px lighten($jungle-green, 25%);
+    color: lighten(green, 25%);
+    border: solid 1px lighten(green, 25%);
   }
 }

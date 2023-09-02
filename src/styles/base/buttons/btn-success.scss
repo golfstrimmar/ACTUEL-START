@@ -3,7 +3,7 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 1.07;
-  color: $white;
+  color: white;
   border-radius: 3px;
   background: #006b36;
   display: flex;
@@ -14,8 +14,8 @@
   @include transition;
   border: solid 1px transparent;
   &:hover {
-    color: lighten($jungle-green, 25%);
-    border: solid 1px lighten($jungle-green, 25%);
+    color: lighten(green, 25%);
+    border: solid 1px lighten(green, 25%);
     box-shadow:  inset 0 0 15px rgba(255, 255, 255, 1);
   }
 }

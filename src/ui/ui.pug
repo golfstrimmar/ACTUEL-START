@@ -78,22 +78,30 @@ fildset.fildset-radio.fildset-radio--sex
 div(style='clear: both; height: 20px; ')
 p -radio--tiers-
 .fildset-radio.fildset-radio--tiers
-      input(type="radio" id="tieresyes" name='tieres' val='yes' checked)
-      label(for="tieresyes")  Да
-      span /
-      input(type="radio" id="tieresnot" name='tieres' val='not')
-      label(for="tieresnot")  Нет
+  input(type="radio" id="tieresyes" name='tieres' val='yes' checked)
+  label(for="tieresyes")  Да
+  span /
+  input(type="radio" id="tieresnot" name='tieres' val='not')
+  label(for="tieresnot")  Нет
 div(style='clear: both; height: 20px; ')
 p -a-
 a(href="#!") +7 (961)511-66-14
 
-
-
-
-
-
-
-
-
-
+div(style='clear: both; height: 50px; ')
+.logo
+  svg
+    use(xlink:href='#logo')
+  p slogan
+div(style='clear: both; height: 50px; ')
+form.info__search
+  input(type='text' placeholder='Поиск')
+  input(type='submit')
+  svg
+    use(xlink:href='#search')
+div(style='clear: both; height: 50px; ')
+picture
+    source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
+    source(srcset='./img/img-1.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+    source(srcset='./img/img-2.webp' type='image/webp' media='(max-width: 999px)')
+    img(src='./img/paralax.webp' alt='img')
 div(style='clear: both; height: 50px; ')

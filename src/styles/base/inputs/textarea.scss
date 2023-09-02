@@ -7,21 +7,19 @@ textarea {
   @include transition;
   display: block;
   border-radius: 5px;
-  border: solid 1px $greyish;
-  background-color: $white;
+  border: solid 1px grey;
+  background-color: white;
           padding: 15px 20px;
         min-height: 85px;
         max-width: 570px;
-        @include Text-Style-32;
   &::placeholder {
     @include transition;
-    @include Text-Style-31;
   }
   &:hover {
     cursor: pointer;
-    border: solid 1px lighten($jungle-green, 25%);
+    border: solid 1px lighten(green, 25%);
     &::placeholder {
-      color: lighten($jungle-green, 25%);
+      color: lighten(green, 25%);
     }
   }
   &:focus {

@@ -9,8 +9,6 @@
 }
 
 .bunner__body {
-  display: flex;
-  flex-direction: column;
   padding: 300px 300px 0 0px;
 }
 .bunner__title {
@@ -27,7 +25,7 @@
 }
 
 .bunner__button {
-  min-height: 40px;
+  display: inline-block;
   svg {
     width: 20px;
     height: 20px;

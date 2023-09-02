@@ -1,8 +1,8 @@
-// import { Header } from "%modules%/header/header";
+import { Header } from "%modules%/header/header";
 // import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
-// import { SideMenu } from "%modules%/side-menu/side-menu";
+import { SideMenu } from "%modules%/side-menu/side-menu";
 // import { CasesInit } from "%modules%/cases/cases";
 // import { GalleryInit } from "%modules%/galery/galery";
 // import { GalCases } from "%modules%/galCases/galCases";
@@ -14,45 +14,40 @@
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
 import { Select } from "%modules%/select/select";
-import { FormFields } from "../../familia/book/book";
 
 // import { Rooms } from "%modules%/rooms/rooms";
-// import { Look } from "%modules%/look/look";
+import { Look } from "%modules%/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
-// import { Popup } from "%modules%/popup/popup";
+import { Popup } from "%modules%/popup/popup";
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  //   // ==========FormFields=============
-  if (document.querySelector(".form-field")) {
-    FormFields();
+document.addEventListener("DOMContentLoaded", function () { alert("");
+  // =====Header==================
+  if (document.querySelector("#look")) {
+    Look();
   }
   // =====Header==================
-  // if (document.querySelector("header")) {
-  //   Header();
-  // }
-  // ===Look=======
-  // if (document.querySelector("#app")) {
-  // Rooms();
-  // }
+  if (document.querySelector("header")) {
+    Header();
+  }
 
   //   // =========bunnerSwiper==============
   // if (document.querySelector("#bunner-slider")) {
   //   bunnerSwiper();
   // }
   // ========popup===============
-  // if (document.querySelector(".popups-init-js")) {
-  //   Popup();
-  // }
+  if (document.querySelector(".popups-init-js")) {
+    Popup();
+  }
   //   // ======Tab=================
   // if (document.querySelector("._tabs-container-js")) {
   //   Tab();
   // }
   //   // =========sideMenu==============
-  // if (document.querySelector("._smenu-js")) {
-  //   SideMenu();
-  // }
+  if (document.querySelector("._smenu-js")) {
+    SideMenu();
+  }
   //   // ====Accords=====
   // if (document.querySelector(".accord")) {
   //   Accords();

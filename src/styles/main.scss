@@ -17,6 +17,7 @@
 @import "base/inputs/submit.scss";
 @import "base/inputs/fildset-radio.scss";
 @import "base/inputs/fildset-checkbox.scss";
+@import "base/inputs/range.scss";
 
 // БЭМ-components
 @import "base/buttons/btn.scss";
@@ -26,34 +27,33 @@
 @import "base/buttons/btn-wave.scss";
 
 
-@import "../familia/shild/shild.scss";
-@import "../familia/book/book-section";
-@import "../familia/book/info";
-@import "../familia/book/choise";
-@import "../familia/book/contacts";
-@import "../familia/rooms/rooms";
+// @import "../familia/shild/shild.scss";
+// @import "../familia/book/book-section";
+// @import "../familia/book/info";
+// @import "../familia/book/choise";
+// @import "../familia/book/contacts";
+// @import "../familia/rooms/rooms";
 
 
 
 
 
 // БЭМ-modules
-// @import "../blocks/modules/header/header";
-
-// @import "../blocks/modules/bunner/bunner";
+@import "../blocks/modules/header/header";
+@import "../blocks/modules/bunner/bunner";
 // @import "../blocks/modules/bunner/bunner-slider";
 // @import "../blocks/modules/do/do";
 // @import "../blocks/modules/wk/wk";
 // @import "../blocks/modules/marque/marque";
 
 // @import "../blocks/modules/tab/tab";
-// @import "../blocks/modules/side-menu/side-menu";
+@import "../blocks/modules/side-menu/side-menu";
 // @import "../blocks/modules/accord/accord";
 // @import "../blocks/modules/galery/galery";
 // @import "../blocks/modules/cases/cases";
 // @import "../blocks/modules/galCases/galCases";
 
-// @import "../blocks/modules/look/look";
+@import "../blocks/modules/look/look";
 
 // @import "../blocks/modules/swiper-1/swiper-1";
 // @import "../blocks/modules/slider-full/slider-full";
