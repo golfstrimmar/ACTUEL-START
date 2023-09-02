@@ -14,23 +14,23 @@ import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
 import { Double } from "%modules%/slider-double/sdouble.js";
 import { MyRange } from "%modules%/range/range";
 import { Select } from "%modules%/select/select";
+
 import { Look } from "%modules%/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
 import { Popup } from "%modules%/popup/popup";
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  // =====Header==================
-  if (document.querySelector("header")) {
-    Header();
-  }
-  //   // ===Look=======
+  // =====Look==================
   if (document.querySelector("video")) {
     Look();
   }
 
-  //   // =========bunnerSwiper==============
+  // =====Header==================
+  if (document.querySelector("header")) {
+    Header();
+  }
+
+  //   // =========bunner slider==============
   if (document.querySelector("#bunner-slider")) {
     bunnerSwiper();
   }
@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector("._galCases-plaza-js")) {
     GalCases();
   }
+
+
+
   // =========swiper-1==============
   if (document.querySelector("#swiperwk")) {
     Swiperwk();
@@ -78,28 +81,29 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".marque")) {
     Marque();
   }
-  // ======slider-full=================
+  // // ======slider-full=================
   if (document.querySelector("#slider-full")) {
     SwiperFull();
   }
-  //   // =====swiper-scroll==================
+  // //   // =====swiper-scroll==================
   if (document.querySelector("#swiper-scroll")) {
     SwiperScroll();
   }
-  //   // ========swiperDouble===============
+  // //   // ========swiperDouble===============
   if (document.querySelector("#swiperDoubleTop")) {
     Double();
   }
 
-  //   // =======================
+
+  // //   // =======================
   const ranges = [...document.querySelectorAll(".range-wrap")];
   if (ranges.length > 0) {
     ranges.forEach((item) => {
       MyRange(item);
     });
   }
-  //   // =======================
-  const selects = [...document.querySelectorAll(".select-custom")];
+  // //   // =========Select==============
+  const selects = [...document.querySelectorAll(".select")];
   if (selects.length > 0) {
     selects.forEach((select) => {
       Select(select);
@@ -108,12 +112,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //   // =======================
 
-  // const textTypedAll = [...document.querySelectorAll("._hover-typed")];
-  // if (textTypedAll.length > 0) {
-  //   textTypedAll.forEach((item) => {
-  //     TypedItem(item);
-  //   });
-  // }
+  const textTypedAll = [...document.querySelectorAll("._hover-typed")];
+  if (textTypedAll.length > 0) {
+    textTypedAll.forEach((item) => {
+      TypedItem(item);
+    });
+  }
 
   // // =======================
 

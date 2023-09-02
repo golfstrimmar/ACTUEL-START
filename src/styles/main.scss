@@ -1,23 +1,42 @@
-@import "vendor/normalize";
 @import "vendor/null";
 
+
 // Переменные, миксины, функции
-@import "helpers/variables";
+// @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
 
 
 // Основное
+@import "base/colors";
 @import "base/common";
 @import "base/fonts";
 @import "base/sliders-swiper";
-@import "base/colors";
-@import "base/inputs";
+@import "base/inputs/text.scss";
+@import "base/inputs/textarea.scss";
+@import "base/inputs/submit.scss";
+@import "base/inputs/fildset-radio.scss";
+@import "base/inputs/fildset-checkbox.scss";
+@import "base/inputs/range.scss";
 
 // БЭМ-components
-@import "../blocks/components/btn/btn";
-@import "../blocks/components/btn-wave/btn-wave";
-@import "../blocks/components/btn-empty/btn-empty";
+@import "base/buttons/btn.scss";
+@import "base/buttons/btn-success.scss";
+@import "base/buttons/btn-empty.scss";
+@import "base/buttons/btn-blue.scss";
+@import "base/buttons/btn-wave.scss";
+
+
+// @import "../familia/shild/shild.scss";
+// @import "../familia/book/book-section";
+// @import "../familia/book/info";
+// @import "../familia/book/choise";
+// @import "../familia/book/contacts";
+// @import "../familia/rooms/rooms";
+
+
+
+
 
 // БЭМ-modules
 @import "../blocks/modules/header/header";

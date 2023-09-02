@@ -1,0 +1,42 @@
+.shild {
+  margin: 20px 0 0 0;
+  &__title {
+    h2{
+       @include Text-Style-30;
+       font-weight: 400;
+    }
+  }
+
+  &__body {
+    
+    background-color: $light-blue-grey;
+    min-height: 168px;
+    @include flex-column;
+    justify-content: center;
+     border-radius: 10px;
+  }
+
+  &__text {
+    margin: 14px 0 0 0;
+     @include Text-Style-26;
+  }
+  
+}
+
+
+
+@media (max-width: 767px) {
+ .shild {
+  margin: 37px 0 0 0;
+}
+.shild__body {
+  min-height: 184px;
+  padding: 20px 0;
+}
+.shild__title  {
+  padding: 0 38px;
+}
+.shild__text {
+  margin: 8px 10px 0 10px;
+}
+}

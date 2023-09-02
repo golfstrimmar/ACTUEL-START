@@ -1,0 +1,111 @@
+div(style='clear: both; height: 20px; ')
+p -buttons-
+button(type='submit' value='Готово').btn-success.but-wave Готово
+div(style='clear: both; height: 20px; ')
+a(href="#!").btn.btn-success.but-wave Заказать
+div(style='clear: both; height: 20px; ')
+button(type='button').btn-blue Удалить номер из списка
+
+div(style='clear: both; height: 20px; ')
+button.btn.btn--empty(  type='submit' name='send' ) Отправить
+
+div(style='clear: both; height: 20px; ')
+p -inputs-
+.text-field
+  input#1(type='text' name='1' value='' placeholder=' Denzel Washington')
+  label.text-field__label(for='1') Имя Фамилия
+  span Поле обязательно для заполнения
+div(style='clear: both; height: 50px; ')
+.text-field
+  input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington').input_invalid
+  label.text-field__label(for='firstname' ) .input_invalid
+  span Поле обязательно для заполнения
+div(style='clear: both; height: 50px; ')
+.text-field
+  input#firstname(type='text' name='firstname' value="Джек Безз" placeholder=' Denzel Washington').input_valid
+  label.text-field__label(for='firstname') .input_valid
+  span Спасибо за предоствленную информацию!
+div(style='clear: both; height: 50px; ')
+form.info__search
+  input(type='text' placeholder='Поиск')
+  input(type='submit')
+  svg
+    use(xlink:href='#search')
+div(style='clear: both; height: 50px; ')
+
+textarea#4(name="4" row='20' placeholder="Введите текст")
+div(style='clear: both; height: 50px; ')
+p -checkbox-
+
+.fildset-checkbox
+  .form-check
+    input#5(type='checkbox')
+    label(for='5') Любимое место
+  .form-check
+    input#6(type='checkbox')
+    label(for='6') Месторасположение
+  .form-check
+    input#7(type='checkbox')
+    label(for='7') Гость торжественного события
+  .form-check
+    input#8(type='checkbox')
+    label(for='8') Корпоративные мероприятия
+  .form-check
+    input#9(type='checkbox')
+    label(for='9') СПА комплекс
+div(style='clear: both; height: 20px; ')
+p -radio-
+
+fildset.fildset-radio
+  .form-check
+    input(type="radio" id="10" name='a' val='16-25' checked)
+    label(for="10")  от 16-25
+  .form-check
+    input(type="radio" id="11" name='a' val='26-35')
+    label(for="11")  от 26-35
+  .form-check
+    input(type="radio" id="12" name='a' val='36-45')
+    label(for="12")  36-45
+  .form-check
+    input(type="radio" id="13" name='a' val='55')
+    label(for="13")  от 45 и старше
+div(style='clear: both; height: 20px; ')
+p -radio-svg-
+fildset.fildset-radio.fildset-radio--sex
+  .form-check
+    input(type="radio" id="14" name='s' val='man')
+    label(for="14")  Мужчина
+    svg
+      use(xlink:href='#Union')
+  .form-check
+    input(type="radio" id="15" name='s' val='frau')
+    label(for="15")  Женщина
+    svg
+      use(xlink:href='#Union')
+
+div(style='clear: both; height: 20px; ')
+p -radio--tiers-
+.fildset-radio.fildset-radio--tiers
+  input(type="radio" id="tieresyes" name='tieres' val='yes' checked)
+  label(for="tieresyes")  Да
+  span /
+  input(type="radio" id="tieresnot" name='tieres' val='not')
+  label(for="tieresnot")  Нет
+div(style='clear: both; height: 20px; ')
+p -a-
+a(href="#!") +7 (961)511-66-14
+
+div(style='clear: both; height: 50px; ')
+.logo
+  svg
+    use(xlink:href='#logo')
+  p slogan
+
+div(style='clear: both; height: 50px; ')
+p -picture-
+picture
+    source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
+    source(srcset='./img/img-1.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+    source(srcset='./img/img-2.webp' type='image/webp' media='(max-width: 999px)')
+    img(src='./img/paralax.webp' alt='img')
+div(style='clear: both; height: 50px; ')

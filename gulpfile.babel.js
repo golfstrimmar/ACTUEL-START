@@ -7,17 +7,25 @@ const requireDir = require("require-dir"),
     views: {
       src: ["./src/views/*.pug"],
       dist: "./dist/",
-      watch: ["./src/blocks/**/*.pug", "./src/views/**/*.pug"],
+      watch: [
+        "./src/**/*.pug",
+      ],
     },
     styles: {
       src: ["./src/styles/main.{scss,sass}"],
       dist: "./dist/styles/",
-      watch: ["./src/blocks/**/*.{scss,sass}", "./src/styles/**/*.scss"],
+      watch: [
+        "./src/**/*.{scss,sass}",
+      ],
     },
     scripts: {
       src: "./src/js/index.js",
       dist: "./dist/js/",
-      watch: ["./src/blocks/**/*.js", "./src/js/**/*.js"],
+      watch: [
+        "./src/**/*.vue",
+        "./src/**/*.js",
+        
+      ],
     },
     images: {
       src: [

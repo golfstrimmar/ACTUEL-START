@@ -4,24 +4,20 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  .imgs {
-    // z-index: +1;
-  }
-}
-
-* {
-  //  outline: 1px solid green;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background:rgb(225, 228, 250);
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  color: green;
+  //   background:rgb(225, 228, 250);
+  background-color: white;
 }
 
 .container {
   // outline: 1px solid #4164ff;
-  max-width: 1200px;
+  max-width: 1160px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -30,14 +26,17 @@ body {
 .inner {
   position: relative;
 }
-.svgSpriteWrap{
+.svgSpriteWrap {
   position: absolute;
 }
 a {
   display: inline-block;
-  transition: all 0.2s ease-in-out;
+  @include transition;
   cursor: pointer;
-  color: rgb(72, 89, 245);
+  color: $jungle-green;
+  &:hover {
+    color: lighten(green, 25%);
+  }
 }
 
 .imgs {
@@ -74,7 +73,6 @@ a {
   display: none;
 }
 
-
 /* +++++++++++++++++++++++++++++++++++++ */
 
 .d-flex {
@@ -91,8 +89,8 @@ a {
 }
 ._hover {
   &:hover {
-    color: lighten(rgba(9, 72, 207), 25%);
-    text-shadow: 0 0  14px white;
+    color: lighten(green, 25%);
+    // text-shadow: 0 0  14px white;
   }
 }
 /* +++++++++++++++++++++++++++++++++++++ */
@@ -170,16 +168,16 @@ a {
 //     }
 //   }
 // }
-@media (min-width: 901px) and (max-width: 1259px) {
+@media (min-width: 768px) and (max-width: 1259px) {
   .container {
     margin: 0 20px;
     max-width: calc(100% - 40px);
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 767px) {
   .container {
-    margin: 0 10px;
-    max-width: calc(100% - 20px);
+    margin: 0 20px;
+    max-width: calc(100% - 40px);
   }
 }

@@ -1,12 +1,10 @@
 header.header
   .container
-
-
     .header__body 
       a(href='#!').header__logo.logo
           svg
             use(xlink:href='#logo')
-          p.ttu slogan
+          p slogan
       nav.header__menu.menu
         .header__close
           svg
@@ -15,7 +13,7 @@ header.header
           li.menu__item.rel
             .menu__link.menu-link-js.menu__link--active buy
               svg
-                use(xlink:href='#down')
+                use(xlink:href='#arrow-down')
             .menu__tab.menu-tab
                 a(href="#!").menu-tab__item Category number one
                 a(href="#!").menu-tab__item Apartments in Dubai
@@ -29,24 +27,25 @@ header.header
           li.menu__item.rel
             .menu__link.menu-link-js buy
               svg
-                use(xlink:href='#down')
+                use(xlink:href='#arrow-down')
             .menu__tab.menu-tab
                 a(href="#!").menu-tab__item Category number one
                 include ../side-menu/side-menu.pug
       .header__info.info
         a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
         form.info__search
-          input(placeholder='Поиск')
+          input(type='text' placeholder='Поиск')
           input(type='submit')
           svg
             use(xlink:href='#search')
-        fildset.header__lang.header-lang
-          input(type="radio" id="boxen" name='boxlang'  val='en' checked)
-          label(for="boxen")._hover.ttu  en
+        fildset.header__lang.fildset-radio.fildset-radio--tiers
+          input(type="radio" id="boxen" name='boxlang' val='en' checked='')
+          label(for="boxen")  en
+          span /
           input(type="radio" id="boxru" name='boxlang' val='ru')
-          label(for="boxru")._hover.ttu  ru
+          label(for="boxru")  ru
 
-        +btn('header__button','#popup1','form')
+        a.btn.btn-success.but-wave.popups-init-js.header__button(rel='#popup1' href='#!' ) form
       .header__burger.icon
         svg
           use(xlink:href='#list')
