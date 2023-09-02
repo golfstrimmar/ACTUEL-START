@@ -22,11 +22,13 @@ import { Popup } from "%modules%/popup/popup";
 
 
 
-document.addEventListener("DOMContentLoaded", function () { alert("");
-  // =====Header==================
-  if (document.querySelector("#look")) {
+document.addEventListener("DOMContentLoaded", function () {
+  alert("");
+  // =====Look==================
+  if (document.querySelector("video")) {
     Look();
   }
+
   // =====Header==================
   if (document.querySelector("header")) {
     Header();
