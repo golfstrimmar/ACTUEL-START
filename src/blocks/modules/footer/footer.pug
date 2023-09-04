@@ -1,23 +1,111 @@
 footer#footer.footer
   .container
     .footer__body
-      a(href="#!").footer__logo.logo
-          svg
-            use(xlink:href='#logo')
-          p.ttu slogan
-      .footer__col
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-      .footer__col
-        span Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-       
-      .footer__col.footer__col--info.info
-        a.info__phone(href='#!') +7(000) 123 45 65 67 
-        form.info__search.info__search--footer
-          input(placeholder='Поиск')
-          input(type='submit')
-          svg
-            use(xlink:href='#search')
-      svg.footer__cheap
-        use(xlink:href='#play')
-    .footer__low
-      a.footer__pol(href='#!') @Lorem ipsum dolor sit amet.
+      .footer__row
+        .footer__column
+            a(href="#!")#logoSvg.footer__logo.logo
+              svg
+                use(xlink:href='#logo')
+
+        .footer__column.column
+            .column__title 
+              h3 Адрес
+            .column__text
+              p Россия, Краснодарский край, 
+              p Динской р-н, ст. Пластуновская,
+              p Усадьба «Фамилия»
+            a(href="#!").column__link На карте
+            a(href="#!").column__link Маршрут до Усадьба «Фамилия»
+        .footer__column.column
+            .column__title 
+              h3 Отель
+            .column__text
+              p Президентский коттедж
+              p Фэмили коттедж
+              p Люкс
+              p Джуниор Сьют
+            .column__text
+              p Супериор
+              p Мельница
+              p Классик
+              p Услуги отеля
+        .footer__column.column
+            .column__title 
+              h3 Активный отдых
+            .column__text
+              p Конный клуб
+              p Развлечения
+              p Спортивно-стрелковый клуб
+              p Спорт и туризм
+        .footer__column.column
+            .column__title 
+              h3 Детский отдых
+            .column__text
+              p Детский клуб
+              p Детское меню
+              p Мастер-классы
+              p Конный клуб
+
+      .footer__row
+        .footer__column.column
+          .column__title 
+              a(href="#!") 8 800 500 10 60
+              a(href="#!") +7 861 000-00-00 (для звонков из-за границы)
+        
+          .column__block
+            p Вопросы по размещению и бронированию
+            a(href="#!")  sales@familia.com
+          .column__block
+            p Предложения по сотрудничеству
+            a(href="#!")  info@familia.com
+          .column__block
+            p Предложения по рекламе, контакты для прессы
+            p Александр Высоцкий
+            a(href="#!")  a.vysotsky@flash.ru
+        .footer__column.column
+            .column__title 
+              h3 Spa & Wellness
+            .column__text
+              p Спа для двоих
+              p Ледяная купель
+              p Хамам
+              p Расул
+              p Русская парная
+              p Йога
+              p Косметические линии
+        .footer__column.column
+            .column__title 
+              h3 Рестораны и бары
+            .column__text
+              p Ресторан Усадьба «Фамилия»
+              p Фермерская продукция Усадьба «Фамилия»
+              p Бар "Гильза"
+              p Бар у бассейна
+              p Лобби-бар
+              p Кальян-бар
+              p Караоке
+        .footer__column.column
+            .column__title 
+              h3 Мероприятия
+            .column__text
+              p Для бизнеса
+              p Семейные мероприятия
+              p Свадьбы
+        .footer__column.column
+            .column__title 
+              h3 Охота и рыбалка
+            .column__text
+              p Охота
+              p Рыбалка
+      .footer__row
+        .footer__column.column
+            .column__text
+              p © Усадьба «Фамилия».<br> Все права защищены
+        .footer__column.column
+          a(href="#!") Спецпредложения и события
+          a(href="#!") Карьера
+          a(href="#!") Контакты
+          a(href="#!") Регламент оплаты
+          a(href="#!") Реквизиты организации
+        .footer__column.column
+          span Сделано std24.ru
