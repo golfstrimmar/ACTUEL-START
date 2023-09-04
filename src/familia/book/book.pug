@@ -9,8 +9,8 @@ section(id='book').book.rel
           .text-block
             .text-field
               input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington')
-              label.text-field__label(for='firstname') Имя Фамилия
-              span Поле обязательно для заполнения
+              label.text-field__label(for='firstname') Имя Фамилия *
+              
 
             
             //- .form-field.form-field--year
@@ -34,7 +34,7 @@ section(id='book').book.rel
             .form-field.form-field--select
               .select
                 button.dropdown-button
-                  p Место проживания
+                  p Место проживания *
                   span 
                   .form-field__area-svg
                     svg
@@ -58,6 +58,7 @@ section(id='book').book.rel
                     ];
                   each block in blocks
                     li.dropdown-list__item(data-value=block.text)=block.text
+            span._text-block-span * Поля обязательные для заполнения
 
         include ./info.pug
         include ./choise.pug

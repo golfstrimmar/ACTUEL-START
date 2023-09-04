@@ -1,5 +1,5 @@
 <template>
-  <p   :class="[{ '_empty-data': date === ''}]">Заезд</p>
+  <p   :class="[{ '_empty-data': date === ''}]">Заезд *</p>
   <Datepicker 
   v-model="date" 
   :format="format" 
