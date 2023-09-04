@@ -1,23 +1,148 @@
 footer#footer.footer
   .container
     .footer__body
-      a(href="#!").footer__logo.logo
-          svg
-            use(xlink:href='#logo')
-          p.ttu slogan
-      .footer__col
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-      .footer__col
-        span Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-       
-      .footer__col.footer__col--info.info
-        a.info__phone(href='#!') +7(000) 123 45 65 67 
-        form.info__search.info__search--footer
-          input(placeholder='Поиск')
-          input(type='submit')
-          svg
-            use(xlink:href='#search')
-      svg.footer__cheap
-        use(xlink:href='#play')
-    .footer__low
-      a.footer__pol(href='#!') @Lorem ipsum dolor sit amet.
+      .footer__row
+        .footer__column.column
+            a(href="#!")#logoSvg.footer__logo.logo
+              svg
+                use(xlink:href='#logo')
+
+        .footer__column.column.column--second
+            .column__title 
+              h3 Адрес
+            .column__text
+              p
+                |Россия, Краснодарский край, 
+                |Динской р-н, ст. Пластуновская,
+                |Усадьба «Фамилия»
+            a(href="#!").column__link На карте
+            a(href="#!").column__link Маршрут до Усадьба «Фамилия»
+        .footer__column.column.column--third
+            .column__title._a-third
+              h3 Отель
+            ul.column__text._b-third
+              li 
+                a(href="#!") Президентский коттедж
+              li 
+                a(href="#!") Фэмили коттедж
+              li 
+                a(href="#!") Люкс
+              li 
+                a(href="#!") Джуниор Сьют
+            ul.column__text._c-third
+              li 
+                a(href="#!") Супериор
+              li 
+                a(href="#!") Мельница
+              li 
+                a(href="#!") Классик
+              li 
+                a(href="#!") Услуги отеля
+        .footer__column.column
+            .column__title 
+              h3 Активный отдых
+            ul.column__text
+              li 
+                a(href="#!") Конный клуб
+              li 
+                a(href="#!") Развлечения
+              li 
+                a(href="#!") Спортивно-стрелковый клуб
+              li 
+                a(href="#!") Спорт и туризм
+        .footer__column.column
+            .column__title 
+              h3 Детский отдых
+            ul.column__text.column__text--border
+              li 
+                a(href="#!") Детский клуб
+              li 
+                a(href="#!") Детское меню
+              li 
+                a(href="#!") Мастер-классы
+              li 
+                a(href="#!") Конный клуб
+
+      .footer__row
+        .footer__column.column
+          .column__title 
+              a(href="#!") 8 800 500 10 60
+              a(href="#!") +7 861 000-00-00 (для звонков из-за границы)
+        
+          .column__block
+            p Вопросы по размещению и бронированию
+            a(href="#!")  sales@familia.com
+          .column__block
+            p Предложения по сотрудничеству
+            a(href="#!")  info@familia.com
+          .column__block
+            p Предложения по рекламе, контакты для прессы
+            p Александр Высоцкий
+            a(href="#!")  a.vysotsky@flash.ru
+        .footer__column.column
+            .column__title 
+              h3 Spa & Wellness
+            ul.column__text
+              li 
+                a(href="#!") Спа для двоих
+              li 
+                a(href="#!") Ледяная купель
+              li 
+                a(href="#!") Хамам
+              li 
+                a(href="#!") Расул
+              li 
+                a(href="#!") Русская парная
+              li 
+                a(href="#!") Йога
+              li 
+                a(href="#!") Косметические линии
+        .footer__column.column
+            .column__title 
+              h3 Рестораны и бары
+            ul.column__text
+              li 
+                a(href="#!") Ресторан Усадьба «Фамилия»
+              li 
+                a(href="#!") Фермерская продукция Усадьба «Фамилия»
+              li 
+                a(href="#!") Бар "Гильза"
+              li 
+                a(href="#!") Бар у бассейна
+              li 
+                a(href="#!") Лобби-бар
+              li 
+                a(href="#!") Кальян-бар
+              li 
+                a(href="#!") Караоке
+        .footer__column.column
+            .column__title 
+              h3 Мероприятия
+            ul.column__text
+              li 
+                a(href="#!") Для бизнеса
+              li 
+                a(href="#!") Семейные мероприятия
+              li 
+                a(href="#!") Свадьбы
+        .footer__column.column
+            .column__title 
+              h3 Охота и рыбалка
+            ul.column__text
+              li 
+                a(href="#!") Охота
+              li 
+                a(href="#!") Рыбалка
+      .footer__row
+        .footer__column.column
+            .column__text
+              p © Усадьба «Фамилия».<br> Все права защищены
+        .footer__column.column
+          a(href="#!") Спецпредложения и события
+          a(href="#!") Карьера
+          a(href="#!") Контакты
+          a(href="#!") Регламент оплаты
+          a(href="#!") Реквизиты организации
+        .footer__column.column
+          span Сделано 
+            a(href="#!") std24.ru

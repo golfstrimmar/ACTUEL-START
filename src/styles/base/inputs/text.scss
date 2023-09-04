@@ -86,10 +86,13 @@ input:not([type="submit"]) {
   }
 }
 
+@media (min-width: 768px) {
+  .text-field {
+    float: left;
+  }
+}
 .text-field {
-  float: left;
   position: relative;
-
   @include transition;
   width: 100%;
   max-width: 320px;
