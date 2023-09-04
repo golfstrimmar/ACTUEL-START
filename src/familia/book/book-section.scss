@@ -18,7 +18,7 @@
       padding: 40px 0 27px 0;
       border-top: 1px solid $white-three;
       &--text {
-        margin: 93px 0 193px 0;
+        margin: 163px 0 181px 0;
         .form-fild-text {
           @include Text-Style-25;
           margin: 0 0 18px 0;
@@ -211,22 +211,21 @@
     border-top: none;
     width: 100%;
     padding: 33px 0 27px 0;
-
   }
   .book-section-form__field--text {
-  margin: 100px 0 193px 0;
-padding: 40px 0 27px 0;
-}
+    margin: 100px 0 193px 0;
+    padding: 40px 0 27px 0;
+  }
   .book-section-form__field--text .form-fild-text {
-  line-height: 29px;
-  &--green {
-  line-height: 24px;
+    line-height: 29px;
+    &--green {
+      line-height: 24px;
+      margin: 0 0 0 0;
+    }
+  }
+  .book-section-form__field--text .form-fild-text a {
     margin: 0 0 0 0;
-}
-}
-.book-section-form__field--text .form-fild-text a {
-  margin: 0 0 0 0;
-}
+  }
 
   // .book-section-form .form-field {
   //   width: calc(100% - 20px);
