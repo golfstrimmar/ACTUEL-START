@@ -32,13 +32,16 @@
 
 <defs>
 <linearGradient id="MyGradient">
-    <stop offset="-500%" style="stop-color:#006B36;">
+    <stop offset="0%" style="stop-color:#006B36;">
     </stop>
-    <stop offset="30%" style="stop-color:#7cf9bb;">
+    <stop offset="20%" style="stop-color:#006B36;">
     </stop>
-    <stop offset="70%" style="stop-color:#7cf9bb;">
+  
+    <stop offset="50%" style="stop-color:#7cf9bb;">
     </stop>
-    <stop offset="500%" style="stop-color:#006B36;"> 
+      <stop offset="80%" style="stop-color:#006B36;">
+    </stop>
+    <stop offset="100%" style="stop-color:#006B36;"> 
     </stop>
     
         <animateTransform 
