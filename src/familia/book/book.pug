@@ -4,7 +4,7 @@ section(id='book').book.rel
       h2 Пожалуйста, заполните анкету
 
     div.book-section
-      forma.book-section-form
+      form.book-section-form(action="#" name="book-form")
         .book-section-form__field
           .text-block
             .text-field
@@ -21,11 +21,13 @@ section(id='book').book.rel
             //-         use(xlink:href='#arrow-down')
 
           .text-block
+            input#date-in(type='hidden' name='date-in')
             .form-field
               #check-in._check
               .form-field__area-svg
                 svg
                   use(xlink:href='#arrow-down')
+            input#date-out(type='hidden' name='date-out')
             .form-field
               #check-out._check
               .form-field__area-svg
@@ -33,9 +35,10 @@ section(id='book').book.rel
                   use(xlink:href='#arrow-down')
             .form-field.form-field--select
               .select
-                button.dropdown-button
+                .dropdown-button
                   p Место проживания *
-                  span 
+                  input(type="hidden" name='place' value="" )
+                  span
                   .form-field__area-svg
                     svg
                       use(xlink:href='#arrow-down')

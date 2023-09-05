@@ -27,6 +27,7 @@ export const Select = (select) => {
           });
           e.stopPropagation();
           $button.querySelector("span").innerHTML = item.innerHTML;
+          $button.querySelector("input").value = item.innerHTML;
           $button.querySelector("span").classList.add("_is-new");
           // $dropHidden.classList.add("_is-active");
           $button.classList.add("_is-new");

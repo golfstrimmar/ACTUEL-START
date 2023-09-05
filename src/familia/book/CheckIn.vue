@@ -1,5 +1,6 @@
 <template>
   <p   :class="[{ '_empty-data': date === ''}]">Заезд *</p>
+  
   <Datepicker 
   v-model="date" 
   :format="format" 
@@ -33,6 +34,7 @@ const focusFn = () => {
 const closedFn = () => {
   if (date.value !== '') {
     document.querySelector('#check-in').closest('.form-field').classList.add('_is-active')
+    document.querySelector('#date-in').value = date.value
   }
   document.querySelector('#check-in').closest('.form-field').querySelector('.form-field__area-svg').style.transform = "translateY(-50%) "
 }
