@@ -24,13 +24,80 @@
   font-style: normal;
   font-stretch: normal;
 }
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/Inter-Bold.woff2");
+  src: url("../fonts/Inter-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter-Regular.woff2");
+  src: url("../fonts/Inter-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/Inter-Medium.woff2");
+  src: url("../fonts/Inter-Medium.woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
 
+@font-face {
+  font-family: "NotoSerif-Bold";
+  src: url("../fonts/NotoSerif-Bold.woff2");
+  src: url("../fonts/NotoSerif-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:wght@700&family=PT+Sans&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&family=Roboto+Slab:wght@700&display=swap');
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("../fonts/PTSans-Bold.woff2");
+  src: url("../fonts/PTSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url("../fonts/PTSans-Regular.woff2");
+  src: url("../fonts/PTSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "PTSerif-Bold";
+  src: url("../fonts/PTSerif-Bold.woff2");
+  src: url("../fonts/PTSerif-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "PTSerif-Regular";
+  src: url("../fonts/PTSerif-Regular.woff2");
+  src: url("../fonts/PTSerif-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+  // @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:wght@700&family=PT+Sans&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&family=Roboto+Slab:wght@700&display=swap');
 
 // font-family: 'Arial-Regular', sans-serif;
 // font-family: 'Arial-Bold', sans-serif;
 // font-family: 'Inter', sans-serif;
+// font-family: 'Inter-Bold', sans-serif;
 // font-family: 'Noto Serif', serif;
 // font-family: 'PT Sans', sans-serif;
 // font-family: 'PT Serif', serif;
