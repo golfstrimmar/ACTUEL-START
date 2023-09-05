@@ -20,14 +20,14 @@
   .book-section-form-line.book-section-form-line--tiers
     p Имеет ли для Вас значение возможность посещение клуба с вашими питомцами?
     fildset.fildset-radio.fildset-radio--tiers
-      input(type="radio" id="tieresyes" name='tieres' val='yes' checked)
+      input(type="radio" id="tieresyes" name='tieres' value='yes' checked)
       label(for="tieresyes")  Да
       span /
-      input(type="radio" id="tieresnot" name='tieres' val='not')
+      input(type="radio" id="tieresnot" name='tieres' value='not')
       label(for="tieresnot")  Нет
   .book-section-form-line.book-section-form-line--text
     p Ваши предложения / пожелания
-    textarea#form-line-1(name="form-line" row='20' placeholder="Введите текст")
+    textarea#form-line-1(name="form-line-1" row='20' placeholder="Введите текст")
 
 //- ===========================
 
@@ -48,7 +48,7 @@
       +rating("rating7")
   .book-section-form-line.book-section-form-line--text
     p Ваши предложения / пожелания
-    textarea#form-line-2(name="form-line" placeholder="Введите текст")
+    textarea#form-line-2(name="form-line-2" placeholder="Введите текст")
 //- ===========================
 
 .book-section-form__field.book-section-form__field--info
@@ -68,6 +68,6 @@
       +rating("rating10")
   .book-section-form-line.book-section-form-line--text
     p Ваши предложения / пожелания
-    textarea#form-line-3(name="form-line" placeholder="Введите текст")
+    textarea#form-line-3(name="form-line-3" placeholder="Введите текст")
 //- ===========================
 
