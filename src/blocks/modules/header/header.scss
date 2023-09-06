@@ -63,9 +63,9 @@
       svg {
         width: 17px;
         min-width: 17px;
-        height: 33px;
+        height: 17px;
       }
-     
+
       a {
         margin: 0 20px 0 0;
         &:last-child {
@@ -90,6 +90,16 @@
       width: 34px;
       min-width: 34px;
       height: 33px;
+      // path {
+      //   fill: inherit;
+      //   stroke: inherit;
+      // }
+      // path#Vector {
+      //   fill: #f73030;
+      // }
+      // path#Vector_2 {
+      //   fill: #f73030;
+      // }
     }
     .info__text {
       @include Text-Style-3;
