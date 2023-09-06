@@ -58,67 +58,75 @@
   li {
     @include flex-aligne-center;
     column-gap: 20px;
+    cursor: pointer;
+   p,svg{
+    @include transition;
+   }
+
+    svg {
+      width: 34px;
+      min-width: 34px;
+      height: 33px;
+      fill: $jungle-green;
+      position: relative;
+      &#cerckle{
+          position: absolute;
+          fill: transparent;
+          stroke: $jungle-green; 
+      }
+      }
+
+    .info__text {
+      @include Text-Style-3;
+    }
+
+    a {
+      @include Text-Style-4;
+    }
+ &:nth-child(1),&:nth-child(3){
+ &:hover p,
+      &:hover a,
+      &:hover svg{
+        color: lighten($jungle-green, 25%);
+        fill: lighten($jungle-green, 25%);
+      }
+
+
+      &:hover #cerckle{
+          fill: transparent;
+          stroke: lighten($jungle-green, 25%);
+      }
+
+ }
     &:nth-child(2) {
-      column-gap: 5px;
       svg {
         width: 17px;
         min-width: 17px;
         height: 17px;
       }
+      .info__block {
+        @include flex-aligne-center;
+        column-gap: 5px;
+        &:hover a {
+          color: lighten($jungle-green, 25%);
+        }
 
-      a {
-        margin: 0 20px 0 0;
-        &:last-child {
-          margin: 0 0 0 0;
+        &:hover svg {
+          fill: lighten($jungle-green, 25%);
         }
       }
     }
     &:nth-child(3) {
       justify-self: end;
+      column-gap: 11px;
       a {
         @include Text-Style-5;
         p {
           @include Text-Style-4;
-          @include transition;
-        }
-        &:hover p {
-          color: lighten($jungle-green, 25%);
+          
         }
       }
-    }
-    svg {
-      width: 34px;
-      min-width: 34px;
-      height: 33px;
-      // path {
-      //   fill: inherit;
-      //   stroke: inherit;
-      // }
-      // path#Vector {
-      //   fill: #f73030;
-      // }
-      // path#Vector_2 {
-      //   fill: #f73030;
-      // }
-    }
-    .info__text {
-      @include Text-Style-3;
-    }
-    a {
-      @include Text-Style-4;
-      &:hover {
-        color: lighten($jungle-green, 25%);
-      }
-      // p {
-      //   @include Text-Style-5;
-      //   @include transition;
-      //   &:nth-child(2) {
-      //     @include Text-Style-4;
-      //   }
-      // }
-      // &:hover p {
-      //   color: lighten($jungle-green, 25%);
-      // }
+     
     }
   }
 }

@@ -9,22 +9,30 @@ header.header
 
         ul.header__info.info
           li 
+            svg#cerckle
+              use(xlink:href='#imagecerckle')
             svg
               use(xlink:href='#image')
-            .info__text Краснодарский край, Динской р-н, ст. Пластуновская
-          li 
-            svg
-              use(xlink:href='#vk')
-            a(href='#!' ) ysadbaclub
+            p.info__text Краснодарский край, Динской р-н, ст. Пластуновская
 
-            svg
-              use(xlink:href='#telegram')
-            a(href='#!' ) @ysadbafamiliya
           li 
+            .info__block
+              svg
+                use(xlink:href='#vk')
+              a(href='#!' ) ysadbaclub
+
+            .info__block
+              svg
+                use(xlink:href='#telegram')
+              a(href='#!' ) @ysadbafamiliya
+          li 
+            svg#cerckle
+              use(xlink:href='#imagecerckle')
             svg
               use(xlink:href='#image')
             a(href='#!' ) 8 800 500 10 60
               p Заказать звонок
+
 
     .header__menu.menu
       .container
