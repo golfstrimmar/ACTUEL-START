@@ -1,0 +1,80 @@
+.form-field {
+  width: 40%;
+  position: relative;
+  box-sizing: content-box;
+  @include transition;
+  border: solid 1px #b4b4b4;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    color: lighten(green, 25%);
+    border: solid 1px lighten(green, 25%);
+    .form-field__area-svg {
+      background: lighten(green, 25%);
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 10px 0 10px 20px;
+    border: none;
+    @include transition;
+    font-size: 0;
+    & ~ div {
+      display: none;
+    }
+    & ~ svg {
+      display: none;
+    }
+  }
+  p {
+    @include transition;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -20;
+    padding: 0 0 0 20px;
+  }
+
+  &._is-active {
+    input {
+      width: calc(100% - 50px);
+      opacity: 1;
+      padding: 25px 0 5px 20px;
+      font-size: 25px;
+      z-index: 5;
+    }
+    p {
+      z-index: 5;
+      transform: translateY(-130%);
+    }
+  }
+
+  &__area-svg {
+    z-index: -20;
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #eee;
+    transform: translateY(-50%);
+    @include flex-center;
+    transition: all 0.2s;
+    svg {
+      width: 13px;
+      height: 7px;
+    }
+  }
+
+  // &--year {
+  //   max-width: 230px;
+  //   input:not(:placeholder-shown) {
+  //     padding: 7px 20px;
+  //   }
+  // }
+}

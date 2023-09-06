@@ -18,6 +18,8 @@
 @import "base/inputs/fildset-radio.scss";
 @import "base/inputs/fildset-checkbox.scss";
 @import "base/inputs/range.scss";
+@import "base/select";
+@import "base/check-in-out";
 
 // БЭМ-components
 @import "base/buttons/btn.scss";
@@ -59,7 +61,7 @@
 @import "../blocks/modules/slider-full/slider-full";
 @import "../blocks/modules/slider-double/sdouble";
 @import "../blocks/modules/slider-scroll/slider-scroll";
-@import "../blocks/modules/select/select";
+
 @import "../blocks/modules/form/form";
 @import "../blocks/modules/typed/typedHover";
 

@@ -1,5 +1,5 @@
 <template>
-  <p :class="[{ '_empty-data': date === '' }]">Выезд</p>
+  <p :class="[{ '_empty-data': date === '' }]">Выезд *</p>
   <Datepicker v-model="date" :format="format" :enable-time-picker="false" locale="ru" position="left" :offset="10"
     auto-apply @closed="closedFn" @focus="focusFn" />
 </template>
@@ -23,6 +23,7 @@ const focusFn = () => {
 const closedFn = () => {
   if (date.value !== '') {
     document.querySelector('#check-out').closest('.form-field').classList.add('_is-active')
+    document.querySelector('#date-out').value = date.value
   }
   document.querySelector('#check-out').closest('.form-field').querySelector('.form-field__area-svg').style.transform = "translateY(-50%) "
 }

@@ -1,11 +1,21 @@
 .container
-  .select-custom.select
-    button.dropdown-button
-      span custom select
-      svg.icon
-        use(xlink:href='#down')
-    ul.dropdown-list
-      li.dropdown-list__item(data-value='Notes') Notes
-      li.dropdown-list__item(data-value='Photo') Photo
-      li.dropdown-list__item(data-value='Dictionary') Dictionary
-    //- input.drop__input(type='text' value='')
+  .select
+      .dropdown-button
+        p Место проживания 
+        input(type="hidden" name='place' value="" )
+        span
+        .form-field__area-svg
+          svg
+            use(xlink:href='#arrow-down')
+      ul.dropdown-list
+        -
+          var blocks = [
+            {text: 'коттеджи 2-х местные' },
+            {text: 'дом Лесника' },
+            {text: 'дом Охотника' },
+            {text: 'дом Рыбака №1' },
+            {text: 'дом Рыбака №2' },
+          ];
+        each block in blocks
+          li.dropdown-list__item(data-value=block.text)=block.text
+

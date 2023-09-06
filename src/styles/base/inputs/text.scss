@@ -1,5 +1,5 @@
-input:not([type="range"]),
-input:not([type="submit"]) {
+input[type="text"]
+ {
   // background: transparent;
   // border: 1px solid transparent;
   width: 100%;
@@ -67,12 +67,12 @@ input:not([type="submit"]) {
   &::placeholder {
     opacity: 0;
   }
-  & ~ div {
-    display: none;
-  }
-  & ~ svg {
-    display: none;
-  }
+  // & ~ div {
+  //   display: none;
+  // }
+  // & ~ svg {
+  //   display: none;
+  // }
 }
 
 .text-field {
