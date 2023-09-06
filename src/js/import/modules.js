@@ -1,4 +1,4 @@
-// import { Header } from "%modules%/header/header";
+import { Header } from "%modules%/header/header";
 // import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     FormFields();
   }
   // =====Header==================
-  // if (document.querySelector("header")) {
-  //   Header();
-  // }
+  if (document.querySelector("header")) {
+    Header();
+  }
   // ===Look=======
   // if (document.querySelector("#app")) {
   // Rooms();

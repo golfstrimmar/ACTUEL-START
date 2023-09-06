@@ -1,54 +1,56 @@
 header.header
-  .container
+    .container
+      .header__top 
+        a(href='#!').header__logo.logo
+            svg
+              use(xlink:href='#logo')
+            p Усадьба «Фамилия»
+              span клуб загородного отдыха
 
+        ul.header__info.info
+          li 
+            svg
+              use(xlink:href='#tel')
+            .info__text Краснодарский край, Динской р-н, ст. Пластуновская
+          li 
+            svg
+              use(xlink:href='#vk')
+            a(href='#!' ) ysadbaclub
 
-    .header__body 
-      a(href='#!').header__logo.logo
-          svg
-            use(xlink:href='#logo')
-          p.ttu slogan
-      nav.header__menu.menu
-        .header__close
-          svg
-            use(xlink:href='#x-lg')
+            svg
+              use(xlink:href='#telegram')
+            a(href='#!' ) @ysadbafamiliya
+          li 
+            svg
+              use(xlink:href='#tel')
+            a(href='#!' ) 8 800 500 10 60
+              p Заказать звонок
+
+    .header__menu.menu
+      .container
         ul.menu__list
           li.menu__item.rel
-            .menu__link.menu-link-js.menu__link--active buy
-              svg
-                use(xlink:href='#down')
-            .menu__tab.menu-tab
-                a(href="#!").menu-tab__item Category number one
-                a(href="#!").menu-tab__item Apartments in Dubai
-                a(href="#!").menu-tab__item Category number twenty five
-                include ../side-menu/side-menu.pug
-
-          li.menu__item
-            a.menu__link(href='#!' rel='#posts') Posts
-          li.menu__item
-            a.menu__link(href='#!' rel='#galery') Projects
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Проживание
           li.menu__item.rel
-            .menu__link.menu-link-js buy
-              svg
-                use(xlink:href='#down')
-            .menu__tab.menu-tab
-                a(href="#!").menu-tab__item Category number one
-                include ../side-menu/side-menu.pug
-      .header__info.info
-        a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
-        form.info__search
-          input(placeholder='Поиск')
-          input(type='submit')
-          svg
-            use(xlink:href='#search')
-        fildset.fildset-switch.header__lang
-          input(type="radio" id="boxen" name='boxlang'  val='en' checked)
-          label(for="boxen")._hover.ttu  en
-          input(type="radio" id="boxru" name='boxlang' val='ru')
-          label(for="boxru")._hover.ttu  ru
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Spa
+          li.menu__item.rel
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Ресторанный комплекс
+          li.menu__item.rel
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Отдых
+          li.menu__item.rel
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Спорт
+          li.menu__item.rel
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Конный клуб
+          li.menu__item.rel
+            a(href="#!").menu__link.menu-link-js.menu__link--active  LIFE-Арена
+          li.menu__item.rel
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Корпоративы
+          li.menu__item.rel
+            a(href="#!").menu__link.menu-link-js.menu__link--active  Оплата Online
 
-        +btn('header__button','#popup1','form')
-      .header__burger.icon
+    .header__burger.icon
         svg
           use(xlink:href='#list')
-
-
+    .header__close
+          svg
+            use(xlink:href='#x-lg')
