@@ -66,13 +66,13 @@ export const Header = () => {
   }
   // --------------------------
 
-  window.addEventListener("scroll", function (event) {
-    if (window.pageYOffset > 100) {
-      header.classList.add("responciveHeader");
-    } else {
-      header.classList.remove("responciveHeader");
-    }
-  });
+  // window.addEventListener("scroll", function (event) {
+  //   if (window.pageYOffset > 100) {
+  //     header.classList.add("responciveHeader");
+  //   } else {
+  //     header.classList.remove("responciveHeader");
+  //   }
+  // });
 
   // ---------------------------------------------
   window.onresize = function () {
