@@ -208,10 +208,12 @@ div(style='clear: both; height: 50px; ')
 p ------------------------picture-----------------------------
 div(style='clear: both; height: 50px; ')
 
-picture
-    source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
-    source(srcset='./img/img-1.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
-    source(srcset='./img/img-2.webp' type='image/webp' media='(max-width: 999px)')
-    img(src='./img/paralax.webp' alt='img')
+div(style=' width:250px; height:250px;').rel
+    .imgs
+      picture
+        source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
+        source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+        source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
+        img(src='./img/paralax.webp' alt='img')
 
 div(style='clear: both; height: 50px; ')
