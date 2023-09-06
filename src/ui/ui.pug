@@ -1,111 +1,217 @@
 div(style='clear: both; height: 20px; ')
-p -buttons-
+p ---------buttons----------------
+div(style='clear: both; height: 20px; ')
+.copy button(type='submit' value='Готово').btn-success.but-wave Готово 
 button(type='submit' value='Готово').btn-success.but-wave Готово
+
 div(style='clear: both; height: 20px; ')
+.copy a(href="#!").btn.btn-success.but-wave Заказать
 a(href="#!").btn.btn-success.but-wave Заказать
+
 div(style='clear: both; height: 20px; ')
+
+.copy button(type='button').btn-blue Удалить номер из списка
 button(type='button').btn-blue Удалить номер из списка
 
 div(style='clear: both; height: 20px; ')
+
+.copy button.btn.btn--empty(  type='submit' name='send' ) Отправить
 button.btn.btn--empty(  type='submit' name='send' ) Отправить
 
 div(style='clear: both; height: 20px; ')
-p -inputs-
+p ------------inputs--------------
+div(style='clear: both; height: 20px; ')
+
+
+
+form.info__search
+  input(type='text' placeholder='Поиск' name="")
+  input(type='submit')
+  svg
+    use(xlink:href='#search')
+
+div(style='clear: both; height: 50px; ')
+
+.copy textarea#4(name="4" row='20' placeholder="Введите текст" )
+textarea#4(name="4" row='20' placeholder="Введите текст" )
+
+div(style='clear: both; height: 50px; ')
 .text-field
   input#1(type='text' name='1' value='' placeholder=' Denzel Washington')
   label.text-field__label(for='1') Имя Фамилия
   span Поле обязательно для заполнения
+
 div(style='clear: both; height: 50px; ')
+
 .text-field
   input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington').input_invalid
   label.text-field__label(for='firstname' ) .input_invalid
   span Поле обязательно для заполнения
+
 div(style='clear: both; height: 50px; ')
+
 .text-field
   input#firstname(type='text' name='firstname' value="Джек Безз" placeholder=' Denzel Washington').input_valid
   label.text-field__label(for='firstname') .input_valid
   span Спасибо за предоствленную информацию!
-div(style='clear: both; height: 50px; ')
-form.info__search
-  input(type='text' placeholder='Поиск')
-  input(type='submit')
-  svg
-    use(xlink:href='#search')
-div(style='clear: both; height: 50px; ')
 
-textarea#4(name="4" row='20' placeholder="Введите текст")
+
+
+
 div(style='clear: both; height: 50px; ')
-p -checkbox-
+p --------------checkbox-----------------
+div(style='clear: both; height: 20px; ')
+
+
+
 
 .fildset-checkbox
   .form-check
-    input#5(type='checkbox')
+    input#5(type='checkbox' name="")
     label(for='5') Любимое место
   .form-check
-    input#6(type='checkbox')
+    input#6(type='checkbox' name="")
     label(for='6') Месторасположение
   .form-check
-    input#7(type='checkbox')
+    input#7(type='checkbox' name="")
     label(for='7') Гость торжественного события
   .form-check
-    input#8(type='checkbox')
+    input#8(type='checkbox' name="")
     label(for='8') Корпоративные мероприятия
   .form-check
-    input#9(type='checkbox')
+    input#9(type='checkbox' name="")
     label(for='9') СПА комплекс
+
+
+
 div(style='clear: both; height: 20px; ')
-p -radio-
+p -----------------radio------------------
+div(style='clear: both; height: 20px; ')
+
+
 
 fildset.fildset-radio
   .form-check
-    input(type="radio" id="10" name='a' val='16-25' checked)
+    input(type="radio" id="10" name='a' value='16-25' checked)
     label(for="10")  от 16-25
   .form-check
-    input(type="radio" id="11" name='a' val='26-35')
+    input(type="radio" id="11" name='a' value='26-35')
     label(for="11")  от 26-35
   .form-check
-    input(type="radio" id="12" name='a' val='36-45')
+    input(type="radio" id="12" name='a' value='36-45')
     label(for="12")  36-45
   .form-check
-    input(type="radio" id="13" name='a' val='55')
+    input(type="radio" id="13" name='a' value='55')
     label(for="13")  от 45 и старше
+
+
+
 div(style='clear: both; height: 20px; ')
-p -radio-svg-
+p ---------------radio-svg----------------------
+div(style='clear: both; height: 20px; ')
+
+
+
+
 fildset.fildset-radio.fildset-radio--sex
   .form-check
-    input(type="radio" id="14" name='s' val='man')
+    input(type="radio" id="14" name='s' value='man')
     label(for="14")  Мужчина
     svg
       use(xlink:href='#Union')
   .form-check
-    input(type="radio" id="15" name='s' val='frau')
+    input(type="radio" id="15" name='s' value='frau')
     label(for="15")  Женщина
     svg
       use(xlink:href='#Union')
 
+
+
 div(style='clear: both; height: 20px; ')
-p -radio--tiers-
+p ----------------radio--tiers----------------
+div(style='clear: both; height: 20px; ')
+
+
+
+
 .fildset-radio.fildset-radio--tiers
-  input(type="radio" id="tieresyes" name='tieres' val='yes' checked)
+  input(type="radio" id="tieresyes" name='tieres' value='yes' checked)
   label(for="tieresyes")  Да
   span /
-  input(type="radio" id="tieresnot" name='tieres' val='not')
+  input(type="radio" id="tieresnot" name='tieres' value='not')
   label(for="tieresnot")  Нет
+
 div(style='clear: both; height: 20px; ')
-p -a-
+p --------------------- vue components ------------------
+div(style='clear: both; height: 20px; ')
+
+.form-field
+    #check-in._check
+    .form-field__area-svg
+      svg
+        use(xlink:href='#arrow-down')
+input#date-in(type='hidden' name='date-in')
+
+div(style='clear: both; height: 20px; ')
+
+.form-field
+  #check-out._check
+  .form-field__area-svg
+      svg
+        use(xlink:href='#arrow-down')
+input#date-out(type='hidden' name='date-out')
+
+div(style='clear: both; height: 20px; ')
+p --------------select------------------
+div(style='clear: both; height: 20px; ')
+
+.select
+      .dropdown-button
+        p Место проживания 
+        input(type="hidden" name='place' value="" )
+        span
+        .form-field__area-svg
+          svg
+            use(xlink:href='#arrow-down')
+      ul.dropdown-list
+        -
+          var blocks = [
+            {text: 'коттеджи 2-х местные' },
+            {text: 'дом Лесника' },
+            {text: 'дом Охотника' },
+            {text: 'дом Рыбака №1' },
+            {text: 'дом Рыбака №2' },
+          ];
+        each block in blocks
+          li.dropdown-list__item(data-value=block.text)=block.text
+
+
+
+
+div(style='clear: both; height: 20px; ')
+p -----------------------a------------------------------
+div(style='clear: both; height: 20px; ')
+
+
+
+.copy  a(href="#!") +7 (961)511-66-14
 a(href="#!") +7 (961)511-66-14
 
 div(style='clear: both; height: 50px; ')
+
 .logo
   svg
     use(xlink:href='#logo')
   p slogan
 
 div(style='clear: both; height: 50px; ')
-p -picture-
+p ------------------------picture-----------------------------
+div(style='clear: both; height: 50px; ')
+
 picture
     source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
     source(srcset='./img/img-1.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
     source(srcset='./img/img-2.webp' type='image/webp' media='(max-width: 999px)')
     img(src='./img/paralax.webp' alt='img')
+
 div(style='clear: both; height: 50px; ')
