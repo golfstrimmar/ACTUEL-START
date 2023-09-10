@@ -25,8 +25,8 @@
       color: lighten($jungle-green, 25%);
     }
   }
-  input[type="radio"]:checked + label + svg,
-  input[type="radio"]:not(:checked) + label + svg {
+  input[type="radio"]:checked + label  svg,
+  input[type="radio"]:not(:checked) + label  svg {
     display: inline-block !important;
     width: 14px;
     transform: translate(6px, 6px);
@@ -36,10 +36,10 @@
     left: 0;
     @include transition;
   }
-  input[type="radio"]:checked + label + svg {
+  input[type="radio"]:checked + label  svg {
     opacity: 1;
   }
-  input[type="radio"]:not(:checked) + label + svg {
+  input[type="radio"]:not(:checked) + label  svg {
     opacity: 0;
   }
 
