@@ -5,7 +5,7 @@ import { createApp } from "vue";
  import VueDatePicker from "@vuepic/vue-datepicker";
 import CheckIn from "./../familia/book/CheckIn.vue";
 import CheckOut from "./../familia/book/CheckOut.vue";
-
+// import Rooms from "./../blocks/modules/header/rooms/Rooms.vue";
 // const app = createApp({
 //   setup() {
 //     const foo = "foo";
@@ -33,7 +33,7 @@ import CheckOut from "./../familia/book/CheckOut.vue";
 // import { createApp } from "vue";
 //
 
-import Rooms from "./../blocks/modules/header/rooms/Rooms.vue";
+
 
 
 // import { document } from "postcss";
@@ -48,9 +48,9 @@ import Rooms from "./../blocks/modules/header/rooms/Rooms.vue";
   createApp(CheckOut).component("VueDatePicker", VueDatePicker).mount(cell);
 });
 
-[...document.querySelectorAll(".rooms")].forEach((cell) => {
-  createApp(Rooms).mount(cell);
-});
+// [...document.querySelectorAll(".rooms")].forEach((cell) => {
+//   createApp(Rooms).mount(cell);
+// });
 
 
 
