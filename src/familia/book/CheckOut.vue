@@ -1,13 +1,34 @@
-<template>
-  <p :class="[{ '_empty-data': date === '' }]">Выезд *</p>
-  <Datepicker v-model="date" :format="format" :enable-time-picker="false" locale="ru" position="left" :offset="10"
-    auto-apply @closed="closedFn" @focus="focusFn" />
+<template lang="pug">
+._check
+  input.date-in(
+    type='hidden' 
+    name='date-out'
+    v-model= 'date' 
+    )
+  p(:class="[{ '_empty-data': date === '' }]") Выезд *
+  VueDatePicker(
+    v-model='date' 
+    :format='format' 
+    :enable-time-picker='false'    
+    locale='ru' position='left' 
+    :offset='10' 
+    auto-apply='' 
+    @closed='closedFn'   
+    @focus='focusFn'
+    @click='clickFn'
+    @open='openFn'
+    )
+  div(:class="fildFocus ? 'form-field__area-svg _is-active' : 'form-field__area-svg'")
+    svg
+      use(xlink:href='#arrow-down') 
 </template>
 
 <script setup>
-import Datepicker from "@vuepic/vue-datepicker";
-import { ref } from 'vue';
+import { ref, onMounted } from "vue";
 const date = ref('');
+var fildFocus = ref(false);
+
+
 
 const format = (date) => {
   const day = date.getDate();
@@ -16,16 +37,12 @@ const format = (date) => {
   return `${day}.${month}.${year}`;
 }
 
-const focusFn = () => {
-  document.querySelector('#check-out').closest('.form-field').querySelector('.form-field__area-svg').style.transform = "translateY(-50%) rotate(180deg)"
+const openFn = () => {
+  fildFocus.value = !fildFocus.value
 }
 
 const closedFn = () => {
-  if (date.value !== '') {
-    document.querySelector('#check-out').closest('.form-field').classList.add('_is-active')
-    document.querySelector('#date-out').value = date.value
-  }
-  document.querySelector('#check-out').closest('.form-field').querySelector('.form-field__area-svg').style.transform = "translateY(-50%) "
+  fildFocus.value = !fildFocus.value
 }
 
 </script>

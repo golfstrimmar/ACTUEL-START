@@ -16,32 +16,30 @@
     @include flex-column;
     justify-content: center;
     cursor: pointer;
-
     width: 100%;
     min-height: 48px;
     p {
       @include Text-Style-31;
       position: relative;
       transform: translateY(0);
+      padding: 0 0 0 0;
     }
-
     &:hover {
       p {
         color: lighten($jungle-green, 25%);
       }
     }
     &._is-new {
-      padding: 12px 20px 13px;
-      // & ~ .dropdown-list {
-      //   top: 74px;
-      // }
+      padding: 14px 20px 0px;
+      p {
+        transform: translateY(-6px);
+      }
     }
-
     span {
       @include transition;
       display: flex;
       color: #000;
-      font-family: "PT Serif", serif;
+      font-family: "PTSerif-Regular", serif;
       font-size: 0;
       font-weight: 400;
       line-height: 34px;

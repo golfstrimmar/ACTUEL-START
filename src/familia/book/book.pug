@@ -8,11 +8,8 @@ section(id='book').book.rel
         .book-section-form__field
           .text-block
             .text-field
-              input#firstname(type='text' name='firstname' value='' placeholder=' Denzel Washington')
+              input#firstname(type='text' name='firstname'   placeholder=' Denzel Washington')
               label.text-field__label(for='firstname') Имя Фамилия *
-              
-
-            
             //- .form-field.form-field--year
             //-     span.form-field__span Год рождения
             //-     #check-year._check
@@ -21,18 +18,10 @@ section(id='book').book.rel
             //-         use(xlink:href='#arrow-down')
 
           .text-block
-            input#date-in(type='hidden' name='date-in')
             .form-field
-              #check-in._check
-              .form-field__area-svg
-                svg
-                  use(xlink:href='#arrow-down')
-            input#date-out(type='hidden' name='date-out')
+              .check-in-vue#check-in-book
             .form-field
-              #check-out._check
-              .form-field__area-svg
-                svg
-                  use(xlink:href='#arrow-down')
+              .check-out-vue#check-out-book
             .form-field.form-field--select
               .select
                 .dropdown-button

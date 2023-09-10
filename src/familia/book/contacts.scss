@@ -7,12 +7,13 @@
   }
   &__body {
     margin: 20px 0 0 0;
+    display: table;
   }
   .text-field {
+    float: left;
     margin: 0 20px 0px 0;
   }
   .submit-button {
-    margin: 0 0 0 20px;
     min-height: 52px;
     width: 220px;
     float: left;

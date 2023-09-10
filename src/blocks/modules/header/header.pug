@@ -1,64 +1,74 @@
 header.header
-    .container
-      .header__top 
-        a(href='#!').header__logo.logo
-            svg
-              use(xlink:href='#logo')
-            p Усадьба «Фамилия»
-              span клуб загородного отдыха
-
-        ul.header__info.info
-          li 
-            svg#cerckle
-              use(xlink:href='#imagecerckle')
-            svg
-              use(xlink:href='#image')
-            p.info__text Краснодарский край, Динской р-н, ст. Пластуновская
-
-          li 
-            .info__block
-              svg
-                use(xlink:href='#vk')
-              a(href='#!' ) ysadbaclub
-
-            .info__block
-              svg
-                use(xlink:href='#telegram')
-              a(href='#!' ) @ysadbafamiliya
-          li 
-            svg#cerckle
-              use(xlink:href='#imagecerckle')
-            svg
-              use(xlink:href='#image')
-            a(href='#!' ) 8 800 500 10 60
-              p Заказать звонок
-
-
-    .header__menu.menu
-      .container
-        ul.menu__list
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Проживание
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Spa
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Ресторанный комплекс
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Отдых
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Спорт
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Конный клуб
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  LIFE-Арена
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Корпоративы
-          li.menu__item.rel
-            a(href="#!").menu__link.menu-link-js.menu__link--active  Оплата Online
-
-    .header__burger.icon
+  .container
+    .header__burger 
+        span
+    .header__top 
+      a(href='#!').header__logo.logo
         svg
-          use(xlink:href='#list')
-    .header__close
+          use(xlink:href='#logo')
+        p Усадьба «Фамилия»
+          span клуб загородного отдыха
+
+      ul.header__info.info
+        li 
+          svg#cerckle
+            use(xlink:href='#imagecerckle')
           svg
-            use(xlink:href='#x-lg')
+            use(xlink:href='#image')
+          p.info__text Краснодарский край, Динской р-н,<br> ст. Пластуновская
+
+        li 
+          .info__block
+            svg
+              use(xlink:href='#vk')
+            a(href='#!' ) ysadbaclub
+
+          .info__block
+            svg
+              use(xlink:href='#telegram')
+            a(href='#!' ) @ysadbafamiliya
+        li 
+          svg#cerckle
+            use(xlink:href='#imagecerckle')
+          svg
+            use(xlink:href='#image')
+          a(href='#!' ) 8 800 500 10 60
+            p Заказать звонок
+
+
+  .header__menu.menu
+    .container
+      ul.menu__list
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js.menu__link--active  Проживание
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  Spa
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  Ресторанный комплекс
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  Отдых
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  Спорт
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  Конный клуб
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  LIFE-Арена
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  Корпоративы
+        li.menu__item.rel
+          a(href="#!").menu__link.menu-link-js  Оплата Online
+
+
+  .container
+    form.header__book.header-book(action="#" name="gasts-form")
+      .header-book__title 
+        h3 Бронирование
+      .header-book__items
+        .form-field
+          #check-in-header.check-in-vue
+        .form-field
+          #check-out-header.check-out-vue
+        .form-field.form-field--rooms
+          #rooms.rooms
+      button.btn.btn-success.header-button(  type='submit'  ) Найти
+
