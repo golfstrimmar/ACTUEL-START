@@ -13,13 +13,17 @@ export const Header = () => {
     now.classList.add("info-active");
     // menu.prepend(nowLogo);
     menu.append(now);
+    info.classList.add("info-active");
     body.classList.add("lock");
+    header.classList.add("responciveHeader");
   };
   const normalInfo = () => {
     menu.classList.remove("menu-active");
     menu.querySelector(".info").remove();
     info.classList.remove("info-active");
     body.classList.remove("lock");
+    header.classList.remove("responciveHeader");
+
   };
 
   const activeItemHEAD = (event) => {
@@ -33,10 +37,11 @@ export const Header = () => {
 
   document.addEventListener("click", function (event) {
     if (event.target.closest(".header__burger")) {
-      activeInfo();
-    }
-    if (event.target.closest(".header__close")) {
-      normalInfo();
+        if (header.classList.contains("responciveHeader")) {
+          normalInfo();
+        } else {
+          activeInfo();
+        }
     }
 
     if (event.target.closest(".menu__link")) {
@@ -61,9 +66,9 @@ export const Header = () => {
     }
   });
   // --------------------------
-  if (window.pageYOffset > 100) {
-    header.classList.add("responciveHeader");
-  }
+  // if (window.pageYOffset > 100) {
+  //   header.classList.add("responciveHeader");
+  // }
   // --------------------------
 
   // window.addEventListener("scroll", function (event) {
@@ -83,6 +88,7 @@ export const Header = () => {
       menu.classList.remove("menu-active");
       info.classList.remove("info-active");
       body.classList.remove("lock");
+      header.classList.remove("responciveHeader");
     }
   };
 

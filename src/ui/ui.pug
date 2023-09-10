@@ -1,32 +1,44 @@
 div(style='clear: both; height: 20px; ')
 p -buttons-
-button(type='submit' valueue='Готово').create-anzahl__fertig.btn-success.but-wave Готово
+button(type='submit' value='Готово').btn.btn-success.but-wave Готово
 div(style='clear: both; height: 20px; ')
-button(type='button').btn-blue Удалить номер из списка
+button(type='button').btn.btn-blue Удалить номер из списка
 div(style='clear: both; height: 20px; ')
 button.btn.btn--empty.submit-button(  type='submit' name='send' ) Отправить
 
 div(style='clear: both; height: 20px; ')
 p -inputs-
 .text-field
-  input#1(type='text' name='1' valueue='' placeholder=' Denzel Washington')
+  input(type='text' name='1'  placeholder=' Denzel Washington')
   label.text-field__label(for='1') Имя Фамилия
   span Поле обязательно для заполнения
 div(style='clear: both; height: 50px; ')
 .text-field
-  input#firstname(type='text' name='firstname' valueue='' placeholder=' Denzel Washington').input_invalueid
-  label.text-field__label(for='firstname' ) .input_invalueid
+  input(type='text' name='f' value="Denzel Washington"  placeholder=' Denzel Washington').input_invalid
+  label.text-field__label(for='f' ) Имя Фамилия
   span Поле обязательно для заполнения
 div(style='clear: both; height: 50px; ')
 .text-field
-  input#firstname(type='text' name='firstname' valueue="Джек Безз" placeholder=' Denzel Washington').input_valueid
-  label.text-field__label(for='firstname') .input_valueid
+  input(type='text' name='fname' value="Denzel Washington" placeholder=' Denzel Washington').input_valueid
+  label.text-field__label(for='fname') Имя Фамилия
   span Спасибо за предоствленную информацию!
+
 
 div(style='clear: both; height: 50px; ')
 
 textarea#4(name="4" row='20' placeholder="Введите текст")
 div(style='clear: both; height: 50px; ')
+
+
+p --- vue-------
+div(style='clear: both; height: 50px; ')
+.form-field
+  .check-in-vue
+
+
+
+div(style='clear: both; height: 50px; ')
+
 p -checkbox-
 
 .fildset-checkbox
@@ -112,13 +124,7 @@ fildset.fildset-rating
 p -a-
 a(href="#!") +7 (961)511-66-14
 
-
-
-
-
-
-
-
-
-
 div(style='clear: both; height: 50px; ')
+
+
+

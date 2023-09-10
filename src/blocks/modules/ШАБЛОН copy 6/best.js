@@ -28,7 +28,7 @@ export class  {
 
 
 let = document.querySelector(" ");
-let = [...   .querySelectorAll(" ")] ;
+let = [... document.querySelectorAll(" ")] ;
 .addEventListener('click',(e) =>{ });
 document.createElement(' ')
 .getAttribute('name');

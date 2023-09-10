@@ -3,8 +3,7 @@
   @include transition;
   width: 100%;
   @include flex-column;
-
-  background-color: rgba(0, 0, 0, 0.1);
+  padding: 66px 0 0 0;
 }
 
 .header .container {
@@ -19,7 +18,7 @@
   width: 100%;
   gap: 0 51px;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 8px 0 5px;
 }
 
 .header__burger {
@@ -29,21 +28,77 @@
 .header__close {
   display: none;
 }
-.header__button {
-  padding: 5px 10px;
+
+.header-button {
+  width: 227px;
+  height: 42px;
+  border-radius: 10px;
+  border: solid 1px $white-16;
+  background-color: $jungle-green;
+}
+
+.header__book {
+}
+.header-book {
+  @include flex-aligne-center;
+  column-gap: 33px;
+  padding: 24px 0;
+  &__items {
+    display: table;
+    .form-field {
+      width: 241px;
+      margin: 0 18px 0px 0;
+      float: left;
+      min-height: 40px;
+      &--rooms {
+        width: 178px;
+        margin: 0 0 0px 0;
+      }
+      p {
+        @include Text-Style-7;
+        padding: 0px 0px 0px 12px;
+        transform: translateY(-127%);
+        opacity: 1;
+        &._empty-data {
+          transform: translateY(-50%);
+        }
+      }
+      input {
+        padding: 0 0 0 12px;
+        min-height: 40px;
+        &:not(:placeholder-shown) {
+          @include Text-Style-8;
+          line-height: 17px;
+          min-height: 0px;
+          padding: 20px 0px 0px 12px;
+        }
+      }
+      &:hover {
+        p {
+          color: lighten($jungle-green, 25%);
+        }
+      }
+    }
+  }
+  &__title {
+    h3 {
+      @include Text-Style-6;
+    }
+  }
 }
 /*=====================*/
 .logo {
   display: grid;
-  grid-template-columns: 62px 207px;
+  grid-template-columns: 68px 207px;
   column-gap: 20px;
   align-items: center;
   svg {
-    height: 62px;
+    height: 76px;
     width: 68px;
   }
   p {
     @include Text-Style;
+    letter-spacing: -0.015rem;
     span {
       display: block;
       @include Text-Style-2;
@@ -53,15 +108,19 @@
 /*=====================*/
 .info {
   display: grid;
-  grid-template-columns: 250px repeat(2, 1fr);
+  grid-template-columns: 280px repeat(2, 1fr);
   column-gap: 50px;
   li {
     @include flex-aligne-center;
-    column-gap: 20px;
+    column-gap: 22px;
     cursor: pointer;
-   p,svg{
-    @include transition;
-   }
+    &:nth-child(2) {
+      padding: 0 0 0 28px;
+    }
+    p,
+    svg {
+      @include transition;
+    }
 
     svg {
       width: 34px;
@@ -69,12 +128,12 @@
       height: 33px;
       fill: $jungle-green;
       position: relative;
-      &#cerckle{
-          position: absolute;
-          fill: transparent;
-          stroke: $jungle-green; 
+      &#cerckle {
+        position: absolute;
+        fill: transparent;
+        stroke: $jungle-green;
       }
-      }
+    }
 
     .info__text {
       @include Text-Style-3;
@@ -83,21 +142,20 @@
     a {
       @include Text-Style-4;
     }
- &:nth-child(1),&:nth-child(3){
- &:hover p,
+    &:nth-child(1),
+    &:nth-child(3) {
+      &:hover p,
       &:hover a,
-      &:hover svg{
+      &:hover svg {
         color: lighten($jungle-green, 25%);
         fill: lighten($jungle-green, 25%);
       }
 
-
-      &:hover #cerckle{
-          fill: transparent;
-          stroke: lighten($jungle-green, 25%);
+      &:hover #cerckle {
+        fill: transparent;
+        stroke: lighten($jungle-green, 25%);
       }
-
- }
+    }
     &:nth-child(2) {
       svg {
         width: 17px;
@@ -123,10 +181,8 @@
         @include Text-Style-5;
         p {
           @include Text-Style-4;
-          
         }
       }
-     
     }
   }
 }
@@ -164,70 +220,157 @@
 
 /*=========@media==============*/
 
-@media (min-width: 1000px) and (max-width: 1199px) {
-  .header {
-    height: 60px;
-  }
+// @media (min-width: 1000px) and (max-width: 1199px) {
+//   .header {
+//     height: 60px;
+//   }
 
-  .header__top {
-    grid-template-columns: 100px 1fr minmax(260px, auto);
-  }
+//   .header__top {
+//     grid-template-columns: 100px 1fr minmax(260px, auto);
+//   }
 
-  .header__menu {
-    margin: 0 20px 0 0;
-  }
+//   .header__menu {
+//     margin: 0 20px 0 0;
+//   }
 
-  .info {
-    padding: 0 0 0 0;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-}
+//   .info {
+//     padding: 0 0 0 0;
+//     flex-direction: column;
+//     justify-content: center;
+//     flex-wrap: nowrap;
+//   }
+// }
 
 /*===========*/
 
-@media (max-width: 999px) {
+@media (max-width: 767px) {
   .header {
-    height: 60px;
+    // height: 60px;
+    background-color: beige;
+    padding: 57px 0 0 0;
   }
+  .logo {
+    grid-template-columns: 68px 207px;
+    z-index: 100;
+  }
+
+  .header-book {
+    display: none;
+  }
+
   .header__top {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 1fr;
+    padding: 0 0 0 0;
   }
-  .header__menu {
-    margin: 0;
-  }
-  .header__burger,
-  .header__close {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    transform: translate(0%, -50%) rotate(0);
+
+  .header__burger {
     display: inline-block;
+    position: relative;
+    position: absolute;
+    top: 20px;
+    width: 34px;
+    height: 30px;
+    transform: translateY(-50%);
+    left: auto;
+    right: 0px;
+    z-index: 110;
     cursor: pointer;
-    svg {
-      width: 100%;
-      height: 100%;
-      @include transition;
-      stroke: #fff;
+    span {
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: inline-block;
+      width: 34px;
+      height: 3px;
+      background: $jungle-green;
+      @include transition;
+    }
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 34px;
+      height: 3px;
+      background: $jungle-green;
+      @include transition;
+    }
+    &::after {
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      bottom: 0;
+      left: 0;
     }
     &:hover {
-      svg {
-        opacity: 0.6;
+      span,
+      &::after,
+      &::before {
+        background: lighten($jungle-green, 25%);
       }
     }
   }
-  .header__burger {
-    left: auto;
-    top: 50%;
-    right: 0;
+  .responciveHeader {
+    .header__burger {
+      
+      span {
+        opacity: 0;
+      }
+      &::after {
+        top: calc(50% - 1px);
+        left: 0;
+        transform: rotate(45deg);
+      }
+      &::before {
+        bottom: calc(50% - 2px);
+        left: 0;
+        transform: rotate(-45deg);
+      }
+      .header__burger,
+      &::after,
+      &::before {
+        background: $white;
+      }
+      &:hover {
+        span,
+        &::after,
+        &::before {
+          background: lighten($jungle-green, 25%);
+        }
+      }
+    }
   }
-  .header__close {
-    left: auto;
-    top: 29px;
-    right: 41px;
-  }
+  // .header__burger,
+  // .header__close {
+  //   position: absolute;
+  //   width: 20px;
+  //   height: 20px;
+  //   transform: translate(0%, -50%) rotate(0);
+  //   display: inline-block;
+  //   cursor: pointer;
+  //   svg {
+  //     width: 100%;
+  //     height: 100%;
+  //     @include transition;
+  //     stroke: #fff;
+  //     position: absolute;
+  //   }
+  //   &:hover {
+  //     svg {
+  //       opacity: 0.6;
+  //     }
+  //   }
+  // }
+  // .header__burger {
+  //   left: auto;
+  //   top: 50%;
+  //   right: 0;
+  // }
+  // .header__close {
+  //   left: auto;
+  //   top: 29px;
+  //   right: 41px;
+  // }
   .logo__link img {
     height: 30px;
     width: 30px;
@@ -240,7 +383,7 @@
     top: 0;
     transform: translateX(-100vw);
     left: 0;
-    padding: 100px 20px 0 20px;
+    padding: 140px 0px 0 0px;
     overflow: auto;
     text-align: right;
     display: flex;
@@ -249,13 +392,15 @@
     align-items: flex-end;
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(15px);
-    z-index: 1000;
+    z-index: 100;
     @include transition;
   }
 
   .menu__list {
     flex-direction: column;
     align-items: flex-end;
+    padding: 0 0 0 0;
+    row-gap: 7px;
   }
 
   .menu-active {
@@ -263,31 +408,58 @@
   }
 
   .info {
-    display: none !important;
+    display: none;
   }
 
   .info.info-active {
-    display: block !important;
-    @include transition;
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 23px 20px 0 0;
   }
+  .info li {
+    column-gap: 11px;
+    .info__text,
+    a {
+      text-align: left;
+      color: $white;
+    }
+    &:nth-child(2) {
+    padding: 15px 0 15px 7px;
+  }
+    &:nth-child(3) a {
+      color: $white;
+       p{
+     color: $white; 
+    }
+    }
+    &:nth-child(3) {
+    justify-self: start;
+    column-gap: 11px;
+   
+  }
+  }
+
 
   .menu-active .menu__link {
     border-radius: 10px;
     padding: 5px;
-    background: transparent;
   }
 
   .menu__link--active {
-    outline: 1px solid #f73030;
-    background: #df8383 !important;
+    background: $jungle-green;
+    &:hover {
+      color: $white;
+      background: lighten($jungle-green, 25%);
+    }
   }
-  .menu__item {
-    margin: 0 0 20px 0;
-    width: 100%;
-    justify-content: flex-end;
-  }
+  // .menu__item {
+  //   margin: 0 0 20px 0;
+  //   width: 100%;
+  //   justify-content: flex-end;
+  // }
 
-  .menu__item:last-child {
-    margin: 0 0 30px 0;
-  }
+  // .menu__item:last-child {
+  //   margin: 0 0 30px 0;
+  // }
 }
