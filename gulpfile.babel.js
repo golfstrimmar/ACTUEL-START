@@ -7,25 +7,17 @@ const requireDir = require("require-dir"),
     views: {
       src: ["./src/views/*.pug"],
       dist: "./dist/",
-      watch: [
-        "./src/**/*.pug",
-      ],
+      watch: ["./src/**/*.pug"],
     },
     styles: {
       src: ["./src/styles/main.{scss,sass}"],
       dist: "./dist/styles/",
-      watch: [
-        "./src/**/*.{scss,sass}",
-      ],
+      watch: ["./src/**/*.{scss,sass}"],
     },
     scripts: {
       src: "./src/js/index.js",
       dist: "./dist/js/",
-      watch: [
-        "./src/**/*.vue",
-        "./src/**/*.js",
-        
-      ],
+      watch: ["./src/**/*.vue", "./src/**/*.js"],
     },
     images: {
       src: [
@@ -67,11 +59,11 @@ export { paths };
 export const development = gulp.series(
   "clean",
   gulp.parallel([
+    "sprites",
     "styles",
     "scripts",
     "images",
     "webp",
-    "sprites",
     "fonts",
     "video",
     "favicons",
@@ -84,11 +76,11 @@ export const development = gulp.series(
 export const prod = gulp.series(
   "clean",
   gulp.parallel([
+    "sprites",
     "styles",
     "scripts",
     "images",
     "webp",
-    "sprites",
     "fonts",
     "video",
     "favicons",

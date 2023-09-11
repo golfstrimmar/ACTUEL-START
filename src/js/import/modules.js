@@ -1,4 +1,4 @@
-// import { Header } from "%modules%/header/header";
+import { Header } from "%modules%/header/header";
 // import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
@@ -21,18 +21,15 @@ import { FormFields } from "../../familia/book/book";
 // import { TypedItem } from "%modules%/typed/typedHover";
 // import { Popup } from "%modules%/popup/popup";
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  
   //   // ==========FormFields=============
   if (document.querySelector(".form-field")) {
     FormFields();
   }
   // =====Header==================
-  // if (document.querySelector("header")) {
-  //   Header();
-  // }
+  if (document.querySelector("header")) {
+    Header();
+  }
   // ===Look=======
   // if (document.querySelector("#app")) {
   // Rooms();

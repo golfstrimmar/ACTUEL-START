@@ -1,5 +1,7 @@
 <template lang="pug">
 section
+  p {{  }}
+  p {{  }}
   .create-anzahl(@click="isFormActive = !isFormActive , isUsed = true")
     span(:class=" (isFormActive == true ||  isUsed == true) ? '_is-active' : ''") Гости*
     input.anzahl-field(type='hidden'   name='gasts' v-model="all" )
@@ -19,13 +21,13 @@ section
             span Взрослые
             .create-anzahl__change 
               button(type="button" @click.prevent='decrErwachsene(todo)').btn-blue &minus;
-              input(type='text'  :name="'adult-' + `${todos.indexOf(todo)+1}`" v-model='todo.content_erwachsene') 
+              input(type='text' disabled  :name="'adult-' + `${todos.indexOf(todo)+1}`" v-model='todo.content_erwachsene') 
               button(type="button" @click.prevent='incrErwachsene(todo)').btn-blue +
 
           .create-anzahl__item
             span Дети младше 14 лет
             .create-anzahl__change 
-              input(type='text'  :name="'kinder-' + `${todos.indexOf(todo)+1}`" v-model='todo.content_kinder')
+              input(type='text' disabled :name="'kinder-' + `${todos.indexOf(todo)+1}`" v-model='todo.content_kinder')
               button(type="button" @click.prevent='decrKinder(todo)').btn-blue &minus;
               button(type="button" @click.prevent='incrKinder(todo)').btn-blue +
         button.create-anzahl__delete.btn-blue(@click.prevent='removeTodo(todo)') Удалить номер из списка
@@ -116,7 +118,7 @@ onMounted(() => {
 
 document.addEventListener('click', (e) => {
   if (!e.target.closest(".rooms")) {
-   isFormActive.value = false
+    isFormActive.value = false
   }
 });
 

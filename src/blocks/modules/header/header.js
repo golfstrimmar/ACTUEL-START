@@ -23,7 +23,6 @@ export const Header = () => {
     info.classList.remove("info-active");
     body.classList.remove("lock");
     header.classList.remove("responciveHeader");
-
   };
 
   const activeItemHEAD = (event) => {
@@ -37,11 +36,11 @@ export const Header = () => {
 
   document.addEventListener("click", function (event) {
     if (event.target.closest(".header__burger")) {
-        if (header.classList.contains("responciveHeader")) {
-          normalInfo();
-        } else {
-          activeInfo();
-        }
+      if (header.classList.contains("responciveHeader")) {
+        normalInfo();
+      } else {
+        activeInfo();
+      }
     }
 
     if (event.target.closest(".menu__link")) {
@@ -81,7 +80,7 @@ export const Header = () => {
 
   // ---------------------------------------------
   window.onresize = function () {
-    if (window.innerWidth >= 999) {
+    if (window.innerWidth <= 768) {
       if (menu.querySelector(".header__info")) {
         menu.querySelector(".header__info").remove();
       }

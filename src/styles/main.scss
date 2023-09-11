@@ -1,11 +1,9 @@
 @import "vendor/null";
 
-
 // Переменные, миксины, функции
 // @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
-
 
 // Основное
 @import "base/colors";
@@ -29,7 +27,6 @@
 @import "base/buttons/btn-blue.scss";
 @import "base/buttons/btn-wave.scss";
 
-
 @import "../familia/shild/shild.scss";
 @import "../familia/book/book-section";
 @import "../familia/book/info";
@@ -37,13 +34,8 @@
 @import "../familia/book/contacts";
 @import "../blocks/modules/header/rooms/rooms";
 
-
-
-
-
 // БЭМ-modules
-// @import "../blocks/modules/header/header";
-
+@import "../blocks/modules/header/header";
 
 // @import "../blocks/modules/bunner/bunner";
 // @import "../blocks/modules/bunner/bunner-slider";
@@ -68,5 +60,5 @@
 // @import "../blocks/modules/form/form";
 // @import "../blocks/modules/typed/typedHover";
 
-// @import "../blocks/modules/footer/footer";
+@import "../blocks/modules/footer/footer";
 // @import "../blocks/modules/popup/popup";
