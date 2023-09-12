@@ -47,13 +47,9 @@
   z-index: 5;
 }
 
-
-
-
-
 .bunner-slider .swiper-pagination {
   position: absolute;
-  left: calc((100vw - 1240px)/2);
+  left: calc((100vw - 1240px) / 2);
   display: inline-block;
   width: auto;
   bottom: 22%;
@@ -74,11 +70,8 @@
   cursor: pointer;
 }
 
-
-
 .bunner-slider .swiper-pagination span.swiper-pagination-bullet-active {
   background: rgb(28, 25, 194);
-
 }
 
 // ==================================
@@ -118,7 +111,13 @@
   height: 100%;
 }
 
-
+.slider-card__title {
+  h1 {
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+    text-align: left;
+    @include Text-Style-9;
+  }
+}
 
 // .slider--1 {
 //   position: relative;

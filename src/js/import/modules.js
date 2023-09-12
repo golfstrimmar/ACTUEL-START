@@ -1,5 +1,5 @@
 import { Header } from "%modules%/header/header";
-// import { bunnerSwiper } from "%modules%/bunner/bunner";
+import { bunnerSwiper } from "../../familia/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
 // import { SideMenu } from "%modules%/side-menu/side-menu";
@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
 
   //   // =========bunnerSwiper==============
-  // if (document.querySelector("#bunner-slider")) {
-  //   bunnerSwiper();
-  // }
+  if (document.querySelector("#bunner-slider")) {
+    bunnerSwiper();
+  }
   // ========popup===============
   // if (document.querySelector(".popups-init-js")) {
   //   Popup();
@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   Marque();
   // }
   // // ======slider-full=================
-  // if (document.querySelector("#slider-full")) {
-  //   SwiperFull();
-  // }
+  if (document.querySelector("#slider-full")) {
+    SwiperFull();
+  }
   // //   // =====swiper-scroll==================
   // if (document.querySelector("#swiper-scroll")) {
   //   SwiperScroll();
