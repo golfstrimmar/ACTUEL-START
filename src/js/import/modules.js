@@ -8,7 +8,7 @@ import { bunnerSwiper } from "../../familia/bunner/bunner";
 // import { GalCases } from "%modules%/galCases/galCases";
 // import { Marque } from "%modules%/marque/marque";
 // import { Swiperwk } from "%modules%/wk/wk";
-// import { Swiper1 } from "%modules%/swiper-1/swiper-1";
+import { Swiper1 } from "../../familia/swiper-1/swiper-1";
 // import { SwiperFull } from "%modules%/slider-full/slider-full";
 // import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
 // import { Double } from "%modules%/slider-double/sdouble.js";
@@ -19,7 +19,7 @@ import { FormFields } from "../../familia/book/book";
 // import { Rooms } from "%modules%/rooms/rooms";
 // import { Look } from "%modules%/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
-// import { Popup } from "%modules%/popup/popup";
+import { Popup } from "%modules%/popup/popup";
 
 document.addEventListener("DOMContentLoaded", function () {
   //   // ==========FormFields=============
@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     bunnerSwiper();
   }
   // ========popup===============
-  // if (document.querySelector(".popups-init-js")) {
-  //   Popup();
-  // }
+  if (document.querySelector(".popups-init-js")) {
+    Popup();
+  }
   //   // ======Tab=================
   // if (document.querySelector("._tabs-container-js")) {
   //   Tab();
@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   Swiperwk();
   // }
   // =========swiper-1==============
-  // if (document.querySelector("#swiper-1")) {
-  //   Swiper1();
-  // }
+  if (document.querySelector("#swiper-1")) {
+    Swiper1();
+  }
   //   // ========swiper-1licens===============
   // if (document.querySelector("#swiper-1licens")) {
   //   Swiper1licens();
@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   Marque();
   // }
   // // ======slider-full=================
-  if (document.querySelector("#slider-full")) {
-    SwiperFull();
-  }
+  // if (document.querySelector("#slider-full")) {
+  //   SwiperFull();
+  // }
   // //   // =====swiper-scroll==================
   // if (document.querySelector("#swiper-scroll")) {
   //   SwiperScroll();

@@ -3,7 +3,6 @@
   @include transition;
   width: 100%;
   @include flex-column;
-  padding: 66px 0 0 0;
 }
 
 .header .container {
@@ -14,11 +13,11 @@
   position: relative;
   height: 100%;
   display: grid;
-  grid-template-columns: 287px 1fr;
+  grid-template-columns: 280px 1fr;
   width: 100%;
   gap: 0 51px;
   justify-content: space-between;
-  padding: 8px 0 5px;
+  padding: 5px 0;
 }
 
 .header__burger {
@@ -90,7 +89,7 @@
 .logo {
   display: grid;
   grid-template-columns: 68px 207px;
-  column-gap: 20px;
+  column-gap: 16px;
   align-items: center;
   img {
     height: 76px;
@@ -109,13 +108,15 @@
 .info {
   display: grid;
   grid-template-columns: 280px repeat(2, 1fr);
-  column-gap: 50px;
+  column-gap: 54px;
   li {
     @include flex-aligne-center;
-    column-gap: 22px;
+    column-gap: 33px;
     cursor: pointer;
     &:nth-child(2) {
+      margin: -11px 0 0 0;
       padding: 0 0 0 28px;
+      column-gap: 22px;
     }
     p,
     svg {
@@ -132,6 +133,11 @@
         position: absolute;
         fill: transparent;
         stroke: $jungle-green;
+      }
+      &#locale {
+        min-width: 1px;
+        height: 13px;
+        transform: translateX(5px);
       }
     }
 
@@ -245,7 +251,6 @@
 
 @media (max-width: 767px) {
   .header {
-    padding: 57px 0 0px 0px;
   }
   .logo {
     grid-template-columns: 68px 207px;

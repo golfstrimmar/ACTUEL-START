@@ -32,6 +32,8 @@
 @import "../familia/book/info";
 @import "../familia/book/choise";
 @import "../familia/book/contacts";
+@import "../familia/swiper-1/swiper-1";
+
 @import "../blocks/modules/header/rooms/rooms";
 
 // БЭМ-modules
@@ -52,8 +54,7 @@
 
 // @import "../blocks/modules/look/look";
 
-// @import "../blocks/modules/swiper-1/swiper-1";
-@import "../blocks/modules/slider-full/slider-full";
+// @import "../blocks/modules/slider-full/slider-full";
 // @import "../blocks/modules/slider-double/sdouble";
 // @import "../blocks/modules/slider-scroll/slider-scroll";
 @import "../blocks/modules/select/select";
@@ -61,4 +62,4 @@
 // @import "../blocks/modules/typed/typedHover";
 
 @import "../blocks/modules/footer/footer";
-// @import "../blocks/modules/popup/popup";
+@import "../blocks/modules/popup/popup";

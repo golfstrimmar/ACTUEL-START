@@ -1,40 +1,41 @@
 section#bunner-slider.bunner-slider
-  .swiper-pagination
-  .slider-bunner.slider-bunner-js.swiper-container
-    button.slider-arrow.full-prev.js-full-prev(type='button')
-      svg
-        use(xlink:href='#left')
-    button.slider-arrow.full-next.js-full-next(type='button')
-      svg
-        use(xlink:href='#right')
+  .bunner-slider__wrapper
+    .slider-bunner.slider-bunner-js.swiper-container
+      button.slider-arrow.js-bunner-prev(type='button')
+        svg
+          use(xlink:href='#left')
+      button.slider-arrow.js-bunner-next(type='button')
+        svg
+          use(xlink:href='#right')
+      ul.bunner-slider__body.swiper-wrapper
+        -
+          var bunerFaq = [
+            {
+              src: './img/bunner/i-1.webp',
+              title: "Конный клуб",
+              title1: "В клубе загородного отдыха Усадьба «Фамилия»",
+              rel: "#video1",
+              class: "slider-card__body"
+            },
+            {
+              src: './img/bunner/i-2.webp',
+              title: "VIP территория",
+              title1: "В клубе загородного отдыха Усадьба «Фамилия»",
+              rel: "#video2",
+              class: "slider-card__body slider-card__body--next"
+            }
+          ];
 
-    ul.bunner-slider__body.swiper-wrapper
-      -
-        var bunerFaq = [
-          {
-            src: './img/bunner/i-1.webp',
-            title: "Конный клуб",
-            title1: "В клубе загородного отдыха Усадьба «Фамилия»"
-          },
-          {
-            src: './img/bunner/i-2.webp',
-            title: "Конный клуб",
-            title1: "В клубе загородного отдыха Усадьба «Фамилия»"
-          },
-          {
-            src: './img/bunner/i-1.webp',
-            title: "Конный клуб",
-            title1: "В клубе загородного отдыха Усадьба «Фамилия»"
-          }
-        ];
-
-      each entry in bunerFaq
-        li.slider__item.slider-card.swiper-slide
-          .slider-card__img.imgs
-            img(data=entry.src alt='img')
-          .slider-card__body
-            .slider-card__title
-              h1=entry.title
-            p.slider-card__text=entry.title1
-            a.btn.btn--success.but-wave.popups-init-js(rel='#popup1' href='#!')
-              p form
+        each entry in bunerFaq
+          li.slider__item.slider-card.swiper-slide
+            .slider-card__img
+              .imgs
+                img(src=entry.src alt='img')
+            div(class=entry.class)
+              .slider-card__title
+                h1=entry.title
+              p.slider-card__text=entry.title1
+              a.btn.btn-empty.bunner__button.popups-init-js(rel=entry.rel href='#!')
+                svg
+                  use(xlink:href='#arrow-right')
+                p Видео о проекте

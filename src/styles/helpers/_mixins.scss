@@ -82,7 +82,12 @@
   letter-spacing: 0.6px;
   color: $warm-grey-two;
 }
-
+@mixin Text-Style-11 {
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 13px;
+  line-height: 3.08;
+  color: $white;
+}
 @mixin Text-Style-40 {
   font-family: "Inter-Regular", sans-serif;
   font-weight: 400;
@@ -148,6 +153,13 @@
   font-size: 14px;
   line-height: 1.14;
   color: $white;
+}
+@mixin Text-Style-13 {
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: $jungle-green;
 }
 // =============================================================
 @mixin Text-Style-8 {
@@ -252,7 +264,17 @@
   font-weight: 400;
   line-height: 38px;
 }
-
+@mixin Text-Style-10 {
+  font-family: "PTSerif-Regular", serif;
+  font-size: 15px;
+  color: $white;
+}
+@mixin Text-Style-14 {
+  font-family: "PTSerif-Regular", serif;
+  font-size: 16px;
+  line-height: 1.38;
+  color: $black-two;
+}
 // =============================================================
 @mixin Text-Style-32 {
   font-family: "PTSans-Regular";
@@ -267,6 +289,7 @@
   letter-spacing: -1px;
   color: $white;
 }
+
 // @mixin Text-Style-17 {
 //   font-family: "PT Serif", serif;
 //   font-size: 40px;
@@ -291,14 +314,6 @@
 //   font-size: 14px;
 //   text-align: center;
 //   color: $white;
-// }
-
-// @mixin Text-Style-13 {
-//   font-family: "Inter", sans-serif;
-//   font-size: 20px;
-//   font-weight: 500;
-//   letter-spacing: 0.4px;
-//   color: $jungle-green;
 // }
 
 // @mixin Text-Style-8 {
@@ -339,11 +354,6 @@
 //   letter-spacing: 0.2px;
 //   color: $black-two;
 // }
-// @mixin Text-Style-10 {
-//   font-family: "PT Serif", serif;
-//   font-size: 15px;
-//   color: $white;
-// }
 
 // @mixin Text-Style-24 {
 //   font-family: "Inter", sans-serif;
@@ -381,12 +391,7 @@
 //   font-size: 13px;
 //   color: $warm-grey-two;
 // }
-// @mixin Text-Style-11 {
-//   font-family: "Inter", sans-serif;
-//   font-size: 13px;
-//   line-height: 3.08;
-//   color: $white;
-// }
+
 // @mixin Text-Style-23 {
 //   font-family: "PT Serif", serif;
 //   font-size: 13px;

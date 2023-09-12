@@ -1,5 +1,6 @@
 "use ctrict";
 import Swiper from "swiper";
+import { Navigation, EffectFade } from "swiper/modules";
 
 export const bunnerSwiper = () => {
   if (document.querySelector("#bunner-slider")) {
@@ -7,10 +8,11 @@ export const bunnerSwiper = () => {
       slidesPerView: 1,
       loop: "true",
       speed: 800,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
+      modules: [Navigation, EffectFade],
+      effect: "fade",
+      navigation: {
+        nextEl: ".js-bunner-next",
+        prevEl: ".js-bunner-prev",
       },
     });
   }

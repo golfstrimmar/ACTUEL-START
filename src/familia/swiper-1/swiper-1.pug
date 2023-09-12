@@ -1,0 +1,35 @@
+section(id='local').local.rel
+  .container
+    .local__title
+      h2 На территории комплекса
+    .local__swiper
+      .swiper-1
+        .swiper-1__body.rel
+          .slider-arrow.arrow-prev-1
+            svg
+              use(xlink:href='#left') 
+          .slider-arrow.arrow-next-1 
+            svg
+              use(xlink:href='#right')
+          #swiper-1.swiper
+            .swiper-wrapper
+              -
+                var blocks = [
+                  { src: 'https://swiperjs.com/demos/images/nature-1.jpg', title:"SPA комплекс", text:"Усадьба «Фамилия» Загородный комплекс премиум-класса"},
+                  { src: 'https://swiperjs.com/demos/images/nature-2.jpg', title:"Номера и коттеджи", text:"Начните планировать свой отдых прямо сейчас"},
+                  { src: 'https://swiperjs.com/demos/images/nature-3.jpg', title:"Ресторанный комплекс", text:"Любое событие приобретает особый статус, если проходит в Усадьба «Фамилия»"},
+                  { src: 'https://swiperjs.com/demos/images/nature-4.jpg', title:"Банкетная служба", text:"Начните планировать свой отдых прямо сейчас"},
+                  { src: 'https://swiperjs.com/demos/images/nature-5.jpg', title:"Конный клуб", text:"Усадьба «Фамилия» Загородный комплекс премиум-класса"},
+                  { src: 'https://swiperjs.com/demos/images/nature-6.jpg', title:"Летний бассейн", text:"Любое событие приобретает особый статус, если проходит в Усадьба «Фамилия»"},
+                  { src: 'https://swiperjs.com/demos/images/nature-6.jpg', title:"Спортивные площадки", text:"Начните планировать свой отдых прямо сейчас"},
+                  { src: 'https://swiperjs.com/demos/images/nature-6.jpg', title:"Рыбалка", text:"Усадьба «Фамилия» Загородный комплекс премиум-класса"},
+                  { src: 'https://swiperjs.com/demos/images/nature-6.jpg', title:"Концертная площадка", text:"Любое событие приобретает особый статус, если проходит в Усадьба «Фамилия»"},
+                ];
+              each block in blocks
+                .local__slide.local-slide.swiper-slide
+                  .local-slide__title
+                    h3=block.title  
+                  .local-slide__img.rel
+                    .imgs
+                      img(src=block.src)
+                  p.local-slide__text=block.text
