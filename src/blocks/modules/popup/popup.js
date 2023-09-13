@@ -36,6 +36,7 @@ export const Popup = () => {
         if (this.linkPlyr) {
           this.newPlyr(this.linkPlyr);
         }
+        console.log(this.linkPlyr);
       }
     }
 
@@ -87,10 +88,7 @@ export const Popup = () => {
         newPopup.start(tempPopup);
       }
 
-      if (
-        e.target == document.querySelector(".popup-overlay-js") ||
-        e.target.closest(".popup-close-js")
-      ) {
+      if (e.target.closest(".popup-overlay-js")) {
         newPopup.closePlyr();
         Popup.close();
         document
