@@ -43,7 +43,9 @@ export const Select = (select) => {
     if (e.target.closest(".dropdown-button") !== $button) {
       $button.classList.remove("dropdown-button-active");
       $list.classList.remove("_is-active");
-      $svg.classList.remove("_is-active");
+      if ($svg.classList.contains("_is-active")) {
+        $svg.classList.remove("_is-active");
+      }
     }
   });
 
