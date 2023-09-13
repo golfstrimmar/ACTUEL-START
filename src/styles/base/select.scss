@@ -12,35 +12,35 @@
     width: 100%;
     min-height: 48px;
     position: relative;
-    background: $white;
+    background: white;
     @include flex-column;
     justify-content: center;
     text-align: left;
     z-index: 2;
-
     padding: 10px 20px;
     cursor: pointer;
     @include transition;
-
+    svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: auto;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include transition;
+      &._is-active {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
     &:hover {
       // p {
       //   color: lighten(green, 25%);
       // }
     }
-    &._is-new {
-      padding: 14px 20px 0px;
-      // p {
-      //   transform: translateY(-6px);
-      // }
-    }
     span {
       @include transition;
       display: flex;
-      color: #000;
-      font-family: "PTSerif-Regular", serif;
-      font-size: 0;
-      font-weight: 400;
-      line-height: 34px;
       &._is-new {
         font-size: 26px;
         opacity: 1;
@@ -48,53 +48,38 @@
       }
     }
   }
-  .form-field__area-svg {
-    &._is-active {
-      transform: translateY(-50%) rotate(180deg);
-    }
-  }
+
   .dropdown-list {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
     width: 100%;
     text-align: left;
-    background: $white;
-    z-index: 1;
-    transform: scaleY(0);
-    transform-origin: top;
+    background: white;
+    border-top: solid 1px transparent;
     @include transition;
-    max-height: 0;
-    overflow: hidden;
-    // position: absolute;
-  }
+    display: grid;
+    grid-template-rows: 0fr;
+    &-wrap {
+      min-height: 0;
+      @include transition;
+    }
+    &._is-active {
+      grid-template-rows: 1fr;
+      border-top: solid 1px grey;
+    }
 
-  .dropdown-list._is-active {
-    transform: scaleY(1);
-    // position: relative;
-    overflow: auto;
-    max-height: 155px;
-    border-top: solid 1px $greyish;
-  }
+    &__item {
+      padding: 10px 20px;
+      cursor: pointer;
+      @include transition;
+    }
 
-  .dropdown-list__item {
-    padding: 10px 20px;
-    cursor: pointer;
-    @include transition;
-  }
+    &__item._item-active {
+      background: rgb(241, 241, 121);
+    }
 
-  .dropdown-list__item._item-active {
-    background: $focus;
+    &__item:hover {
+      background: beige;
+    }
   }
-
-  .dropdown-list__item:hover {
-    background: $focus;
-  }
-
-  // .drop__input {
-  // margin: 10px 0 0 0;
-  // border: 1px solid #545553;
-  /* opacity: 0;
-visibility: hidden; */
-  // }
 }

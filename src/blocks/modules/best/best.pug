@@ -13,9 +13,10 @@ section(id='best').best.rel
     button(type='button').btn.btn-blue button btn-blue 
     button.btn.btn-empty(  type='button' name='send' ) button btn-empty
     input(type='text' placeholder='Поиск' name="")
-    form.form-search
-      input(type='text' placeholder='Поиск' name="")
-      .form-search__submit
+    form.form-input
+      input#search1(type='text' placeholder='Leškoti...' name="" )
+      label(for='search1') Leškoti...
+      .form-input__submit
         input(type='submit')
         svg
           use(xlink:href='#search')
@@ -56,13 +57,13 @@ section(id='best').best.rel
       .form-check
         input(type="radio" id="14" name='s' value='man' checked)
         label(for="14")  Мужчина
-        svg
-          use(xlink:href='#Union')
+          svg
+            use(xlink:href='#Union')
       .form-check
         input(type="radio" id="15" name='s' value='frau')
         label(for="15")  Женщина
-        svg
-          use(xlink:href='#Union')
+          svg
+            use(xlink:href='#Union')
     .fildset-radio.fildset-radio--tiers
       input(type="radio" id="tieresyes" name='tieres' value='yes' checked)
       label(for="tieresyes")  Да
@@ -91,6 +92,17 @@ section(id='best').best.rel
         label(for="rating1") 
           svg
             use(xlink:href='#Star-1') 
+    .select
+      input(type="hidden")
+      button.dropdown-button
+        span custom select
+        svg.icon
+          use(xlink:href='#down')
+      ul.dropdown-list
+        .dropdown-list-wrap
+          li.dropdown-list__item(data-value='Notes') Notes
+          li.dropdown-list__item(data-value='Photo') Photo
+          li.dropdown-list__item(data-value='Dictionary') Dictionary
     div(style=' width:250px; height:250px;').rel
       .imgs
         picture

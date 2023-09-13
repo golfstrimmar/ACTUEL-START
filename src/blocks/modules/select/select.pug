@@ -1,11 +1,12 @@
-.container
-  .select-custom.select
-    button.dropdown-button
-      span custom select
-      svg.icon
-        use(xlink:href='#down')
-    ul.dropdown-list
+.select
+  input(type="hidden")
+  button.dropdown-button
+    span custom select
+    svg.icon
+      use(xlink:href='#down')
+  ul.dropdown-list
+    .dropdown-list-wrap
       li.dropdown-list__item(data-value='Notes') Notes
       li.dropdown-list__item(data-value='Photo') Photo
       li.dropdown-list__item(data-value='Dictionary') Dictionary
-    //- input.drop__input(type='text' value='')
+  //- input.drop__input(type='text' value='')

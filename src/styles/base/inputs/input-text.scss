@@ -1,18 +1,13 @@
 input[type="text"] {
   // background: transparent;
-  border: solid 1px lighten(green, 0%);
   width: 100%;
   height: 100%;
   cursor: pointer;
-  @include flex-center;
   position: relative;
   background: transparent;
   @include transition;
   z-index: 5;
-  &:hover {
-    // color: lighten($jungle-green, 25%);
-    border: solid 1px lighten(green, 25%);
-  }
+
   &::placeholder {
     opacity: 0;
   }
