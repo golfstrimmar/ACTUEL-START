@@ -1,11 +1,10 @@
-.btn--empty {
+.btn-empty {
   @include flex-center;
   border-radius: 5px;
   border: solid 1px green;
-  background-color: white;
+  background-color: transparent;
   &:hover {
     color: lighten(green, 25%);
     border: solid 1px lighten(green, 25%);
   }
 }
-

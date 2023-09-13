@@ -21,14 +21,12 @@ button.btn.btn--empty(  type='submit' name='send' ) Отправить
 div(style='clear: both; height: 20px; ')
 p ------------inputs--------------
 div(style='clear: both; height: 20px; ')
-
-
-
-form.info__search
+form.form-search
   input(type='text' placeholder='Поиск' name="")
-  input(type='submit')
-  svg
-    use(xlink:href='#search')
+  .form-search__submit
+    input(type='submit')
+    svg
+      use(xlink:href='#search')
 
 div(style='clear: both; height: 50px; ')
 
@@ -146,26 +144,26 @@ div(style='clear: both; height: 20px; ')
 p -radio -- rating--
 fildset.fildset-rating
   .fildset-rating__items
-      input(type="radio" id="rating5" name='rating' value='5' )
-      label(for="rating5")
-        svg
-          use(xlink:href='#Star-1')  
-      input(type="radio" id="rating4" name='rating' value='4' )
-      label(for="rating4")
-        svg
-          use(xlink:href='#Star-1') 
-      input(type="radio" id="rating3" name='rating' value='3' )
-      label(for="rating3") 
-        svg
-          use(xlink:href='#Star-1') 
-      input(type="radio" id="rating2" name='rating' value='2' )
-      label(for="rating2") 
-        svg
-          use(xlink:href='#Star-1') 
-      input(type="radio" id="rating1" name='rating' value='1' )
-      label(for="rating1") 
-        svg
-          use(xlink:href='#Star-1') 
+    input(type="radio" id="rating5" name='rating' value='5' )
+    label(for="rating5")
+      svg
+        use(xlink:href='#Star-1')  
+    input(type="radio" id="rating4" name='rating' value='4' )
+    label(for="rating4")
+      svg
+        use(xlink:href='#Star-1') 
+    input(type="radio" id="rating3" name='rating' value='3' )
+    label(for="rating3") 
+      svg
+        use(xlink:href='#Star-1') 
+    input(type="radio" id="rating2" name='rating' value='2' )
+    label(for="rating2") 
+      svg
+        use(xlink:href='#Star-1') 
+    input(type="radio" id="rating1" name='rating' value='1' )
+    label(for="rating1") 
+      svg
+        use(xlink:href='#Star-1') 
 
 
 
@@ -174,10 +172,10 @@ p --------------------- vue components ------------------
 div(style='clear: both; height: 20px; ')
 
 .form-field
-    #check-in._check
-    .form-field__area-svg
-      svg
-        use(xlink:href='#arrow-down')
+  #check-in._check
+  .form-field__area-svg
+    svg
+      use(xlink:href='#arrow-down')
 input#date-in(type='hidden' name='date-in')
 
 div(style='clear: both; height: 20px; ')
@@ -185,8 +183,8 @@ div(style='clear: both; height: 20px; ')
 .form-field
   #check-out._check
   .form-field__area-svg
-      svg
-        use(xlink:href='#arrow-down')
+    svg
+      use(xlink:href='#arrow-down')
 input#date-out(type='hidden' name='date-out')
 
 div(style='clear: both; height: 20px; ')
@@ -194,24 +192,24 @@ p --------------select------------------
 div(style='clear: both; height: 20px; ')
 
 .select
-      .dropdown-button
-        p Место проживания 
-        input(type="hidden" name='place' value="" )
-        span
-        .form-field__area-svg
-          svg
-            use(xlink:href='#arrow-down')
-      ul.dropdown-list
-        -
-          var blocks = [
-            {text: 'коттеджи 2-х местные' },
-            {text: 'дом Лесника' },
-            {text: 'дом Охотника' },
-            {text: 'дом Рыбака №1' },
-            {text: 'дом Рыбака №2' },
-          ];
-        each block in blocks
-          li.dropdown-list__item(data-value=block.text)=block.text
+  .dropdown-button
+    p Место проживания 
+    input(type="hidden" name='place' value="" )
+    span
+    .form-field__area-svg
+      svg
+        use(xlink:href='#arrow-down')
+  ul.dropdown-list
+    -
+      var blocks = [
+        {text: 'коттеджи 2-х местные' },
+        {text: 'дом Лесника' },
+        {text: 'дом Охотника' },
+        {text: 'дом Рыбака №1' },
+        {text: 'дом Рыбака №2' },
+      ];
+    each block in blocks
+      li.dropdown-list__item(data-value=block.text)=block.text
 
 
 
@@ -237,11 +235,11 @@ p ------------------------picture-----------------------------
 div(style='clear: both; height: 50px; ')
 
 div(style=' width:250px; height:250px;').rel
-    .imgs
-      picture
-        source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
-        source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
-        source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
-        img(src='./img/paralax.webp' alt='img')
+  .imgs
+    picture
+      source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
+      source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+      source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
+      img(src='./img/paralax.webp' alt='img')
 
 div(style='clear: both; height: 50px; ')
