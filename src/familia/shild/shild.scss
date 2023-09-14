@@ -15,9 +15,23 @@
     border-radius: 10px;
   }
 
+  &__pre-text {
+    margin: 14px auto 0;
+    max-width: 680px;
+    @include Text-Style-25;
+  }
   &__text {
     margin: 14px 0 0 0;
     @include Text-Style-26;
+  }
+  &-index {
+    .shild__body {
+      background-color: $white;
+      min-height: 298px;
+    }
+    .shild__text {
+      margin: 33px 0 0 0;
+    }
   }
 }
 

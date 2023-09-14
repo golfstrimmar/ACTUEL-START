@@ -1,13 +1,12 @@
 
-if section = "index"
+if page.index 
+
   section(id='shild-index').shild.shild-index.rel
     .container
       .shild__body
-        .shild__title
-          h2 Lorem ipsum 
-        p.shild__text Lorem ipsum  -index
-
-else 
+        p.shild__pre-text Спланируйте отдых для всей семьи в Усадьба «Фамилия», радость простых удовольствий и безграничный простор активного отдыха откроют новые горизонты и подарят яркие воспоминания в кругу близких.
+        p.shild__text Добро пожаловать в Усадьба «Фамилия»
+if page.room 
   section(id='shild').shild.rel
     .container
       .shild__body
