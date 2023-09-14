@@ -1,18 +1,12 @@
 .btn-blue {
-  border-radius: 3px;
-  background-color: rgba(7, 91, 186, 0.09);
-  font-family: "Arial-Regular", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  color: #006b36;
   width: 100%;
   text-align: center;
   @include transition;
-  border: solid 1px transparent;
-  @include flex-center; 
+  background-color: #8edbfa;
+  border: solid 1px #056f99;
+  @include flex-center;
   &:hover {
-    color: lighten(green, 25%);
-    border: solid 1px lighten(green, 25%);
+    background-color: rgb(8, 101, 163);
+    border: solid 1px lighten(#8edbfa, 25%);
   }
 }

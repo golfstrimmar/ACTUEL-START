@@ -1,25 +1,25 @@
 @import "vendor/null";
 
-
 // Переменные, миксины, функции
 // @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
 
-
 // Основное
 @import "base/colors";
 @import "base/common";
 @import "base/fonts";
+@import "base/select";
 @import "base/sliders-swiper";
-@import "base/inputs/text.scss";
+@import "base/inputs/input-text.scss";
+@import "base/inputs/text-field.scss";
 @import "base/inputs/textarea.scss";
 @import "base/inputs/submit.scss";
 @import "base/inputs/fildset-radio.scss";
 @import "base/inputs/fildset-checkbox.scss";
 @import "base/inputs/fildset-rating.scss";
+@import "base/inputs/form-input.scss";
 @import "base/inputs/range.scss";
-@import "base/select";
 @import "base/vue/vue-check-in-out";
 
 // БЭМ-components
@@ -29,7 +29,6 @@
 @import "base/buttons/btn-blue.scss";
 @import "base/buttons/btn-wave.scss";
 
-
 // @import "../familia/shild/shild.scss";
 // @import "../familia/book/book-section";
 // @import "../familia/book/info";
@@ -37,16 +36,13 @@
 // @import "../familia/book/contacts";
 // @import "../familia/rooms/rooms";
 
-
-
-
-
 // БЭМ-modules
 @import "../blocks/modules/header/header";
 @import "../blocks/modules/bunner/bunner";
 @import "../blocks/modules/bunner/bunner-slider";
 @import "../blocks/modules/do/do";
 @import "../blocks/modules/wk/wk";
+@import "../blocks/modules/best/best";
 @import "../blocks/modules/marque/marque";
 
 @import "../blocks/modules/tab/tab";

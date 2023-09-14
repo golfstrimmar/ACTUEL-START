@@ -9,9 +9,9 @@ textarea {
   border-radius: 5px;
   border: solid 1px grey;
   background-color: white;
-          padding: 15px 20px;
-        min-height: 85px;
-        max-width: 570px;
+  padding: 15px 20px;
+  min-height: 85px;
+  max-width: 570px;
   &::placeholder {
     @include transition;
   }

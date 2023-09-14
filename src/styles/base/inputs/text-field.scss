@@ -1,0 +1,45 @@
+.text-field {
+  // float: left;
+  position: relative;
+  @include transition;
+  width: 100%;
+  max-width: 320px;
+  border: none;
+  &:last-of-type {
+    margin: 0 0 0 0;
+  }
+  input[type="text"] {
+    min-height: 52px;
+    padding: 0px 20px 0px;
+  }
+  input[type="text"] {
+    &:focus {
+      padding: 30px 20px 8px;
+      & + label {
+        transform: translateY(-150%);
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    @include transition;
+    z-index: 2;
+  }
+
+  input[type="text"]:not(:placeholder-shown) {
+    padding: 30px 20px 8px;
+  }
+  input[type="text"]:not(:placeholder-shown) + label {
+    transform: translateY(-150%);
+  }
+
+  &:hover {
+    label {
+      color: lighten(green, 25%);
+    }
+  }
+}

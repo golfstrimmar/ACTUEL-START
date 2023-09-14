@@ -2,9 +2,8 @@ header.header
   .container
     .header__body 
       a(href='#!').header__logo.logo
-          svg
-            use(xlink:href='#logo')
-          p slogan
+        img(src='./img/logo.svg' alt='logo')
+        p slogan
       nav.header__menu.menu
         .header__close
           svg
@@ -15,10 +14,10 @@ header.header
               svg
                 use(xlink:href='#arrow-down')
             .menu__tab.menu-tab
-                a(href="#!").menu-tab__item Category number one
-                a(href="#!").menu-tab__item Apartments in Dubai
-                a(href="#!").menu-tab__item Category number twenty five
-                include ../side-menu/side-menu.pug
+              a(href="#!").menu-tab__item Category number one
+              a(href="#!").menu-tab__item Apartments in Dubai
+              a(href="#!").menu-tab__item Category number twenty five
+              include ../side-menu/side-menu.pug
 
           li.menu__item
             a.menu__link(href='#!' rel='#posts') Posts
@@ -29,15 +28,16 @@ header.header
               svg
                 use(xlink:href='#arrow-down')
             .menu__tab.menu-tab
-                a(href="#!").menu-tab__item Category number one
-                include ../side-menu/side-menu.pug
+              a(href="#!").menu-tab__item Category number one
+              include ../side-menu/side-menu.pug
       .header__info.info
         a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
-        form.info__search
-          input(type='text' placeholder='Поиск')
-          input(type='submit')
-          svg
-            use(xlink:href='#search')
+        form.form-input
+          input(type='text' placeholder='Поиск' name="")
+          .form-input__submit
+            input(type='submit')
+            svg
+              use(xlink:href='#search')
         fildset.header__lang.fildset-radio.fildset-radio--tiers
           input(type="radio" id="boxen" name='boxlang' val='en' checked='')
           label(for="boxen")  en

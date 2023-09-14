@@ -1,10 +1,11 @@
 "use strict";
 
 export const Select = (select) => {
-  const $button = select.querySelector(".dropdown-button"),
+  const $select = select,
+    $button = select.querySelector(".dropdown-button"),
     $list = select.querySelector(".dropdown-list"),
     items = $list.querySelectorAll(".dropdown-list__item"),
-    $svg = $button.querySelector(".form-field__area-svg"),
+    $svg = $button.querySelector("svg"),
     $dropHidden = $button.querySelector("._drop-hidden");
 
   select.addEventListener("click", (e) => {
@@ -21,16 +22,12 @@ export const Select = (select) => {
       items.forEach((item) => {
         item.addEventListener("click", (e) => {
           items.forEach((item) => {
-            item == target
-              ? item.classList.add("_item-active")
-              : item.classList.remove("_item-active");
+            item.classList.remove("_item-active");
           });
+          item.classList.add("_item-active");
           e.stopPropagation();
           $button.querySelector("span").innerHTML = item.innerHTML;
-          $button.querySelector("input").value = item.innerHTML;
-          $button.querySelector("span").classList.add("_is-new");
-          // $dropHidden.classList.add("_is-active");
-          $button.classList.add("_is-new");
+          $select.querySelector("input").value = item.innerHTML;
           $list.classList.remove("_is-active");
           $button.classList.remove("dropdown-button-active");
           $svg.classList.remove("_is-active");

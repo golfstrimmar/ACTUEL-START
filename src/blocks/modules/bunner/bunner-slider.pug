@@ -21,24 +21,23 @@ section#bunner-slider.bunner-slider
             title1: 'Lorem ipsum dolor.'
           },
         ];
-      
+
       each entry in bunerFaq
-          li.slider__item.slider-card.swiper-slide
-            .slider-card__img.imgs
-              img(data=entry.src alt='img')
-            .container
-              .slider-card__body
-                .slider-card__title
-                    h1 Lorem ipsum dolor sit amet.
-                p.slider-card__text Lorem ipsum .
-                a.btn.btn--success.but-wave.popups-init-js(rel='#popup1' href='#!')
-                  p form
-
-
-  form.info__search.bunner-slider__search.bunner-search
-    .text-field
-      input#search1(type='text' name='search1' value='' placeholder=' Denzel Washington')
-      label.text-field__label(for='search1') Leškoti...
-    input(type='submit')
-    svg
-      use(xlink:href='#search')
+        li.slider__item.slider-card.swiper-slide
+          .slider-card__img.imgs
+            img(data=entry.src alt='img')
+          .container
+            .slider-card__body
+              .slider-card__title
+                h1 Lorem ipsum dolor sit amet.
+              p.slider-card__text Lorem ipsum .
+              a.btn.btn--success.but-wave.popups-init-js(rel='#popup1' href='#!')
+                p form
+  .bunner-search
+    form.form-input
+      input#search1(type='text' placeholder='Leškoti...' name="" )
+      label(for='search1') Leškoti...
+      .form-input__submit
+        input(type='submit')
+        svg
+          use(xlink:href='#search')

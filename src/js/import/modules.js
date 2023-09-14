@@ -63,8 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     GalCases();
   }
 
-
-
   // =========swiper-1==============
   if (document.querySelector("#swiperwk")) {
     Swiperwk();
@@ -94,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
     Double();
   }
 
-
   // //   // =======================
   const ranges = [...document.querySelectorAll(".range-wrap")];
   if (ranges.length > 0) {
@@ -112,12 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //   // =======================
 
-  const textTypedAll = [...document.querySelectorAll("._hover-typed")];
-  if (textTypedAll.length > 0) {
-    textTypedAll.forEach((item) => {
-      TypedItem(item);
-    });
-  }
+  // const textTypedAll = [...document.querySelectorAll("._hover-typed")];
+  // if (textTypedAll.length > 0) {
+  //   textTypedAll.forEach((item) => {
+  //     TypedItem(item);
+  //   });
+  // }
 
   // // =======================
 

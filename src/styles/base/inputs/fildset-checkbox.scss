@@ -1,5 +1,7 @@
 .fildset-checkbox {
-
+  .form-check {
+    position: relative;
+  }
   input[type="checkbox"]:checked,
   input[type="checkbox"]:not(:checked) {
     position: fixed !important;
@@ -67,4 +69,3 @@
     opacity: 0;
   }
 }
-
