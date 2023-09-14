@@ -9,6 +9,7 @@ import { bunnerSwiper } from "../../familia/bunner/bunner";
 // import { Marque } from "%modules%/marque/marque";
 // import { Swiperwk } from "%modules%/wk/wk";
 import { Swiper1 } from "../../familia/swiper-1/swiper-1";
+import { SwiperCases } from "../../familia/cases/cases";
 // import { SwiperFull } from "%modules%/slider-full/slider-full";
 // import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
 // import { Double } from "%modules%/slider-double/sdouble.js";
@@ -38,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //   // =========bunnerSwiper==============
   if (document.querySelector("#bunner-slider")) {
     bunnerSwiper();
+  }
+  //   // =========bunnerSwiper==============
+  if (document.querySelector("#cases-swiper")) {
+    SwiperCases();
   }
   // ========popup===============
   if (document.querySelector(".popups-init-js")) {

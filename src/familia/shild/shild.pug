@@ -1,7 +1,16 @@
-section(id='shild').shild.rel
-  .container
-    .shild__body
-      .shild__title
-        h2 Спасибо за выбор Усадьбы «Фамилия»
-      p.shild__text Для нас очень важно ваше мнение.
-      
+
+if section = "index"
+  section(id='shild-index').shild.shild-index.rel
+    .container
+      .shild__body
+        .shild__title
+          h2 Lorem ipsum 
+        p.shild__text Lorem ipsum  -index
+
+else 
+  section(id='shild').shild.rel
+    .container
+      .shild__body
+        .shild__title
+          h2 Спасибо за выбор Усадьбы «Фамилия»
+        p.shild__text Для нас очень важно ваше мнение.

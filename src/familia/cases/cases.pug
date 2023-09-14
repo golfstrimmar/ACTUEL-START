@@ -1,0 +1,33 @@
+section(id='cases').cases.rel
+  .container
+    .cases__swiper.cases-swiper
+      .cases-swiper__body.rel
+        .slider-arrow.arrow-cases-next
+          svg
+            use(xlink:href='#left') 
+        .slider-arrow.arrow-cases-prev
+          svg
+            use(xlink:href='#right')
+        #cases-swiper.swiper.swiper-container
+          .swiper-wrapper
+            -
+              var blocks = [
+                {src: './img/cases/i-1.webp' , title:"Конный клуб", title_text:"«Искусство быть выше…»",  text:"Общение с лошадью поднимает настроение, даёт заряд бодрости и положительной энергии, а верховая езда — это отличная нагрузка для мышц всего тела."},
+                {src: './img/cases/i-1.webp' , title:"Конный клуб", title_text:"«Искусство быть выше…»",  text:"Общение с лошадью поднимает настроение, даёт заряд бодрости и положительной энергии, а верховая езда — это отличная нагрузка для мышц всего тела."},
+                {src: './img/cases/i-1.webp' , title:"Конный клуб", title_text:"«Искусство быть выше…»",  text:"Общение с лошадью поднимает настроение, даёт заряд бодрости и положительной энергии, а верховая езда — это отличная нагрузка для мышц всего тела."},
+                {src: './img/cases/i-1.webp' , title:"Конный клуб", title_text:"«Искусство быть выше…»",  text:"Общение с лошадью поднимает настроение, даёт заряд бодрости и положительной энергии, а верховая езда — это отличная нагрузка для мышц всего тела."},
+              ];
+            each block in blocks
+              .swiper-slide.cases-slide
+                .cases-slide__img.rel
+                  .imgs
+                    img(src=block.src)
+
+                .cases-slide__body
+                  .cases-slide__pre-title
+                    h3=block.title
+                  p.cases-slide__title-text=block.title_text
+                  .cases-slide__title
+                    h4=block.title
+                  p.cases-slide__text=block.text
+                  a(href="#!").cases-slide__link Подробнее

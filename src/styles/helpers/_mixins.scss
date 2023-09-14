@@ -161,6 +161,19 @@
   letter-spacing: 0.4px;
   color: $jungle-green;
 }
+@mixin Text-Style-15 {
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: $jungle-green;
+}
+
+@mixin Text-Style-16 {
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 13px;
+  color: $warm-grey-two;
+}
 // =============================================================
 @mixin Text-Style-8 {
   font-family: "Arial-Regular", sans-serif;
@@ -275,6 +288,18 @@
   line-height: 1.38;
   color: $black-two;
 }
+@mixin Text-Style-17 {
+  font-family: "PTSerif-Regular", serif;
+  font-size: 40px;
+  line-height: 1.38;
+  color: $black-two;
+}
+@mixin Text-Style-18 {
+  font-family: "PTSerif-Regular", serif;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $black-two;
+}
 // =============================================================
 @mixin Text-Style-32 {
   font-family: "PTSans-Regular";
@@ -290,12 +315,6 @@
   color: $white;
 }
 
-// @mixin Text-Style-17 {
-//   font-family: "PT Serif", serif;
-//   font-size: 40px;
-//   line-height: 1.38;
-//   color: $black-two;
-// }
 // @mixin Text-Style-21 {
 //   font-family: "PT Serif", serif;
 //   font-size: 29px;
@@ -322,19 +341,6 @@
 //   color: $warm-grey;
 // }
 
-// @mixin Text-Style-15 {
-//   font-family: "Inter", sans-serif;
-//   font-size: 16px;
-//   font-weight: bold;
-//   letter-spacing: 2px;
-//   color: $jungle-green;
-// }
-// @mixin Text-Style-18 {
-//   font-family: "PT Serif", serif;
-//   font-size: 16px;
-//   line-height: 1.42;
-//   color: $black-two;
-// }
 // @mixin Text-Style-14 {
 //   font-family: "PT Serif", serif;
 //   font-size: 16px;
@@ -385,11 +391,6 @@
 //   line-height: 1.23;
 //   letter-spacing: 1.9px;
 //   color: $beige;
-// }
-// @mixin Text-Style-16 {
-//   font-family: "Inter", sans-serif;
-//   font-size: 13px;
-//   color: $warm-grey-two;
 // }
 
 // @mixin Text-Style-23 {
