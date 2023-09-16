@@ -1,4 +1,5 @@
 .fildset-radio {
+  position: relative;
   .form-check {
     position: relative;
   }
@@ -34,12 +35,6 @@
     top: 0;
     left: 0;
     @include transition;
-  }
-  input[type="radio"]:checked + label > svg {
-    opacity: 1;
-  }
-  input[type="radio"]:not(:checked) + label > svg {
-    opacity: 0;
   }
 
   input[type="radio"]:checked + label:after,
@@ -86,7 +81,112 @@
   input[type="radio"]:not(:checked) + label::after {
     opacity: 0;
   }
+  &--tema {
+    @include flex-aligne-center;
+    position: relative;
+    width: 105px;
+    height: 20px;
 
+    input[type="radio"]:checked + label:after,
+    input[type="radio"]:checked + label::before,
+    input[type="radio"]:not(:checked) + label:after,
+    input[type="radio"]:not(:checked) + label::before {
+      display: none;
+    }
+
+    input[type="radio"]:checked + label,
+    input[type="radio"]:not(:checked) + label {
+      width: 54px;
+      height: 20px;
+      position: relative;
+      padding: 0 0 0 0;
+      z-index: 10;
+    }
+
+    input[type="radio"]:checked + label > svg,
+    input[type="radio"]:not(:checked) + label > svg {
+      display: inline-block !important;
+      width: 20px;
+      height: 20px;
+      transform: translate(0, 0);
+      position: absolute;
+    }
+
+    input[type="radio"]#temalight + label > svg {
+      right: 0;
+      left: auto;
+    }
+
+    input[type="radio"]:not(:checked) + label {
+      svg {
+        fill: $white;
+      }
+    }
+    input[type="radio"]:checked + label {
+      svg {
+        fill: $periwinkle;
+      }
+    }
+    // input[type="radio"]:checked + label,
+    // input[type="radio"]:not(:checked) + label {
+    //   height: 20px;
+    //   position: relative;
+    //   // position: absolute;
+    //   // left: 0;
+    //   svg {
+    //     fill: $periwinkle;
+    //     display: inline-block;
+    //     opacity: 1;
+    //   }
+    // }
+    // input[type="radio"]:checked + label::before,
+    // input[type="radio"]:not(:checked) + label::before {
+    //   width: 45px;
+    //   height: 20px;
+    //   border-radius: 32px;
+    //   border: solid 1px $white;
+    //   background: transparent;
+    // }
+
+    span {
+      display: inline-block;
+      width: 45px;
+      height: 19px;
+      border-radius: 32px;
+      border: solid 1px $white;
+      position: relative;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      @include transition;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        background-color: $periwinkle;
+        top: 50%;
+        left: auto;
+        right: 3px;
+        transform: translateY(-55%);
+        border-radius: 50%;
+        @include transition;
+      }
+    }
+    input#temadark[type="radio"]:checked ~ span {
+      &::after {
+        left: 3px;
+        right: auto;
+      }
+    }
+    input#temalight[type="radio"]:checked ~ span {
+      &::after {
+        left: auto;
+        right: 3px;
+      }
+    }
+  }
   &--tiers {
     @include flex-aligne-center;
     input[type="radio"]:checked + label {
@@ -112,18 +212,18 @@
     column-gap: 5px;
   }
 
-  &--sex {
-    input[type="radio"]:not(:checked) + label::before {
-      border-radius: 5px;
-    }
-    input[type="radio"]:checked + label::before,
-    input[type="radio"]:not(:checked) + label::before {
-      border-radius: 5px;
-    }
+  // &--sex {
+  //   input[type="radio"]:not(:checked) + label::before {
+  //     border-radius: 5px;
+  //   }
+  //   input[type="radio"]:checked + label::before,
+  //   input[type="radio"]:not(:checked) + label::before {
+  //     border-radius: 5px;
+  //   }
 
-    input[type="radio"]:checked + label:after,
-    input[type="radio"]:not(:checked) + label:after {
-      display: none;
-    }
-  }
+  //   input[type="radio"]:checked + label:after,
+  //   input[type="radio"]:not(:checked) + label:after {
+  //     display: none;
+  //   }
+  // }
 }

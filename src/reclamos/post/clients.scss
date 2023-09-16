@@ -1,0 +1,101 @@
+.clients {
+  &__body {
+  }
+  &__title {
+  }
+  &__text {
+  }
+  &__block {
+    margin: 40px 0 0 0;
+    display: grid;
+    grid-template-columns: 510px 213px 213px;
+    align-items: center;
+    column-gap: 38px;
+    justify-content: space-between;
+  }
+  .btn {
+    width: 213px;
+    height: 58px;
+    background-color: transparent;
+    margin: 0 0 0 82px;
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
+
+  .sec__img {
+    position: absolute;
+
+    &--1 {
+      left: 72%;
+      top: 13%;
+    }
+    &--2 {
+      left: 84%;
+      top: 24%;
+    }
+    &--3 {
+      left: 78%;
+      top: 41%;
+    }
+    &--4 {
+      width: 180px;
+      height: 180px;
+      left: auto;
+      right: 1%;
+      top: 3%;
+    }
+    &--5 {
+      width: 18px;
+      height: 18px;
+      left: auto;
+      right: 7%;
+      top: 51%;
+    }
+  }
+  &__cards {
+    margin: 40px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 334px);
+    justify-content: space-between;
+  }
+  &__card {
+  }
+  .card {
+    display: grid;
+    grid-template-areas: "a b" "a c" "a d";
+    grid-template-columns: 130px 1fr;
+    align-items: center;
+    column-gap: 20px;
+    ._a {
+      grid-area: a;
+    }
+    ._b {
+      grid-area: b;
+    }
+    ._c {
+      grid-area: c;
+    }
+    ._d {
+      grid-area: d;
+    }
+    &__img {
+      width: 130px;
+      height: 130px;
+    }
+    &__info {
+      @include Text-Style-17;
+      padding: 0 0 5px 0;
+      margin: 30px 0 0 0;
+      border-bottom: 1px solid $sandy-yellow;
+    }
+    &__name {
+      margin: 5px 0 0 0;
+      @include Text-Style-17;
+    }
+    &__job {
+      margin: 5px 0 30px 0;
+      @include Text-Style-2;
+    }
+  }
+}

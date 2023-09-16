@@ -3,11 +3,10 @@
   @include transition;
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 90px;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
   border: 1px solid transparent;
-  // background-image: url("/dist/img/img-1.png")
+  padding: 34px 0 5px 0;
 }
 
 .header .container {
@@ -18,14 +17,59 @@
   position: relative;
   height: 100%;
   display: grid;
-  grid-template-columns: 100px 1fr 1fr;
+  grid-template-columns: 128px auto;
   width: 100%;
-  gap: 0 20px;
   justify-content: space-between;
 }
 
 .header__burger {
-  display: none;
+  min-width: 28px;
+  height: 26px;
+  position: relative;
+  cursor: pointer;
+  span {
+    display: inline-block;
+    width: 28px;
+    height: 6px;
+    background-color: $periwinkle;
+    border-radius: 6px;
+    position: absolute;
+    width: 28px;
+    height: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 6px;
+    background-color: $periwinkle;
+    border-radius: 6px;
+    top: 0%;
+    left: 0;
+    @include transition;
+  }
+  &::before {
+    @include transition;
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 6px;
+    background-color: $periwinkle;
+    border-radius: 6px;
+    bottom: 0%;
+    left: 0;
+  }
+  &._is-active {
+    &::after {
+      transform: translateX(40%);
+    }
+    &::before {
+      transform: translateX(-40%);
+    }
+  }
 }
 
 .header__close {
@@ -48,8 +92,25 @@
 
 /*=====================*/
 .header__menu {
-  margin: 0 30px 0 30px;
   position: relative;
+  position: absolute;
+  top: 30px;
+  left: 86px;
+}
+.menu {
+  max-height: 60px;
+  height: 60px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background-color: rgba(138, 122, 255, 0.2);
+  padding: 0 20px;
+  opacity: 0;
+  @include transition;
+  &._is-active {
+    opacity: 1;
+    top: 70px;
+  }
 }
 
 .menu__list {
@@ -72,91 +133,14 @@
   text-transform: uppercase;
   color: rgb(253, 253, 253);
   cursor: pointer;
-  svg {
-    width: 15px;
-    height: 15px;
-    @include transition;
-    fill: white;
-    margin: 0 0 0 10px;
-  }
+  @include Text-Style;
 
   &:hover {
-    color: lighten(green, 25%);
+    color: lighten($sandy-yellow, 20%);
   }
 
   &--active {
-    background: green;
-  }
-
-  &._is-active {
-    & ~ .menu-tab {
-      background-color: black;
-      max-height: 190px;
-      height: 190px;
-      outline: solid 1px rgb(165, 10, 10);
-      animation: pul 0.3s linear;
-      animation-fill-mode: forwards;
-
-      .smenu__item:hover {
-        & > .smenu-title-js {
-          background: rgb(147, 240, 185);
-          svg {
-            transform: rotate(90deg);
-          }
-        }
-        & > .smenu__hidden {
-          animation: pulse 0.3s linear;
-          animation-fill-mode: forwards;
-        }
-      }
-    }
-    svg {
-      transform: rotate(180deg);
-    }
-  }
-}
-
-@keyframes pul {
-  0% {
-    overflow: hidden;
-  }
-  99% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: visible;
-  }
-}
-
-.menu__tab {
-  transition: all 0.3s;
-  overflow: hidden;
-  position: absolute;
-  width: 247px;
-  height: 148px;
-  bottom: 0px;
-  top: 80px;
-  max-height: 0;
-  border: solid 1px transparent;
-}
-
-.menu-tab {
-  &__item {
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
-    min-height: 36px;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    @include transition;
-    &:hover {
-      background-color: rgb(54, 54, 56);
-      color: rgb(109, 181, 240);
-    }
-  }
-  .smenu__body {
-    width: 100%;
+    color: $sandy-yellow;
   }
 }
 
@@ -165,17 +149,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  column-gap: 60px;
 }
 
-.info__search {
-  height: 25px;
-  min-width: 25px;
-  margin: 0 0 0 10px;
-}
-
-.info__phone {
-  white-space: nowrap;
-}
 // ==========================================
 .responciveHeader {
   position: fixed;

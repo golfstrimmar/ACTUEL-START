@@ -1,0 +1,63 @@
+.prob {
+  &__body {
+    min-height: 719px;
+    padding: 50px 0 0 0;
+  }
+  &__title {
+    h2 {
+      @include Text-Style-12;
+    }
+  }
+  .fildset-radio--tiers {
+    @include flex-column;
+    row-gap: 30px;
+    margin: 90px 0 0 0;
+    align-items: start;
+    @include transition;
+    label {
+      position: relative;
+    }
+    span {
+      @include transition;
+      position: relative;
+      position: absolute;
+      @include Text-Style-15;
+      opacity: 0;
+      width: 550px;
+      border-radius: 18px;
+      min-height: 142px;
+      padding: 45px 109px 45px 20px;
+      top: 50%;
+      left: 300px;
+      transform: translateY(-50%);
+      box-shadow: 0 17.8px 35.6px 0 rgba(0, 0, 0, 0.08);
+      background-color: $white;
+      z-index: -1;
+      svg {
+        position: absolute;
+        height: 0%;
+        width: 0%;
+        top: 0;
+        left: -207px;
+      }
+    }
+  }
+  .fildset-radio--tiers input[type="radio"]:checked + label {
+    @include Text-Style-14;
+    span {
+      opacity: 1;
+      left: 650px;
+      z-index: 1;
+      svg {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+  .fildset-radio--tiers input[type="radio"]:not(:checked) + label {
+    @include Text-Style-13;
+    &:hover {
+      color: lighten($sandy-yellow, 15%);
+    }
+  }
+}

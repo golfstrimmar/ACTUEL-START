@@ -12,16 +12,16 @@
 
   input[type="checkbox"]:checked + label,
   input[type="checkbox"]:not(:checked) + label {
+    @include Text-Style-11;
     display: inline-block;
     position: relative;
-    padding-left: 46px;
-    // line-height: 20px;
-    padding: 0 0 0 46px;
+    padding: 0 0 0 25px;
     line-height: 26px;
     cursor: pointer;
     @include transition;
+
     &:hover {
-      color: lighten(green, 25%);
+      color: $sandy-yellow;
     }
   }
 
@@ -30,36 +30,37 @@
     content: "";
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: transparent;
     @include transition;
   }
 
   input[type="checkbox"]:not(:checked) + label::before {
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    border: solid 2.4px #bababa;
+    width: 16px;
+    height: 16px;
+    border: solid 2px $white;
   }
   input[type="checkbox"]:checked + label::before {
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    border: solid 2px $dark-sea-green;
+    width: 16px;
+    height: 16px;
+    border: solid 2px $white;
   }
 
   input[type="checkbox"]:checked + label::after,
   input[type="checkbox"]:not(:checked) + label::after {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 6px;
+    height: 6px;
     border-radius: 100%;
-    top: 0;
-    left: 0;
-    transform: translate(6px, 6px);
-    border: solid 2px $jungle-green;
-    background-color: $jungle-green;
+    top: 50%;
+    transform: translate(5px, -50%);
+    left: 0%;
+    border: solid 2px $sandy-yellow;
+    background-color: $sandy-yellow;
     @include transition;
   }
   input[type="checkbox"]:checked + label::after {

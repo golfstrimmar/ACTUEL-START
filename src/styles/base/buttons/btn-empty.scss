@@ -1,10 +1,20 @@
 .btn-empty {
+  width: 213px;
+  height: 58px;
+  border-radius: 10px;
+  border: solid 2px $sandy-yellow;
+  @include Text-Style-17;
   @include flex-center;
-  border-radius: 5px;
-  border: solid 1px green;
   background-color: transparent;
   &:hover {
-    color: lighten(green, 25%);
-    border: solid 1px lighten(green, 25%);
+    color: $sandy-yellow;
+    box-shadow: inset 0 0 10px lighten($sandy-yellow, 15%);
+  }
+  &--gauti {
+    border: solid 2px $periwinkle;
+    &:hover {
+      color: lighten($periwinkle, 5%);
+      box-shadow: inset 0 0 10px lighten($periwinkle, 15%);
+    }
   }
 }

@@ -6,32 +6,32 @@ textarea {
   resize: none;
   @include transition;
   display: block;
-  border-radius: 5px;
-  border: solid 1px grey;
-  background-color: white;
-  padding: 15px 20px;
-  min-height: 85px;
-  max-width: 570px;
+  // border-radius: 5px;
+  // border: solid 1px grey;
+  // background-color: white;
+  // padding: 15px 20px;
+  // min-height: 85px;
+  // max-width: 570px;
   &::placeholder {
-    @include transition;
+    opacity: 0;
   }
-  &:hover {
-    cursor: pointer;
-    border: solid 1px lighten(green, 25%);
-    &::placeholder {
-      color: lighten(green, 25%);
-    }
-  }
-  &:focus {
-    // background: $focus;
-    &::placeholder {
-      opacity: 0;
-    }
-  }
-  &:not(:placeholder-shown) {
-    // background: $focus;
-    &::placeholder {
-      opacity: 0;
-    }
-  }
+  // &:hover {
+  //   cursor: pointer;
+  //   // border: solid 1px lighten(green, 25%);
+  //   &::placeholder {
+  //     color: lighten(green, 25%);
+  //   }
+  // }
+  // &:focus {
+  //   // background: $focus;
+  //   &::placeholder {
+  //     opacity: 0;
+  //   }
+  // }
+  // &:not(:placeholder-shown) {
+  //   // background: $focus;
+  //   &::placeholder {
+  //     opacity: 0;
+  //   }
+  // }
 }

@@ -1,0 +1,88 @@
+#serv {
+  .post {
+    &__body {
+      grid-template-columns: 1fr;
+    }
+    &__text {
+      @include Text-Style-21;
+      padding: 50px;
+    }
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 269px);
+      column-gap: 30px;
+      row-gap: 30px;
+    }
+    &__card {
+    }
+    .card {
+      min-height: 348px;
+      border-radius: 10px;
+      box-shadow: 0 30px 40px 0 rgba(189, 199, 228, 0.4);
+      background-color: $white;
+      padding: 30px 15px;
+      @include flex-column;
+      &__header {
+        @include flex-aligne-center;
+        justify-content: space-between;
+        h3 {
+          @include Text-Style-22;
+        }
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      p {
+        margin: 27px 0 10px 0;
+        @include Text-Style-23;
+      }
+      a {
+        max-height: 18px;
+        width: 100px;
+        overflow: hidden;
+        position: relative;
+        margin: auto 0 0 0;
+        span {
+          @include Text-Style-24;
+          @include transition;
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-48%);
+          width: 30px;
+          right: 0;
+          fill: $dark-periwinkle;
+          @include transition;
+        }
+        &:hover {
+          span {
+            color: lighten($dark-periwinkle, 20%);
+          }
+          svg {
+            fill: lighten($dark-periwinkle, 20%);
+          }
+        }
+      }
+    }
+    .sec__img--4 {
+      width: 347px;
+      height: 352px;
+      left: -3%;
+      top: 9%;
+    }
+    .sec__img--1 {
+      width: 127px;
+      height: 143px;
+      left: 16%;
+      top: 42%;
+    }
+    .sec__img--3 {
+      width: 226px;
+      height: 211px;
+      left: 7%;
+      top: 70%;
+    }
+  }
+}

@@ -1,20 +1,41 @@
 .text-field {
-  // float: left;
   position: relative;
   @include transition;
   width: 100%;
-  max-width: 320px;
   border: none;
   &:last-of-type {
     margin: 0 0 0 0;
   }
-  input[type="text"] {
-    min-height: 52px;
-    padding: 0px 20px 0px;
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    min-height: 36px;
+    padding: 0px 7px 0px;
+    @include transition;
+    @include Text-Style;
+    border-bottom: 1px solid $white;
+    cursor: pointer;
   }
-  input[type="text"] {
+  textarea {
+    height: 36px;
+  }
+  textarea {
+    &:focus,
+    &:not(:placeholder-shown) {
+      height: auto;
+      min-height: 36px;
+      padding: 30px 0px 8px 7px;
+      & + label {
+        transform: translateY(-214%);
+      }
+    }
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
     &:focus {
-      padding: 30px 20px 8px;
+      padding: 30px 0px 8px 7px;
       & + label {
         transform: translateY(-150%);
       }
@@ -25,21 +46,60 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 20px;
+    left: 7px;
     @include transition;
+    @include Text-Style;
     z-index: 2;
   }
 
-  input[type="text"]:not(:placeholder-shown) {
-    padding: 30px 20px 8px;
+  input[type="text"]:not(:placeholder-shown),
+  input[type="tel"]:not(:placeholder-shown),
+  input[type="email"]:not(:placeholder-shown) {
+    padding: 30px 0px 8px 7px;
   }
-  input[type="text"]:not(:placeholder-shown) + label {
+  input[type="text"]:not(:placeholder-shown) + label,
+  input[type="tel"]:not(:placeholder-shown) + label,
+  input[type="email"]:not(:placeholder-shown) + label {
     transform: translateY(-150%);
   }
 
   &:hover {
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+      border-bottom: 1px solid $sandy-yellow;
+    }
     label {
-      color: lighten(green, 25%);
+      color: $sandy-yellow;
+    }
+  }
+  &--white {
+    width: 462px;
+    height: 79px;
+    border-radius: 10px;
+    background-color: $white;
+    &:hover label {
+      color: #5a5a5a;
+    }
+    input[type="text"] {
+      border-bottom: none;
+      padding-left: 30px;
+      @include Text-Style-8;
+      &:hover {
+        border-bottom: none;
+      }
+    }
+    input[type="text"]:not(:placeholder-shown),
+    input[type="text"]:focus {
+      border-bottom: none;
+      padding-left: 30px;
+      padding-top: 47px;
+      @include Text-Style-8;
+    }
+    label {
+      @include Text-Style-8;
+      padding-left: 30px;
     }
   }
 }
