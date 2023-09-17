@@ -1,9 +1,4 @@
 .wrapper {
-  overflow: hidden;
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 body {
@@ -26,6 +21,11 @@ body {
 
 .inner {
   position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 300px 0;
 }
 .svgSpriteWrap {
   position: absolute;

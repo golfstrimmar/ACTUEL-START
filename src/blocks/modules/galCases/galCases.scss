@@ -1,16 +1,7 @@
 .galCases {
-  background: black;
-  &__title {
-    h2 {
-      font-size: 70px;
-      font-weight: bold;
-      color: white;
-    }
-  }
   &__body {
     max-width: 961px;
     margin: 0 auto;
-
     ul {
       display: grid;
       grid-template-columns: repeat(3, 300px);
@@ -41,8 +32,8 @@
         fill: black;
         margin: 0 0 0 10px;
         transform: rotate(0deg);
+        @include transition;
         &._is-active {
-          @include transition;
           transform: rotate(720deg);
         }
       }
@@ -69,13 +60,12 @@
       margin: auto 0 0 0;
       cursor: pointer;
     }
-    svg{
-       width: 20px;
-        height: 20px;
-        fill: black;
-        margin: 0 0 0 10px;
-        transform: rotate(0deg);
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: black;
+      margin: 0 0 0 10px;
+      transform: rotate(0deg);
     }
-
   }
 }

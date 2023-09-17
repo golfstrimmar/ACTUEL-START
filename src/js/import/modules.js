@@ -3,9 +3,9 @@ import { Header } from "%modules%/header/header";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
 // import { SideMenu } from "%modules%/side-menu/side-menu";
-// import { CasesInit } from "%modules%/cases/cases";
+import { CasesInit } from "%modules%/cases/cases";
 // import { GalleryInit } from "%modules%/galery/galery";
-// import { GalCases } from "%modules%/galCases/galCases";
+import { GalCases } from "%modules%/galCases/galCases";
 // import { Marque } from "%modules%/marque/marque";
 // import { Swiperwk } from "%modules%/wk/wk";
 // import { Swiper1 } from "%modules%/swiper-1/swiper-1";
@@ -51,17 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
   //   Accords();
   // }
   //   // ========Cases=============
-  // if (document.querySelector("._accord-cases-js")) {
-  //   CasesInit();
-  // }
+  if (document.querySelector("._accord-cases-js")) {
+    CasesInit();
+  }
   //   // ======Gallery======================
   // if (document.querySelector("._accord-galery-js")) {
   //   GalleryInit();
   // }
   //   // ====GalCases=====
-  // if (document.querySelector("._galCases-plaza-js")) {
-  //   GalCases();
-  // }
+  if (document.querySelector("._galCases-plaza-js")) {
+    GalCases();
+  }
 
   // =========swiper-1==============
   // if (document.querySelector("#swiperwk")) {

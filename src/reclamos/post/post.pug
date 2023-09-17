@@ -356,5 +356,79 @@ if sec.mus
                 .post__item 
                   .post__num 6
                   .post__text Investuotas 1 € mūsų klientams atneša vidutiniškai 15-20 € pajamų
+if sec.team
+  section(id='team')
+    .post.rel.sec
+      svg.sec__img.sec__img--1
+        use(xlink:href='#elips')
+      svg.sec__img.sec__img--2 
+        use(xlink:href='#elips')
+      svg.sec__img.sec__img--3 
+        use(xlink:href='#elips')
+      svg.sec__img.sec__img--4 
+        use(xlink:href='#rund')
+      svg.sec__img.sec__img--5 
+        use(xlink:href='#rund')
+      svg.sec__img.sec__img--6 
+        use(xlink:href='#rund')
+      .container
+        .post__body
+          .post__title.title
+            p 07
+            h2 Su Jumis <span>dirbs</span>: 
+          .post__team
+            section(id='galCasesteam').galCases
+              .galCases__body.rel
+                ul._galCases-plaza-js
+                  -
+                    var blocks = [
+                      {src: './img/team/i-1.webp',title:'George Washington',text:'Marketingo vadovas'},
+                      {src: './img/team/i-2.webp',title:'Milla Jovovich',text:'Web programuotojas'},
+                      {src: './img/team/i-3.webp',title:'Zlatan Ibrahimović',text:'Plėtros vadovas'},
+                      {src: './img/team/i-4.webp',title:'Dalai Lama',text:'Google skyriaus vadovė'},
+                      {src: './img/team/i-2.webp',title:'Milla Jovovich',text:'Marketingo vadovas'},
+                      {src: './img/team/i-3.webp',title:'Zlatan Ibrahimović',text:'Plėtros vadovas'},
+                      {src: './img/team/i-4.webp',title:'George Washington',text:'Web programuotojas'},
+                      {src: './img/team/i-1.webp',title:'Dalai Lama',text:'Plėtros vadovas'},
+                      {src: './img/team/i-2.webp',title:'Milla Jovovich',text:'Marketingo vadovas'},
+                      {src: './img/team/i-1.webp',title:'George Washington',text:'Google skyriaus vadovė'},
+                      {src: './img/team/i-4.webp',title:'Dalai Lama',text:'Web programuotojas'},
+                      {src: './img/team/i-3.webp',title:'Zlatan Ibrahimović',text:'Marketingo vadovas'},
+                    ];
+
+                  each block in blocks
+                    li._galCases-item-js.rel
+                      h3=block.title
+                      .block__img.rel
+                        .imgs
+                          img(src=block.src alt='img')
+                      p=block.text
+
+                button._galCases-button-js.btn.btn-empty
+                  span More
+                    svg._is-active
+                      use(xlink:href='#load')
+
+if sec.works
+  section(id='works')
+    .post.rel.sec
+      //- svg.sec__img.sec__img--1
+      //-   use(xlink:href='#elips')
+      //- svg.sec__img.sec__img--2 
+      //-   use(xlink:href='#elips')
+      //- svg.sec__img.sec__img--3 
+      //-   use(xlink:href='#elips')
+      //- svg.sec__img.sec__img--4 
+      //-   use(xlink:href='#rund')
+      //- svg.sec__img.sec__img--5 
+      //-   use(xlink:href='#rund')
+      //- svg.sec__img.sec__img--6 
+      //-   use(xlink:href='#rund')
+      .container
+        .post__body
+          .post__title.title
+            p 08
+            h2 Visos mūsų <span>klientų</span> svetainės : 
+
 
 

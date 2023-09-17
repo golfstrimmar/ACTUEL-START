@@ -47,7 +47,7 @@ export const GalCases = () => {
       this.NumberAddItems = this.Columns;
       this.startOrigin();
       this.Button.innerHTML =
-        '<span>more</span><svg><use xlink:href="#load"></use></svg>';
+        '<span>More<svg><use xlink:href="#load"></use></svg></span>';
     }
 
     addItems() {
@@ -65,7 +65,7 @@ export const GalCases = () => {
 
         this.checkNummbersItems();
         if (this.tempActive.length === this.elements.length) {
-          this.Button.innerHTML = "close";
+          this.Button.innerHTML = "<span>Close</span>";
         }
       }
     }
@@ -90,13 +90,13 @@ export const GalCases = () => {
   }
 
   // ============
-  if (document.querySelector("#galCases1 ")) {
-    const galCases1 = document.querySelector("#galCases1 ");
-    const galCases1Act = new GALCASE(galCases1, {
-      numberColumns: 3,
-      numberItems: 3,
+  if (document.querySelector("#galCasesteam ")) {
+    const galCasesteam = document.querySelector("#galCasesteam ");
+    const galCasesteamAct = new GALCASE(galCasesteam, {
+      numberColumns: 4,
+      numberItems: 4,
     });
-    galCases1Act.start();
+    galCasesteamAct.start();
   }
 
   if (document.querySelector("#galCases2 ")) {
