@@ -34,11 +34,18 @@
 //   padding: 300px 300px 0 0px;
 // }
 .bunner__title {
+  margin: 60px 0 0 0;
   h1 {
-    @include Text-Style-3;
+    color: #fff;
+    font-family: "Gilroy-ExtraBold", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%; /* 65px */
+    letter-spacing: 1.5px;
   }
   span {
-    @include Text-Style-5;
+    color: #ffee7a;
   }
 }
 .bunner__text {
@@ -64,7 +71,7 @@
     transform: rotate(-90deg);
     right: 406px;
     top: 559px;
-
+    z-index: 50;
     svg {
       width: 5px;
       height: 76px;

@@ -1,22 +1,23 @@
 .accord {
   &__body {
-    border: 1px solid #7ab764;
+    // border: 1px solid #7ab764;
+    // border: 1px solid #7ab764;
   }
   &__nav {
-    display: grid;
-    grid-auto-flow: column;
-    button {
-      border: 1px solid #120a81;
-      background: #7268fa;
-      @include transition;
-      padding: 10px;
-      &:hover {
-        background: #a09af7;
-      }
-      &._is-active {
-        background: #550a81;
-      }
-    }
+    // display: grid;
+    // grid-auto-flow: column;
+    // button {
+    //   border: 1px solid #120a81;
+    //   background: #7268fa;
+    //   @include transition;
+    //   padding: 10px;
+    //   &:hover {
+    //     background: #a09af7;
+    //   }
+    //   &._is-active {
+    //     background: #550a81;
+    //   }
+    // }
   }
   &__hidden {
     background: rgb(134, 231, 125);
@@ -35,7 +36,7 @@
   grid-template-rows: 0fr;
   overflow: hidden;
   @include transition;
-  
+
   &._is-active {
     grid-template-rows: 1fr;
   }

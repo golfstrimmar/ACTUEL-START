@@ -46,7 +46,9 @@
 }
 .slider-cases {
   .slider__item {
-    min-height: 373px;
+    min-height: 216px;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .slider-arrow {

@@ -1,6 +1,6 @@
 "use ctrict";
 import Swiper from "swiper";
-import { Pagination, Navigation } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 export const CasesInit = () => {
   // ==========================================
@@ -43,11 +43,8 @@ export const CasesInit = () => {
         // loop: "true",
         speed: 500,
         grabCursor: true,
-        modules: [Pagination, Navigation],
-        pagination: {
-          el: ".swiper-pagination-cases",
-          clickable: true,
-        },
+        modules: [Navigation],
+
         navigation: {
           prevEl: ".cases-prev",
           nextEl: ".cases-next",
@@ -99,19 +96,11 @@ export const CasesInit = () => {
     }
   }
 
-
-    if (document.querySelector("#accord--cases1 ")) {
-      const accordCases1 = document.querySelector("#accord--cases1 ");
-      const accordCases1Act = new contentCases(accordCases1, {
-        numberItems: 2,
-      });
-      accordCases1Act.start();
-    }
-    if (document.querySelector("#accord--cases2 ")) {
-      const accordCases2 = document.querySelector("#accord--cases2 ");
-      const accordCases2Act = new contentCases(accordCases2, {
-        numberItems: 3,
-      });
-      accordCases2Act.start();
-    }
+  if (document.querySelector("#works-cases ")) {
+    const accordCases1 = document.querySelector("#works-cases");
+    const accordCases1Act = new contentCases(accordCases1, {
+      numberItems: 3,
+    });
+    accordCases1Act.start();
+  }
 };

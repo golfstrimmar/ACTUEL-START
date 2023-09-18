@@ -96,5 +96,17 @@ export const Header = () => {
     }
   };
 
-  // -----------------------------------
+  // // -----------------------------------
+
+  // document.addEventListener("click", function (e) {
+  //   if (e.target.closest(".bunner__link--arrow")) {
+  //     const anchor = document.querySelector("#post-scroll").offsetTop;
+  //     console.log(anchor);
+  //     e.preventDefault();
+  //     window.scroll({
+  //       top: anchor,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // });
 };

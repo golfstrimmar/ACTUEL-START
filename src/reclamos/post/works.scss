@@ -1,0 +1,48 @@
+#works {
+  .post {
+    &__body {
+      grid-template-columns: 1fr;
+      padding: 0 0 20px 0;
+    }
+  }
+  .slider-arrow {
+    height: 20px;
+    width: 50px;
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+    background: transparent;
+    top: 138px;
+    svg {
+      position: absolute;
+      transform: translateY(-50%) rotate(180deg);
+      width: 50px;
+      left: 0;
+      fill: $periwinkle;
+    }
+    &.js-cases-next {
+      svg {
+        transform: translateY(-50%) rotate(0deg);
+      }
+    }
+    &.swiper-button-disabled {
+      svg {
+        fill: lighten($periwinkle, 15%);
+      }
+    }
+  }
+  .slider-cases .cases-prev {
+    right: 60px;
+    left: auto;
+  }
+  .slider-cases .cases-next {
+    right: 0;
+    left: auto;
+  }
+
+  ._accord-cases-js .accord__nav button[disabled] {
+    color: $periwinkle;
+    background-color: transparent;
+    text-shadow: none;
+  }
+}

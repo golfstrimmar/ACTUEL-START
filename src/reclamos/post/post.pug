@@ -1,4 +1,5 @@
 if sec.post
+  #post-scroll
   section(id='post').post.rel.sec
     svg.sec__img.sec__img--1
       use(xlink:href='#creuz')
@@ -36,8 +37,8 @@ if sec.post
               input#5(type='checkbox' name="")
               label(for='5') Aš sutinku su privatumo politika
           button(type='submit' value='SUŽINOTI').btn.btn-success.but-wave SUŽINOTI
-
 if sec.prob
+
   section(id='prob').rel.prob
     .imgs
       img(src='./img/prob-bg.webp' alt='img')
@@ -235,6 +236,7 @@ if sec.clients
             p.card__name._c Justas Skaržinskas
             p.card__job._d Web programuotojas
 if sec.serv
+
   section(id='serv')
     .post.rel.sec
       svg.sec__img.sec__img--1
@@ -408,27 +410,95 @@ if sec.team
                   span More
                     svg._is-active
                       use(xlink:href='#load')
-
 if sec.works
   section(id='works')
     .post.rel.sec
-      //- svg.sec__img.sec__img--1
-      //-   use(xlink:href='#elips')
-      //- svg.sec__img.sec__img--2 
-      //-   use(xlink:href='#elips')
-      //- svg.sec__img.sec__img--3 
-      //-   use(xlink:href='#elips')
-      //- svg.sec__img.sec__img--4 
-      //-   use(xlink:href='#rund')
-      //- svg.sec__img.sec__img--5 
-      //-   use(xlink:href='#rund')
-      //- svg.sec__img.sec__img--6 
-      //-   use(xlink:href='#rund')
       .container
         .post__body
           .post__title.title
             p 08
             h2 Visos mūsų <span>klientų</span> svetainės : 
+        section.accord#works-cases
+          .accord__body._accord-js._accord-galery-js._accord-cases-js
+            nav.accord__nav._accord-nav-js
+              button(type='button')  Web sites
+              button(type='button')  Marketing cases
+              button(type='button')  Banners
 
+            .accord__hidden._accord-hidden-js
+              .accord-hidden__wrap._accord-hidden-wrap-js
+                ul.accord__content._accord-content-js._accord-default-js
+                  -
+                    var blocks = [
+                      {src: './img/works/i-1.webp',data: 'red',},
+                      {src: './img/works/i-2.webp',data: 'red',},
+                      {src: './img/works/i-3.webp',data: 'red',},
+                      {src: './img/works/i-5.webp',data: 'red',},
+                      {src: './img/works/i-6.webp',data: 'red',},
 
+                    ];
+                  each block in blocks
+                    li
+                      img(src=block.src alt='img')
+                ul.accord__content._accord-content-js
+                  -
+                    var blocks = [
+                      {src: './img/works/i-7.webp',data: 'blue',},
+                      {src: './img/works/i-8.webp',data: 'blue',},
+                      {src: './img/works/i-9.webp',data: 'blue',},
+                      {src: './img/works/i-10.webp',data: 'blue',},
+                    ];
+                  each block in blocks
+                    li
+                      img(src=block.src alt='img')
+                ul.accord__content._accord-content-js
+                  -
+                    var blocks = [    
+                      {src: './img/works/i-11.webp',data: 'green',},
+                      {src: './img/works/i-12.webp',data: 'green',},
+                      {src: './img/works/i-13.webp',data: 'green',},
+                      {src: './img/works/i-14.webp',data: 'green',},
+                      {src: './img/works/i-15.webp',data: 'green',},
+                      {src: './img/works/i-16.webp',data: 'green',},
+                    ];
+                  each block in blocks
+                    li
+                      img(src=block.src alt='img')
 
+                ul.accord__content._accord-content-js
+                .slider-cases.swiper-container
+                  button.slider-arrow.cases-prev.js-cases-prev(type='button')
+                    svg
+                      use(xlink:href='#arrow-right')
+                  button.slider-arrow.cases-next.js-cases-next(type='button')
+                    svg
+                      use(xlink:href='#arrow-right')
+                  ul.swiper-wrapper
+                  .swiper-pagination-cases
+if sec.ques
+  section(id='ques')
+    .post.rel.sec
+      .container
+        .post__body
+          .post__title
+            h2 Turite klausimų?
+          p.post__text  Parašykite žinutę Jums patogiu būdu ir specialistas Jums atsakys pasirinktoje programėlėje
+          ul.post__links 
+            li 
+              a(href="#!")
+                svg
+                  use(xlink:href='#ques-1')
+                span Whats App
+            li 
+              a(href="#!")
+                svg
+                  use(xlink:href='#ques-2')
+                span viber
+            li 
+              a(href="#!")
+                svg
+                  use(xlink:href='#ques-3')
+                span telegram
+          .post__img.rel
+            .imgs
+              img(src='./img/ques-bg.webp' alt='img')

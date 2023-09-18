@@ -35,10 +35,16 @@
 // }
 .bunner__title {
   h1 {
-    @include Text-Style-3;
+    color: #fff;
+    font-family: "Gilroy-ExtraBold", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%; /* 65px */
+    letter-spacing: 1.5px;
   }
   span {
-    @include Text-Style-5;
+    color: #ffee7a;
   }
 }
 .bunner__text {

@@ -1,0 +1,54 @@
+#ques {
+  margin: 100px 0 202px 0;
+  .post {
+    &__body {
+      width: 100%;
+      height: 402px;
+      border-radius: 16px;
+      background-color: $periwinkle;
+      padding: 40px 478px 40px 40px;
+      @include flex-column;
+    }
+    &__title {
+      margin: 0 0 0 0;
+      h2 {
+        @include Text-Style-40;
+      }
+    }
+    &__text {
+      margin: 0 0 0 0;
+      @include Text-Style-41;
+    }
+    &__links {
+      margin: 40px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      a {
+        @include flex-aligne-center;
+        column-gap: 20px;
+
+        &:hover {
+          span {
+            @include transition;
+            color: #b0a8e9;
+          }
+        }
+      }
+      a span {
+        @include Text-Style-42;
+      }
+      a svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    &__img {
+      width: 320px;
+      height: 640px;
+      position: absolute;
+      top: 50%;
+      right: 100px;
+      transform: translateY(-50%);
+    }
+  }
+}

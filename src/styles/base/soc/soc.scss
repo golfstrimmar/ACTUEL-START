@@ -4,7 +4,7 @@
   &__item {
     @include transition;
     @include flex-center;
-    width: 35px;
+    min-width: 35px;
     height: 35px;
 
     a {
