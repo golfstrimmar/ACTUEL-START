@@ -10,6 +10,11 @@
     position: relative;
   }
   &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    // z-index: 11;
+    height: 100%;
   }
   &::after {
     content: "";
@@ -65,13 +70,27 @@
 }
 .bunner__link {
   opacity: 0.5;
+  position: relative;
+
   &--arrow {
     opacity: 0.5;
+    position: relative;
     position: absolute;
     transform: rotate(-90deg);
     right: 406px;
-    top: 559px;
+    top: 735px;
     z-index: 50;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 28px;
+      left: -29px;
+      border-left: 2px solid #ffee7a;
+      border-radius: 100%;
+    }
     svg {
       width: 5px;
       height: 76px;

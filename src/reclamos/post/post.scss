@@ -3,6 +3,8 @@
   padding: 100px 0 0 0;
 }
 .post {
+  background-color: #fbf9f1;
+
   &__body {
     display: grid;
     grid-template-columns: 461px 408px;
@@ -59,7 +61,7 @@
     &--1 {
       width: 68px;
       height: 68px;
-      left: 38%;
+      left: 46%;
       top: 15%;
     }
     &--2 {
@@ -69,16 +71,34 @@
       top: 22%;
     }
     &--3 {
-      width: 29px;
-      height: 29px;
-      left: 40%;
-      top: 30%;
+      width: 80px;
+      height: 80px;
+      left: 75%;
+      top: 86%;
     }
     &--4 {
-      width: 309px;
+      width: 214px;
       height: 309px;
       left: 7%;
-      top: 37%;
+      top: 15%;
+    }
+    &--5 {
+      width: 155px;
+      height: 155px;
+      left: 83%;
+      top: 2%;
+    }
+    &--6 {
+      width: 352px;
+      height: 350px;
+      left: 43%;
+      top: 42%;
+    }
+    &--7 {
+      width: 73px;
+      height: 73px;
+      left: 93%;
+      top: 67%;
     }
   }
 }

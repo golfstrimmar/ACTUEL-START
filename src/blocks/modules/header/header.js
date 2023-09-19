@@ -97,16 +97,17 @@ export const Header = () => {
   };
 
   // // -----------------------------------
+  const Dark = () => {
+    let temadark = document.querySelector("#temadark");
+    let temadarkRadio = document.querySelector(".fildset-radio--tema");
 
-  // document.addEventListener("click", function (e) {
-  //   if (e.target.closest(".bunner__link--arrow")) {
-  //     const anchor = document.querySelector("#post-scroll").offsetTop;
-  //     console.log(anchor);
-  //     e.preventDefault();
-  //     window.scroll({
-  //       top: anchor,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // });
+    temadarkRadio.addEventListener("click", (e) => {
+      if (temadark.checked) {
+        document.querySelector("body").classList.add("_dark");
+      } else {
+        document.querySelector("body").classList.remove("_dark");
+      }
+    });
+  };
+  Dark();
 };

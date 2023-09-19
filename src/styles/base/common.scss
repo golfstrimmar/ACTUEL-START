@@ -6,6 +6,26 @@ body {
   font-weight: 400;
   line-height: 130%;
   letter-spacing: 0.51px;
+  background: $white;
+  &._dark {
+    background: #242424;
+    color: $white;
+    .title h2,
+    #team .galCases__body li._is-active h3,
+    #team .galCases__body li._is-active p,
+    ._accord-cases-js .accord__nav button,
+    .clients .card__info,
+    .clients .card__name,
+    .clients .card__job,
+    .btn-empty,
+    #serv .post__text,
+    #mus .post__text {
+      color: $white;
+    }
+    .post {
+      background: #242424;
+    }
+  }
 }
 
 .container {
@@ -90,7 +110,7 @@ a {
   }
 }
 .sec {
-  padding: 50px 0 0;
+  padding: 50px 0 50px;
 }
 
 /* +++++++++++++++++++++++++++++++++++++ */
