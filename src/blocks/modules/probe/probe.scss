@@ -1,0 +1,45 @@
+.probe {
+  .fildset-radio--tiers {
+    margin: 20px 0 0 0;
+    align-items: start;
+    @include flex-column;
+    .probe__item {
+      @include flex-column;
+      border: 1px solid gray;
+      margin: 0 0 10px 0;
+    }
+
+    label {
+      @include transition;
+      position: relative;
+      white-space: nowrap;
+    }
+    label + div {
+      overflow: hidden;
+      padding: 0px 20px;
+      @include transition;
+      background-color: rgb(193, 216, 247);
+      display: grid;
+      grid-template-rows: 0fr;
+      min-height: 0;
+      border-top: 0px solid gray;
+    }
+    label + div p {
+      min-height: 0;
+      color: rgb(0, 0, 0);
+    }
+  }
+  input[type="radio"]:not(:checked) + label,
+  input[type="radio"]:checked + label {
+    padding: 5px 20px;
+    &:hover {
+      color: lighten(rgb(2, 184, 114), 15%);
+    }
+  }
+
+  .fildset-radio--tiers input[type="radio"]:checked + label + div {
+    grid-template-rows: 1fr;
+    border-top: 1px solid gray;
+    padding: 10px 20px;
+  }
+}
