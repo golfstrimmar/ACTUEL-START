@@ -17,6 +17,7 @@
     &__item {
       position: relative;
       min-height: 206px;
+      padding: 0 20px 0 0;
       &::after {
         content: "";
         position: absolute;
@@ -87,5 +88,33 @@
     height: 94px;
     left: 66%;
     top: 82%;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  #mus .post__cols {
+    margin: 40px 0 0 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+  #mus .post__item {
+    padding: 0 41px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #mus .post__cols {
+    margin: 20px 0 0 0;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 20px;
+  }
+  #mus .post__item {
+    min-height: 119px;
+    padding: 0 33px 0 0;
+  }
+  #mus .post__item::before {
+    height: 64px;
+    top: 31px;
   }
 }

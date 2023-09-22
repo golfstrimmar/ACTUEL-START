@@ -6,7 +6,7 @@
     position: relative;
   }
   &__body {
-    padding: 278px 0 0 0;
+    padding: 278px 0 200px 0;
     position: relative;
   }
   &__bg {
@@ -78,9 +78,8 @@
     position: absolute;
     transform: rotate(-90deg);
     right: 406px;
-    top: 735px;
     z-index: 50;
-
+    top: 552px;
     &::after {
       content: "";
       position: absolute;
@@ -100,21 +99,50 @@
     }
   }
 }
-// .bunner__button {
-//   display: inline-block;
-
-//   svg {
-//     width: 20px;
-//     height: 20px;
-//     fill: green;
-//     margin: 0 0 0 10px;
-//   }
-//   &:hover {
-//     svg {
-//       fill: lighten(green, 25%);
-//     }
-//   }
-// }
-// .slider-main-js {
-//   max-height: 100%;
-// }
+@media (min-width: 768px) and (max-width: 1480px) {
+  .bunner__body {
+    padding: 20% 47% 20% 0;
+  }
+  .bunner__person {
+    width: 316px;
+    height: 404px;
+    right: 15px;
+  }
+  .bunner__link--arrow {
+    right: 253px;
+    top: 717px;
+  }
+}
+@media (max-width: 767px) {
+  .bunner .container {
+    z-index: 4;
+  }
+  .bunner__body {
+    padding: 97px 29px 0 0;
+  }
+  .bunner__title {
+    margin: 28px 0 0 0;
+  }
+  .bunner__title h1 {
+    font-size: 35px;
+  }
+  .bunner__link--arrow {
+    right: -72px;
+    top: 313px;
+  }
+  .bunner__text {
+    margin: 20px 0 30px 0;
+    padding: 0 0 0 25px;
+  }
+  .bunner__text::after {
+    height: 100%;
+    width: 5px;
+  }
+  .bunner__person {
+    width: 198px;
+    height: 259px;
+    right: 1px;
+    opacity: 0.5;
+    z-index: 2;
+  }
+}

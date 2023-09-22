@@ -10,6 +10,7 @@
     &__cards {
       display: grid;
       grid-template-columns: repeat(auto-fill, 269px);
+      justify-content: center;
       column-gap: 30px;
       row-gap: 30px;
     }
@@ -84,5 +85,31 @@
       left: 7%;
       top: 70%;
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1210px) {
+  #serv .post__cards {
+    grid-template-columns: repeat(2, 269px);
+  }
+}
+
+@media (max-width: 767px) {
+  #serv .post__text {
+    padding: 20px;
+  }
+  #serv .post__body {
+    gap: 0px 0px;
+    padding: 0 0 40px 0;
+  }
+  #serv .post__cards {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  #serv .post .card {
+    min-height: 279px;
   }
 }

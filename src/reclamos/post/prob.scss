@@ -17,7 +17,7 @@
     label {
       position: relative;
     }
-    span {
+    p {
       @include transition;
       position: relative;
       position: absolute;
@@ -25,8 +25,7 @@
       opacity: 0;
       width: 550px;
       border-radius: 18px;
-      min-height: 142px;
-      padding: 45px 109px 45px 20px;
+      padding: 20px 45px;
       top: 50%;
       left: 300px;
       transform: translateY(-50%);
@@ -44,9 +43,9 @@
   }
   .fildset-radio--tiers input[type="radio"]:checked + label {
     @include Text-Style-14;
-    span {
+    p {
       opacity: 1;
-      left: 650px;
+      left: 489px;
       z-index: 1;
       svg {
         width: auto;
@@ -59,5 +58,35 @@
     &:hover {
       color: lighten($sandy-yellow, 15%);
     }
+  }
+}
+
+@media (max-width: 1087px) {
+  .prob__body {
+    min-height: 684px;
+  }
+  .prob__body {
+    min-height: auto;
+    padding: 50px 0 21px 0;
+  }
+  .prob .fildset-radio--tiers {
+    margin: 44px 0 0 0;
+  }
+  .prob .fildset-radio--tiers input[type="radio"]:not(:checked) + label p {
+    transform: translateY(0%);
+    left: 0px;
+    top: 40px;
+    width: calc(100vw - 40px);
+    padding: 15px;
+  }
+  .prob .fildset-radio--tiers input[type="radio"]:checked + label p {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0%);
+    left: 0px;
+    top: 10px;
+    width: calc(100vw - 40px);
+    padding: 15px;
+    height: auto;
   }
 }

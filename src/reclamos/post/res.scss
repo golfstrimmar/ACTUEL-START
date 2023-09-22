@@ -49,3 +49,20 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  #res .post .btn-success {
+    margin: 10px 0 0 0;
+    max-width: 324px;
+    width: 100%;
+  }
+  #res .post__cards {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    column-gap: 0px;
+    row-gap: 20px;
+  }
+  #res .post__text {
+    margin: 0px 0 0 0;
+  }
+}

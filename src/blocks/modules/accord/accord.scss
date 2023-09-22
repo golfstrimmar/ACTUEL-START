@@ -45,3 +45,9 @@
   min-height: 0;
   min-width: 0;
 }
+
+@media (max-width: 767px) {
+  ._accord-hidden-js {
+    overflow: visible;
+  }
+}

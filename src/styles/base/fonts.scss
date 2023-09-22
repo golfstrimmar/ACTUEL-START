@@ -90,15 +90,6 @@
   color: $sandy-yellow;
 }
 
-@mixin Text-Style-4 {
-  font-family: "Gilroy-ExtraBold", sans-serif;
-  font-size: 50px;
-  font-weight: 800;
-  line-height: 1.3;
-  letter-spacing: 1.5px;
-  color: $black;
-}
-
 @mixin Text-Style-32 {
   font-family: "Gilroy-ExtraBold", sans-serif;
   font-size: 50px;
@@ -123,6 +114,10 @@
   line-height: 1.3;
   letter-spacing: 1.35px;
   color: $white;
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
 }
 @mixin Text-Style-38 {
   font-family: "Gilroy-ExtraBold", sans-serif;
@@ -139,6 +134,9 @@
   line-height: 1.3;
   letter-spacing: 1.2px;
   color: $periwinkle;
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
 @mixin Text-Style-12 {
   font-family: "Gilroy-ExtraBold", sans-serif;
@@ -147,6 +145,10 @@
   line-height: 1.3;
   letter-spacing: 1.2px;
   color: $white;
+
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
 }
 @mixin Text-Style-27 {
   font-family: "Montserrat-MediumItalic", sans-serif;
@@ -156,6 +158,9 @@
   line-height: 1.3;
   letter-spacing: 1.05px;
   color: $white;
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
 }
 @mixin Text-Style-7 {
   font-family: "Gilroy-ExtraBold", sans-serif;
@@ -172,7 +177,11 @@
   line-height: 1.3;
   letter-spacing: 0.9px;
   color: $white;
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
+
 @mixin Text-Style-22 {
   font-family: "Gilroy-ExtraBold", sans-serif;
   font-size: 30px;
@@ -180,6 +189,9 @@
   line-height: 1.3;
   letter-spacing: 0.9px;
   color: $black-three;
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
 @mixin Text-Style-18 {
   font-family: "Gilroy-ExtraBold", sans-serif;
@@ -188,6 +200,9 @@
   line-height: 1.3;
   letter-spacing: 0.9px;
   color: $periwinkle;
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
 @mixin Text-Style-16 {
   font-family: "Gilroy-ExtraBold", sans-serif;
@@ -196,6 +211,10 @@
   line-height: 1.3;
   letter-spacing: 0.9px;
   color: $black-two;
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 }
 @mixin Text-Style-35 {
   font-family: "WorkSans-SemiBold", sans-serif;
@@ -212,6 +231,10 @@
   line-height: 1.3;
   letter-spacing: 0.75px;
   color: $sandy-yellow;
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 @mixin Text-Style-13 {
   font-family: "WorkSans-SemiBold", sans-serif;
@@ -220,6 +243,9 @@
   line-height: 1.3;
   letter-spacing: 0.75px;
   color: $white;
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 @mixin Text-Style-41 {
   font-family: "WorkSans-Regular", sans-serif;
@@ -227,6 +253,9 @@
   line-height: 1.3;
   letter-spacing: 0.75px;
   color: $text-gray-7;
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 @mixin Text-Style-6 {
   font-family: "WorkSans-Light", sans-serif;
@@ -235,6 +264,10 @@
   line-height: 1.3;
   letter-spacing: 0.75px;
   color: $white;
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 @mixin Text-Style-28 {
   font-family: "WorkSans-Bold", sans-serif;
@@ -251,6 +284,9 @@
   line-height: 1.3;
   letter-spacing: 0.6px;
   color: $white;
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 @mixin Text-Style-37 {
   font-family: "WorkSans-SemiBold", sans-serif;
@@ -276,6 +312,9 @@
   line-height: 1.3;
   letter-spacing: 0.6px;
   color: $periwinkle;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 @mixin Text-Style-39 {
   font-family: "WorkSans-Regular", sans-serif;
@@ -291,7 +330,11 @@
   letter-spacing: 0.6px;
   text-align: center;
   color: $black-two;
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
+
 @mixin Text-Style-29 {
   font-family: "WorkSans-Bold", sans-serif;
   font-size: 17px;
@@ -354,6 +397,10 @@
   line-height: 1.3;
   letter-spacing: 0.51px;
   color: $white;
+
+  @media (max-width: 767px) {
+    font-size: 15px;
+  }
 }
 @mixin Text-Style-17 {
   font-family: "WorkSans-Regular", sans-serif;
@@ -361,6 +408,9 @@
   line-height: 1.3;
   letter-spacing: 0.51px;
   color: $black-two;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 @mixin Text-Style-31 {
   font-family: "WorkSans-Bold", sans-serif;
@@ -406,6 +456,10 @@
   font-size: 15px;
   line-height: 1.67;
   color: $text-gray-900;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 @mixin Text-Style {
   font-family: "WorkSans-Regular", sans-serif;
@@ -413,6 +467,9 @@
   line-height: 1.3;
   letter-spacing: 0.45px;
   color: $white;
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
 }
 @mixin Text-Style-11 {
   font-family: "WorkSans-Regular", sans-serif;
@@ -429,6 +486,9 @@
   line-height: 1.3;
   letter-spacing: 0.51px;
   color: $black-two;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }
 @mixin Text-Style-3 {
   font-family: "Gilroy-ExtraBold", sans-serif;
@@ -444,4 +504,7 @@
   line-height: 1.3;
   letter-spacing: 0.6px;
   color: $text-gray-900;
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 }

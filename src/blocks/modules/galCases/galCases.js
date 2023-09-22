@@ -99,23 +99,23 @@ export const GalCases = () => {
     galCasesteamAct.start();
   }
 
-  if (document.querySelector("#galCases2 ")) {
-    const galCases2 = document.querySelector("#galCases2 ");
-    const galCases2Act = new GALCASE(galCases2, {
-      numberColumns: 3,
-      numberItems: 3,
-    });
-    galCases2Act.start();
-  }
+  // if (document.querySelector("#galCases2 ")) {
+  //   const galCases2 = document.querySelector("#galCases2 ");
+  //   const galCases2Act = new GALCASE(galCases2, {
+  //     numberColumns: 3,
+  //     numberItems: 3,
+  //   });
+  //   galCases2Act.start();
+  // }
 
-  if (document.querySelector("#galCases3 ")) {
-    const galCases3 = document.querySelector("#galCases3 ");
-    const galCases3Act = new GALCASE(galCases3, {
-      numberColumns: 3,
-      numberItems: 3,
-    });
-    galCases3Act.start();
-  }
+  // if (document.querySelector("#galCases3 ")) {
+  //   const galCases3 = document.querySelector("#galCases3 ");
+  //   const galCases3Act = new GALCASE(galCases3, {
+  //     numberColumns: 3,
+  //     numberItems: 3,
+  //   });
+  //   galCases3Act.start();
+  // }
 
   // =================
 };

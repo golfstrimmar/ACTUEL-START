@@ -43,11 +43,10 @@
   }
 
   .galCases__body ul {
-    width: 65%;
     padding: 36px 0 0 0;
     display: grid;
-    grid-template-columns: repeat(2, 234px);
-    gap: 0 30px;
+    grid-template-columns: repeat(auto-fill, 405px);
+    gap: 0 0px;
     justify-content: space-between;
     overflow: visible;
     margin: 0 0 -70px 0;
@@ -68,6 +67,8 @@
       top: -40px;
       left: 56px;
       white-space: nowrap;
+      z-index: 4;
+      color: $periwinkle;
       &::after {
         content: "";
         position: absolute;
@@ -123,5 +124,62 @@
     height: 94px;
     left: 31%;
     top: 82%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+}
+@media (max-width: 767px) {
+  #team .galCases__body ul {
+    padding: 16px 0 0 0;
+    grid-template-columns: 1fr;
+    gap: 20px 0px;
+    justify-content: start;
+    margin: 0 0 0px 0;
+    width: 100%;
+  }
+  #team .galCases__body li._is-active .block__img {
+    max-width: 233px;
+    width: 100%;
+    height: 232px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #team .galCases__body {
+    max-width: 100%;
+    margin: 20px 0 0 0;
+    grid-template-columns: 1fr 50px;
+    column-gap: 20px;
+  }
+  #team .galCases__body button {
+    width: 50px;
+  }
+  #team .galCases__body li._is-active {
+    margin: 0 0 40px 0;
+    h3 {
+      white-space: normal;
+      z-index: 4;
+      color: $periwinkle;
+      left: 18px;
+    }
+  }
+  #team .sec__img--1 {
+    width: 120px;
+    height: 120px;
+    left: -2%;
+    top: 20%;
+  }
+  #team .sec__img--2 {
+    width: 254px;
+    height: 290px;
+    left: 44%;
+    top: 2%;
+  }
+  #team .sec__img--4 {
+    left: 45%;
+  }
+  #team .galCases__body button svg {
+    width: 20px;
+    height: 20px;
   }
 }

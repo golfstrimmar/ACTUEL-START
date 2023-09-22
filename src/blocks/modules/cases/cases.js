@@ -37,8 +37,8 @@ export const CasesInit = () => {
         }
       });
       var tempSwiper = new Swiper(this.slider, {
-        slidesPerView: this.numberItems,
-        spaceBetween: 30,
+        spaceBetween: 10,
+        slidesPerView: 1,
         // slidesPerGroup: 4,
         // loop: "true",
         speed: 500,
@@ -52,6 +52,16 @@ export const CasesInit = () => {
         observer: true,
         observeParents: true,
         observeSlideChildren: true,
+        breakpoints: {
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1260: {
+            slidesPerView: this.numberItems,
+            spaceBetween: 30,
+          },
+        },
       });
       const Change = () => {
         setTimeout(() => {

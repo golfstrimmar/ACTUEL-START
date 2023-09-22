@@ -102,3 +102,42 @@
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+}
+@media (max-width: 994px) {
+  .post__body {
+    grid-template-columns: 1fr;
+    gap: 30px 0px;
+    justify-content: space-between;
+    z-index: 10;
+  }
+  .sec__img--1 {
+    width: 43px;
+    height: 43px;
+    left: 48%;
+    top: 4%;
+  }
+  .sec__img--3 {
+    width: 52px;
+    height: 80px;
+    left: 65%;
+    top: 93%;
+  }
+  .sec__img--4 {
+    width: 119px;
+    height: 309px;
+    left: 1%;
+    top: 21%;
+  }
+  .sec__img--6 {
+    width: 233px;
+    height: 275px;
+    left: 58%;
+    top: 35%;
+  }
+  .post__part--form {
+    max-width: 489px;
+    width: 100%;
+    margin: 0 auto 0px auto;
+  }
+}
