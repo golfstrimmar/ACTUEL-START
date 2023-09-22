@@ -30,11 +30,11 @@ if sec.post
             input#11(type='text' name='11' value='' placeholder=' Denzel Washington')
             label(for='11') Jūsų vardas
           .text-field
-            input#11(type='text' name='11' value='' placeholder=' Denzel Washington')
-            label(for='11') Jūsų telefono numeris
+            input#12(type='text' name='12' value='' placeholder=' Denzel Washington')
+            label(for='12') Jūsų telefono numeris
           .text-field
-            input#11(type='text' name='11' value='' placeholder=' Denzel Washington')
-            label(for='11') Jūsų el. paštas
+            input#13(type='text' name='13' value='' placeholder=' Denzel Washington')
+            label(for='13') Jūsų el. paštas
           .text-field
             textarea#4(name="4" placeholder="Введите текст" )
             label(for='4') Jūsų vardas
@@ -47,7 +47,7 @@ if sec.prob
 
   section(id='prob').rel.prob
     .imgs
-      img(data='./img/prob-bg.webp' alt='img')
+      img(data-src='./img/prob-bg.webp' alt='img')
     .container
       .prob__body
         .prob__title._enter-top
@@ -184,9 +184,9 @@ if sec.prob
     //-       use(xlink:href='#down')
     //-   ul.dropdown-list
     //-     .dropdown-list-wrap
-    //-       li.dropdown-list__item(data-value='Notes') Notes
-    //-       li.dropdown-list__item(data-value='Photo') Photo
-    //-       li.dropdown-list__item(data-value='Dictionary') Dictionary
+    //-       li.dropdown-list__item(data-src-value='Notes') Notes
+    //-       li.dropdown-list__item(data-src-value='Photo') Photo
+    //-       li.dropdown-list__item(data-src-value='Dictionary') Dictionary
     //- div(style=' width:250px; height:250px;').rel
     //-   .imgs
     //-     picture
@@ -223,21 +223,21 @@ if sec.clients
           .clients__card.card
             .card__img._a.rel
               .imgs
-                img(data='./img/clients/i-1.webp' alt='img')
+                img(data-src='./img/clients/i-1.webp' alt='img')
             p.card__info._b 19 394 užklausų
             p.card__name._c Justas Skaržinskas
             p.card__job._d Web programuotojas
           .clients__card.card
             .card__img._a.rel
               .imgs
-                img(data='./img/clients/i-2.webp' alt='img')
+                img(data-src='./img/clients/i-2.webp' alt='img')
             p.card__info._b 19 394 užklausų
             p.card__name._c Justas Skaržinskas
             p.card__job._d Web programuotojas
           .clients__card.card
             .card__img._a.rel
               .imgs
-                img(data='./img/clients/i-3.webp' alt='img')
+                img(data-src='./img/clients/i-3.webp' alt='img')
             p.card__info._b 19 394 užklausų
             p.card__name._c Justas Skaržinskas
             p.card__job._d Web programuotojas
@@ -262,8 +262,7 @@ if sec.serv
             li.post__card.card
               .card__header 
                 h3 SEO
-                svg
-                  use(xlink:href='#serv-1')
+                img(src='./img/serv-1.svg' alt='serv-1')
               p Pasiekite savo klientus didžiausiame pasaulyje profesionalių tinkle. 4 iš 5 „LinkedIn" narių priima verslo sprendimus. "LinkedIn" nariu perkamoji galia yra 2x didesnė.
               a(href="!#")
                 span Plačiau
@@ -272,8 +271,7 @@ if sec.serv
             li.post__card.card
               .card__header 
                 h3 Website
-                svg
-                  use(xlink:href='#serv-2')
+                img(src='./img/serv-2.svg' alt='serv-1')
               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
               a(href="!#")
                 span Plačiau
@@ -282,8 +280,7 @@ if sec.serv
             li.post__card.card
               .card__header 
                 h3 Facebook
-                svg
-                  use(xlink:href='#serv-3')
+                img(src='./img/serv-3.svg' alt='serv-1')
               p Rodykite skelbimus tikslingai auditorijai.<br>Padidinkite savo prekės ženklo žinomumą.<br>Mokėkite tik už paspaudimą.<br>Vidutinė paspaudimo kaina yra 0,10 €. Sukurkite į klientus panašias auditorijas.
               a(href="!#")
                 span Plačiau
@@ -292,8 +289,7 @@ if sec.serv
             li.post__card.card
               .card__header 
                 h3 Google
-                svg
-                  use(xlink:href='#serv-4')
+                img(src='./img/serv-4.svg' alt='serv-1')
               p Pateikite savo skelbimą klientams būtent tą akimirką, kai jie „Google" ieško jūsų siūlomų prekių ar paslaugų. Mokėkite tik tada, kai jie spustelės skelbimą, kad apsilankytų jūsų svetainėje, arba paskambins jums.
               a(href="!#")
                 span Plačiau
@@ -303,7 +299,7 @@ if sec.res
   section(id='res')
     .post.rel.sec
       .imgs
-        img(data='./img/res-bg.webp' alt='img')
+        img(data-src='./img/res-bg.webp' alt='img')
       .container
         .post__body
           .post__title.title
@@ -409,7 +405,7 @@ if sec.team
                       h3=block.title
                       .block__img.rel
                         .imgs
-                          img(data=block.src alt='img')
+                          img(data-src=block.src alt='img')
                       p=block.text
 
                 button._galCases-button-js.btn.btn-empty._enter-right
@@ -455,7 +451,7 @@ if sec.works
                     ];
                   each block in blocks
                     li
-                      img(data=block.src alt='img')
+                      img(data-src=block.src alt='img')
                 ul.accord__content._accord-content-js
                   -
                     var blocks = [    
@@ -467,7 +463,7 @@ if sec.works
                     ];
                   each block in blocks
                     li
-                      img(data=block.src alt='img')
+                      img(data-src=block.src alt='img')
 
                 ul.accord__content._accord-content-js
                 .slider-cases.swiper-container
@@ -515,4 +511,4 @@ if sec.ques
                 span telegram
           .post__img.rel
             .imgs
-              img(data='./img/ques-bg.webp' alt='img')
+              img(data-src='./img/ques-bg.webp' alt='img')
