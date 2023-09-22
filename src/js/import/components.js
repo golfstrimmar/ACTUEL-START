@@ -19,16 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //   // ========Lazy===============
 
-  if (document.querySelector("img")) {
-    var temp = [...document.querySelectorAll("img")].map((el) => {
-      return el.getAttribute("data");
-    });
-    temp = temp.filter((el) => {
-      return el !== null;
-    });
-    if (temp.length > 0) {
-      Lazy();
-    }
+  //   // ========Lazy===============
+  if (document.querySelector("img[data-src]")) {
+    Lazy();
   }
 
   if (document.querySelector("#bunner-link")) {
