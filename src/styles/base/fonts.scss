@@ -1,40 +1,533 @@
-
-// @font-face {
-//   font-family: "Lobster-Regular";
-//   src: url("../fonts/Lobster-Regular.woff2");
-//   src: url("../fonts/Lobster-Regular.woff");
-//   font-weight: 400;
-//   font-style: normal;
-//   font-stretch: normal;
-// }
-
 @font-face {
-  font-family: "Arial-Regular";
-  src: url("../fonts/arial_reg.woff2");
-  src: url("../fonts/arial_reg.woff");
+  font-family: "MuseoSansCyrl-300";
+  src: url("../fonts/MuseoSansCyrl-300.woff2");
+  src: url("../fonts/MuseoSansCyrl-300.woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HouschkaPro-DemiBold";
+  src: url("../fonts/HouschkaPro-DemiBold.woff2");
+  src: url("../fonts/HouschkaPro-DemiBold.woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "HouschkaPro-Bold";
+  src: url("../fonts/HouschkaPro-Bold.woff2");
+  src: url("../fonts/HouschkaPro-Bold.woff");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.woff2");
+  src: url("../fonts/Roboto-Light.woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.woff2");
+  src: url("../fonts/Roboto-Regular.woff");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Arial-Bold";
-  src: url("../fonts/arial_bold.woff2");
-  src: url("../fonts/arial_bold.woff");
-  font-weight: 700;
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto-Medium.woff2");
+  src: url("../fonts/Roboto-Medium.woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.woff2");
+  src: url("../fonts/Roboto-Bold.woff");
+  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   font-display: swap;
 }
 
+// font-family: 'MuseoSansCyrl-300', sans-serif;
+// font-family: 'HouschkaPro-DemiBold', sans-serif;
+// font-family: 'HouschkaPro-Bold', sans-serif;
+// font-family: 'Roboto-Bold', sans-serif;
+// font-family: 'Roboto-Medium', sans-serif;
+// font-family: 'Roboto-Regular', sans-serif;
+// font-family: 'Roboto-Light', sans-serif;
+@mixin Text-Style-2 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.36;
+  color: $white-three;
+}
+@mixin Text-Style-72 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.21;
+  color: $white-three;
+}
+@mixin Text-Style-70 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: $black-five;
+}
+@mixin Text-Style-73 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 25px;
+  line-height: 1.36;
+  font-weight: 300;
+  color: $white-three;
+}
+@mixin Text-Style-64 {
+  font-size: 96px;
+  color: $black-five;
+}
+@mixin Text-Style-11 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: $black-four;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif:wght@700&family=PT+Sans&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&family=Roboto+Slab:wght@700&display=swap');
+@mixin Text-Style-54 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: $black-five;
+}
+@mixin Text-Style-38 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: $black-four;
+}
 
-// font-family: 'Arial-Regular', sans-serif;
-// font-family: 'Arial-Bold', sans-serif;
-// font-family: 'Inter', sans-serif;
-// font-family: 'Noto Serif', serif;
-// font-family: 'PT Sans', sans-serif;
-// font-family: 'PT Serif', serif;
-// font-family: 'Roboto Flex', sans-serif;
-// font-family: 'Roboto Slab', serif;
+@mixin Text-Style-55 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: $greyish-brown-four;
+}
+@mixin Text-Style-43 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: $black-three;
+}
+@mixin Text-Style-31 {
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  color: $jungle-green;
+}
+@mixin Text-Style-69 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: $black-five;
+}
+@mixin Text-Style-47 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: $black-five;
+}
+@mixin Text-Style-48 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: $black-five;
+}
+@mixin Text-Style-58 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: $black-five;
+}
+@mixin Text-Style-37 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.41;
+  color: $black-four;
+}
+@mixin Text-Style-21 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: $black-three;
+}
+@mixin Text-Style-51 {
+  font-size: 20px;
+  color: $jungle-green;
+}
+@mixin Text-Style-50 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: $black-four;
+}
+@mixin Text-Style-76 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 18.5px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $black-five;
+}
+@mixin Text-Style-35 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: $jungle-green;
+}
+@mixin Text-Style-32 {
+  font-size: 18px;
+  color: $black-three;
+}
+@mixin Text-Style-36 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: $black-three;
+}
+@mixin Text-Style-16 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: $cherry;
+}
+@mixin Text-Style-44 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.31;
+  color: $black-five;
+}
+@mixin Text-Style-42 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $black-four;
+}
+@mixin Text-Style-40 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $black-three;
+}
+@mixin Text-Style-12 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $jungle-green;
+}
+@mixin Text-Style-63 {
+  font-size: 16px;
+  text-align: center;
+  color: $black-five;
+}
+@mixin Text-Style-33 {
+  font-size: 16px;
+  color: $white-three;
+}
+@mixin Text-Style-19 {
+  font-size: 16px;
+  color: $black-three;
+}
+@mixin Text-Style-17 {
+  font-size: 16px;
+  color: $jungle-green;
+}
+@mixin Text-Style-15 {
+  font-size: 16px;
+  color: $black-four;
+}
+@mixin Text-Style-27 {
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: $cherry;
+}
+@mixin Text-Style-26 {
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: $black-three;
+}
+@mixin Text-Style-24 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: $warm-grey;
+}
+@mixin Text-Style-14 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: $black-four;
+}
+@mixin Text-Style-13 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: $black-three;
+}
+@mixin Text-Style-71 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: $black-five;
+}
+@mixin Text-Style-68 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: $black-five;
+}
+@mixin Text-Style-66 {
+  font-size: 14px;
+  text-align: center;
+  color: $black-five;
+}
+@mixin Text-Style-6 {
+  font-family: "HouschkaPro-Bold", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $black-three;
+}
+@mixin Text-Style-8 {
+  font-family: "HouschkaPro-DemiBold", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: $cherry;
+}
+@mixin Text-Style-7 {
+  font-family: "HouschkaPro-DemiBold", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: $greyish-brown-three;
+}
+@mixin Text-Style-4 {
+  font-family: "HouschkaPro-DemiBold", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: $white-three;
+}
+@mixin Text-Style-80 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.71;
+  color: #818181;
+}
+@mixin Text-Style-81 {
+  font-size: 14px;
+  line-height: 1.86;
+  color: $greyish;
+}
+@mixin Text-Style-79 {
+  font-size: 14px;
+  line-height: 1.71;
+  color: $warm-grey-two;
+}
+@mixin Text-Style-78 {
+  font-size: 14px;
+  line-height: 1.93;
+  color: $brownish-grey;
+}
+@mixin Text-Style-77 {
+  font-size: 14px;
+  line-height: 1.71;
+  color: $brownish-grey;
+}
+@mixin Text-Style-75 {
+  font-size: 14px;
+  line-height: 2.14;
+  color: $brownish-grey;
+}
+@mixin Text-Style-23 {
+  font-size: 14px;
+  color: $greyish-brown-four;
+}
+@mixin Text-Style-22 {
+  font-size: 14px;
+  color: $jungle-green;
+}
+@mixin Text-Style-18 {
+  font-size: 14px;
+  color: $black-three;
+}
+@mixin Text-Style-45 {
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: $black-three;
+}
+@mixin Text-Style-30 {
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: $jungle-green;
+}
+@mixin Text-Style-74 {
+  font-size: 13.8px;
+  color: #959595;
+}
+@mixin Text-Style-62 {
+  font-size: 13.8px;
+  text-align: right;
+  color: $cherry;
+}
+@mixin Text-Style-61 {
+  font-size: 13.8px;
+  text-align: right;
+  color: $jungle-green;
+}
+@mixin Text-Style-60 {
+  font-size: 13.8px;
+  color: $greyish-brown-four;
+}
+@mixin Text-Style-59 {
+  font-size: 13.8px;
+  text-align: right;
+  color: $greyish-brown-four;
+}
+@mixin Text-Style-46 {
+  font-size: 13px;
+  line-height: 1.88;
+  color: #7a7a7a;
+}
+@mixin Text-Style-49 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: $cherry;
+}
+@mixin Text-Style-0 {
+  font-family: "HouschkaPro-DemiBold", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: $emerald;
+}
+@mixin Text-Style-5 {
+  color: $warm-grey;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.35px;
+}
+@mixin Text-Style-3 {
+  font-family: "HouschkaPro-DemiBold", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: $greyish-brown-two;
+}
+@mixin Text-Style-2 {
+  font-family: "HouschkaPro-DemiBold", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: $greyish-brown;
+}
+@mixin Text-Style {
+  font-family: "HouschkaPro-DemiBold", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: $black-47;
+}
+@mixin Text-Style-41 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: $black-three;
+}
+@mixin Text-Style-34 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: $greyish-brown-four;
+}
+
+@mixin Text-Style-67 {
+  font-size: 12px;
+  color: $greyish-brown-four;
+}
+@mixin Text-Style-57 {
+  font-size: 12px;
+  color: $jungle-green;
+}
+@mixin Text-Style-56 {
+  font-size: 12px;
+  color: $warm-grey;
+}
+@mixin Text-Style-53 {
+  font-size: 12px;
+  text-align: center;
+  color: $warm-grey;
+}
+@mixin Text-Style-52 {
+  font-size: 12px;
+  text-align: center;
+  color: $jungle-green;
+}
+@mixin Text-Style-39 {
+  font-size: 12px;
+  color: $black-three;
+}
+@mixin Text-Style-20 {
+  font-family: "MuseoSansCyrl-300", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: $warm-grey;
+}
+@mixin Text-Style-9 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: $black-four;
+}
+@mixin Text-Style-25 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: $warm-grey;
+}
+@mixin Text-Style-10 {
+  font-family: "Roboto-Light", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: $jungle-green;
+}
+@mixin Text-Style-28 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: $black-five;
+}
+@mixin Text-Style-29 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: $black-five;
+}

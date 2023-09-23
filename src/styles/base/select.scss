@@ -3,59 +3,57 @@
   border: none;
   width: 100%;
   height: 100%;
-  border-radius: 5px;
   overflow: hidden;
-  border: 1px solid grey;
   @include flex-column;
   justify-content: center;
   .dropdown-button {
     width: 100%;
-    min-height: 48px;
+    min-height: 15px;
     position: relative;
     background: white;
-    @include flex-column;
     justify-content: center;
     text-align: left;
     z-index: 2;
-    padding: 10px 20px;
+    padding: 5px 0px;
     cursor: pointer;
+    @include flex-column;
     @include transition;
+
     svg {
-      width: 20px;
-      height: 20px;
+      width: 12px;
+      height: 8px;
       position: absolute;
       left: auto;
       right: 20px;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) rotate(180deg);
       @include transition;
       &._is-active {
-        transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%) rotate(0deg);
       }
     }
-    &:hover {
-      // p {
-      //   color: lighten(green, 25%);
-      // }
-    }
+
     span {
       @include transition;
       display: flex;
+      @include Text-Style-0;
       &._is-new {
         font-size: 26px;
         opacity: 1;
         width: 80%;
       }
     }
+    &:hover {
+      span {
+        color: $hover;
+      }
+    }
   }
 
   .dropdown-list {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     width: 100%;
     text-align: left;
     background: white;
-    border-top: solid 1px transparent;
     @include transition;
     display: grid;
     grid-template-rows: 0fr;
@@ -65,21 +63,22 @@
     }
     &._is-active {
       grid-template-rows: 1fr;
-      border-top: solid 1px grey;
+      border: solid 1px grey;
     }
 
     &__item {
-      padding: 10px 20px;
+      padding: 5px;
       cursor: pointer;
       @include transition;
+      @include Text-Style;
     }
 
     &__item._item-active {
-      background: rgb(241, 241, 121);
+      background: $sunflower-yellow;
     }
 
     &__item:hover {
-      background: beige;
+      background: lighten($sunflower-yellow, 40%);
     }
   }
 }

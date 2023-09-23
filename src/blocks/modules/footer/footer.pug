@@ -1,24 +1,109 @@
 footer#footer.footer
   .container
     .footer__body
-      a(href="#!").footer__logo.logo
-          svg
-            use(xlink:href='#logo')
-          p.ttu slogan
       .footer__col
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
+        .footer__title 
+          h2 Каталог
+        ul.footer__links
+          li
+            a(href='#!') Категория 1
+          li
+            a(href='#!') Категория 2
+          li
+            a(href='#!') Категория 3
+          li
+            a(href='#!') Категория 4
+          li
+            a(href='#!') Категория 5
+          li
+            a(href='#!') Категория 6
+          li
+            a(href='#!') Бренды от А до Я
       .footer__col
-        span Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-       
-      .footer__col.footer__col--info.info
-        a.info__phone(href='#!') +7(000) 123 45 65 67 
-        form.info__search.info__search--footer
-          input(type='text' placeholder='Поиск')
-          input(type='submit')
-          svg
-            use(xlink:href='#search')
+        .footer__title 
+          h2 Интернет-аптека
+        ul.footer__links
+          li
+            a(href='#!') Как оформить заказ
+          li
+            a(href='#!') Доставка
+          li
+            a(href='#!') Оплата
+          li
+            a(href='#!') Адреса аптек
+          li
+            a(href='#!') Скидки и
+          li
+            a(href='#!') Вопрос-ответ
+          li
+            a(href='#!') Юридическим лицам
+      .footer__col
+        .footer__title 
+          h2 О компании
+        ul.footer__links
+          li
+            a(href='#!') О сети аптек
+          li
+            a(href='#!') Вакансии
+          li
+            a(href='#!') Контакты
+          li
+            a(href='#!') Лицензии и реквизиты
+          li
+            a(href='#!') Политика конфиденциальности
+          li
+            a(href='#!') Пользовательское соглашение
+          li
+            a(href='#!') Сотрудничество
+      .footer__col
+        .footer__title 
+          h2 Обратная связь
+        ul.footer__links
+          li
+            a(href='#!') Задать вопрос 
+          li
+            a(href='#!') Сообщить об ошибке
+          li
+            a(href='#!') Выразить благодарность
+          li
+            a(href='#!') Вопросы качества
+          li
+            a(href='#!') Другой вопрос
+          li
+            a(href='#!') Предложить идею
+          li
+            a(href='#!') Оценить работу
 
-      svg.footer__cheap
-        use(xlink:href='#play')
+
+      .footer__col.footer__col--last
+        p Единая справочная
+        a(href="#!") 8800 902-20-10
+        p Присоединяйтесь
+        ul.soc
+          li.soc__item
+            a(href="!#")
+              svg
+                use(xlink:href='#od')
+          li.soc__item
+            a(href="!#")
+              svg
+                use(xlink:href='#wk')
+          li.soc__item
+            a(href="!#")
+              svg
+                use(xlink:href='#inst')
+          li.soc__item
+            a(href="!#")
+              svg
+                use(xlink:href='#fb')
+        p ООО «Социальная Аптека 15», 344065,<br> г.Ростов-на-Дону, ул.Киргиская, 14 б,<br> ОГРН 1076162001398, ИНН<br> 6162049032
+
     .footer__low
-      a.footer__pol(href='#!') @Lorem ipsum dolor sit amet.
+      p ВАЖНО! Мы не продаем товары на сайте и не доставляем заказы на дом. Под «заказом» на сайте понимается должным образом оформленный запрос Клиента на бронирование в аптечных организациях группы компаний ПАО «Социальная аптека», а также ее партнеров по указанному на сайте адресу перечня Товаров, выбранных на сайте. Товар вам продает аптечная организация. Дистанционная продажа лекарственных средств (в том числе, с доставкой на дом) запрещена действующим законодательством Российской Федерации.
+      p Цены действительны только при бронировании на сайте на момент оформления заказа.<br> Телефонные звонки клиентов принимаются справочной службой согласно 
+        a(href='#!') графика работы
+      a.footer__pol(href='#!') © 2018 Социальная Аптека
+
+a#_returnToTop(href="#header").btn-up_hide
+  svg
+    use(xlink:href='#arrow')

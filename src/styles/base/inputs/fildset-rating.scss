@@ -36,28 +36,32 @@
     svg {
       display: block;
       @include transition;
-      fill: #d9d9d9;
-      width: 50px;
-      height: 50px;
+      fill: transparent;
+      stroke: $sunflower-yellow;
+      width: 27px;
+      height: 26px;
     }
     &:hover {
       svg {
-        fill: lighten(#ffb802, 20%);
+        stroke: lighten($sunflower-yellow, 10%);
+        fill: lighten($sunflower-yellow, 10%);
       }
       & ~ label > svg {
-        fill: lighten(#ffb802, 20%);
+        stroke: lighten($sunflower-yellow, 10%);
+        fill: lighten($sunflower-yellow, 10%);
       }
     }
   }
   input[type="radio"]:checked ~ label {
     svg {
-      fill: #ffb802;
+      stroke: lighten($sunflower-yellow, 20%);
+      fill: lighten($sunflower-yellow, 20%);
     }
 
     &:hover,
     &:hover ~ label {
       svg {
-        fill: lighten(#ffb802, 20%);
+        // stroke: lighten($sunflower-yellow, 20%);
       }
     }
   }

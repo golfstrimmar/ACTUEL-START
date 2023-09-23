@@ -7,16 +7,16 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: "Roboto-Regular", sans-serif;
   font-size: 16px;
   font-weight: 400;
   //   background:rgb(225, 228, 250);
-  background-color: white;
+  background-color: $white-three;
 }
 
 .container {
   // outline: 1px solid #4164ff;
-  max-width: 1160px;
+  max-width: 1140px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -32,9 +32,8 @@ a {
   display: inline-block;
   @include transition;
   cursor: pointer;
-  color: $jungle-green;
   &:hover {
-    color: lighten(green, 25%);
+    color: lighten($emerald, 5%);
   }
 }
 
@@ -62,30 +61,12 @@ a {
   position: relative;
 }
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .hidden {
   display: none;
 }
 
 /* +++++++++++++++++++++++++++++++++++++ */
 
-.d-flex {
-  display: flex;
-}
-.jucc {
-  justify-content: center;
-}
-.alic {
-  align-items: center;
-}
-.fdc {
-  flex-direction: column;
-}
 ._hover {
   &:hover {
     color: lighten(green, 25%);
@@ -137,36 +118,29 @@ a {
   }
 }
 /* +++++++++++++++++++++++++++++++++++++ */
-
+.soc {
+  @include flex-aligne-center;
+  column-gap: 7px;
+  &__item {
+    a {
+      border-radius: 100%;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    svg {
+      width: 43px;
+      height: 43px;
+    }
+  }
+}
 .lock {
   overflow: hidden;
 }
 .ttu {
   text-transform: uppercase;
 }
-// a.common__link {
-//   width: 104px;
-//   height: 104px;
-//   z-index: 50;
-//   border-radius: 100px;
-//   box-shadow: 0 4px 24px 0 rgba(27, 49, 95, 0.15);
-//   background-color: rgba(9, 72, 207);
-//   opacity: 0;
-//   z-index: 50;
-//   svg {
-//     width: 50px;
-//     height: 50px;
-//     fill: $white;
-//     transition: all 0.3s;
-//   }
-//   &:hover {
-//     background-color: lighten(rgba(9, 72, 207), 25%);
-//     box-shadow: 0 4px 24px 0 rgba(9, 72, 207, 0.45);
-//     svg {
-//       fill: rgba(9, 72, 207);
-//     }
-//   }
-// }
+
 @media (min-width: 768px) and (max-width: 1259px) {
   .container {
     margin: 0 20px;
