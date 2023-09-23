@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // ============появление текста================
   Anim();
-
-  //   // ========Lazy===============
-
   //   // ========Lazy===============
   if (document.querySelector("img[data-src]")) {
     Lazy();
