@@ -3,7 +3,7 @@ import { Anim } from "../utils/animation";
 import { Lazy } from "../utils/lazy";
 import { myCopy } from "../utils/myCopy";
 import { ScrollLink } from "../utils/scroll-link";
-
+import { ScrollUp } from "../utils/scroll-up";
 document.addEventListener("DOMContentLoaded", function () {
   //   // ==========Button=============
   [...document.querySelectorAll(".but-wave")].forEach((cell) => {
@@ -23,5 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (document.querySelector("#bunner-link")) {
     ScrollLink();
+  }
+
+  if (document.querySelector("#_returnToTop")) {
+    ScrollUp();
   }
 });
