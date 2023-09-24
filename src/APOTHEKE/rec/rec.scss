@@ -67,23 +67,33 @@
       height: 55px;
       box-shadow: 2.5px 11.7px 46px 0 rgba(46, 46, 46, 0.03);
       background-color: $white-three;
+      input[type="text"],
+      input[type="phone"] {
+        padding: 0 0 0 20px;
+        & + label {
+          @include Text-Style-74;
+          @include flex-aligne-center;
+          column-gap: 14px;
+          padding: 0 0 0 20px;
+          svg {
+            width: 14px;
+            height: 12px;
+            fill: #b8b8b8;
+          }
+        }
+      }
     }
+    .text-field input[type="text"]:focus + label,
+    .text-field input[type="phone"]:focus + label {
+      transform: translateY(-150%);
+    }
+
     button {
       background-color: $cherry-light;
       min-width: 137px;
       height: 55px;
       @include Text-Style-33;
       border-radius: 0;
-    }
-    label {
-      @include Text-Style-74;
-      @include flex-aligne-center;
-      column-gap: 14px;
-      svg {
-        width: 14px;
-        height: 12px;
-        fill: #b8b8b8;
-      }
     }
   }
 }

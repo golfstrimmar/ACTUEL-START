@@ -1,12 +1,16 @@
 .send {
   &__title {
   }
-
   &__body {
-    min-height: 441px;
-    padding: 81px 50px 50px 47px;
+    display: grid;
+    grid-template-columns: 1fr 262px;
+    column-gap: 30px;
     box-shadow: 1px 3px 29px 0 rgba(0, 0, 0, 0.2);
     background-color: $white-three;
+    min-height: 441px;
+    padding: 81px 50px 50px 47px;
+  }
+  &__form {
   }
   &__btn {
     @include Text-Style-33;
@@ -92,6 +96,20 @@
         svg {
           fill: $hover;
         }
+      }
+    }
+  }
+  &__info {
+    p {
+      @include Text-Style-67;
+      margin: 0 0 20px 0;
+    }
+    a {
+      @include Text-Style-57;
+      display: inline-block;
+      text-decoration: underline !important;
+      &:hover {
+        color: $hover;
       }
     }
   }
