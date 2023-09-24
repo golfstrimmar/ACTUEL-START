@@ -1,0 +1,176 @@
+section(id='send').send.rel
+  //- .imgs
+  //-   img.__img(src='./img/img-1.webp' alt='img')
+  .container
+    form.send__body
+      .send__linia
+        p Оценка:
+        fildset.fildset-rating
+          .fildset-rating__items
+            input(type="radio" id="rating5" name='rating' value='5' )
+            label(for="rating5")
+              svg
+                use(xlink:href='#star-empty')  
+            input(type="radio" id="rating4" name='rating' value='4' )
+            label(for="rating4")
+              svg
+                use(xlink:href='#star-empty') 
+            input(type="radio" id="rating3" name='rating' value='3' )
+            label(for="rating3") 
+              svg
+                use(xlink:href='#star-empty') 
+            input(type="radio" id="rating2" name='rating' value='2' )
+            label(for="rating2") 
+              svg
+                use(xlink:href='#star-empty') 
+            input(type="radio" id="rating1" name='rating' value='1' )
+            label(for="rating1") 
+              svg
+                use(xlink:href='#star-empty')
+      .send__linia
+        .text-field
+          textarea#4(name="4" row='20' placeholder="Введите текст" )
+          label(for='4') Напишите ваш отзыв...
+
+      .send__linia.send__linia--inputs
+        .text-field
+          input#1(type='text' name='1' value='' placeholder=' Denzel Washington')
+          label.text-field__label(for='1') ФИО
+        .text-field
+          input#2(type='phone' name='2' value='' placeholder=' Denzel Washington')
+          label.text-field__label(for='2') Телефон
+        .select
+          input(type="hidden" name="town")
+          button.dropdown-button
+            span Москва
+            svg.icon
+              use(xlink:href='#arrow')
+          ul.dropdown-list
+            .dropdown-list-wrap
+              li.dropdown-list__item(data-value='Notes') Ростов-на-Дону
+              li.dropdown-list__item(data-value='Notes') Mосква
+              li.dropdown-list__item(data-value='Photo') Санкт Петербург
+              li.dropdown-list__item(data-value='Dictionary') Сан Франциско
+
+      .send__linia.send__linia--check
+        .fildset-checkbox
+          .form-check
+            input#55(type='checkbox' name="")
+            label(for='55') Согласен с 
+              a(href="#!") правилами публикации отзывов
+      button(type="submit").btn.btn-success.but-wave.send__btn Отправить отзыв
+
+
+
+
+
+
+    //- .select
+    //-   input(type="hidden")
+    //-   button.dropdown-button
+    //-     span Ростов-на-Дону
+    //-     svg.icon
+    //-       use(xlink:href='#arrow')
+    //-   ul.dropdown-list
+    //-     .dropdown-list-wrap
+    //-       li.dropdown-list__item(data-value='Notes') Ростов-на-Дону
+    //-       li.dropdown-list__item(data-value='Notes') Mосква
+    //-       li.dropdown-list__item(data-value='Photo') Санкт Петербург
+    //-       li.dropdown-list__item(data-value='Dictionary') Сан Франциско
+
+
+    //- a(href="#!") 8 800 100-01-03
+    //- .logo
+    //-   svg.icon
+    //-     use(xlink:href='#logo_apteka')
+
+    //- form.form-input
+    //-   input#search1(type='text' placeholder='Поиск' name="" )
+    //-   label(for='search1') Поиск по названию, производителю, веществу, штрих-коду
+    //-   .form-input__submit
+    //-     input(type='submit')
+    //-     svg
+    //-       use(xlink:href='#search')
+
+
+
+
+
+
+
+    //- button(type='button' value='Готово').btn.btn-success.but-wave button btn-success
+    //- button(type='button').btn.btn-blue button btn-blue 
+
+
+
+
+    //- .send__title
+    //-   h2 send шаблонная секцияшаблонная секцияшаблонная секцияшаблонная секция
+    //- .send__body
+    //-   p.send__text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae culpa alias explicabo ipsam non voluptatum incidunt dolores. Ab quam eum alias exercitationem. Amet labore sunt asperiores, perferendis sequi illum facere?
+
+
+
+    //- a(href="#!").btn.btn-success.but-wave a.btn-success
+
+    //- button.btn.btn-empty(  type='button' name='send' ) button btn-empty
+    //- input(type='text' placeholder='Поиск' name="")
+
+
+    //- .text-field
+    //-   input#1(type='text' name='1' value='' placeholder=' Denzel Washington')
+    //-   label.text-field__label(for='1') Имя Фамилия
+    //- .fildset-checkbox
+    //-   .form-check
+    //-     input#5(type='checkbox' name="")
+    //-     label(for='5') Любимое место
+    //-   .form-check
+    //-     input#6(type='checkbox' name="")
+    //-     label(for='6') Месторасположение
+    //-   .form-check
+    //-     input#7(type='checkbox' name="")
+    //-     label(for='7') Гость торжественного события
+    //-   .form-check
+    //-     input#8(type='checkbox' name="")
+    //-     label(for='8') Корпоративные мероприятия
+    //-   .form-check
+    //-     input#9(type='checkbox' name="")
+    //-     label(for='9') СПА комплекс
+    //- fildset.fildset-radio
+    //-   .form-check
+    //-     input(type="radio" id="10" name='a' value='16-25' checked)
+    //-     label(for="10")  от 16-25
+    //-   .form-check
+    //-     input(type="radio" id="11" name='a' value='26-35')
+    //-     label(for="11")  от 26-35
+    //-   .form-check
+    //-     input(type="radio" id="12" name='a' value='36-45')
+    //-     label(for="12")  36-45
+    //-   .form-check
+    //-     input(type="radio" id="13" name='a' value='55')
+    //-     label(for="13")  от 45 и старше
+    //- fildset.fildset-radio.fildset-radio--sex
+    //-   .form-check
+    //-     input(type="radio" id="14" name='s' value='man' checked)
+    //-     label(for="14")  Мужчина
+    //-       svg
+    //-         use(xlink:href='#Union')
+    //-   .form-check
+    //-     input(type="radio" id="15" name='s' value='frau')
+    //-     label(for="15")  Женщина
+    //-       svg
+    //-         use(xlink:href='#Union')
+    //- .fildset-radio.fildset-radio--tiers
+    //-   input(type="radio" id="tieresyes" name='tieres' value='yes' checked)
+    //-   label(for="tieresyes")  Да
+    //-   span /
+    //-   input(type="radio" id="tieresnot" name='tieres' value='not')
+    //-   label(for="tieresnot")  Нет
+
+    //- div(style=' width:250px; height:250px;').rel
+    //-   .imgs
+    //-     picture
+    //-       source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
+    //-       source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+    //-       source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
+    //-       img(src='./img/paralax.webp' alt='img')

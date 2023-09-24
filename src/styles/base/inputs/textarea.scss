@@ -1,37 +1,43 @@
-textarea {
-  width: 100%;
-  outline: none;
-  border: 1px solid transparent;
-  background: transparent;
-  resize: none;
-  @include transition;
-  display: block;
-  border-radius: 5px;
-  border: solid 1px grey;
-  background-color: white;
-  padding: 15px 20px;
-  min-height: 85px;
-  max-width: 570px;
-  &::placeholder {
+.text-field {
+  textarea {
+    width: 100%;
+    background: transparent;
+    resize: none;
     @include transition;
+    display: block;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0px 0 0px;
+    z-index: 10;
+    position: relative;
+
+    &::placeholder {
+      opacity: 0;
+    }
+    & + label {
+      left: 0;
+      position: absolute;
+      top: 0%;
+      transform: translateY(0%);
+      z-index: 2;
+    }
+    &:focus {
+      padding: 60px 20px 8px 0px;
+      & + label {
+        left: 0;
+        transform: translateY(-150%);
+      }
+    }
+  }
+  textarea:not(:placeholder-shown) {
+    padding: 60px 20px 8px 0px;
+  }
+  textarea:not(:placeholder-shown) + label {
+    transform: translateY(-150%);
   }
   &:hover {
-    cursor: pointer;
-    border: solid 1px lighten(green, 25%);
-    &::placeholder {
-      color: lighten(green, 25%);
-    }
-  }
-  &:focus {
-    // background: $focus;
-    &::placeholder {
-      opacity: 0;
-    }
-  }
-  &:not(:placeholder-shown) {
-    // background: $focus;
-    &::placeholder {
-      opacity: 0;
+    label {
+      color: $hover;
     }
   }
 }

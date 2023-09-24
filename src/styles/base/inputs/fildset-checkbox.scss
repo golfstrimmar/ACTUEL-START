@@ -21,7 +21,7 @@
     cursor: pointer;
     @include transition;
     &:hover {
-      color: lighten(green, 25%);
+      // color: lighten($jungle-green, 25%);
     }
   }
 
@@ -30,36 +30,34 @@
     content: "";
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: transparent;
     @include transition;
   }
 
   input[type="checkbox"]:not(:checked) + label::before {
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    border: solid 2.4px #bababa;
+    width: 17px;
+    height: 17px;
+    border: solid 2px $white-four;
   }
   input[type="checkbox"]:checked + label::before {
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    border: solid 2px $dark-sea-green;
+    width: 17px;
+    height: 17px;
+    border: solid 2px $jungle-green;
   }
 
   input[type="checkbox"]:checked + label::after,
   input[type="checkbox"]:not(:checked) + label::after {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    top: 0;
+    width: 9px;
+    height: 6px;
+    transform: translate(4px, -4px) rotate(-45deg);
+    top: 50%;
     left: 0;
-    transform: translate(6px, 6px);
-    border: solid 2px $jungle-green;
-    background-color: $jungle-green;
+    border-left: solid 2px $jungle-green;
+    border-bottom: solid 2px $jungle-green;
     @include transition;
   }
   input[type="checkbox"]:checked + label::after {

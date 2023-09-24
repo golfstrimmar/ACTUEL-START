@@ -78,11 +78,15 @@
   background-color: $white-three;
   @include flex-center;
   @include transition;
+  z-index: 10000;
   svg {
     width: 24px;
     height: 13px;
   }
   &:hover {
     box-shadow: 0 5px 8px 0 rgba(135, 135, 135, 0.4);
+  }
+  &.btn-up_hide {
+    display: none;
   }
 }

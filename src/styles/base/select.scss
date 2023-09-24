@@ -3,14 +3,13 @@
   border: none;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   @include flex-column;
   justify-content: center;
   .dropdown-button {
     width: 100%;
     min-height: 15px;
     position: relative;
-    background: white;
+    background: $white-three;
     justify-content: center;
     text-align: left;
     z-index: 2;
@@ -53,21 +52,32 @@
   .dropdown-list {
     width: 100%;
     text-align: left;
-    background: white;
+    background: $white-three;
     @include transition;
     display: grid;
     grid-template-rows: 0fr;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 100%;
+    border: solid 1px $white-four;
+    opacity: 0;
+    visibility: hidden;
     &-wrap {
       min-height: 0;
       @include transition;
     }
     &._is-active {
       grid-template-rows: 1fr;
-      border: solid 1px grey;
+      border: solid 1px $white-four;
+      opacity: 1;
+      visibility: visible;
+      // position: absolute;
+      // top: 100%;
     }
 
     &__item {
-      padding: 5px;
+      padding: 10px;
       cursor: pointer;
       @include transition;
       @include Text-Style;

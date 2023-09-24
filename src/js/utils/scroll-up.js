@@ -13,14 +13,15 @@ export const ScrollUp = () => {
         const scrollY = window.scrollY || document.documentElement.scrollTop;
         scrollY > 400 ? this.show() : this.hide();
       });
-      this.el.addEventListener("click", (event) => {
+
+      document.querySelector("#_returnToTop").onclick = (e) => {
         window.scrollTo({
           top: 0,
           left: 0,
           behavior: "smooth",
         });
-        event.preventDefault();
-      });
+        e.preventDefault();
+      };
     },
   };
 

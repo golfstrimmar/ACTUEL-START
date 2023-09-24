@@ -1,0 +1,98 @@
+.send {
+  &__title {
+  }
+
+  &__body {
+    min-height: 441px;
+    padding: 81px 50px 50px 47px;
+    box-shadow: 1px 3px 29px 0 rgba(0, 0, 0, 0.2);
+    background-color: $white-three;
+  }
+  &__btn {
+    @include Text-Style-33;
+    width: 180px;
+    height: 37px;
+  }
+  .text-field {
+  }
+  &__linia {
+    max-width: 750px;
+    @include flex-aligne-center;
+    column-gap: 26px;
+    margin: 0 0 30px 0;
+    p {
+      @include Text-Style-24;
+    }
+    &--inputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 230px);
+      column-gap: 30px;
+      row-gap: 30px;
+      label {
+        @include Text-Style-10;
+      }
+      .text-field input[type="text"],
+      .text-field input[type="phone"] {
+        @include Text-Style-14;
+        min-height: 30px;
+        padding: 10px 0px 10px 0;
+        border-bottom: 1px solid $white-four;
+      }
+      .text-field input[type="text"]:not(:placeholder-shown),
+      .text-field input[type="phone"]:not(:placeholder-shown) {
+        border-bottom: solid 2px $jungle-green;
+      }
+    }
+    &--check {
+      label a {
+        @include Text-Style-17;
+        text-decoration: underline !important;
+      }
+
+      .fildset-checkbox input[type="checkbox"]:checked + label,
+      .fildset-checkbox input[type="checkbox"]:not(:checked) + label {
+        @include Text-Style-19;
+        padding: 10px 0px 11px 0;
+        padding: 0 0 0 30px;
+      }
+    }
+  }
+  textarea {
+    min-height: 70px;
+    border-bottom: 1px solid $white-four;
+    &:focus {
+      padding: 0px 20px 8px 0px;
+      & + label {
+        left: 0;
+        transform: translateY(-150%);
+      }
+    }
+    & + label {
+      @include Text-Style-13;
+    }
+    textarea:not(:placeholder-shown) {
+      padding: 0px 20px 8px 0px;
+      max-height: 70px;
+    }
+  }
+  .select {
+    .dropdown-button {
+      border-bottom: 1px solid $white-four;
+      padding: 10px 0px;
+      span {
+        @include Text-Style-14;
+      }
+      svg {
+        fill: $black-four;
+      }
+      &:hover {
+        span {
+          color: $hover;
+        }
+        svg {
+          fill: $hover;
+        }
+      }
+    }
+  }
+}
