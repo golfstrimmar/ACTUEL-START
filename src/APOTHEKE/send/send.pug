@@ -1,64 +1,80 @@
+form(action='#' method='GET')
+  div
+    label(for='say') What greeting do you want to say?
+    input#say(name='say' value='Hi')
+  div
+    label(for='to') Who do you want to say it to?
+    input#to(name='to' value='Mom')
+  div
+    button(type="submit").btn.btn-success Send my greetings
+
+
+
+form(action="#" name="send-form" method='GET')
+  input#send-say(type="text" name="send" value='text')
+  button(type="submit").btn.btn-success.send__btn Отправить отзыв
 section(id='send').send.rel
   //- .imgs
   //-   img.__img(src='./img/img-1.webp' alt='img')
   .container
-    form(action="#" name="send-form").send__body
-      .send__linia
-        p Оценка:
-        fildset.fildset-rating
-          .fildset-rating__items
-            input(type="radio" id="rating5" name='rating' value='5' )
-            label(for="rating5")
-              svg
-                use(xlink:href='#star-empty')  
-            input(type="radio" id="rating4" name='rating' value='4' )
-            label(for="rating4")
-              svg
-                use(xlink:href='#star-empty') 
-            input(type="radio" id="rating3" name='rating' value='3' )
-            label(for="rating3") 
-              svg
-                use(xlink:href='#star-empty') 
-            input(type="radio" id="rating2" name='rating' value='2' )
-            label(for="rating2") 
-              svg
-                use(xlink:href='#star-empty') 
-            input(type="radio" id="rating1" name='rating' value='1' )
-            label(for="rating1") 
-              svg
-                use(xlink:href='#star-empty')
-      .send__linia
-        .text-field
-          textarea#4(name="4" row='20' placeholder="Введите текст" )
-          label(for='4') Напишите ваш отзыв...
+    //- form(action="#" name="send-form").send__body
+    //-   input(type="text" name="send")
+    //- .send__linia
+    //-   p Оценка:
+    //-   fildset.fildset-rating
+    //-     .fildset-rating__items
+    //-       input(type="radio" id="rating5" name='rating' value='5' )
+    //-       label(for="rating5")
+    //-         svg
+    //-           use(xlink:href='#star-empty')  
+    //-       input(type="radio" id="rating4" name='rating' value='4' )
+    //-       label(for="rating4")
+    //-         svg
+    //-           use(xlink:href='#star-empty') 
+    //-       input(type="radio" id="rating3" name='rating' value='3' )
+    //-       label(for="rating3") 
+    //-         svg
+    //-           use(xlink:href='#star-empty') 
+    //-       input(type="radio" id="rating2" name='rating' value='2' )
+    //-       label(for="rating2") 
+    //-         svg
+    //-           use(xlink:href='#star-empty') 
+    //-       input(type="radio" id="rating1" name='rating' value='1' )
+    //-       label(for="rating1") 
+    //-         svg
+    //-           use(xlink:href='#star-empty')
+    //- .send__linia
+    //-   .text-field
+    //-     textarea#4(name="4" row='20' placeholder="Введите текст" )
+    //-     label(for='4') Напишите ваш отзыв...
 
-      .send__linia.send__linia--inputs
-        .text-field
-          input#1(type='text' name='1' value='' placeholder=' Denzel Washington')
-          label.text-field__label(for='1') ФИО
-        .text-field
-          input#2(type='phone' name='2' value='' placeholder=' Denzel Washington')
-          label.text-field__label(for='2') Телефон
-        .select
-          input(type="hidden" name="town")
-          button.dropdown-button
-            span Москва
-            svg.icon
-              use(xlink:href='#arrow')
-          ul.dropdown-list
-            .dropdown-list-wrap
-              li.dropdown-list__item(data-value='Notes') Ростов-на-Дону
-              li.dropdown-list__item(data-value='Notes') Mосква
-              li.dropdown-list__item(data-value='Photo') Санкт Петербург
-              li.dropdown-list__item(data-value='Dictionary') Сан Франциско
+    //- .send__linia.send__linia--inputs
+    //-   .text-field
+    //-     input#1(type='text' name='1' value='' placeholder=' Denzel Washington')
+    //-     label.text-field__label(for='1') ФИО
+    //-   .text-field
+    //-     input#2(type='phone' name='2' value='' placeholder=' Denzel Washington')
+    //-     label.text-field__label(for='2') Телефон
+    //-   .select
+    //-     input(type="hidden" name="town")
+    //-     button.dropdown-button
+    //-       span Москва
+    //-       svg.icon
+    //-         use(xlink:href='#arrow')
+    //-     ul.dropdown-list
+    //-       .dropdown-list-wrap
+    //-         li.dropdown-list__item(data-value='Notes') Ростов-на-Дону
+    //-         li.dropdown-list__item(data-value='Notes') Mосква
+    //-         li.dropdown-list__item(data-value='Photo') Санкт Петербург
+    //-         li.dropdown-list__item(data-value='Dictionary') Сан Франциско
 
-      .send__linia.send__linia--check
-        .fildset-checkbox
-          .form-check
-            input#55(type='checkbox' name="")
-            label(for='55') Согласен с 
-              a(href="#!") правилами публикации отзывов
-      button(type="submit").btn.btn-success.but-wave.send__btn Отправить отзыв
+    //- .send__linia.send__linia--check
+    //-   .fildset-checkbox
+    //-     .form-check
+    //-       input#55(type='checkbox' name="")
+    //-       label(for='55') Согласен с 
+    //-         a(href="#!") правилами публикации отзывов
+    button(type="submit").btn.btn-success.but-wave.send__btn Отправить отзыв
 
 
 
