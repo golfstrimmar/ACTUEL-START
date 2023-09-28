@@ -10,6 +10,14 @@ export const FormFields = () => {
   BookForm.addEventListener("submit", (e) => {
     if (!FirstName.value) {
       FirstName.closest(".text-field").classList.add("_check_invalid");
+      setTimeout(() => {
+        window.scrollTo({
+          top: 175,
+          left: 0,
+          behavior: "smooth",
+        });
+      }, 200);
+
       e.preventDefault();
     } else if (
       FirstName.closest(".text-field").classList.contains("_check_invalid")
@@ -19,6 +27,14 @@ export const FormFields = () => {
 
     if (!dateIn.value) {
       dateIn.closest(".form-field").classList.add("_check_invalid");
+      setTimeout(() => {
+        window.scrollTo({
+          top: 175,
+          left: 0,
+          behavior: "smooth",
+        });
+      }, 200);
+
       e.preventDefault();
     } else if (
       dateIn.closest(".form-field").classList.contains("_check_invalid")
@@ -28,6 +44,14 @@ export const FormFields = () => {
 
     if (!dateOut.value) {
       dateOut.closest(".form-field").classList.add("_check_invalid");
+      setTimeout(() => {
+        window.scrollTo({
+          top: 175,
+          left: 0,
+          behavior: "smooth",
+        });
+      }, 200);
+
       e.preventDefault();
     } else if (
       dateOut.closest(".form-field").classList.contains("_check_invalid")
@@ -37,6 +61,14 @@ export const FormFields = () => {
 
     if (!PlaseOfLiving.value) {
       PlaseOfLiving.closest(".form-field").classList.add("_check_invalid");
+      setTimeout(() => {
+        window.scrollTo({
+          top: 175,
+          left: 0,
+          behavior: "smooth",
+        });
+      }, 200);
+
       e.preventDefault();
     } else if (
       PlaseOfLiving.closest(".form-field").classList.contains("_check_invalid")
