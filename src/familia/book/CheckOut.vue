@@ -1,6 +1,6 @@
 <template lang="pug">
 ._check
-  input.date-in(
+  input#date-out.date-in(
     type='hidden' 
     name='date-out'
     v-model= 'date' 

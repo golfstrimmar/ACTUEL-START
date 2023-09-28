@@ -26,7 +26,7 @@
     left: 20px;
     @include transition;
     @include Text-Style-31;
-    opacity: .5;
+    opacity: 0.5;
     z-index: 2;
   }
   span {
@@ -91,5 +91,46 @@
     &:hover {
       border: solid 1px lighten($jungle-green, 25%);
     }
+  }
+}
+.span_invalid {
+  position: absolute;
+  top: calc(100% + 10px);
+  min-width: 100%;
+  white-space: nowrap;
+  left: 0;
+  font-family: "PTSans-Regular";
+  color: #f00;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 1;
+  display: none;
+}
+.form-field._check_invalid {
+  border: solid 1px #ff0000;
+  & ~ label ~ span {
+    color: #ff0000;
+    opacity: 1;
+  }
+  &:hover {
+    border: solid 1px lighten($jungle-green, 25%);
+  }
+  p,
+  .select .dropdown-button p {
+    color: #ff0000;
+    opacity: 1;
+  }
+}
+.text-field._check_invalid {
+  border: solid 1px #ff0000;
+  border-radius: 5px;
+  label {
+    color: #ff0000;
+    opacity: 1;
+  }
+  input {
+    border: none !important;
   }
 }
