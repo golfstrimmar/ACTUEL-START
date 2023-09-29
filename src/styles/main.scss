@@ -32,6 +32,7 @@
 @import "../components/inputs/range.scss";
 
 // БЭМ-modules
+@import "../modules/burger/burger.scss";
 @import "../modules/header/header";
 @import "../modules/bunner/bunner";
 @import "../modules/bunner/bunner-slider";
@@ -43,7 +44,7 @@
 @import "../modules/form/form";
 
 @import "../modules/marque/marque";
-@import "../modules/burger/burger.scss";
+
 @import "../modules/tab/tab";
 @import "../modules/side-menu/side-menu";
 @import "../modules/accord/accord";

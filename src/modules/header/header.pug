@@ -4,20 +4,20 @@ header#header.header
       a(href='#!').header__logo.logo
         img(src='./img/logo.svg' alt='logo')
         p slogan
+      .header__burger._burger
+        span
+
       nav.header__menu.menu
         .header__close
-          svg
-            use(xlink:href='#x-lg')
+          //- svg
+          //-   use(xlink:href='#x-lg')
         ul.menu__list
           li.menu__item.rel
             .menu__link.menu-link-js.menu__link--active buy
-              svg
-                use(xlink:href='#arrow-down')
             .menu__tab.menu-tab
               a(href="#!").menu-tab__item Category number one
               a(href="#!").menu-tab__item Apartments in Dubai
               a(href="#!").menu-tab__item Category number twenty five
-              include ../side-menu/side-menu.pug
 
           li.menu__item
             a.menu__link(href='#!' rel='#posts') Posts
@@ -32,22 +32,21 @@ header#header.header
               include ../side-menu/side-menu.pug
       .header__info.info
         a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
-        form.form-input
-          input(type='text' placeholder='Поиск' name="")
-          .form-input__submit
+        form.search-field
+          input#search1(type='text' placeholder='search' name="" )
+          label(for='search1') search
+          .search-field__submit
             input(type='submit')
             svg
               use(xlink:href='#search')
-        fildset.header__lang.fildset-radio.fildset-radio--tiers
-          input(type="radio" id="boxen" name='boxlang' val='en' checked='')
-          label(for="boxen")  en
+        .fildset-radio.fildset-radio--tiers
+          input(type="radio" id="tier+" name='tieres+-' value='yes' checked)
+          label(for="tier+")  Да
           span /
-          input(type="radio" id="boxru" name='boxlang' val='ru')
-          label(for="boxru")  ru
+          input(type="radio" id="tier-" name='tieres+-' value='not')
+          label(for="tier-")  Нет
 
-        a.btn.btn-success.but-wave.popups-init-js.header__button(rel='#popup1' href='#!' ) form
-      .header__burger.icon
-        svg
-          use(xlink:href='#list')
+        a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') popup
+
 
 
