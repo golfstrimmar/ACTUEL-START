@@ -1,0 +1,12 @@
+.btn {
+  width: 100%;
+  background: #006b36;
+  color: antiquewhite;
+  border: 1px solid transparent;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include transition;
+}

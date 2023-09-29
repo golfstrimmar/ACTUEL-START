@@ -11,57 +11,51 @@
 @import "base/fonts";
 @import "base/select";
 @import "base/sliders-swiper";
-@import "base/inputs/text-field-input.scss";
-@import "base/inputs/text-field-textarea.scss";
-@import "base/inputs/submit.scss";
-@import "base/inputs/fildset-radio.scss";
-@import "base/inputs/fildset-checkbox.scss";
-@import "base/inputs/fildset-rating.scss";
-@import "base/inputs/form-input.scss";
-@import "base/inputs/range.scss";
+
 @import "base/vue/vue-check-in-out";
 
-// БЭМ-components
-@import "base/buttons/btn.scss";
-@import "base/buttons/btn-success.scss";
-@import "base/buttons/btn-empty.scss";
-@import "base/buttons/btn-blue.scss";
-@import "base/buttons/btn-wave.scss";
+// components buttons
+@import "../components/buttons/btn.scss";
+@import "../components/buttons/btn-success.scss";
+@import "../components/buttons/btn-empty.scss";
+@import "../components/buttons/btn-blue.scss";
+@import "../components/buttons/btn-wave.scss";
 
-// @import "../familia/shild/shild.scss";
-// @import "../familia/book/book-section";
-// @import "../familia/book/info";
-// @import "../familia/book/choise";
-// @import "../familia/book/contacts";
-// @import "../familia/rooms/rooms";
+// components inputs
+@import "../components/inputs/input-field.scss";
+@import "../components/inputs/textarea-fild.scss";
+@import "../components/inputs/search-field.scss";
+
+@import "../components/inputs/fildset-radio.scss";
+@import "../components/inputs/fildset-checkbox.scss";
+@import "../components/inputs/fildset-rating.scss";
+@import "../components/inputs/range.scss";
 
 // БЭМ-modules
-@import "../blocks/modules/header/header";
-@import "../blocks/modules/bunner/bunner";
-@import "../blocks/modules/bunner/bunner-slider";
-@import "../blocks/modules/do/do";
-@import "../blocks/modules/probe/probe";
-@import "../blocks/modules/wk/wk";
-@import "../blocks/modules/best/best";
-@import "../blocks/modules/marque/marque";
-@import "../blocks/modules/burger/burger.scss";
+@import "../modules/header/header";
+@import "../modules/bunner/bunner";
+@import "../modules/bunner/bunner-slider";
+@import "../modules/do/do";
+@import "../modules/probe/probe";
+@import "../modules/wk/wk";
 
-@import "../blocks/modules/tab/tab";
-@import "../blocks/modules/side-menu/side-menu";
-@import "../blocks/modules/accord/accord";
-@import "../blocks/modules/galery/galery";
-@import "../blocks/modules/cases/cases";
-@import "../blocks/modules/galCases/galCases";
+@import "../modules/best/best";
+@import "../modules/form/form";
 
-@import "../blocks/modules/look/look";
+@import "../modules/marque/marque";
+@import "../modules/burger/burger.scss";
+@import "../modules/tab/tab";
+@import "../modules/side-menu/side-menu";
+@import "../modules/accord/accord";
+@import "../modules/galery/galery";
+@import "../modules/cases/cases";
+@import "../modules/galCases/galCases";
+@import "../modules/look/look";
+@import "../modules/swiper-1/swiper-1";
+@import "../modules/slider-full/slider-full";
+@import "../modules/slider-double/sdouble";
+@import "../modules/slider-scroll/slider-scroll";
 
-@import "../blocks/modules/swiper-1/swiper-1";
-@import "../blocks/modules/slider-full/slider-full";
-@import "../blocks/modules/slider-double/sdouble";
-@import "../blocks/modules/slider-scroll/slider-scroll";
-
-@import "../blocks/modules/form/form";
-@import "../blocks/modules/typed/typedHover";
-
-@import "../blocks/modules/footer/footer";
-@import "../blocks/modules/popup/popup";
+@import "../modules/typed/typedHover";
+@import "../modules/footer/footer";
+@import "../modules/popup/popup";

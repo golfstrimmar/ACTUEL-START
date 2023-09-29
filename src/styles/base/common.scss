@@ -32,7 +32,7 @@ a {
   display: inline-block;
   @include transition;
   cursor: pointer;
-  color: $jungle-green;
+  color: green;
   &:hover {
     color: lighten(green, 25%);
   }

@@ -1,23 +1,23 @@
-import { Header } from "%modules%/header/header";
-import { bunnerSwiper } from "%modules%/bunner/bunner";
-import { Tab } from "%modules%/tab/tab";
-import { Accords } from "%modules%/accord/accord";
-import { SideMenu } from "%modules%/side-menu/side-menu";
-import { CasesInit } from "%modules%/cases/cases";
-import { GalleryInit } from "%modules%/galery/galery";
-import { GalCases } from "%modules%/galCases/galCases";
-import { Marque } from "%modules%/marque/marque";
-import { Swiperwk } from "%modules%/wk/wk";
-import { Swiper1 } from "%modules%/swiper-1/swiper-1";
-import { SwiperFull } from "%modules%/slider-full/slider-full";
-import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
-import { Double } from "%modules%/slider-double/sdouble.js";
-import { MyRange } from "%modules%/range/range";
-import { Select } from "%modules%/select/select";
+import { Header } from "../../modules/header/header";
+import { bunnerSwiper } from "../../modules/bunner/bunner";
+import { Tab } from "../../modules/tab/tab";
+import { Accords } from "../../modules/accord/accord";
+import { SideMenu } from "../../modules/side-menu/side-menu";
+import { CasesInit } from "../../modules/cases/cases";
+import { GalleryInit } from "../../modules/galery/galery";
+import { GalCases } from "../../modules/galCases/galCases";
+import { Marque } from "../../modules/marque/marque";
+import { Swiperwk } from "../../modules/wk/wk";
+import { Swiper1 } from "../../modules/swiper-1/swiper-1";
+import { SwiperFull } from "../../modules/slider-full/slider-full";
+import { SwiperScroll } from "../../modules/slider-scroll/slider-scroll";
+import { Double } from "../../modules/slider-double/sdouble.js";
+import { Select } from "../../modules/select/select";
+import { Form } from "../../modules/form/form";
 
-import { Look } from "%modules%/look/look";
+import { Look } from "../../modules/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
-import { Popup } from "%modules%/popup/popup";
+import { Popup } from "../../modules/popup/popup";
 
 document.addEventListener("DOMContentLoaded", function () {
   // =====Look==================
@@ -91,14 +91,11 @@ document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector("#swiperDoubleTop")) {
     Double();
   }
-
-  // //   // =======================
-  const ranges = [...document.querySelectorAll(".range-wrap")];
-  if (ranges.length > 0) {
-    ranges.forEach((item) => {
-      MyRange(item);
-    });
+  // //   // ========Form===============
+  if (document.querySelector("#send-form")) {
+    Form();
   }
+
   // //   // =========Select==============
   const selects = [...document.querySelectorAll(".select")];
   if (selects.length > 0) {

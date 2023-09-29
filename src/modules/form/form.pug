@@ -1,0 +1,77 @@
+h2 form
+form(action="#" name="send-form").send#send-form
+      .send__linia.input-field
+            input#text1(type='text' name='text1' value='' placeholder=' Denzel Washington')
+            label.text-field__label(for='text1') обычный инпут text
+      .send__linia.input-field
+            input#text1(type='email' name='text1' value='' placeholder=' Denzel Washington')
+            label.text-field__label(for='text1') обычный инпут email
+      .send__linia.input-field
+            input#text1(type='tel' name='text1' value='' placeholder=' Denzel Washington')
+            label.text-field__label(for='text1') обычный инпут tel
+
+      .send__linia
+            p Оценка:
+            fildset.fildset-rating
+                  .fildset-rating__items
+                        input(type="radio" id="rating5" name='rating' value='5' )
+                        label(for="rating5")
+                              svg
+                                    use(xlink:href='#star-empty')  
+                        input(type="radio" id="rating4" name='rating' value='4' )
+                        label(for="rating4")
+                              svg
+                                    use(xlink:href='#star-empty') 
+                        input(type="radio" id="rating3" name='rating' value='3' )
+                        label(for="rating3") 
+                              svg
+                                    use(xlink:href='#star-empty') 
+                        input(type="radio" id="rating2" name='rating' value='2' )
+                        label(for="rating2") 
+                              svg
+                                    use(xlink:href='#star-empty') 
+                        input(type="radio" id="rating1" name='rating' value='1' )
+                        label(for="rating1") 
+                              svg
+                                    use(xlink:href='#star-empty')
+      .send__linia.textarea-field
+            textarea#textarea4(name="textarea4" row='20' placeholder="Введите текст" )
+            label(for='textarea4') textarea
+
+      .send__linia.select
+            input(type="hidden" name="formtown")
+            button(type="button").dropdown-button
+                  span Москва
+                  svg.icon
+                        use(xlink:href='#arrow-down')
+            ul.dropdown-list
+                  .dropdown-list-wrap
+                        li.dropdown-list__item(data-value='Notes') Ростов-на-Дону
+                        li.dropdown-list__item(data-value='Notes') Mосква
+                        li.dropdown-list__item(data-value='Photo') Санкт Петербург
+                        li.dropdown-list__item(data-value='Dictionary') Сан Франциско
+
+      .send__linia.send__linia--check
+            .fildset-checkbox
+                  .form-check
+                        input#55(type='checkbox' name="agry")
+                        label(for='55') Согласен с  правилами публикации отзывов
+      button.btn.btn-success.but-wave(type='submit') submit
+//- form.form
+//-       input(name='example_button' type='button' value='Лайкнуть статью')
+//-       input(name='example_color' type='color' value='#55cc77')
+//-       input(name='example_date' type='date')
+//-       input(name='example_datetime-local' type='datetime-local')
+//-       input(name='example_email' type='email')
+//-       input(name='example_file' type='file')
+//-       input(name='example_hidden' type='hidden' value='48784')
+//-       input(name='example_image' type='image' src='/images/button_image.png' width='130' height='42')
+//-       input(name='example_month' type='month')
+//-       input(name='example_number' type='number')
+//-       input(name='example_password' type='password')
+//-       input(name='example_reset' type='reset' value='Очистить поля')
+//-       input(name='example_tel' type='tel')
+//-       input(name='example_time' type='time')
+//-       input(name='example_url' type='url')
+//-       input(name='example_week' type='week')
+
