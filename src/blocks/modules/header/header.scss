@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   z-index: 50;
   @include transition;
   width: 100%;
@@ -166,7 +167,7 @@
     line-height: normal;
     text-transform: uppercase;
     &:hover {
-      color: $hover;
+      color: $cherry;
     }
     &.menu__link--cherry {
       color: $cherry;
@@ -176,7 +177,9 @@
     }
   }
 }
-
+.menu__item a.menu__link--active {
+  color: lighten($cherry, 20%);
+}
 // .menu__link {
 //   padding: 0 10px;
 //   @include transition;
@@ -364,7 +367,7 @@
     flex: 0 0 131px;
   }
   .header-top__body a {
-    margin: 0 15px 0 15px;
+    margin: 0 15px 0 auto;
   }
   .header-top__body a.link-status {
     margin: 0;
@@ -388,12 +391,20 @@
     position: relative;
     position: absolute;
     left: 0;
-    max-width: 335px;
     width: 100%;
     height: 45px;
     border-radius: 5px;
     border: solid 1px $white-four;
     background-color: $white-three;
+  }
+  .info .form-input label {
+    padding: 0 35px 0 0;
+  }
+  .info {
+    grid-template-columns: 1fr;
+  }
+  .info__links {
+    justify-content: end;
   }
 }
 

@@ -39,25 +39,8 @@ export const Header = () => {
       normalInfo();
     }
 
-    if (event.target.closest(".menu__link")) {
-      activeItemHEAD(event);
-    }
-
     if (event.target.closest(".menu-link-js")) {
-      var temp = event.target.closest(".menu-link-js");
-      [...document.querySelectorAll(".menu-link-js")].forEach((cell) => {
-        if (temp == cell) {
-          cell.classList.contains("_is-active")
-            ? cell.classList.remove("_is-active")
-            : cell.classList.add("_is-active");
-        } else {
-          cell.classList.remove("_is-active");
-        }
-      });
-    } else {
-      [...document.querySelectorAll(".menu-link-js")].forEach((cell) => {
-        cell.classList.remove("_is-active");
-      });
+      activeItemHEAD(event);
     }
   });
   // --------------------------
