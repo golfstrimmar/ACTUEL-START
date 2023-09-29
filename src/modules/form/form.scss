@@ -1,2 +1,32 @@
 .send {
+  .input-field {
+    border: 1px solid gray;
+    position: relative;
+    span {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      width: 100%;
+      height: auto;
+      color: red;
+      display: none;
+    }
+  }
+
+  .input-field input[type="text"],
+  .input-field input[type="email"],
+  .input-field input[type="tel"] {
+    border: none;
+  }
+  .input-field._check_invalid {
+    border: 1px solid red;
+    input[type="text"] + label,
+    input[type="email"] + label,
+    input[type="tel"] + label {
+      color: red;
+    }
+    span {
+      display: block;
+    }
+  }
 }

@@ -1,15 +1,17 @@
 h2 form
 form(action="#" name="send-form").send#send-form
       .send__linia.input-field
-            input#text1(type='text' name='text1' value='' placeholder=' Denzel Washington')
-            label.text-field__label(for='text1') обычный инпут text
+            input#firstname(type='text' name='text1' value='' placeholder=' Denzel Washington')
+            label.text-field__label(for='text1') *обычный инпут text
+            span *поле обязательное для заполнения
       .send__linia.input-field
-            input#text1(type='email' name='text1' value='' placeholder=' Denzel Washington')
-            label.text-field__label(for='text1') обычный инпут email
+            input#email(type='email' name='text1' value='' placeholder=' Denzel Washington')
+            label.text-field__label(for='text1') *обычный инпут email
+            span *поле обязательное для заполнения
       .send__linia.input-field
-            input#text1(type='tel' name='text1' value='' placeholder=' Denzel Washington')
-            label.text-field__label(for='text1') обычный инпут tel
-
+            input#tel(type='tel' name='text1' value='' placeholder=' Denzel Washington')
+            label.text-field__label(for='text1') *обычный инпут tel
+            span *поле обязательное для заполнения
       .send__linia
             p Оценка:
             fildset.fildset-rating
