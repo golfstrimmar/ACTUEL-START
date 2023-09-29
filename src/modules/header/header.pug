@@ -1,52 +1,145 @@
-header#header.header
-  .container
-    .header__body 
-      a(href='#!').header__logo.logo
-        img(src='./img/logo.svg' alt='logo')
-        p slogan
-      .header__burger._burger
-        span
-
-      nav.header__menu.menu
-        .header__close
-          //- svg
-          //-   use(xlink:href='#x-lg')
-        ul.menu__list
-          li.menu__item.rel
-            .menu__link.menu-link-js.menu__link--active buy
-            .menu__tab.menu-tab
-              a(href="#!").menu-tab__item Category number one
-              a(href="#!").menu-tab__item Apartments in Dubai
-              a(href="#!").menu-tab__item Category number twenty five
-
-          li.menu__item
-            a.menu__link(href='#!' rel='#posts') Posts
-          li.menu__item
-            a.menu__link(href='#!' rel='#galery') Projects
-          li.menu__item.rel
-            .menu__link.menu-link-js buy
-              svg
-                use(xlink:href='#arrow-down')
-            .menu__tab.menu-tab
-              a(href="#!").menu-tab__item Category number one
-              include ../side-menu/side-menu.pug
-      .header__info.info
-        a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
-        form.search-field
-          input#search1(type='text' placeholder='search' name="" )
-          label(for='search1') search
-          .search-field__submit
-            input(type='submit')
+header.header#header
+  .header__top.header-top
+    .container 
+      .header-top__body
+        .select
+          input(type="hidden" name="header_town")
+          button(type="button").dropdown-button
+            span Ростов-на-Дону
             svg
-              use(xlink:href='#search')
-        .fildset-radio.fildset-radio--tiers
-          input(type="radio" id="tier+" name='tieres+-' value='yes' checked)
-          label(for="tier+")  Да
-          span /
-          input(type="radio" id="tier-" name='tieres+-' value='not')
-          label(for="tier-")  Нет
+              use(xlink:href='#arrow')
+            svg.icon
+              use(xlink:href='#location')
+          ul.dropdown-list
+            .dropdown-list-wrap
+              li.dropdown-list__item(data-value='Notes') Ростов-на-Дону
+              li.dropdown-list__item(data-value='Notes') Mосква
+              li.dropdown-list__item(data-value='Photo') Санкт Петербург
+              li.dropdown-list__item(data-value='Dictionary') Сан Франциско
+        a.link-phone(href="#!")._not-sm 8 800 100-01-03 
+          span Обратный звонок
+        a.link-oder(href="#!")._not-sm 
+          svg
+            use(xlink:href='#24_7')
+          | Как сделать заказ
+        a(href="#!") Аптеки
+        a(href="#!")._not-sm Доставка
+        a(href="#!").link-status Статус заказа
+        .header__enter._not-sm
+          a(href="#!") Вход
+          span |
+          a(href="#!") Регистрация
 
-        a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') popup
+  .header__body.header-midl
+    .container
+      .header-midl__body
+        a(href='#!').header__logo.logo
+          svg
+            use(xlink:href='#logo_apteka')
+
+        .header__info.info
+          form.search-field
+            input#search1(type='text' placeholder='search' name="" )
+            label(for='search1') Поиск по названию, производителю, веществу, штрих-коду
+            .search-field__submit
+              input(type='submit')
+              svg
+                use(xlink:href='#search')
+
+          ul.info__links
+            li._not-sm
+              a(href='#!' ).info__link 
+                svg
+                  use(xlink:href='#clipboards')
+                |Заказы
+            li._visible-sm
+              a(href='#!' ).info__link 
+                svg
+                  use(xlink:href='#glass')
+            li._visible-sm
+              a(href='#!' ).info__link 
+                svg
+                  use(xlink:href='#phone-call')
+            li._not-sm
+              a(href='#!' ).info__link 
+                svg
+                  use(xlink:href='#like')
+                |Избранное
+            li
+              a(href='#!' ).info__link
+                svg
+                  use(xlink:href='#shopping-cart')
+                span._not-sm
+                  | Корзина
 
 
+
+  //- .header__low
+  //-   .container
+  //-     .header__menu.menu
+  //-       section(id='side-menu').smenu
+  //-         .smenu__body
+  //-           ._smenu-js.rel 
+  //-             .smenu__item._smenu-item-js 
+  //-               .smenu__title._smenu-title-js.smenu__title--main 
+  //-                 .smenu__burger 
+  //-                   span
+  //-                 span  Каталог товаров
+
+  //-               .smenu__hidden._smenu-hidden-js
+  //-                 .smenu__wrap
+  //-                   ._smenu-js
+  //-                     .smenu__item._smenu-item-js 
+  //-                       .smenu__title._smenu-title-js._smenu-sub-title-js
+  //-                         span  title1
+  //-                         svg
+  //-                           use(xlink:href='#arrow')
+  //-                       .smenu__hidden._smenu-sub-hidden-js
+  //-                         .smenu__wrap
+  //-                           ._smenu-js
+  //-                             .smenu__item._smenu-item-js 
+  //-                               .smenu__title._smenu-title-js._smenu-sub-title-js 
+  //-                                 span sub title1
+  //-                                 svg
+  //-                                   use(xlink:href='#arrow')
+  //-                               .smenu__hidden._smenu-sub-hidden-js
+  //-                                 .smenu__wrap
+  //-                                   ._smenu-js
+  //-                                     .smenu__item._smenu-item-js 
+  //-                                       .smenu__title._smenu-title-js 
+  //-                                         span sub title111
+  //-                                     .smenu__item._smenu-item-js 
+  //-                                       .smenu__title._smenu-title-js 
+  //-                                         span sub title222
+  //-                                     .smenu__item._smenu-item-js 
+  //-                                       .smenu__title._smenu-title-js 
+  //-                                         span sub title333
+  //-                                     .smenu__item._smenu-item-js 
+  //-                                       .smenu__title._smenu-title-js 
+  //-                                         span sub title444
+  //-                             .smenu__item._smenu-item-js 
+  //-                               .smenu__title._smenu-title-js._smenu-sub-title-js 
+  //-                                 span sub title1
+  //-                     .smenu__item._smenu-item-js 
+  //-                       .smenu__title._smenu-title-js 
+  //-                         span  title2
+  //-                     .smenu__item._smenu-item-js 
+  //-                       .smenu__title._smenu-title-js 
+  //-                         span  title3
+  //-                     .smenu__item._smenu-item-js 
+  //-                       .smenu__title._smenu-title-js 
+  //-                         span  title4
+  //-       ul.menu__list
+  //-         li.menu__item
+  //-           a.menu__link.menu-link-js.menu__link--active(href='#!' rel='#posts') Акции
+  //-         li.menu__item
+  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') Товар дня
+  //-         li.menu__item
+  //-           a.menu__link.menu-link-js.menu__link--cherry(href='#!' rel='#galery') %Распродажа
+  //-         li.menu__item
+  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') аптечка
+  //-         li.menu__item
+  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') Программа лольности
+  //-         li.menu__item
+  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') О компании
 

@@ -4,7 +4,6 @@ export const Header = () => {
   const menu = document.querySelector(".menu");
   const header = document.querySelector("header");
   const info = document.querySelector(".info");
-  const burger = header.querySelector("._burger");
   // const logo = document.querySelector(".logo");
   // const nowLogo = logo.cloneNode(true);
   const now = info.cloneNode(true);
@@ -13,7 +12,6 @@ export const Header = () => {
     menu.classList.add("menu-active");
     now.classList.add("info-active");
     // menu.prepend(nowLogo);
-    burger.classList.add("_is-active");
     menu.append(now);
     body.classList.add("lock");
   };
@@ -22,7 +20,6 @@ export const Header = () => {
     menu.querySelector(".info").remove();
     info.classList.remove("info-active");
     body.classList.remove("lock");
-    burger.classList.remove("_is-active");
   };
 
   const activeItemHEAD = (event) => {
@@ -36,49 +33,29 @@ export const Header = () => {
 
   document.addEventListener("click", function (event) {
     if (event.target.closest(".header__burger")) {
-      if (
-        event.target.closest(".header__burger").classList.contains("_is-active")
-      ) {
-        normalInfo();
-      } else {
-        activeInfo();
-      }
+      activeInfo();
     }
-
-    if (event.target.closest(".menu__link")) {
-      activeItemHEAD(event);
+    if (event.target.closest(".header__close")) {
+      normalInfo();
     }
 
     if (event.target.closest(".menu-link-js")) {
-      var temp = event.target.closest(".menu-link-js");
-      [...document.querySelectorAll(".menu-link-js")].forEach((cell) => {
-        if (temp == cell) {
-          cell.classList.contains("_is-active")
-            ? cell.classList.remove("_is-active")
-            : cell.classList.add("_is-active");
-        } else {
-          cell.classList.remove("_is-active");
-        }
-      });
-    } else {
-      [...document.querySelectorAll(".menu-link-js")].forEach((cell) => {
-        cell.classList.remove("_is-active");
-      });
+      activeItemHEAD(event);
     }
   });
   // --------------------------
-  if (window.pageYOffset > 100) {
-    header.classList.add("responciveHeader");
-  }
+  // if (window.pageYOffset > 100) {
+  //   header.classList.add("responciveHeader");
+  // }
   // --------------------------
 
-  window.addEventListener("scroll", function (event) {
-    if (window.pageYOffset > 100) {
-      header.classList.add("responciveHeader");
-    } else {
-      header.classList.remove("responciveHeader");
-    }
-  });
+  // window.addEventListener("scroll", function (event) {
+  //   if (window.pageYOffset > 100) {
+  //     header.classList.add("responciveHeader");
+  //   } else {
+  //     header.classList.remove("responciveHeader");
+  //   }
+  // });
 
   // ---------------------------------------------
   window.onresize = function () {
@@ -89,7 +66,6 @@ export const Header = () => {
       menu.classList.remove("menu-active");
       info.classList.remove("info-active");
       body.classList.remove("lock");
-      burger.classList.remove("_is-active");
     }
   };
 
