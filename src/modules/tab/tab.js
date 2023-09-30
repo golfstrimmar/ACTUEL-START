@@ -6,6 +6,7 @@ export const Tab = () => {
       this.title = document.querySelector("._kab-title-js");
       this.tab = {};
       this.neibours = [];
+      this.burger = this.title.querySelector("._burger");
     }
 
     start(el) {
@@ -16,11 +17,13 @@ export const Tab = () => {
         if (cell == this.tab) {
           if (this.tab.classList.contains("_is-active")) {
             this.tab.classList.remove("_is-active");
+            this.burger.classList.remove("_is-active");
             cell.querySelectorAll("._kab-js").forEach((kab) => {
               kab.classList.remove("_is-active");
             });
           } else {
             this.tab.classList.add("_is-active");
+            this.burger.classList.add("_is-active");
           }
         } else {
           cell.classList.remove("_is-active");
@@ -33,6 +36,7 @@ export const Tab = () => {
     static resetAll() {
       [...document.querySelectorAll("._kab-js")].forEach((item) => {
         item.classList.remove("_is-active");
+        item.querySelector("._burger").classList.remove("_is-active");
       });
     }
   }
@@ -47,16 +51,15 @@ export const Tab = () => {
     if (!e.target.closest("._tabs-container-js ")) {
       MyTab.resetAll();
     }
- 
 
     if (e.target.closest("._tabs-container-js ")) {
       var tempContainer = e.target.closest("._tabs-container-js ");
 
       tabsConteiners.forEach((cell) => {
         if (cell !== tempContainer) {
-           [...cell.querySelectorAll("._kab-js")].forEach((item) => {
-             item.classList.remove("_is-active");
-           });
+          [...cell.querySelectorAll("._kab-js")].forEach((item) => {
+            item.classList.remove("_is-active");
+          });
         }
       });
     }

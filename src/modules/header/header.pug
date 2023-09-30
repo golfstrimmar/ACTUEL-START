@@ -33,6 +33,8 @@ header.header#header
   .header__body.header-midl
     .container
       .header-midl__body
+        .header__burger._visible-sm._burger
+          span
         a(href='#!').header__logo.logo
           svg
             use(xlink:href='#logo_apteka')
@@ -74,72 +76,300 @@ header.header#header
 
 
 
-  //- .header__low
-  //-   .container
-  //-     .header__menu.menu
-  //-       section(id='side-menu').smenu
-  //-         .smenu__body
-  //-           ._smenu-js.rel 
-  //-             .smenu__item._smenu-item-js 
-  //-               .smenu__title._smenu-title-js.smenu__title--main 
-  //-                 .smenu__burger 
-  //-                   span
-  //-                 span  Каталог товаров
+  .header__low
+    .container
+      .header__menu.menu
+        section(id='header-tab').tab.rel._tabs-container-js
+          .tab__body._tab-body-js
+            .kab._kab-js
+              .kab__title.kab__title--main._kab-title-js
+                ._burger
+                  span
+                h4 Каталог товаров
 
-  //-               .smenu__hidden._smenu-hidden-js
-  //-                 .smenu__wrap
-  //-                   ._smenu-js
-  //-                     .smenu__item._smenu-item-js 
-  //-                       .smenu__title._smenu-title-js._smenu-sub-title-js
-  //-                         span  title1
-  //-                         svg
-  //-                           use(xlink:href='#arrow')
-  //-                       .smenu__hidden._smenu-sub-hidden-js
-  //-                         .smenu__wrap
-  //-                           ._smenu-js
-  //-                             .smenu__item._smenu-item-js 
-  //-                               .smenu__title._smenu-title-js._smenu-sub-title-js 
-  //-                                 span sub title1
-  //-                                 svg
-  //-                                   use(xlink:href='#arrow')
-  //-                               .smenu__hidden._smenu-sub-hidden-js
-  //-                                 .smenu__wrap
-  //-                                   ._smenu-js
-  //-                                     .smenu__item._smenu-item-js 
-  //-                                       .smenu__title._smenu-title-js 
-  //-                                         span sub title111
-  //-                                     .smenu__item._smenu-item-js 
-  //-                                       .smenu__title._smenu-title-js 
-  //-                                         span sub title222
-  //-                                     .smenu__item._smenu-item-js 
-  //-                                       .smenu__title._smenu-title-js 
-  //-                                         span sub title333
-  //-                                     .smenu__item._smenu-item-js 
-  //-                                       .smenu__title._smenu-title-js 
-  //-                                         span sub title444
-  //-                             .smenu__item._smenu-item-js 
-  //-                               .smenu__title._smenu-title-js._smenu-sub-title-js 
-  //-                                 span sub title1
-  //-                     .smenu__item._smenu-item-js 
-  //-                       .smenu__title._smenu-title-js 
-  //-                         span  title2
-  //-                     .smenu__item._smenu-item-js 
-  //-                       .smenu__title._smenu-title-js 
-  //-                         span  title3
-  //-                     .smenu__item._smenu-item-js 
-  //-                       .smenu__title._smenu-title-js 
-  //-                         span  title4
-  //-       ul.menu__list
-  //-         li.menu__item
-  //-           a.menu__link.menu-link-js.menu__link--active(href='#!' rel='#posts') Акции
-  //-         li.menu__item
-  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') Товар дня
-  //-         li.menu__item
-  //-           a.menu__link.menu-link-js.menu__link--cherry(href='#!' rel='#galery') %Распродажа
-  //-         li.menu__item
-  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') аптечка
-  //-         li.menu__item
-  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') Программа лольности
-  //-         li.menu__item
-  //-           a.menu__link.menu-link-js(href='#!' rel='#galery') О компании
+              .kab__hidden.kab__hidden--first._kab-hidden-js 
+                ._kab-wrap-js
+                  .tab__body._tab-body-js
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Лекарства
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Лекарства1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Лекарства2
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Лекарства3
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Лекарства4
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Бад и витамины
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Бад и витамины1
+
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Бад и витамины2
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Планирование семьи
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Планирование семьи1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Планирование семьи2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Медицинская техника
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Медицинская техника1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Медицинская техника2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Массмаркет
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Массмаркет1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Массмаркет2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Изделия медицинского назначения
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Изделия медицинского назначения1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Изделия медицинского назначения2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Перевязочные средства
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Перевязочные средства1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Перевязочные средства2
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Подарочные наборы
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Подарочные наборы1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Подарочные наборы2
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Травы и чаи
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Травы и чаи1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Травы и чаи2
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Лечебная косметика
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Лечебная косметика1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Лечебная косметика2
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Простуда
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Простуда1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Простуда2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Алергия
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Алергия1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Алергия2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Ортопедия
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Ортопедия1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Ортопедия2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Оптика
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Оптика1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Оптика2
+
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Гомеопатия
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Гомеопатия1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Гомеопатия2
+
+
+                    .kab._kab-js
+                      .kab__title._kab-title-js
+                        h4 Питание
+                        svg
+                          use(xlink:href='#arrow')
+                      .kab__hidden._kab-hidden-js 
+                        ._kab-wrap-js 
+                          .tab__body._tab-body-js
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Питание1
+                            .kab._kab-js
+                              .kab__title._kab-title-js
+                                a(href="#!") Питание2
+
+
+        ul.menu__list
+          li.menu__item
+            a.menu__link.menu-link-js.menu__link--active(href='#!' rel='#posts') Акции
+          li.menu__item
+            a.menu__link.menu-link-js(href='#!' rel='#galery') Товар дня
+          li.menu__item
+            a.menu__link.menu-link-js.menu__link--cherry(href='#!' rel='#galery') %Распродажа
+          li.menu__item
+            a.menu__link.menu-link-js(href='#!' rel='#galery') аптечка
+          li.menu__item
+            a.menu__link.menu-link-js(href='#!' rel='#galery') Программа лольности
+          li.menu__item
+            a.menu__link.menu-link-js(href='#!' rel='#galery') О компании
 

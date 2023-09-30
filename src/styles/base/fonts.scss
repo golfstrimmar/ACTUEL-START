@@ -450,6 +450,14 @@
   font-weight: 600;
   color: $greyish-brown;
 }
+@mixin Text-Style-6 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 @mixin Text-Style {
   font-family: "HouschkaPro-DemiBold", sans-serif;
   font-size: 12px;

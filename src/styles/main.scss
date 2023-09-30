@@ -33,6 +33,7 @@
 
 // БЭМ-modules
 @import "../modules/burger/burger.scss";
+@import "../modules/side-menu/side-menu";
 @import "../modules/header/header";
 @import "../modules/bunner/bunner";
 @import "../modules/bunner/bunner-slider";
@@ -46,7 +47,7 @@
 @import "../modules/marque/marque";
 
 @import "../modules/tab/tab";
-@import "../modules/side-menu/side-menu";
+
 @import "../modules/accord/accord";
 @import "../modules/galery/galery";
 @import "../modules/cases/cases";

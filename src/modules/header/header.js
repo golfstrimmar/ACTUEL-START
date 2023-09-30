@@ -8,17 +8,18 @@ export const Header = () => {
   // const nowLogo = logo.cloneNode(true);
   const now = info.cloneNode(true);
   const body = document.querySelector("body");
+  const burger = header.querySelector(".header__burger");
   const activeInfo = () => {
     menu.classList.add("menu-active");
-    now.classList.add("info-active");
+    // now.classList.add("info-active");
     // menu.prepend(nowLogo);
-    menu.append(now);
+    // menu.append(now);
     body.classList.add("lock");
   };
   const normalInfo = () => {
     menu.classList.remove("menu-active");
-    menu.querySelector(".info").remove();
-    info.classList.remove("info-active");
+    // menu.querySelector(".info").remove();
+    // info.classList.remove("info-active");
     body.classList.remove("lock");
   };
 
@@ -33,10 +34,13 @@ export const Header = () => {
 
   document.addEventListener("click", function (event) {
     if (event.target.closest(".header__burger")) {
-      activeInfo();
-    }
-    if (event.target.closest(".header__close")) {
-      normalInfo();
+      if (!burger.classList.contains("_is-active")) {
+        burger.classList.add("_is-active");
+        activeInfo();
+      } else {
+        burger.classList.remove("_is-active");
+        normalInfo();
+      }
     }
 
     if (event.target.closest(".menu-link-js")) {
@@ -59,13 +63,14 @@ export const Header = () => {
 
   // ---------------------------------------------
   window.onresize = function () {
-    if (window.innerWidth >= 999) {
+    if (window.innerWidth >= 1079) {
       if (menu.querySelector(".header__info")) {
         menu.querySelector(".header__info").remove();
       }
       menu.classList.remove("menu-active");
       info.classList.remove("info-active");
       body.classList.remove("lock");
+      burger.classList.remove("_is-active");
     }
   };
 

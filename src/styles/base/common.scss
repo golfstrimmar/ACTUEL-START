@@ -141,14 +141,14 @@ a {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) and (max-width: 1259px) {
+@media (min-width: 1080px) and (max-width: 1180px) {
   .container {
     margin: 0 20px;
     max-width: calc(100% - 40px);
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1079px) {
   .container {
     margin: 0 20px;
     max-width: calc(100% - 40px);

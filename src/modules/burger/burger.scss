@@ -7,7 +7,7 @@
     span,
     &::after,
     &::before {
-      background-color: rgb(138, 138, 138);
+      background-color: $hover;
     }
   }
   span {
