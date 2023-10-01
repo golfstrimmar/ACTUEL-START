@@ -30,21 +30,20 @@
     content: "";
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: transparent;
     @include transition;
   }
 
   input[type="checkbox"]:not(:checked) + label::before {
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
+    width: 16px;
+    height: 16px;
     border: solid 2.4px #bababa;
   }
   input[type="checkbox"]:checked + label::before {
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
+    width: 16px;
+    height: 16px;
     border: solid 2px green;
   }
 
@@ -52,14 +51,12 @@
   input[type="checkbox"]:not(:checked) + label::after {
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 10px;
+    height: 10px;
     border-radius: 100%;
     top: 0;
     left: 0;
     transform: translate(6px, 6px);
-    border: solid 2px green;
-    background-color: green;
     @include transition;
   }
   input[type="checkbox"]:checked + label::after {

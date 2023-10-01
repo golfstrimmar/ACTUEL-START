@@ -1,59 +1,63 @@
 .tab {
-  background-color: bisque;
-  &__body {
-    display: table;
-  }
-  .kab {
-    &__title {
-      padding: 10px;
+  &__title {
+    @include transition;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      width: 15px;
+      height: 18px;
       @include transition;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      transform: rotate(-180deg);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__hidden {
+    p {
+      padding: 10px;
+    }
+  }
+  &._is-active {
+    & > ._tab-title-js {
+      h4 {
+      }
+      ._burger {
+        span {
+          opacity: 0;
+        }
+        &::after {
+          top: 43%;
+          transform: rotate(40deg);
+        }
+        &::before {
+          bottom: 40%;
+          transform: rotate(-40deg);
+        }
+      }
+
       svg {
-        width: 15px;
-        height: 18px;
-        @include transition;
-      }
-      &:hover {
-        cursor: pointer;
+        transform: rotate(0deg);
       }
     }
-    &__hidden {
-      p {
-        padding: 10px;
-      }
-    }
-    &._is-active {
-      & > .kab__title {
-        h4 {
-          color: white;
-        }
-        svg {
-          transform: rotate(180deg);
-          fill: white;
-        }
-      }
-      & > .kab__hidden {
-      }
+    & > .kab__hidden {
     }
   }
 }
 
-._kab-js {
-  float: left;
-  width: 50%;
-  & > ._kab-hidden-js {
+._tab-js {
+  & > ._tab-hidden-js {
     overflow: hidden;
     @include transition;
     display: grid;
     grid-template-rows: 0fr;
-    ._kab-wrap-js {
+    ._tab-wrap-js {
       min-height: 0;
     }
   }
   &._is-active {
-    & > ._kab-hidden-js {
+    & > ._tab-hidden-js {
       grid-template-rows: 1fr;
     }
   }

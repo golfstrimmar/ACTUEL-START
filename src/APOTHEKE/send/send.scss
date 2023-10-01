@@ -1,0 +1,194 @@
+.send {
+  margin: 40px 0 0 0;
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 262px;
+    column-gap: 30px;
+    box-shadow: 1px 3px 29px 0 rgba(0, 0, 0, 0.2);
+    background-color: $white-three;
+    min-height: 441px;
+    padding: 81px 50px 50px 47px;
+  }
+
+  &__btn {
+    @include Text-Style-33;
+    width: 180px;
+    height: 37px;
+    border-radius: 3px;
+  }
+
+  &__linia {
+    max-width: 750px;
+    @include flex-aligne-center;
+    column-gap: 26px;
+    margin: 0 0 30px 0;
+    span {
+      @include Text-Style-24;
+    }
+    .select .dropdown-button svg {
+      right: 0px;
+    }
+    .fildset-rating input[type="radio"]:checked + label svg,
+    .fildset-rating input[type="radio"]:not(:checked) + label svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--inputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 230px);
+      column-gap: 30px;
+      row-gap: 30px;
+      label {
+        @include Text-Style-10;
+      }
+      .input-field {
+        border-bottom: 1px solid $white-four;
+      }
+      .input-field input[type="text"],
+      .input-field input[type="tel"] {
+        @include Text-Style-14;
+        min-height: 30px;
+        padding: 10px 0px 10px 0;
+      }
+      .input-field input[type="text"] + label,
+      .input-field input[type="email"] + label,
+      .input-field input[type="tel"] + label {
+        left: 0px;
+      }
+      .input-field input[type="text"]:not(:placeholder-shown),
+      .input-field input[type="tel"]:not(:placeholder-shown) {
+        border-bottom: solid 2px $jungle-green;
+      }
+    }
+    &--check {
+      label a {
+        @include Text-Style-17;
+        text-decoration: underline !important;
+        &:hover {
+          color: $hover;
+        }
+      }
+
+      .fildset-checkbox input[type="checkbox"]:checked + label,
+      .fildset-checkbox input[type="checkbox"]:not(:checked) + label {
+        @include Text-Style-19;
+        padding: 10px 0px 11px 0;
+        padding: 0 0 0 30px;
+      }
+      .fildset-checkbox input[type="checkbox"]:not(:checked) + label::before {
+        border-radius: 0%;
+        width: 16px;
+        height: 16px;
+        border: solid 2.4px #bababa;
+      }
+      .fildset-checkbox input[type="checkbox"]:checked + label::after,
+      .fildset-checkbox input[type="checkbox"]:not(:checked) + label::after {
+        border-bottom: solid 2px green;
+        border-right: solid 2px green;
+        background-color: transparent;
+        width: 7px;
+        height: 9px;
+        top: 50%;
+        border-radius: 0%;
+        transform: translate(4px, -6px) rotate(45deg);
+      }
+    }
+  }
+  .textarea-field {
+    min-height: 70px;
+    border-bottom: 1px solid $white-four;
+    textarea {
+      border: none;
+      & + label {
+        @include Text-Style-13;
+      }
+    }
+  }
+
+  .select {
+    .dropdown-button {
+      border-bottom: 1px solid $white-four;
+      padding: 10px 0px;
+      span {
+        @include Text-Style-14;
+      }
+      svg {
+        fill: $black-four;
+      }
+      &:hover {
+        span {
+          color: $hover;
+        }
+        svg {
+          fill: $hover;
+        }
+      }
+    }
+  }
+  &__info {
+    p {
+      @include Text-Style-67;
+      margin: 0 0 20px 0;
+    }
+    a {
+      @include Text-Style-57;
+      display: inline-block;
+      text-decoration: underline !important;
+      &:hover {
+        color: $hover;
+      }
+    }
+  }
+}
+@media (min-width: 860px) and (max-width: 1180px) {
+  .send__body {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    min-height: 441px;
+    padding: 40px 20px 40px 20px;
+  }
+  .send__info {
+    margin: 20px 0 0 0;
+    p {
+      margin: 10px 0 0 0;
+    }
+  }
+}
+@media (max-width: 859px) {
+  .send__body {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    min-height: 441px;
+    padding: 40px 20px 40px 20px;
+  }
+  .send__linia {
+    max-width: 100%;
+    align-items: center;
+    column-gap: 15px;
+    margin: 0 0 20px 0;
+    textarea {
+      min-height: 70px;
+    }
+  }
+  .fildset-checkbox input[type="checkbox"]:checked + label,
+  .fildset-checkbox input[type="checkbox"]:not(:checked) + label {
+    line-height: 18px;
+  }
+  .send__btn {
+    width: 100%;
+    max-width: 300px;
+    height: 37px;
+  }
+  .send__info {
+    margin: 20px 0 0 0;
+    p {
+      margin: 10px 0 0 0;
+    }
+  }
+  .send__linia--inputs {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 10px;
+  }
+}

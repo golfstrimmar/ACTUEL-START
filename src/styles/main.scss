@@ -29,35 +29,37 @@
 @import "../components/inputs/fildset-radio.scss";
 @import "../components/inputs/fildset-checkbox.scss";
 @import "../components/inputs/fildset-rating.scss";
-@import "../components/inputs/range.scss";
+// @import "../components/inputs/range.scss";
 
 // БЭМ-modules
 @import "../modules/burger/burger.scss";
-@import "../modules/side-menu/side-menu";
+// @import "../modules/side-menu/side-menu";
 @import "../modules/header/header";
-@import "../modules/bunner/bunner";
-@import "../modules/bunner/bunner-slider";
-@import "../modules/do/do";
-@import "../modules/probe/probe";
-@import "../modules/wk/wk";
+// @import "../modules/bunner/bunner";
+// @import "../modules/bunner/bunner-slider";
+// @import "../modules/do/do";
+// @import "../modules/probe/probe";
+// @import "../modules/wk/wk";
 @import "../modules/select/select";
 @import "../modules/best/best";
 @import "../modules/form/form";
 
-@import "../modules/marque/marque";
+// @import "../modules/marque/marque";
 
 @import "../modules/tab/tab";
+@import "../APOTHEKE/send/send";
+@import "../APOTHEKE/rec/rec";
 
-@import "../modules/accord/accord";
-@import "../modules/galery/galery";
-@import "../modules/cases/cases";
-@import "../modules/galCases/galCases";
-@import "../modules/look/look";
-@import "../modules/swiper-1/swiper-1";
-@import "../modules/slider-full/slider-full";
-@import "../modules/slider-double/sdouble";
-@import "../modules/slider-scroll/slider-scroll";
+// @import "../modules/accord/accord";
+// @import "../modules/galery/galery";
+// @import "../modules/cases/cases";
+// @import "../modules/galCases/galCases";
+// @import "../modules/look/look";
+// @import "../modules/swiper-1/swiper-1";
+// @import "../modules/slider-full/slider-full";
+// @import "../modules/slider-double/sdouble";
+// @import "../modules/slider-scroll/slider-scroll";
 
-@import "../modules/typed/typedHover";
+// @import "../modules/typed/typedHover";
 @import "../modules/footer/footer";
 @import "../modules/popup/popup";

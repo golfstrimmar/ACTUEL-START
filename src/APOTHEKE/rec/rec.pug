@@ -1,0 +1,66 @@
+section(id='rec').rec.rel
+  //- .imgs
+  //-   img.__img(src='./img/img-1.webp' alt='img')
+  .container
+    .rec__body
+      .rec__title
+        h2 Почему в Социальной Аптеке покупают онлайн
+      .rec__items
+        .rec__item
+          svg
+            use(xlink:href='#rec-1')
+          h3 Круглосуточно и без выходных
+          p Интернет заказы принимаются в любое удобное время
+        .rec__item
+          svg
+            use(xlink:href='#rec-2')
+          h3 50 000 товаров
+          p Самые редкие лекарства доступны в одном месте
+        .rec__item
+          svg
+            use(xlink:href='#rec-3')
+          h3 Цены ниже чем в аптеках
+          p В интернет-аптеке товары представлены по сниженной цене 
+        .rec__item
+          svg
+            use(xlink:href='#rec-5')
+          h3 Сбор заказа за 15 мин
+          p Выкуп товара сразу после оформления на сайте
+        .rec__item
+          svg
+            use(xlink:href='#rec-6')
+          h3 Удобное расположение аптек
+          p Более 350 аптек для самовывоза рядом с домом или офисом
+        .rec__item
+          svg
+            use(xlink:href='#rec-4')
+          h3 Гарантированное качество
+          p Безопасные подлинные лекарства и товары надлежащего качества
+
+  .rec__cont.rel
+    .imgs
+      img(src='./img/i-2.webp' alt='img')
+    .rec__img.rel
+      .imgs
+        img(src='./img/env.webp' alt='img')
+    .container
+      .rec__cont-body
+        .rec__cont-title 
+          h2 Подпишитесь и получайте 
+          p первыми лучшие предложения!
+        form.rec__form
+          .input-field
+            input#name1(type='email' name='name1' value='' placeholder=' Denzel Washington')
+            label.text-field__label(for='name1') 
+              svg
+                use(xlink:href='#letter')
+              |Введите ваш Email
+
+          //- .text-field
+          //-   input#name1(type='text' name='name1' placeholder=' Denzel Washington')
+          //-   label.text-field__label(for='name1') 
+          //-     svg
+          //-       use(xlink:href='#letter')
+          //-     |Имя Фамилия
+          button(type='submit' value='Готово').btn.btn-success.but-wave Подписаться
+

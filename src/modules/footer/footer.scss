@@ -1,67 +1,95 @@
 .footer {
-  position: relative;
-  background: rgb(161, 190, 243);
-  margin: auto 0 0 0;
-  padding: 30px 0;
-}
-
-.footer__body {
-  display: grid;
-  grid-template-columns: 10% 20% 20% 20% 5%;
-  column-gap: 10px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.footer__cheap {
-  justify-self: right;
-  width: 50px;
-  height: 50px;
-}
-
-.footer__col--info {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.footer__low {
-  text-align: center;
-  margin: 20px 0 0 0;
-}
-
-@media (min-width: 901px) and (max-width: 1024px) {
-  .footer {
-    padding: 30px 0;
-  }
-}
-
-@media (max-width: 999px) {
-  .footer {
-    padding: 20px 0;
+  // .footer__body
+  padding: 53px 0 95px 0;
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 252px;
+    justify-content: space-between;
+    column-gap: 35px;
   }
 
-  .footer__body {
-    grid-template-columns: 1fr;
-    column-gap: 0px;
-    align-items: center;
-    justify-items: center;
+  // .footer__col
+
+  &__col {
+    .tab__title {
+      h4 {
+        @include Text-Style-76;
+      }
+      svg {
+        display: none;
+      }
+    }
+    a {
+      @include Text-Style-75;
+      margin: 0 0 5px 0;
+    }
+    p {
+      @include Text-Style-77;
+      &:last-of-type {
+        @include Text-Style-78;
+      }
+    }
+    ._tab-js > ._tab-hidden-js {
+      overflow: visible;
+      grid-template-rows: 1fr;
+      margin: 18px 0 0 0;
+    }
+
+    &--last {
+      a {
+        @include Text-Style-70;
+        margin: 0 0 10px 0;
+      }
+      .soc {
+        margin: 15px 0;
+        a {
+          margin: 0 0 0 0;
+        }
+      }
+    }
   }
 
-  .footer__cheap {
-    justify-self: center;
-    width: 30px;
-    height: 30px;
-    margin: 10px 0 0 0;
+  // .footer__title
+
+  &__title {
+    h2 {
+    }
   }
 
-  .footer__col--info {
-    display: flex !important;
+  // .footer__links
+
+  &__links {
+    margin: 15px 0 0 0;
+    li {
+    }
+    a {
+    }
+  }
+
+  &__low {
     margin: 20px 0 0 0;
+    p {
+      margin: 0 0 20px 0;
+      @include Text-Style-79;
+      a {
+        @include Text-Style-80;
+        text-decoration: underline !important;
+      }
+    }
   }
 
-  .info__search--footer {
-    margin: 0;
+  &__pol {
+    @include Text-Style-81;
+  }
+  .tab {
+    a {
+      @include Text-Style-75;
+      display: block;
+      white-space: nowrap;
+      &:hover {
+        color: $hover;
+      }
+    }
   }
 }
 #_returnToTop {
@@ -71,22 +99,85 @@
   border-radius: 100%;
   width: 55px;
   height: 55px;
-  opacity: 0.7;
-  box-shadow: 0 0 4px rgba(135, 135, 135, 0.4);
-  background-color: white;
+  box-shadow: 0 5px 8px 0 rgba(135, 135, 135, 0.2);
+  background-color: $white-three;
   @include flex-center;
   @include transition;
   z-index: 10000;
   svg {
-    width: 34px;
-    height: 30px;
-    transform: rotate(-90deg);
+    width: 24px;
+    height: 13px;
   }
   &:hover {
-    opacity: 1;
-    box-shadow: 0 0 8px rgba(135, 135, 135, 0.7);
+    box-shadow: 0 5px 8px 0 rgba(135, 135, 135, 0.4);
   }
   &.btn-up_hide {
     display: none;
+  }
+}
+
+@media (max-width: 1079px) {
+  .footer {
+    padding: 30px 0 95px 0;
+    .container {
+      min-width: 100vw;
+      margin: 0 0 0 0;
+    }
+
+    &__col ._tab-js > ._tab-hidden-js {
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: 0fr;
+      margin: 0 0 0 0;
+      ._tab-wrap-js {
+        @include transition;
+        padding: 0px 20px 0;
+      }
+      a {
+        &:last-child {
+          margin: 0 0 0 0;
+        }
+      }
+    }
+    &__col ._tab-js._is-active > ._tab-hidden-js {
+      grid-template-rows: 1fr;
+      ._tab-wrap-js {
+        padding: 10px 20px 0;
+      }
+    }
+    &__col .tab__title svg {
+      display: block;
+    }
+    &__body {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: space-between;
+      column-gap: 0px;
+    }
+    .tab {
+      margin: 0 0 6px 0;
+    }
+    .tab__title {
+      background-color: #f3f3f3;
+      min-height: 40px;
+      padding: 0 20px;
+    }
+    &__col--last {
+      margin: 36px 20px 0;
+      a {
+        margin: 0 0 10px 0;
+        line-height: 1;
+      }
+      .soc {
+        margin: 5px 0 20px;
+      }
+    }
+    &__low {
+      margin: 36px 20px 0;
+    }
+  }
+  #_returnToTop {
+    right: 21px;
+    bottom: 51px;
   }
 }

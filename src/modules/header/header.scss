@@ -225,17 +225,14 @@
   display: none !important;
 }
 /*=====================*/
-
+#header-tab {
+  position: absolute;
+  top: -11px;
+}
 .header__low {
   background-color: $white-three;
   min-height: 76px;
   @include flex-aligne-center;
-  #header-tab {
-    position: absolute;
-    top: -11px;
-  }
-  .menu {
-  }
 
   .menu__list {
     display: flex;
@@ -270,114 +267,152 @@
     color: lighten($cherry, 20%);
   }
 
-  ._kab-js {
-    clear: both;
+  ._tab-js {
     width: 100%;
+  }
+  ._tab-top-js {
+    outline: 1px solid grey;
+    border-radius: 3px;
+    width: 190px;
   }
   .tab {
-    width: 190px;
-    border-radius: 3px;
     overflow: hidden;
-    outline: 1px solid grey;
+
     background-color: $sunflower-yellow;
-  }
-  .tab__body {
-    width: 100%;
-  }
-  .tab .kab {
-    outline: none;
-    background-color: $sunflower-yellow;
-  }
-  .tab .kab__title {
-    display: flex;
-    align-items: center;
-    column-gap: 7px;
-    padding: 0 8px;
-    min-height: 42px;
-    @include Text-Style-6;
-    justify-content: space-between;
-    &:hover {
-      background-color: lighten($sunflower-yellow, 30%);
-    }
-    svg {
-      min-width: 15px;
-      height: 18px;
-      transform: rotate(180deg);
-    }
-  }
-
-  .tab .kab__title--main {
-    justify-content: flex-start;
-  }
-
-  .tab .kab._is-active > .kab__title--main {
-    background-color: $sunflower-yellow;
-
-    &:hover {
-      background-color: lighten($sunflower-yellow, 30%);
-    }
-  }
-
-  .tab .kab .kab__title:not(.kab__title--main) {
-    background-color: lighten($sunflower-yellow, 50%);
-    &:hover {
-      background-color: lighten($sunflower-yellow, 30%);
-    }
-  }
-  .tab .kab._is-active {
-    @include transition;
-  }
-  .tab .kab._is-active > .kab__title:not(.kab__title--main) {
-    background-color: lighten($sunflower-yellow, 40%);
-    box-shadow: none;
-  }
-  .tab .kab._is-active > .kab__title svg {
-    transform: rotate(0deg);
-    fill: $black-two;
-  }
-  .tab .kab._is-active > .kab__title h4 {
-    color: $black-two;
-  }
-  .kab__title ._burger {
-    width: 15px;
-    height: 12px;
-    span,
-    &::after,
-    &::before {
-      width: 15px;
-      height: 2px;
-      background-color: $black-two;
-    }
-    span {
-      top: 49%;
-    }
-
-    &::after {
-      top: -1%;
-      transform: translateY(50%);
-    }
-    &::before {
-      bottom: 1%;
-      transform: translateY(-50%);
-    }
-    &._is-active {
-      &::after {
-        top: 43%;
-        transform: rotate(40deg);
+    &__title {
+      display: flex;
+      align-items: center;
+      column-gap: 7px;
+      padding: 0 8px;
+      min-height: 42px;
+      @include Text-Style-6;
+      justify-content: space-between;
+      &:hover {
+        background-color: lighten($sunflower-yellow, 30%);
       }
-      &::before {
-        bottom: 40%;
-        transform: rotate(-40deg);
+      ._burger {
+        width: 15px;
+        height: 12px;
+        span,
+        &::after,
+        &::before {
+          width: 15px;
+          height: 2px;
+          background-color: $black-two;
+        }
+        span {
+          top: 49%;
+        }
+
+        &::after {
+          top: -1%;
+          transform: translateY(50%);
+        }
+        &::before {
+          bottom: 1%;
+          transform: translateY(-50%);
+        }
+      }
+      svg {
+        min-width: 15px;
+        height: 18px;
+        transform: rotate(180deg);
+      }
+      &:not(.title--main) {
+        background-color: lighten($sunflower-yellow, 30%);
+        border: none;
+        padding: 5px 8px;
+        &:hover {
+          background-color: lighten($sunflower-yellow, 20%);
+        }
       }
     }
-  }
-  .kab._is-active a {
-    font-size: 12px;
-    color: $black-two;
-    padding: 0 0 0 5px;
-  }
-  .tab .kab._is-active > .kab__title {
-    border-bottom: none;
+    &._is-active > .title--main {
+      background-color: $sunflower-yellow;
+
+      &:hover {
+        background-color: lighten($sunflower-yellow, 30%);
+      }
+    }
+
+    &._is-active > .tab__title:not(.title--main) {
+    }
+    &._is-active a {
+      display: block;
+      font-size: 14px;
+      color: $black-two;
+      padding: 10px 0 10px 10px;
+      background-color: lighten($sunflower-yellow, 50%);
+      &:hover {
+        background-color: lighten($sunflower-yellow, 40%);
+      }
+    }
+
+    // .tab .kab._is-active > .kab__title--main {
+    //   background-color: $sunflower-yellow;
+
+    //   &:hover {
+    //     background-color: lighten($sunflower-yellow, 30%);
+    //   }
+    // }
+
+    // .tab .kab .kab__title:not(.kab__title--main) {
+    //   background-color: lighten($sunflower-yellow, 50%);
+    //   &:hover {
+    //     background-color: lighten($sunflower-yellow, 30%);
+    //   }
+    // }
+    // .tab .kab._is-active {
+    //   @include transition;
+    // }
+    // .tab .kab._is-active > .kab__title:not(.kab__title--main) {
+    //   background-color: lighten($sunflower-yellow, 40%);
+    //   box-shadow: none;
+    // }
+    // .tab .kab._is-active > .kab__title svg {
+    //   transform: rotate(0deg);
+    //   fill: $black-two;
+    // }
+    // .tab .kab._is-active > .kab__title h4 {
+    //   color: $black-two;
+    // }
+    // .kab__title ._burger {
+    //   width: 15px;
+    //   height: 12px;
+    //   span,
+    //   &::after,
+    //   &::before {
+    //     width: 15px;
+    //     height: 2px;
+    //     background-color: $black-two;
+    //   }
+    //   span {
+    //     top: 49%;
+    //   }
+
+    //   &::after {
+    //     top: -1%;
+    //     transform: translateY(50%);
+    //   }
+    //   &::before {
+    //     bottom: 1%;
+    //     transform: translateY(-50%);
+    //   }
+    //   &._is-active {
+    //     &::after {
+    //       top: 43%;
+    //       transform: rotate(40deg);
+    //     }
+    //     &::before {
+    //       bottom: 40%;
+    //       transform: rotate(-40deg);
+    //     }
+    //   }
+    // }
+
+    // .tab .kab._is-active > .kab__title {
+    //   border-bottom: none;
+    // }
   }
 }
 
@@ -508,18 +543,15 @@
   }
   .menu-active {
     transform: translateX(0vw);
-
-    .tab {
+    #header-tab {
       width: 100%;
+      position: relative;
+      border-radius: 0px;
+      top: 0;
     }
   }
-  .kab__hidden--first {
-    max-height: 50vh;
-    overflow: auto !important;
-  }
-  .header__low #header-tab {
-    position: relative;
-    border-radius: 0px;
-    top: 0;
-  }
+  // .kab__hidden--first {
+  //   max-height: 50vh;
+  //   overflow: auto !important;
+  // }
 }

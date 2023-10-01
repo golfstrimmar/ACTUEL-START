@@ -7,7 +7,6 @@
   // &:last-of-type {
   // margin: 0 0 0 0;
   // }
-  background: whitesmoke;
   width: 100%;
   position: relative;
   textarea {
@@ -30,7 +29,7 @@
       position: absolute;
       transform: translateY(0%);
       @include transition;
-      padding: 0px 20px 0px;
+      padding: 0px;
       top: 0;
       z-index: 2;
     }

@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Popup();
   }
   //   // ======Tab=================
-  if (document.querySelector("._tabs-container-js")) {
+  if (document.querySelector(".tab")) {
     Tab();
   }
   //   // =========sideMenu==============
