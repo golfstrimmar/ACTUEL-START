@@ -7,9 +7,8 @@
 
 // Основное
 @import "base/colors";
-@import "base/common";
 @import "base/fonts";
-
+@import "base/common";
 @import "base/sliders-swiper";
 
 @import "base/vue/vue-check-in-out";
@@ -47,6 +46,9 @@
 // @import "../modules/marque/marque";
 
 @import "../modules/tab/tab";
+@import "../APOTHEKE/descr/descr";
+@import "../APOTHEKE/caract/caract";
+@import "../APOTHEKE/realise/realise";
 @import "../APOTHEKE/send/send";
 @import "../APOTHEKE/rec/rec";
 

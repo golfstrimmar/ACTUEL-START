@@ -13,12 +13,11 @@
 }
 @mixin hover {
   &:hover {
-    color: dark;
-    text-shadow: 0 0 14px lighten(grey, 25%);
+    color: $hover;
   }
 }
 @mixin transition {
-  transition: all .2s;
+  transition: all 0.2s;
 }
 // // =======================================
 // @mixin Text-Style-38 {

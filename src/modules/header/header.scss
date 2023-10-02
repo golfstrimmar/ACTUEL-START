@@ -13,7 +13,7 @@
   &__body {
     @include flex-aligne-center;
     .select {
-      max-width: 150px;
+      max-width: 132px;
       .dropdown-button {
         padding: 0 0 0 16px;
         background-color: $white;
@@ -53,27 +53,31 @@
       }
       &.link-phone {
         @include Text-Style-6;
+        color: $black-three;
         margin: 0 0 0 15px;
+        text-decoration: none !important;
         span {
           margin: 0 0 0 10px;
           color: #4c4c4c;
           font-family: "HouschkaPro-DemiBold", sans-serif;
           font-size: 12px;
           font-style: normal;
-          font-weight: 400;
           line-height: normal;
-          text-decoration: dashed !important;
+          text-transform: none;
           @include transition;
+          border-bottom: dashed 1px #4c4c4c;
         }
         &:hover {
           color: $hover;
           span {
             color: $hover;
+            border-bottom: dashed 1px $hover;
           }
         }
       }
       &.link-oder {
         margin: 0 15px 0 60px;
+        text-decoration: none !important;
         &:hover {
           color: $hover;
         }
@@ -84,6 +88,7 @@
         }
       }
       &.link-status {
+        text-decoration: none !important;
         &:hover {
           color: $hover;
         }

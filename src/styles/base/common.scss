@@ -141,6 +141,20 @@ a {
   text-transform: uppercase;
 }
 
+.title {
+  h3 {
+    @include Text-Style-38;
+  }
+}
+
+@media (max-width: 1180px) {
+  .title {
+    h3 {
+      font-size: 25px;
+    }
+  }
+}
+
 @media (min-width: 1080px) and (max-width: 1180px) {
   .container {
     margin: 0 20px;
