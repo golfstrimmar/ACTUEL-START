@@ -103,7 +103,6 @@
       }
       &.btn-success:hover {
         color: #fff;
-
         background-color: $cherry-light;
         box-shadow: inset 0 0 15px #fff;
       }
@@ -115,7 +114,11 @@
 }
 @media (max-width: 1079px) {
   .rec__title h2 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .rec__cont-title h2,
+  .rec__cont-title p {
+    font-size: 22px;
   }
   .rec__items {
     grid-template-columns: 1fr;

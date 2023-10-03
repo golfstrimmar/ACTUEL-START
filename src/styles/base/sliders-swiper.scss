@@ -16,11 +16,8 @@
   height: 40px;
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-
 .slider-arrow svg {
   position: absolute;
   top: 50%;
@@ -31,24 +28,21 @@
   z-index: 2;
   stroke-width: 1px;
   transition: all 0.2s ease-in-out;
-  fill: rgba(0, 0, 0, 0.2);
 }
 
 .slider-arrow[disabled] {
   opacity: 0.3;
   &:hover {
-    cursor: none ;
+    cursor: none;
   }
 }
 
 .slider-arrow:not([disabled]) {
   &:hover {
     transform: scale(1.05) translate(0%, -50%);
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4), 0 0 18px rgba(0, 0, 0, 0.2);
   }
 
   &:hover > svg {
-    fill: rgba(0, 0, 0, 0.2);
   }
 }
 

@@ -1,6 +1,20 @@
 .fid {
   &__rate {
     @include flex-aligne-center;
+    display: grid;
+    column-gap: 20px;
+
+    grid-template-areas: "a b c";
+    grid-template-columns: repeat(3, max-content);
+    ._a {
+      grid-area: a;
+    }
+    ._b {
+      grid-area: b;
+    }
+    ._c {
+      grid-area: c;
+    }
     svg {
       margin: 0 5px 0 0;
       width: 26px;
@@ -16,6 +30,7 @@
     span {
       margin: 0 0 0 15px;
       @include Text-Style-55;
+      white-space: nowrap;
     }
     p {
       margin: 0 0 0 15px;
@@ -31,24 +46,6 @@
   .caract__body {
     margin: 24px 0 0 0;
     width: 100%;
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
   }
 }
 
@@ -69,6 +66,7 @@
   .accord__hidden {
     background: transparent;
   }
+
   .accord {
     margin: 13px 0 30px 0;
   }
@@ -138,6 +136,7 @@
   ._tab-js._is-active > ._tab-hidden-js {
     border: 1px solid $pinkish-grey;
     background: lighten($white-two, 5%);
+    margin: 12px 0 0 0;
   }
 }
 
@@ -226,21 +225,43 @@
   }
 }
 
-#popup2 {
-  width: 100%;
-  background-color: $white-three;
-  form {
-    @include flex-column;
-    margin: 20px;
-    width: 100%;
-    button {
-      margin: 20px auto 20px;
-      width: 200px;
-      height: 40px;
-      border-radius: 5px;
+@media (max-width: 1180px) {
+  .fid__rate {
+    grid-template-areas: "a a a" " b b b" "c c c";
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    span,
+    p {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
     }
-    .textarea-field textarea + label {
-      padding: 0 0 0 20px;
+  }
+  .fid {
+    .galCases__body {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto;
     }
+  }
+  .fid-section__top {
+    grid-template-columns: 1fr;
+    gap: 10px 0px;
+  }
+  .fid-section__top span {
+    justify-self: start;
+  }
+  .fid-section__low .tab,
+  .fid-section__low a {
+    clear: left;
+  }
+  .fid-section__low a {
+    margin: 10px 0 0 0px;
+  }
+  .fid .tab__hidden {
+    min-width: 0px;
+    width: calc(100vw - 40px);
+  }
+  .fid-section__title h3 {
+    font-size: 16px;
   }
 }

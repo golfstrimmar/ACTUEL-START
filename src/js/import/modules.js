@@ -8,7 +8,7 @@ import { GalleryInit } from "../../modules/galery/galery";
 import { GalCases } from "../../modules/galCases/galCases";
 // import { Marque } from "../../modules/marque/marque";
 // import { Swiperwk } from "../../modules/wk/wk";
-// import { Swiper1 } from "../../modules/swiper-1/swiper-1";
+import { Swiper1 } from "../../APOTHEKE/fruch/fruch";
 // import { SwiperFull } from "../../modules/slider-full/slider-full";
 // import { SwiperScroll } from "../../modules/slider-scroll/slider-scroll";
 // import { Double } from "../../modules/slider-double/sdouble.js";
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   Swiperwk();
   // }
   // // =========swiper-1==============
-  // if (document.querySelector("#swiper-1")) {
-  //   Swiper1();
-  // }
+  if (document.querySelector("#swiper-1")) {
+    Swiper1();
+  }
   // //   // ========swiper-1licens===============
   // if (document.querySelector("#swiper-1licens")) {
   //   Swiper1licens();

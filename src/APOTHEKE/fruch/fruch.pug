@@ -1,0 +1,46 @@
+#fruch.fruch.swiper-1
+  .container 
+    .title
+      h3 Вы недавно просматривали
+
+    .swiper-1__body.rel
+      .slider-arrow.arrow-next-1
+        svg
+          use(xlink:href='#arrow-right') 
+      .slider-arrow.arrow-prev-1 
+        svg
+          use(xlink:href='#arrow-right')
+      #swiper-1.swiper
+        .swiper-wrapper
+          -
+            var blocks = [
+              {src: './img/i-1.webp',title:"Бутылка для чая 530мл",text:"Какой-то производитель", price:"1000 ₽" },
+              {src: './img/i-6.webp',title:"Nuxe Сплендьез Крем SPF 20 50мл",text:"Какой-то производитель", price:"2000 ₽" },
+              {src: './img/i-7.webp',title:"Авен молочко для детей солнцезащSPF 50+, 250мл",text:"Какой-то производитель", price:"8000 ₽" },
+              {src: './img/i-1.webp',title:"Адерма эссеншиал крем для рук 50мл",text:"Какой-то производитель", price:"3000 ₽" },
+              {src: './img/i-10.webp',title:"Авен молочко для детей солнцезащSPF 50+, 250мл",text:"Какой-то производитель", price:"4000 ₽" },
+              {src: './img/i-4.webp',title:"Бутылка для чая 530мл",text:"Какой-то производитель", price:"5000 ₽" },
+              {src: './img/i-6.webp',title:"Бутылка для чая 530мл",text:"Какой-то производитель", price:"6000 ₽" },
+
+            ];
+          each block in blocks
+            .swiper-slide.fruch-slide
+              .fruch-slide__img.rel 
+                .imgs
+                  img(src=block.src)
+              .fruch-slide__title 
+                h3=block.title
+              p.fruch-slide__text=block.text
+              .fruch-slide__rate
+                svg
+                  use(xlink:href='#star-empty')  
+                svg
+                  use(xlink:href='#star-empty')  
+                svg
+                  use(xlink:href='#star-empty')  
+                svg
+                  use(xlink:href='#star-empty')  
+                svg
+                  use(xlink:href='#star-empty') 
+              span=block.price
+

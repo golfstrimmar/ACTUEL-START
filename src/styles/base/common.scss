@@ -73,6 +73,10 @@ a {
     // text-shadow: 0 0  14px white;
   }
 }
+.flex {
+  display: flex;
+  align-items: center;
+}
 /* +++++++++++++++++++++++++++++++++++++ */
 @media (prefers-reduced-motion: no-preference) {
   .top-animation {

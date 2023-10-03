@@ -105,6 +105,7 @@
       @include Text-Style-22;
       border-bottom: dashed 1px $jungle-green;
       @include hover;
+      margin: 0 0 0 5px;
       &:hover {
         border-bottom: dashed 1px $hover;
       }

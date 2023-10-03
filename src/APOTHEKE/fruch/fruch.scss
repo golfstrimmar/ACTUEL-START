@@ -1,0 +1,77 @@
+#fruch {
+  .container {
+    overflow: hidden;
+  }
+  .swiper {
+    margin: 40px 0 0 0;
+  }
+  .slider-arrow {
+    width: 54px;
+    height: 54px;
+    background-color: $white;
+    box-shadow: none;
+    &.swiper-button-disabled {
+      opacity: 0.2;
+    }
+  }
+
+  .slider-arrow svg {
+    width: 24px;
+    height: 13px;
+  }
+  .arrow-next-1 {
+    left: auto;
+    right: -27px;
+    svg {
+      transform: translate(-100%, -50%);
+    }
+  }
+  .arrow-prev-1 {
+    left: -27px;
+    right: auto;
+    svg {
+      transform: translate(0%, -50%) rotate(180deg);
+    }
+  }
+  .fruch-slide {
+    min-height: 369px;
+    border: 1px solid #ebebeb;
+    @include flex-column;
+    align-items: center;
+    padding: 25px 20px;
+    &__img {
+      width: 90px;
+      height: 174px;
+    }
+    &__title {
+      margin: 20px 0 0 0;
+      h3 {
+        @include Text-Style-68;
+      }
+    }
+
+    &__text {
+      margin: 15px 0 0 0;
+      @include Text-Style-23;
+    }
+    &__rate {
+      margin: 15px 0 0 0;
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: $sunflower-yellow;
+        stroke: $sunflower-yellow;
+        &:last-of-type {
+          margin: 0 0 0 0;
+          fill: $white-three;
+          stroke: $sunflower-yellow;
+        }
+      }
+    }
+
+    span {
+      margin: auto 0 0 0;
+      @include Text-Style-69;
+    }
+  }
+}

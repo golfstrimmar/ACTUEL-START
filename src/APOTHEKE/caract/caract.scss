@@ -168,11 +168,12 @@
 .right-shild {
   min-height: 378px;
   padding: 24px 0 0;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffed9f;
   @include flex-column;
   align-items: center;
   margin: 40px 0 40px 0;
+  border-radius: 5px;
   &--pink {
     background-color: #fae4e9;
     margin: 0 0 0 0;
@@ -206,7 +207,7 @@
   .caract__nav {
     grid-template-columns: 1fr;
     row-gap: 10px;
-    padding: 0 0 20px;
+    padding: 20px 0 20px;
   }
   .caract__nav a span,
   .caract__nav a._is-active span {
@@ -238,7 +239,8 @@
   .caract .right-shild {
     min-height: 313px;
     padding: 20px 0 0;
-    margin: 30px 0;
+    margin: 30px auto;
+    max-width: 350px;
   }
   .caract .right-shild__title h4 {
     font-size: 70px;
