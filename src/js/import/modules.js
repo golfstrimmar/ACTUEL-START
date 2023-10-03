@@ -1,97 +1,97 @@
 import { Header } from "../../modules/header/header";
-import { bunnerSwiper } from "../../modules/bunner/bunner";
+// import { bunnerSwiper } from "../../modules/bunner/bunner";
 import { Tab } from "../../modules/tab/tab";
 import { Accords } from "../../modules/accord/accord";
-import { SideMenu } from "../../modules/side-menu/side-menu";
-import { CasesInit } from "../../modules/cases/cases";
+// import { SideMenu } from "../../modules/side-menu/side-menu";
+// import { CasesInit } from "../../modules/cases/cases";
 import { GalleryInit } from "../../modules/galery/galery";
 import { GalCases } from "../../modules/galCases/galCases";
-import { Marque } from "../../modules/marque/marque";
-import { Swiperwk } from "../../modules/wk/wk";
-import { Swiper1 } from "../../modules/swiper-1/swiper-1";
-import { SwiperFull } from "../../modules/slider-full/slider-full";
-import { SwiperScroll } from "../../modules/slider-scroll/slider-scroll";
-import { Double } from "../../modules/slider-double/sdouble.js";
+// import { Marque } from "../../modules/marque/marque";
+// import { Swiperwk } from "../../modules/wk/wk";
+// import { Swiper1 } from "../../modules/swiper-1/swiper-1";
+// import { SwiperFull } from "../../modules/slider-full/slider-full";
+// import { SwiperScroll } from "../../modules/slider-scroll/slider-scroll";
+// import { Double } from "../../modules/slider-double/sdouble.js";
 import { Select } from "../../modules/select/select";
 import { Form } from "../../modules/form/form";
 
-import { Look } from "../../modules/look/look";
+// import { Look } from "../../modules/look/look";
 // import { TypedItem } from "%modules%/typed/typedHover";
 import { Popup } from "../../modules/popup/popup";
 
 document.addEventListener("DOMContentLoaded", function () {
   // =====Look==================
-  if (document.querySelector("video")) {
-    Look();
-  }
+  // if (document.querySelector("video")) {
+  //   Look();
+  // }
 
-  // =====Header==================
+  // // =====Header==================
   if (document.querySelector("header")) {
     Header();
   }
 
-  //   // =========bunner slider==============
-  if (document.querySelector("#bunner-slider")) {
-    bunnerSwiper();
-  }
-  // ========popup===============
+  // //   // =========bunner slider==============
+  // if (document.querySelector("#bunner-slider")) {
+  //   bunnerSwiper();
+  // }
+  // // ========popup===============
   if (document.querySelector(".popups-init-js")) {
     Popup();
   }
-  //   // ======Tab=================
+  // //   // ======Tab=================
   if (document.querySelector(".tab")) {
     Tab();
   }
-  //   // =========sideMenu==============
-  if (document.querySelector("._smenu-js")) {
-    SideMenu();
-  }
-  //   // ====Accords=====
+  // //   // =========sideMenu==============
+  // if (document.querySelector("._smenu-js")) {
+  //   SideMenu();
+  // }
+  // //   // ====Accords=====
   if (document.querySelector(".accord")) {
     Accords();
   }
-  //   // ========Cases=============
-  if (document.querySelector("._accord-cases-js")) {
-    CasesInit();
-  }
-  //   // ======Gallery======================
+  // //   // ========Cases=============
+  // if (document.querySelector("._accord-cases-js")) {
+  //   CasesInit();
+  // }
+  // //   // ======Gallery======================
   if (document.querySelector("._accord-galery-js")) {
     GalleryInit();
   }
-  //   // ====GalCases=====
+  // //   // ====GalCases=====
   if (document.querySelector("._galCases-plaza-js")) {
     GalCases();
   }
 
-  // =========swiper-1==============
-  if (document.querySelector("#swiperwk")) {
-    Swiperwk();
-  }
-  // =========swiper-1==============
-  if (document.querySelector("#swiper-1")) {
-    Swiper1();
-  }
-  //   // ========swiper-1licens===============
-  if (document.querySelector("#swiper-1licens")) {
-    Swiper1licens();
-  }
-  //   // =======================
-  if (document.querySelector(".marque")) {
-    Marque();
-  }
-  // // ======slider-full=================
-  if (document.querySelector("#slider-full")) {
-    SwiperFull();
-  }
-  // //   // =====swiper-scroll==================
-  if (document.querySelector("#swiper-scroll")) {
-    SwiperScroll();
-  }
-  // //   // ========swiperDouble===============
-  if (document.querySelector("#swiperDoubleTop")) {
-    Double();
-  }
-  // //   // ========Form===============
+  // // =========swiper-1==============
+  // if (document.querySelector("#swiperwk")) {
+  //   Swiperwk();
+  // }
+  // // =========swiper-1==============
+  // if (document.querySelector("#swiper-1")) {
+  //   Swiper1();
+  // }
+  // //   // ========swiper-1licens===============
+  // if (document.querySelector("#swiper-1licens")) {
+  //   Swiper1licens();
+  // }
+  // //   // =======================
+  // if (document.querySelector(".marque")) {
+  //   Marque();
+  // }
+  // // // ======slider-full=================
+  // if (document.querySelector("#slider-full")) {
+  //   SwiperFull();
+  // }
+  // // //   // =====swiper-scroll==================
+  // if (document.querySelector("#swiper-scroll")) {
+  //   SwiperScroll();
+  // }
+  // // //   // ========swiperDouble===============
+  // if (document.querySelector("#swiperDoubleTop")) {
+  //   Double();
+  // }
+  // // //   // ========Form===============
   if (document.querySelector("#send-form")) {
     Form();
   }

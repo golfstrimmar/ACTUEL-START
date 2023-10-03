@@ -89,7 +89,8 @@ export const Popup = () => {
 
       if (
         e.target == document.querySelector(".popup-overlay-js") ||
-        e.target.closest(".popup-close-js")
+        e.target.closest(".popup-close-js") ||
+        e.target.closest("#popup2-button")
       ) {
         newPopup.closePlyr();
         Popup.close();

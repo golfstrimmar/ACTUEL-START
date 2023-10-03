@@ -1,0 +1,246 @@
+.fid {
+  &__rate {
+    @include flex-aligne-center;
+    svg {
+      margin: 0 5px 0 0;
+      width: 26px;
+      height: 26px;
+      fill: $sunflower-yellow;
+      stroke: $sunflower-yellow;
+      &:last-of-type {
+        margin: 0 0 0 0;
+        fill: $white-three;
+        stroke: $sunflower-yellow;
+      }
+    }
+    span {
+      margin: 0 0 0 15px;
+      @include Text-Style-55;
+    }
+    p {
+      margin: 0 0 0 15px;
+      display: inline-block;
+      @include Text-Style-23;
+    }
+    border-bottom: 1px solid $white-four;
+    padding: 20px 0;
+  }
+  .right-shild {
+    margin: 0 0 40px 0;
+  }
+  .caract__body {
+    margin: 24px 0 0 0;
+    width: 100%;
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+}
+
+.fid {
+  &__section {
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  ._accord-hidden-js._is-active {
+    grid-template-rows: 1fr;
+  }
+  ._accord-hidden-js {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+  .accord__hidden {
+    background: transparent;
+  }
+  .accord {
+    margin: 13px 0 30px 0;
+  }
+  .accord__body {
+    border: none;
+  }
+  .accord__nav button._is-active {
+    @include Text-Style-57;
+    border-bottom: none;
+  }
+  .accord__nav {
+  }
+  .accord__nav button {
+    padding: 0px;
+    background: transparent;
+    @include Text-Style-39;
+    border-bottom: 1px dashed #333;
+    margin: 0 20px 0 0;
+    &:last-child {
+      margin: 0 0 0 0;
+    }
+  }
+  .galCases {
+    background: $white-three;
+  }
+  .accord--galery .accord__content {
+    grid-template-columns: 1fr;
+    gap: 0px 0px;
+  }
+  .galCases__body ul {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+  }
+  .galCases__body li {
+    height: auto;
+    max-height: 0px;
+  }
+  .galCases__body li._is-active {
+    min-height: 186px;
+    max-height: 1000px;
+    margin: 0 0 0px 0;
+  }
+  .galCases__body button {
+    width: 165px;
+    height: 36px;
+    background-color: $white;
+    padding: 0 0 0 0;
+    margin: 12px auto 0;
+    @include Text-Style-66;
+  }
+
+  .tab {
+    max-width: 175px;
+    &__title {
+      h4 {
+        @include Text-Style-60;
+        border-bottom: 1px dashed $greyish-brown-four;
+        padding: 0 0 5px 0;
+      }
+    }
+    &__hidden {
+      // position: absolute;
+      min-width: 822px;
+      // top: 120%;
+    }
+  }
+  ._tab-js._is-active > ._tab-hidden-js {
+    border: 1px solid $pinkish-grey;
+    background: lighten($white-two, 5%);
+  }
+}
+
+.fid-section {
+  // .fid-section__top
+  padding: 20px 0;
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, max-content) 1fr;
+    align-items: center;
+    column-gap: 30px;
+    span {
+      justify-self: end;
+      @include Text-Style-59;
+    }
+    svg {
+      margin: 0 5px 0 0;
+      width: 20px;
+      height: 20px;
+      fill: $sunflower-yellow;
+      stroke: $sunflower-yellow;
+      &:last-of-type {
+        margin: 0 0 0 0;
+        fill: $white-three;
+        stroke: $sunflower-yellow;
+      }
+    }
+  }
+
+  // .fid-section__title
+
+  &__title {
+    h3 {
+      @include Text-Style-58;
+    }
+  }
+
+  // .fid-section__content
+
+  &__content {
+    margin: 20px 0 0 0;
+    @include Text-Style-18;
+  }
+
+  // .fid-section__low
+
+  &__low {
+    margin: 26px 0 0 0;
+    display: table;
+    // display: grid;
+    // grid-template-columns: repeat(2, max-content) 1fr max-content;
+    // align-items: center;
+    // column-gap: 30px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    a {
+      span {
+        margin: 0 0 0 5px;
+      }
+      @include Text-Style-60;
+    }
+    .tab,
+    a {
+      float: left;
+    }
+    a {
+      margin: 0 0 0 20px;
+    }
+  }
+
+  .fid-score {
+    justify-self: end;
+    @include flex-aligne-center;
+    column-gap: 5px;
+    span {
+      @include Text-Style-61;
+    }
+    &--bad {
+      justify-self: end;
+      span {
+        @include Text-Style-62;
+      }
+    }
+  }
+}
+
+#popup2 {
+  width: 100%;
+  background-color: $white-three;
+  form {
+    @include flex-column;
+    margin: 20px;
+    width: 100%;
+    button {
+      margin: 20px auto 20px;
+      width: 200px;
+      height: 40px;
+      border-radius: 5px;
+    }
+    .textarea-field textarea + label {
+      padding: 0 0 0 20px;
+    }
+  }
+}

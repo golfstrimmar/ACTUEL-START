@@ -22,6 +22,7 @@
       transform: scaleY(0);
       transform-origin: top;
       min-height: 0px;
+
       @include transition;
       &._is-active {
         min-height: 350px;
@@ -69,13 +70,12 @@
       margin: auto 0 0 0;
       cursor: pointer;
     }
-    svg{
-       width: 20px;
-        height: 20px;
-        fill: black;
-        margin: 0 0 0 10px;
-        transform: rotate(0deg);
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: black;
+      margin: 0 0 0 10px;
+      transform: rotate(0deg);
     }
-
   }
 }

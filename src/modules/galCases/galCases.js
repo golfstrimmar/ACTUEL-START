@@ -47,7 +47,7 @@ export const GalCases = () => {
       this.NumberAddItems = this.Columns;
       this.startOrigin();
       this.Button.innerHTML =
-        '<span>more</span><svg><use xlink:href="#load"></use></svg>';
+        '<span>Еще 2 отзыва</span><svg><use xlink:href="#load"></use></svg>';
     }
 
     addItems() {
@@ -65,7 +65,7 @@ export const GalCases = () => {
 
         this.checkNummbersItems();
         if (this.tempActive.length === this.elements.length) {
-          this.Button.innerHTML = "close";
+          this.Button.innerHTML = "Свернуть";
         }
       }
     }
@@ -90,32 +90,39 @@ export const GalCases = () => {
   }
 
   // ============
-  if (document.querySelector("#galCases1 ")) {
-    const galCases1 = document.querySelector("#galCases1 ");
+  if (document.querySelector("#galCasesfid ")) {
+    const galCases1 = document.querySelector("#galCasesfid ");
     const galCases1Act = new GALCASE(galCases1, {
       numberColumns: 3,
-      numberItems: 3,
+      numberItems: 2,
     });
     galCases1Act.start();
   }
-
-  if (document.querySelector("#galCases2 ")) {
-    const galCases2 = document.querySelector("#galCases2 ");
-    const galCases2Act = new GALCASE(galCases2, {
-      numberColumns: 3,
-      numberItems: 3,
+  if (document.querySelector("#galCasesfidplus")) {
+    const galCases1plus = document.querySelector("#galCasesfidplus");
+    const galCases1plusAct = new GALCASE(galCases1plus, {
+      numberColumns: 2,
+      numberItems: 2,
     });
-    galCases2Act.start();
+    galCases1plusAct.start();
+  }
+  if (document.querySelector("#galCasesfidminus")) {
+    const galCases1minus = document.querySelector("#galCasesfidminus ");
+    const galCases1minusAct = new GALCASE(galCases1minus, {
+      numberColumns: 2,
+      numberItems: 2,
+    });
+    galCases1minusAct.start();
   }
 
-  if (document.querySelector("#galCases3 ")) {
-    const galCases3 = document.querySelector("#galCases3 ");
-    const galCases3Act = new GALCASE(galCases3, {
-      numberColumns: 3,
-      numberItems: 3,
-    });
-    galCases3Act.start();
-  }
+  // if (document.querySelector("#galCases3 ")) {
+  //   const galCases3 = document.querySelector("#galCases3 ");
+  //   const galCases3Act = new GALCASE(galCases3, {
+  //     numberColumns: 3,
+  //     numberItems: 3,
+  //   });
+  //   galCases3Act.start();
+  // }
 
   // =================
 };

@@ -1,4 +1,5 @@
 .realise {
+  padding: 0 0 40px 0;
   &__body {
     max-width: 847px;
   }
@@ -46,15 +47,24 @@
     &__fidback {
       margin: 10px 0 15px 0;
       @include flex-aligne-center;
-      .fildset-rating input[type="radio"]:checked + label svg,
-      .fildset-rating input[type="radio"]:not(:checked) + label svg {
-        fill: #d9d9d9;
-        width: 15px;
-        height: 15px;
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        fill: $sunflower-yellow;
+        &:last-of-type {
+          fill: $white-three;
+          stroke: $sunflower-yellow;
+        }
       }
+      //
+      //
+      // }
       span {
+        display: inline-block;
         @include Text-Style-45;
+        line-height: 1;
         margin: 0 0 0 10px;
+        padding: 3px 0 0 0;
       }
     }
     &__text {
@@ -78,5 +88,22 @@
         @include Text-Style-20;
       }
     }
+  }
+}
+
+@media (max-width: 1180px) {
+  .realise .realise-item {
+    padding: 15px 0 37px 0;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 20px;
+  }
+  .realise .realise-item__img {
+    width: 73px;
+    height: 152px;
+  }
+  .realise {
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
