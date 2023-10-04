@@ -1,0 +1,301 @@
+section(id='map').map.rel
+  .container
+    .title
+      h2 В наличии в аптеках
+    .map__body
+      .map__text 
+        span Отобразить аптеки по 
+        .select
+          input(type="hidden")
+          button.dropdown-button
+            span Московской области
+            svg.icon
+              use(xlink:href='#arrow')
+          ul.dropdown-list
+            .dropdown-list-wrap
+              li.dropdown-list__item._item-active(data-value='Mosk') Московской области
+              li.dropdown-list__item(data-value='Rost') Ростовской области
+              li.dropdown-list__item(data-value='Penz') Пензенской области
+              li.dropdown-list__item(data-value='Kursk') Курской области
+
+    .map__content.maps#maps  
+      section#Mosk.accord.accord--galery._is-active
+        .container
+          .accord__body._accord-js._accord-galery-js
+            nav.accord__nav._accord-nav-js
+              button(type='button')  Москва
+              button(type='button')  Балашиха
+              button(type='button')  Бронницы
+              button(type='button')  Видное
+              button(type='button')  Высоковск
+              button(type='button')  Дзержинский
+              button(type='button')  Дрезна
+              button(type='button')  Видное
+              button(type='button')  Волоколамск
+              button(type='button')  Балашиха
+              button(type='button')  Бронницы
+              button(type='button')  Высоковск
+              button(type='button')  Все аптеки
+
+            .accord__hidden._accord-hidden-js
+              .accord-hidden__wrap._accord-hidden-wrap-js
+                include moc.pug
+                include balash.pug
+                include br.pug
+                include vidn.pug
+                include drez.pug
+                include dzer.pug
+                include vi.pug
+                include vis.pug
+                include visok.pug
+                include vol.pug
+                include vi.pug
+                include drez.pug
+                ul.accord__content._accord-content-js
+      section#Rost.accord.accord--galery
+        .container
+          .accord__body._accord-js._accord-galery-js
+            nav.accord__nav._accord-nav-js
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+              button(type='button')  Ростов
+
+              button(type='button')  Все аптеки
+
+            .accord__hidden._accord-hidden-js
+              .accord-hidden__wrap._accord-hidden-wrap-js
+                include moc.pug
+                include balash.pug
+                include br.pug
+                include vidn.pug
+                include drez.pug
+                include dzer.pug
+                include vi.pug
+                include vis.pug
+                include visok.pug
+                include vol.pug
+                include vi.pug
+                include drez.pug
+                ul.accord__content._accord-content-js
+      section#Penz.accord.accord--galery
+        .container
+          .accord__body._accord-js._accord-galery-js
+            nav.accord__nav._accord-nav-js
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Penz
+              button(type='button')  Все аптеки
+
+            .accord__hidden._accord-hidden-js
+              .accord-hidden__wrap._accord-hidden-wrap-js
+                include moc.pug
+                include balash.pug
+                include br.pug
+                include vidn.pug
+                include drez.pug
+                include dzer.pug
+                include vi.pug
+                include vis.pug
+                include visok.pug
+                include vol.pug
+                include vi.pug
+                include drez.pug
+                ul.accord__content._accord-content-js
+      section#Kursk.accord.accord--galery
+        .container
+          .accord__body._accord-js._accord-galery-js
+            nav.accord__nav._accord-nav-js
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Kursk
+              button(type='button')  Все аптеки
+
+            .accord__hidden._accord-hidden-js
+              .accord-hidden__wrap._accord-hidden-wrap-js
+                include moc.pug
+                include balash.pug
+                include br.pug
+                include vidn.pug
+                include drez.pug
+                include dzer.pug
+                include vi.pug
+                include vis.pug
+                include visok.pug
+                include vol.pug
+                include vi.pug
+                include drez.pug
+                ul.accord__content._accord-content-js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') popup
+
+    button.btn.btn-success.but-wave(type='submit') submit
+
+    button(type='button' ).btn.btn-success.but-wave success
+    a(href="#!").btn.btn-success.but-wave success
+
+    button.btn.btn-empty(  type='button' name='empty' ) empty
+    a.btn.btn-empty( href='#!') empty
+
+    button(type='button').btn.btn-blue blue
+    a(href="#!").btn.btn-blue blue
+
+
+    .input-field
+      input#text1(type='text' name='text1' value='' placeholder=' Denzel Washington')
+      label(for='text1') обычный инпут text
+
+
+
+
+    form.search-field
+      input#search1(type='text' placeholder='search' name="" )
+      label(for='search1') search
+      .search-field__submit
+        input(type='submit')
+        svg
+          use(xlink:href='#search')
+
+    .textarea-field
+      textarea#textarea4(name="textarea4" row='20' placeholder="Введите текст" )
+      label(for='textarea4') textarea
+
+
+
+
+
+    .fildset-checkbox
+      .form-check
+        input#5(type='checkbox' name="")
+        label(for='5') Любимое место
+      .form-check
+        input#6(type='checkbox' name="")
+        label(for='6') Месторасположение
+      .form-check
+        input#7(type='checkbox' name="")
+        label(for='7') Гость торжественного события
+      .form-check
+        input#8(type='checkbox' name="")
+        label(for='8') Корпоративные мероприятия
+      .form-check
+        input#9(type='checkbox' name="")
+        label(for='9') СПА комплекс
+    fildset.fildset-radio
+      .form-check
+        input(type="radio" id="10" name='a' value='16-25' checked)
+        label(for="10")  от 16-25
+      .form-check
+        input(type="radio" id="11" name='a' value='26-35')
+        label(for="11")  от 26-35
+      .form-check
+        input(type="radio" id="12" name='a' value='36-45')
+        label(for="12")  36-45
+      .form-check
+        input(type="radio" id="13" name='a' value='55')
+        label(for="13")  от 45 и старше
+    fildset.fildset-radio.fildset-radio--sex
+      .form-check
+        input(type="radio" id="14" name='s' value='man' checked)
+        label(for="14")  Мужчина
+          svg
+            use(xlink:href='#Union')
+      .form-check
+        input(type="radio" id="15" name='s' value='frau')
+        label(for="15")  Женщина
+          svg
+            use(xlink:href='#Union')
+    .fildset-radio.fildset-radio--tiers
+      input(type="radio" id="tieresyes" name='tieres' value='yes' checked)
+      label(for="tieresyes")  Да
+      span /
+      input(type="radio" id="tieresnot" name='tieres' value='not')
+      label(for="tieresnot")  Нет
+    fildset.fildset-rating
+      .fildset-rating__items
+        input(type="radio" id="rating5" name='rating' value='5' )
+        label(for="rating5")
+          svg
+            use(xlink:href='#star-empty')  
+        input(type="radio" id="rating4" name='rating' value='4' )
+        label(for="rating4")
+          svg
+            use(xlink:href='#star-empty') 
+        input(type="radio" id="rating3" name='rating' value='3' )
+        label(for="rating3") 
+          svg
+            use(xlink:href='#star-empty') 
+        input(type="radio" id="rating2" name='rating' value='2' )
+        label(for="rating2") 
+          svg
+            use(xlink:href='#star-empty') 
+        input(type="radio" id="rating1" name='rating' value='1' )
+        label(for="rating1") 
+          svg
+            use(xlink:href='#star-empty') 
+
+    ._range-wrap-js
+      .rangeValue 0
+      input.myRange(type='range' name='myRange' min='0' max='100' value='0' step='1')
+
+    .select
+      input(type="hidden")
+      button.dropdown-button
+        span custom select
+        svg.icon
+          use(xlink:href='#down')
+      ul.dropdown-list
+        .dropdown-list-wrap
+          li.dropdown-list__item(data-value='Notes') Notes
+          li.dropdown-list__item(data-value='Photo') Photo
+          li.dropdown-list__item(data-value='Dictionary') Dictionary
+    div(style=' width:250px; height:250px;').rel
+      .imgs
+        picture
+          source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
+          source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+          source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
+          img(src='./img/paralax.webp' alt='img')
+    ._burger
+      span
+    ._burger._is-active
+      span

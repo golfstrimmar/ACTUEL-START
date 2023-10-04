@@ -6,10 +6,14 @@ export const Select = (select) => {
     $list = select.querySelector(".dropdown-list"),
     items = $list.querySelectorAll(".dropdown-list__item"),
     $svg = $button.querySelector("svg"),
-    $dropHidden = $button.querySelector("._drop-hidden");
-
+    $dropHidden = $button.querySelector("._drop-hidden"),
+    $MapsGals = [
+      ...document.querySelector(" #maps").querySelectorAll(".accord "),
+    ];
+  var $id = "";
   select.addEventListener("click", (e) => {
     e.preventDefault;
+
     let target = e.target;
     if (target.closest(".dropdown-button") === $button) {
       $button.classList.toggle("dropdown-button-active");
@@ -27,10 +31,19 @@ export const Select = (select) => {
           item.classList.add("_item-active");
           e.stopPropagation();
           $button.querySelector("span").innerHTML = item.innerHTML;
-          $select.querySelector("input").value = item.innerHTML;
+          $select.querySelector("input").value =
+            item.getAttribute("data-value");
           $list.classList.remove("_is-active");
           $button.classList.remove("dropdown-button-active");
           $svg.classList.remove("_is-active");
+          $MapsGals.forEach((cell) => {
+            $id = cell.getAttribute("id");
+            if ($id == item.getAttribute("data-value")) {
+              cell.classList.add("_is-active");
+            } else {
+              cell.classList.remove("_is-active");
+            }
+          });
         });
       });
     }

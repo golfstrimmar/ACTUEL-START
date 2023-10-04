@@ -1,0 +1,61 @@
+.map {
+  &__title {
+  }
+  &__body {
+  }
+
+  &__text {
+    .select {
+      display: inline-block;
+      width: max-content;
+      margin: 0 0 0 10px;
+      button {
+        span {
+          @include Text-Style-51;
+        }
+        svg {
+          right: -20px;
+          fill: $jungle-green;
+        }
+        &:hover {
+          svg {
+            fill: $hover;
+          }
+        }
+      }
+    }
+  }
+  #maps {
+    nav {
+      display: grid;
+      // grid-auto-flow: column;
+      grid-template-columns: repeat(auto-fill, minmax(100px, max-content));
+      column-gap: 10px;
+      row-gap: 10px;
+
+      button {
+        white-space: nowrap;
+      }
+      margin: 25px 0;
+    }
+
+    section {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      &._is-active {
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+      }
+    }
+    &__ {
+    }
+    &__ {
+    }
+    &__ {
+    }
+    &__ {
+    }
+  }
+}
