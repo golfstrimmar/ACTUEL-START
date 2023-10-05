@@ -313,7 +313,7 @@
         z-index: 4;
         svg {
           width: 24px;
-          height: 24px;
+          height: 26px;
           @include transition;
         }
       }
@@ -355,7 +355,8 @@ button.common-button {
     }
   }
 }
-@media (max-width: 1180px) {
+
+@media (max-width: 1140px) {
   .descr {
     max-width: 500px;
     margin: 0 auto;
@@ -426,5 +427,18 @@ button.common-button {
     grid-template-columns: 1fr;
     column-gap: 0px;
     row-gap: 10px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1140px) {
+  .descr {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .descr .descr-soc {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fill, minmax(24px, max-content));
+    column-gap: 60px;
+    row-gap: 10px;
+    width: 100%;
   }
 }

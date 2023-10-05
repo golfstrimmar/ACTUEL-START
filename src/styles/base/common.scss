@@ -159,19 +159,21 @@ a {
   }
 }
 
-@media (min-width: 1080px) and (max-width: 1180px) {
+@media (min-width: 601px) and (max-width: 1180px) {
   .container {
     margin: 0 20px;
     max-width: calc(100% - 40px);
   }
 }
 
-@media (max-width: 1079px) {
+@media (max-width: 600px) {
   .container {
     margin: 0 20px;
     max-width: calc(100% - 40px);
   }
-  .inner {
-    padding: 85px 0 0 0;
+  .title {
+    h3 {
+      font-size: 25px;
+    }
   }
 }

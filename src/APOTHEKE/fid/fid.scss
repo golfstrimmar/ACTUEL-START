@@ -2,7 +2,6 @@
   &__rate {
     @include flex-aligne-center;
     display: grid;
-    column-gap: 20px;
 
     grid-template-areas: "a b c";
     grid-template-columns: repeat(3, max-content);
@@ -42,6 +41,9 @@
   }
   .right-shild {
     margin: 0 0 40px 0;
+    &:last-child {
+      margin: 0 0 0 0;
+    }
   }
   .caract__body {
     margin: 24px 0 0 0;
@@ -225,7 +227,7 @@
   }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 600px) {
   .fid__rate {
     grid-template-areas: "a a a" " b b b" "c c c";
     grid-template-columns: 1fr;

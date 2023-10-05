@@ -1,0 +1,53 @@
+.crambs {
+  margin: 30px 0;
+  &__title {
+  }
+
+  &__body {
+    @include flex-aligne-center;
+  }
+  svg {
+    fill: $jungle-green;
+    width: 25px;
+    height: 9px;
+  }
+  a {
+    @include hover;
+    span {
+      @include Text-Style-10;
+      @include transition;
+      color: $jungle-green;
+    }
+    &:not(._product) {
+      span {
+        border-bottom: 1px dashed $jungle-green;
+      }
+      &:hover {
+        span {
+          border-bottom: 1px dashed $hover;
+          color: $hover;
+        }
+      }
+    }
+
+    &._product {
+      @include Text-Style-9;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+}
+@media (max-width: 600px) {
+  .crambs {
+    margin: 20px 0;
+    &__title {
+    }
+
+    &__body {
+      @include flex-aligne-center;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 10px;
+    }
+  }
+}

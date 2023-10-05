@@ -199,10 +199,11 @@
     margin: auto 0 0 0;
   }
 }
-@media (max-width: 1180px) {
+@media (max-width: 1140px) {
   .caract {
     max-width: 500px;
-    margin: 0 auto;
+    align-items: center;
+    margin: 40px auto 0;
   }
   .caract__nav {
     grid-template-columns: 1fr;
@@ -241,6 +242,7 @@
     padding: 20px 0 0;
     margin: 30px auto;
     max-width: 350px;
+    width: 100%;
   }
   .caract .right-shild__title h4 {
     font-size: 70px;
@@ -256,5 +258,25 @@
   }
   .caract__right-title h3 {
     font-size: 18px;
+  }
+  .caract__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .caract__right-items {
+    width: 100%;
+  }
+}
+@media (min-width: 601px) and (max-width: 1140px) {
+  .caract {
+    max-width: 5000px;
+    align-items: center;
+    margin: 40px auto 0;
+  }
+  .caract__right {
+    max-width: 600px;
+    width: 100%;
+    margin: 30px auto 0px;
   }
 }

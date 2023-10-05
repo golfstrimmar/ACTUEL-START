@@ -1,5 +1,5 @@
 .rec {
-  margin: 80px 0 0 0;
+  margin: 40px 0 0 0;
   &__title {
     h2 {
       @include Text-Style-70;
@@ -112,7 +112,7 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
 }
-@media (max-width: 1079px) {
+@media (max-width: 1034px) {
   .rec__title h2 {
     font-size: 16px;
   }
