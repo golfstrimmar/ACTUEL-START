@@ -208,6 +208,19 @@
         fill: $hover;
       }
     }
+    span.cart-count {
+      width: 18.6px;
+      height: 19px;
+      box-shadow: 0.4px 2px 14.4px 0 rgba(0, 0, 0, 0.08);
+      background-color: $sunflower-yellow-two;
+      @include flex-center;
+      @include hover;
+      @include transition;
+      border-radius: 50%;
+      position: absolute;
+      top: 21px;
+      right: -5px;
+    }
   }
 }
 
@@ -512,10 +525,16 @@
   .info__links {
     justify-content: end;
   }
-  .info__link svg {
-    width: 20px;
-    height: 20px;
+  .info__link {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    span.cart-count {
+      top: 16px;
+    }
   }
+
   .menu {
     width: 100vw;
     height: calc(100vh - 166px);

@@ -17,9 +17,13 @@
     justify-content: space-between;
     padding: 0 0 6px 0;
     a {
+      @include hover;
+      @include transition;
       span {
         @include Text-Style-36;
         padding: 0 0 4px 0;
+        @include hover;
+        @include transition;
       }
       &._is-active {
         span {

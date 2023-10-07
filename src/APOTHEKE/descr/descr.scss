@@ -56,14 +56,15 @@
   }
   &__nav {
     @include flex-aligne-center;
-    @include transition;
+
     justify-content: space-between;
     border-bottom: 1px solid $white-four;
     a {
       @include Text-Style-13;
       padding: 0 0 13px 0;
-
-      &._active-descr-link {
+      @include transition;
+      @include hover;
+      &._is-active {
         @include Text-Style-12;
         position: relative;
 
@@ -76,10 +77,6 @@
           height: 4px;
           background-color: $jungle-green;
         }
-      }
-
-      span {
-        @include Text-Style-16;
       }
     }
   }

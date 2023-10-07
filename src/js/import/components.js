@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Lazy();
   }
 
-  if (document.querySelector("#bunner-link")) {
+  if (document.querySelector("._link")) {
     ScrollLink();
   }
 
