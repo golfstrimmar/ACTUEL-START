@@ -1,21 +1,18 @@
 .do {
   &__body {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, 270px);
-    // column-gap: 30px;
-    // row-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+    column-gap: 30px;
+    row-gap: 30px;
     padding: 50px 0;
-    display: table;
+    min-height: 439px;
   }
   &__item {
-    float: left;
     margin: 0 30px 0 0;
   }
 }
 
 .do-item {
-  width: 270px;
-  min-height: 439px;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -29,8 +26,7 @@
     padding: 15px 20px 12px;
     align-items: center;
     min-height: 80px;
-    h3{
-
+    h3 {
     }
     svg {
       width: 30px;
@@ -44,18 +40,16 @@
   }
   &__line {
     padding: 0 0 13px 0;
-    h5{
+    h5 {
     }
     p {
-      &:nth-child(1){
-
+      &:nth-child(1) {
       }
-      &:nth-child(2){
-
+      &:nth-child(2) {
       }
     }
   }
- 
+
   &__footer {
     cursor: pointer;
     padding: 10px 17px;
