@@ -45,7 +45,7 @@
     border-radius: 50%;
     width: 26px;
     height: 26px;
-    border: solid 2px $dark-sea-green;
+    border: solid 2px green;
   }
 
   input[type="checkbox"]:checked + label::after,
@@ -58,8 +58,8 @@
     top: 0;
     left: 0;
     transform: translate(6px, 6px);
-    border: solid 2px $jungle-green;
-    background-color: $jungle-green;
+    border: solid 2px green;
+    background-color: green;
     @include transition;
   }
   input[type="checkbox"]:checked + label::after {
