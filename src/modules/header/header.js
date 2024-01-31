@@ -25,14 +25,14 @@ export const Header = () => {
     burger.classList.remove("_is-active");
   };
 
-  const activeItemHEAD = (event) => {
-    var temp = event.target.closest(".menu__link");
-    [...document.querySelectorAll(".menu__link ")].forEach((cell) => {
-      temp == cell
-        ? cell.classList.add("menu__link--active")
-        : cell.classList.remove("menu__link--active");
-    });
-  };
+  // const activeItemHEAD = (event) => {
+  //   var temp = event.target.closest(".menu__link");
+  //   [...document.querySelectorAll(".menu__link ")].forEach((cell) => {
+  //     temp == cell
+  //       ? cell.classList.add("menu__link--active")
+  //       : cell.classList.remove("menu__link--active");
+  //   });
+  // };
 
   document.addEventListener("click", function (event) {
     if (event.target.closest(".header__burger")) {
@@ -45,9 +45,9 @@ export const Header = () => {
       }
     }
 
-    if (event.target.closest(".menu__link")) {
-      activeItemHEAD(event);
-    }
+    // if (event.target.closest(".menu__link")) {
+    //   activeItemHEAD(event);
+    // }
 
     if (event.target.closest(".menu-link-js")) {
       var temp = event.target.closest(".menu-link-js");

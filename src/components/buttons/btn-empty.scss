@@ -1,9 +1,25 @@
 .btn-empty {
-  border: solid 1px green;
+  border: solid 1px $akzent;
   background-color: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $akzent;
+  padding: 16px;
+  border-radius: 16px;
+  svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 8px;
+    stroke: $akzent;
+    @include transition;
+  }
   &:hover {
-    color: lighten(green, 25%);
-    border: solid 1px lighten(green, 25%);
+    color: $hover;
+    border: solid 1px $hover;
     box-shadow: inset 0 0 15px rgba(255, 255, 255, 1);
+    svg {
+      stroke: $hover;
+    }
   }
 }
