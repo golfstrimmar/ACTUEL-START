@@ -1,35 +1,99 @@
 .footer {
   position: relative;
-  background: rgb(161, 190, 243);
+  border-top: 2px solid rgb(0, 128, 0);
+  background: rgb(244, 245, 246);
   margin: auto 0 0 0;
-  padding: 30px 0;
+  padding: 40px 24px 24px;
+  &__col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    li {
+      font-size: 16px;
+      line-height: 150%;
+      color: $black-1;
+      list-style-type: disc;
+    }
+  }
+  .phone {
+    svg {
+      width: 31px;
+      height: 31px;
+      @include transition;
+    }
+    span {
+      font-size: 32px;
+      @include transition;
+      font-weight: 600;
+      line-height: 120%;
+      color: $black-text;
+    }
+    &:hover {
+      span {
+        color: $hover;
+        @include transition;
+      }
+    }
+  }
+}
+.footer__title {
+  h2 {
+    padding: 0px 0 0 24px;
+    font-weight: 600;
+    line-height: 120%;
+  }
 }
 
 .footer__body {
   display: grid;
-  grid-template-columns: 10% 20% 20% 20% 5%;
-  column-gap: 10px;
+  grid-template-columns: 280px 280px 1fr;
+  column-gap: 16px;
   align-items: center;
-  justify-content: space-between;
+  padding: 24px 40px 0;
 }
 
-.footer__cheap {
-  justify-self: right;
-  width: 50px;
-  height: 50px;
-}
-
-.footer__col--info {
+.footer__col-info {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  justify-self: end;
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $black-2;
+    padding: 0 0 0 40px;
+  }
 }
 
 .footer__low {
-  text-align: center;
-  margin: 20px 0 0 0;
+  padding: 40px 24px 0;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 144px;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    svg {
+      width: 213px;
+      height: 40px;
+    }
+  }
+  .footer__pol {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $black-3;
+    display: flex;
+    column-gap: 30px;
+    a {
+      color: $black-3;
+      &:hover {
+        color: $hover;
+      }
+    }
+  }
 }
-
 @media (min-width: 901px) and (max-width: 1024px) {
   .footer {
     padding: 30px 0;

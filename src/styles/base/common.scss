@@ -17,7 +17,7 @@ body {
 
 .container {
   outline: 1px solid #4164ff;
-  max-width: 1280px;
+  max-width: 1328px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -25,6 +25,7 @@ body {
 
 .inner {
   position: relative;
+  padding: 108px 0 0 0;
 }
 .svgSpriteWrap {
   position: absolute;
@@ -35,7 +36,12 @@ a {
   cursor: pointer;
   color: $black-text;
   &:hover {
-    color: lighten(green, 25%);
+    color: $hover;
+
+    span {
+      color: $hover;
+      @include transition;
+    }
   }
 }
 

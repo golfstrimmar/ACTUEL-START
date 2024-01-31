@@ -1,16 +1,39 @@
 footer#footer.footer
   .container
+    .footer__title
+      h2 Наши услуги
     .footer__body
-      a(href="#!").footer__logo.logo
-        img(src='./img/logo.svg' alt='logo')
-        p.ttu slogan
-      .footer__col
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-      .footer__col
-        span Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
+      ul.footer__col
+        li Контроль ошибок по НДС
+        li Контроль ошибок в первичных документах
+        li Расчет и формирование регистров ЕСХН
+        li Актуальная отчетность АПК
+      ul.footer__col
+        li Электронный архив копий документов
+        li Распределение незавершенки для агропредприятий
+        li Подготовка и проведение годовой инвентаризация
+      .footer__col-info 
+        a.footer__phone(href='#!').phone
+          svg
+            use(xlink:href='#phone')
+          span +8 (800) 123-45-67 
+        p По будням с 10:00 до 18:00
+        p По выходным с 10:00 до 16:00
+        a.footer__phone(href='#!').phone
+          svg
+            use(xlink:href='#mail')
+          span 1c@agrobuh.ru 
 
     .footer__low
-      a.footer__pol(href='#!') @Lorem ipsum dolor sit amet.
-a#_returnToTop(href="#header").btn-up_hide
-  svg
-    use(xlink:href='#chevron-right')
+      a(href="#!").footer__pol.logo
+        svg
+          use(xlink:href='#logo')
+      .footer__pol
+        a(href='#!') Пользовательское соглашение 
+        a(href='#!') Политика конфиденциальности
+        a(href='#!') Оферта
+      .footer__pol
+        a(href='#!') @ Сopyrights 2024 All right reserveв
+//- a#_returnToTop(href="#header").btn-up_hide
+//-   svg
+//-     use(xlink:href='#chevron-right')

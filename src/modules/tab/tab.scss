@@ -3,6 +3,7 @@
     display: table;
   }
   .kab {
+    position: relative;
     &__title {
       @include transition;
       display: flex;
@@ -19,7 +20,7 @@
     }
     &__hidden {
       position: absolute;
-      background: $white;
+      top: 120%;
       p {
         padding: 10px;
       }
@@ -50,6 +51,7 @@
   }
   &._is-active {
     & > ._kab-hidden-js {
+      background: $white;
       border-color: $black-text;
       @include transition;
       grid-template-rows: 1fr;
