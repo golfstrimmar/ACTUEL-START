@@ -47,16 +47,27 @@ export const Tab = () => {
     if (!e.target.closest("._tabs-container-js ")) {
       MyTab.resetAll();
     }
- 
+    if (e.target.closest(".menu-tab__item")) {
+      MyTab.resetAll();
+      let headItems = [
+        ...e.target
+          .closest("._tabs-container-js ")
+          .querySelectorAll(".menu-tab__item"),
+      ];
+      headItems.forEach((cell) => {
+        cell.classList.remove("_is-active");
+      });
+      e.target.closest(".menu-tab__item").classList.add("_is-active");
+    }
 
     if (e.target.closest("._tabs-container-js ")) {
       var tempContainer = e.target.closest("._tabs-container-js ");
 
       tabsConteiners.forEach((cell) => {
         if (cell !== tempContainer) {
-           [...cell.querySelectorAll("._kab-js")].forEach((item) => {
-             item.classList.remove("_is-active");
-           });
+          [...cell.querySelectorAll("._kab-js")].forEach((item) => {
+            item.classList.remove("_is-active");
+          });
         }
       });
     }

@@ -11,7 +11,19 @@ header#header.header
         .header__close
           //- svg
           //-   use(xlink:href='#x-lg')
-        ul.menu__list
+        ul.menu__list.tab.rel._tabs-container-js
+          .tab__body._tab-body-js
+            .kab._kab-js
+              .kab__title._kab-title-js._hover
+                h4 Наши услуги
+                svg
+                  use(xlink:href='#arrow-down')
+              .kab__hidden._kab-hidden-js 
+                ._kab-wrap-js
+                  a(href="#!").menu-tab__item Category number one
+                  a(href="#!").menu-tab__item Category number two
+                  a(href="#!").menu-tab__item Category number three
+                  a(href="#!").menu-tab__item Category number four
           //- li.menu__item.rel
           //- .menu__link.menu-link-js.menu__link--active buy
           //-   .menu__tab.menu-tab
@@ -23,15 +35,15 @@ header#header.header
           //-   a.menu__link(href='#!' rel='#posts') Posts
           //- li.menu__item
           //-   a.menu__link(href='#!' rel='#galery') Projects
-          li.menu__item.rel
-            .menu__link.menu-link-js._hover Наши услуги
-              svg
-                use(xlink:href='#arrow-down')
-            .menu__tab.menu-tab
-              a(href="#!").menu-tab__item Category number one
-              a(href="#!").menu-tab__item Category number two
-              a(href="#!").menu-tab__item Category number three
-              //- include ../side-menu/side-menu.pug
+          //- li.menu__item.rel
+          //-   .menu__link.menu-link-js._hover Наши услуги
+          //-     svg
+          //-       use(xlink:href='#arrow-down')
+          //-   .menu__tab.menu-tab
+          //-     a(href="#!").menu-tab__item Category number one
+          //-     a(href="#!").menu-tab__item Category number two
+          //-     a(href="#!").menu-tab__item Category number three
+          //- include ../side-menu/side-menu.pug
       .header__info.info
         a.info__phone(href='#!')
           svg

@@ -8,7 +8,33 @@
   border: 1px solid transparent;
   box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.1);
 
-  // background-image: url("/dist/img/img-1.png")
+  ._kab-js {
+    width: 100%;
+  }
+  .kab__title {
+    @include transition;
+    // text-transform: uppercase;
+    cursor: pointer;
+    h4 {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      @include transition;
+      margin: 0 0 0 10px;
+      stroke: $black;
+    }
+
+    &:hover {
+      svg {
+        stroke: $hover;
+      }
+    }
+  }
 }
 
 .header .container {
@@ -19,9 +45,9 @@
   position: relative;
   height: 100%;
   display: grid;
-  grid-template-columns: 319px max-content max-content;
+  grid-template-columns: 320px max-content max-content;
   width: 100%;
-  gap: 0 20px;
+  gap: 0 68px;
   justify-content: space-between;
 }
 
@@ -39,19 +65,15 @@
   gap: 0 10px;
   svg {
     height: 60px;
-    width: 319px;
+    width: 320px;
   }
 }
 
 /*=====================*/
 .header__menu {
   position: relative;
-}
-
-.menu__list {
   display: flex;
-  justify-content: space-between;
-  height: 100%;
+  align-items: center;
 }
 
 .menu__item {
@@ -61,69 +83,45 @@
   /* border: 1px solid transparent; */
 }
 
-.menu__link {
-  // padding: 0 10px;
-  @include transition;
-  // text-transform: uppercase;
-  cursor: pointer;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  svg {
-    width: 16px;
-    height: 16px;
-    @include transition;
-    margin: 0 0 0 10px;
-    stroke: $black;
-  }
-  &:hover {
-    svg {
-      stroke: $hover;
-    }
-  }
-  // &--active {
-  //   background: green;
-  // }
+// .menu__link {
+//   &._is-active {
+//     & ~ .menu-tab {
+//       max-height: 190px;
+//       height: 190px;
+//       outline: solid 1px $black-text;
+//       animation: pul 0.3s linear;
+//       animation-fill-mode: forwards;
 
-  &._is-active {
-    & ~ .menu-tab {
-      max-height: 190px;
-      height: 190px;
-      outline: solid 1px $black-text;
-      animation: pul 0.3s linear;
-      animation-fill-mode: forwards;
+//       .smenu__item:hover {
+//         & > .smenu-title-js {
+//           background: rgb(147, 240, 185);
+//           svg {
+//             transform: rotate(90deg);
+//           }
+//         }
+//         & > .smenu__hidden {
+//           animation: pulse 0.3s linear;
+//           animation-fill-mode: forwards;
+//         }
+//       }
+//     }
+//     svg {
+//       transform: rotate(180deg);
+//     }
+//   }
+// }
 
-      .smenu__item:hover {
-        & > .smenu-title-js {
-          background: rgb(147, 240, 185);
-          svg {
-            transform: rotate(90deg);
-          }
-        }
-        & > .smenu__hidden {
-          animation: pulse 0.3s linear;
-          animation-fill-mode: forwards;
-        }
-      }
-    }
-    svg {
-      transform: rotate(180deg);
-    }
-  }
-}
-
-@keyframes pul {
-  0% {
-    overflow: hidden;
-  }
-  99% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: visible;
-  }
-}
+// @keyframes pul {
+//   0% {
+//     overflow: hidden;
+//   }
+//   99% {
+//     overflow: hidden;
+//   }
+//   100% {
+//     overflow: visible;
+//   }
+// }
 
 .menu__tab {
   transition: all 0.3s;
@@ -146,11 +144,12 @@
     align-items: center;
     @include transition;
     &:hover {
-      background-color: rgb(54, 54, 56);
+      background-color: lighten($black-text, 50%);
     }
-  }
-  .smenu__body {
-    width: 100%;
+    &._is-active {
+      color: $hover;
+      background-color: lighten($black-text, 25%);
+    }
   }
 }
 
@@ -159,8 +158,9 @@
   display: grid;
   align-items: center;
   justify-content: space-between;
-  grid-template-columns: repeat(3, max-content) 120px;
-  column-gap: 20px;
+  grid-template-columns: repeat(3, max-content);
+  padding: 0 28px 0 0;
+  column-gap: 24px;
   &__phone {
     &:hover {
       svg {
