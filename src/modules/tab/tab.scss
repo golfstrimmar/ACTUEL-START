@@ -4,7 +4,6 @@
   }
   .kab {
     &__title {
-      padding: 10px;
       @include transition;
       display: flex;
       justify-content: space-between;
