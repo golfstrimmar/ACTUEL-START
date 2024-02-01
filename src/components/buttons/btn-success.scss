@@ -1,7 +1,24 @@
 .btn-success {
+  background-color: $akzent;
+  color: $white;
+  column-gap: 8px;
   &:hover {
-    color: lighten(green, 25%);
-    border: solid 1px lighten(green, 25%);
+    color: $hover;
     box-shadow: inset 0 0 15px rgba(255, 255, 255, 1);
+    svg {
+      stroke: $hover;
+      @include transition;
+      fill: $hover;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: $white;
+    fill: $white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 }

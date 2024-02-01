@@ -1,20 +1,26 @@
 section#bunner.bunner
   .bunner__bg.imgs
     picture
-      source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
+      source(srcset='./img/bunner.webp ' type='image/webp' media='(min-width: 1200px)')
       source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
       source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
-      img(src='./img/paralax.webp' alt='img')
+      img(src='./img/bunner.webp' alt='img')
 
   .container
     .bunner__body
       .bunner__title
-        h1 Lorem ipsum dolor sit amet.
-      a#bunner-link( href='#best') scroll->#best
+        h2 Контроль ошибок по НДС
       .bunner__text
-        p Lorem ipsum .
-      a.popups-init-js.bunner__button(rel='#popupPlyr1' href='#!') video1
-        svg
-          use(xlink:href='#right')
+        p Регулярная проверка и контроль помогают предотвращать ошибки, связанные с НДС, что в свою очередь способствует соблюдению законодательных требований и уменьшению рисков финансовых потерь и штрафов.
+
+      .bunner__buttons
+        a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') 
+          span Заказать 
+          svg
+            use(xlink:href='#arrow-right')
+        a.btn.btn-empty.popups-init-js(rel='#popup1' href='#!') 
+          span Задать вопрос
+          svg
+            use(xlink:href='#arrow-right')
 
 

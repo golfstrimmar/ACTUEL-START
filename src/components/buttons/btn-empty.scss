@@ -6,10 +6,10 @@
   line-height: 24px;
   color: $akzent;
   border-radius: 16px;
+  column-gap: 8px;
   svg {
     width: 24px;
     height: 24px;
-    margin: 0 0 0 8px;
     stroke: $akzent;
     @include transition;
   }

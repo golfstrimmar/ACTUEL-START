@@ -1,6 +1,7 @@
 .bunner {
-  min-height: 100vh;
+  max-height: 600px;
   position: relative;
+  padding: 136px 24px;
 }
 
 .bunner .container {
@@ -9,36 +10,34 @@
 }
 
 .bunner__body {
-  padding: 300px 300px 0 0px;
+  max-width: 756px;
+  padding: 24px;
 }
 .bunner__title {
-  h1 {
-    font-size: 60px;
-    font-family: "Inter", sans-serif;
-    color: #1763b2;
-    text-shadow: 0px 0px 4px #bdd8f5;
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0px;
+    color: $akzent;
   }
 }
 .bunner__text {
-  margin: 50px 0 30px 0;
-  text-shadow: 0px 0px 4px #1763b2;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: $black-1;
 }
 
-.bunner__button {
-  display: inline-block;
-
-  svg {
-    width: 20px;
-    height: 20px;
-    fill: green;
-    margin: 0 0 0 10px;
-  }
-  &:hover {
-    svg {
-      fill: lighten(green, 25%);
-    }
+.bunner__buttons {
+  margin: 24px 0 0 0;
+  display: flex;
+  column-gap: 24px;
+  align-items: center;
+  a {
+    border-radius: 16px;
+    width: 200px;
+    height: 56px;
   }
 }
-// .slider-main-js {
-//   max-height: 100%;
-// }

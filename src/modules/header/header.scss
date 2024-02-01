@@ -145,11 +145,11 @@
     align-items: center;
     @include transition;
     &:hover {
-      background-color: lighten($black-text, 50%);
+      background-color: $bg-grey;
     }
     &._is-active {
       color: $hover;
-      background-color: lighten($black-text, 25%);
+      background-color: lighten($black-3, 10%);
     }
   }
 }
