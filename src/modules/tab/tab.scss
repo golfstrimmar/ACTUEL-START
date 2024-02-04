@@ -41,7 +41,7 @@
         }
       }
       & > .kab__hidden {
-        background-color: rgb(229, 229, 248);
+        background-color: rgb(143, 189, 248);
       }
     }
   }
@@ -62,6 +62,45 @@
   &._is-active {
     & > ._kab-hidden-js {
       grid-template-rows: 1fr;
+    }
+  }
+}
+
+#tab-ver {
+  z-index: 1000;
+  position: relative;
+  .tab {
+    &__body {
+      min-width: 300px;
+      display: table;
+    }
+    .kab {
+      position: relative;
+      &__hidden {
+        position: absolute;
+        top: 120%;
+        p {
+          padding: 10px;
+        }
+      }
+      &._is-active {
+        & > .kab__title {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  ._kab-js {
+    float: left;
+    width: 50%;
+    &._is-active {
+      & > ._kab-hidden-js {
+        grid-template-rows: 1fr;
+        border: 1px solid black;
+      }
     }
   }
 }
