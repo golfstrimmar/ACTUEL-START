@@ -8,11 +8,49 @@
         video#playerFull2.slider-video.playerFull1(playsinline='' controls='')
           source(src='./video/video-2.mp4' type='video/mp4')
 
-      #popup1.popup__content
-        include ../form/form.pug
-        include ../form/form.pug
-        include ../form/form.pug
-        include ../form/form.pug
+      #popup1.popup__content.client
+        .client__title
+          h2 Заказать обратный звонок
+        form.client__form
+          .client__block._a.client-block 
+            .client-block__title 
+              h3 Удобное время
+            .client-block__selects
+              .select
+                input(type="hidden")
+                button.dropdown-button
+                  span 1
+                  svg.icon
+                    use(xlink:href='#chevron-down')
+                ul.dropdown-list
+                  .dropdown-list-wrap
+                    - var n = 1;
+                    while n < 25
+                      li.dropdown-list__item(data-value=n)=n++
+
+              .select
+                input(type="hidden")
+                button.dropdown-button
+                  span 1
+                  svg.icon
+                    use(xlink:href='#chevron-down')
+                ul.dropdown-list
+                  .dropdown-list-wrap
+                    - var n = 1;
+                    while n < 61
+                      li.dropdown-list__item(data-value=n)=n++
+          .client__block._b.client-block 
+            .client-block__title 
+              h3 Телефон
+            .input-field
+              input#tel1(type='tel' name='tel1' value='' placeholder=' Denzel Washington')
+              label.text-field__label(for='tel1') +7 (---) --- -- --
+          a.client__button._c.btn.btn-success.but-wave(  href='#!') 
+            span Жду звонка 
+            svg
+              use(xlink:href='#arrow-right')
+
+
       //- #popup2.popup__content
       //-   p popup2
       //-   p popup2
@@ -54,4 +92,4 @@
       //-       img(src='' alt='img')
     i.popup__close.popup-close-js
       svg
-        use(xlink:href='#x-lg')
+        use(xlink:href='#x')

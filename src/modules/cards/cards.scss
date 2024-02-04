@@ -1,20 +1,62 @@
 .cards {
-  &__card {
-  }
-
   &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 410px);
+    column-gap: 24px;
+    row-gap: 24px;
+    justify-content: space-between;
+    padding: 128px 24px;
   }
+  &__card {
+    border: 1px solid rgb(230, 232, 236);
+    border-radius: 8px;
+    // box-shadow: 0px 40px 32px -24px rgba(15, 15, 15, 0.1);
+    // background: rgb(252, 252, 253);
+  }
+}
 
-  &__ {
+.inf-card {
+  padding: 80px 24px 24px;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 160px;
+    border-bottom: 2px solid rgb(0, 128, 0);
   }
-  &__ {
+  &__img {
+    width: 80px;
+    height: 80px;
   }
-  &__ {
+  &__title {
+    margin: 18px 0 0 0;
+    padding: 0 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 120%;
+      color: $akzent;
+    }
   }
-  &__ {
+  &__text {
+    margin: 16px 0 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: $black-text1;
   }
-  &__ {
+  &:nth-child(1) {
+    .inf-card__title {
+      max-width: 180px;
+    }
   }
-  &__ {
+  &:nth-child(4) {
+    .inf-card__title {
+      max-width: 240px;
+    }
   }
 }
