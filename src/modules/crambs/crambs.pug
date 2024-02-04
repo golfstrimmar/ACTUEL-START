@@ -1,19 +1,32 @@
-section(id='crambs').crambs.rel
-  .container
-    .crambs__body
-      a(href="!#")
+if page.index
+  section(id='crambs').crambs.rel
+    .container
+      .crambs__body
+        a(href="!#")
+          svg
+            use(xlink:href='#home-smile')
         svg
-          use(xlink:href='#home-smile')
-      svg
-        use(xlink:href='#chevron-right')
-      a(href="!#").crambs__link Каталог
-      svg
-        use(xlink:href='#chevron-right')
-      a(href="!#").crambs__link Женская одежда
-      svg
-        use(xlink:href='#chevron-right')
-      a(href="!#").crambs__link Белье
-    .index-title 
-      h1 Боди без рукавов, на широких бретелях
+          use(xlink:href='#chevron-right')
+        a(href="!#").crambs__link Каталог
+        svg
+          use(xlink:href='#chevron-right')
+        a(href="!#").crambs__link Женская одежда
+        svg
+          use(xlink:href='#chevron-right')
+        a(href="!#").crambs__link Белье
+      .index-title.ttu 
+        h1.ttu  Боди без рукавов, на широких бретелях
+if page.services
+  section(id='crambs').crambs.crambs--services.rel
+    .container
+      .crambs__body
+        a(href="!#")
+          svg
+            use(xlink:href='#home-smile')
+        svg
+          use(xlink:href='#chevron-right')
+        a(href="!#").crambs__link Наши услуги
+      .index-title 
+        h1 Наши услуги
 
 

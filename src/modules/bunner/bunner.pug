@@ -1,26 +1,52 @@
-section#bunner.bunner
-  .bunner__bg.imgs
-    picture
-      source(srcset='./img/bunner.webp ' type='image/webp' media='(min-width: 1200px)')
-      source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
-      source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
-      img(src='./img/bunner.webp' alt='img')
+if page.index
+  section#bunner.bunner
+    .bunner__bg.imgs
+      picture
+        source(srcset='./img/bunner.webp ' type='image/webp' media='(min-width: 1200px)')
+        source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+        source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
+        img(src='./img/bunner.webp' alt='img')
 
-  .container
-    .bunner__body
-      .bunner__title
-        h2 Контроль ошибок по НДС
-      .bunner__text
-        p Регулярная проверка и контроль помогают предотвращать ошибки, связанные с НДС, что в свою очередь способствует соблюдению законодательных требований и уменьшению рисков финансовых потерь и штрафов.
+    .container
+      .bunner__body
+        .bunner__title
+          h2 Контроль ошибок по НДС
+        .bunner__text
+          p Регулярная проверка и контроль помогают предотвращать ошибки, связанные с НДС, что в свою очередь способствует  соблюдению законодательных требований и уменьшению рисков финансовых потерь и штрафов.
 
-      .bunner__buttons
-        a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') 
-          span Заказать 
-          svg
-            use(xlink:href='#arrow-right')
-        a.btn.btn-empty.popups-init-js(rel='#popup1' href='#!') 
-          span Задать вопрос
-          svg
-            use(xlink:href='#arrow-right')
+        .bunner__buttons
+          a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') 
+            span Заказать 
+            svg
+              use(xlink:href='#arrow-right')
+          a.btn.btn-empty.popups-init-js(rel='#popup1' href='#!') 
+            span Задать вопрос
+            svg
+              use(xlink:href='#arrow-right')
 
+if page.services
+  section#bunner.bunner
+    .bunner__bg.imgs
+      picture
+        source(srcset='./img/bunner-services.webp ' type='image/webp' media='(min-width: 1200px)')
+        source(srcset='./img/bunner-services.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+        source(srcset='./img/bunner-services.webp' type='image/webp' media='(max-width: 999px)')
+        img(src='./img/bunner-services.webp' alt='img')
+
+    .container
+      .bunner__body
+        .bunner__title
+          h2 Услуги специалиста по 1С
+        .bunner__text
+          p Наши специалисты обладают необходимым опытом и знаниями, чтобы создать или улучшить функциональность системы для вашего бизнеса. Мы работаем с командой квалифицированных разработчиков, которые готовы реализовать любые задачи по индивидуальному плану работ. 
+
+        .bunner__buttons
+          a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') 
+            span Заказать 
+            svg
+              use(xlink:href='#arrow-right')
+          a.btn.btn-empty.popups-init-js(rel='#popup1' href='#!') 
+            span Задать вопрос
+            svg
+              use(xlink:href='#arrow-right')
 
