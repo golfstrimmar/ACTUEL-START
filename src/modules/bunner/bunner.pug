@@ -1,20 +1,54 @@
 section#bunner.bunner
   .bunner__bg.imgs
     picture
-      source(srcset='./img/paralax.webp ' type='image/webp' media='(min-width: 1200px)')
-      source(srcset='./img/img-2.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
-      source(srcset='./img/img-1.webp' type='image/webp' media='(max-width: 999px)')
-      img(src='./img/paralax.webp' alt='img')
+      source(srcset='./img//bunner.webp ' type='image/webp' media='(min-width: 1200px)')
+      source(srcset='./img//bunner.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
+      source(srcset='./img//bunner.webp' type='image/webp' media='(max-width: 999px)')
+      img(src='./img/bunner.webp' alt='img')
 
   .container
     .bunner__body
       .bunner__title
-        h1 Lorem ipsum dolor sit amet.
+        span Работа в Европе. 
+        span Наши 
+        span вакансии 
+        br
+        span бесплатные 
+        span или оплачиваются 
+        br
+        span с первой зароботной платы 
       a#bunner-link( href='#best') scroll->#best
       .bunner__text
-        p Lorem ipsum .
-      a.popups-init-js.bunner__button(rel='#popupPlyr1' href='#!') video1
-        svg
-          use(xlink:href='#right')
+        p Вакансии для мужчин, женщин, семейных пар,
+        p pазнорабочих и специалистов. Зарплата
+        span от 700 до 2500 евро/мес. 
+
+      ul.bunner__blocks
+        li
+          .bunner-block__img
+            svg
+              use(xlink:href='#bunner')
+          p Проверенные 
+            span работодатели 
+        li
+          .bunner-block__img
+            svg
+              use(xlink:href='#bunner')
+          p Никаких
+
+          p предоплат 
+        li
+          .bunner-block__img 
+            svg
+              use(xlink:href='#bunner')
+          p Помощь
+            span по всем вопросам в течении 1 месяца
+        li
+          .bunner-block__img
+            svg
+              use(xlink:href='#bunner')
+          p Гарантия  
+            span трудоустройства 
+          p 100% 
 
 

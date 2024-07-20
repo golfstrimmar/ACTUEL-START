@@ -3,24 +3,24 @@
 export const Header = () => {
   const menu = document.querySelector(".menu");
   const header = document.querySelector("header");
-  const info = document.querySelector(".info");
+  // const info = document.querySelector(".info");
   const burger = header.querySelector("._burger");
   // const logo = document.querySelector(".logo");
   // const nowLogo = logo.cloneNode(true);
-  const now = info.cloneNode(true);
+  // const now = info.cloneNode(true);
   const body = document.querySelector("body");
   const activeInfo = () => {
     menu.classList.add("menu-active");
-    now.classList.add("info-active");
+    // now.classList.add("info-active");
     // menu.prepend(nowLogo);
     burger.classList.add("_is-active");
-    menu.append(now);
+    // menu.append(now);
     body.classList.add("lock");
   };
   const normalInfo = () => {
     menu.classList.remove("menu-active");
-    menu.querySelector(".info").remove();
-    info.classList.remove("info-active");
+    // menu.querySelector(".info").remove();
+    // info.classList.remove("info-active");
     body.classList.remove("lock");
     burger.classList.remove("_is-active");
   };
@@ -87,7 +87,7 @@ export const Header = () => {
         menu.querySelector(".header__info").remove();
       }
       menu.classList.remove("menu-active");
-      info.classList.remove("info-active");
+      // info.classList.remove("info-active");
       body.classList.remove("lock");
       burger.classList.remove("_is-active");
     }

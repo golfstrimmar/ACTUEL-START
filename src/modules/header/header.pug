@@ -15,9 +15,9 @@ header#header.header
         span
 
       nav.header__menu.menu
-        .header__close
-          //- svg
-          //-   use(xlink:href='#x-lg')
+        //- .header__close
+        //- svg
+        //-   use(xlink:href='#x-lg')
         ul.menu__list
           li.menu__item
             a.menu__link(href='#!' rel='#posts') ВАКАНСИИ
@@ -31,14 +31,17 @@ header#header.header
             a.menu__link(href='#!' rel='#galery') КОНТАКТЫ
 
       .header__info.info
-        .info__soc 
+        .info__soc.soc 
           a(href='#!')
             svg
               use(xlink:href='#tel')
           a(href='#!')
             svg
               use(xlink:href='#inst')
-        span
+          a.phone-link(href='#!')
+            svg
+              use(xlink:href='#phone')
+        div
           .info__text Звоните, Пн-Пт с 10 до 18 
           a.info__phone(href='#!')._hover +38 067 230 20 54
 
