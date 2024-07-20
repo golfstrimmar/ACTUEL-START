@@ -1,13 +1,24 @@
 .best {
   &__title {
+    span {
+      font-size: 32px;
+      line-height: 44px;
+      &:nth-child(1),
+      &:nth-child(3) {
+        font-weight: 600;
+      }
+    }
   }
 
   &__body {
   }
 
-  &__ {
-  }
-  &__ {
+  &__text {
+    font-size: 20px;
+    line-height: 24px;
+    span {
+      font-weight: 600;
+    }
   }
   &__ {
   }

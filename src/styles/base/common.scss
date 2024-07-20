@@ -7,16 +7,17 @@
 }
 
 body {
-  font-family: Arial;
-  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  // font-size: 16px;
   font-weight: 400;
   //   background:rgb(225, 228, 250);
-  background-color: white;
+  background-color: $rgb255;
+  color: rgb(0, 0, 0);
 }
 
 .container {
-  // outline: 1px solid #4164ff;
-  max-width: 1160px;
+  outline: 1px solid #4164ff;
+  max-width: 1110px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -32,10 +33,9 @@ a {
   display: inline-block;
   @include transition;
   cursor: pointer;
-  color: green;
-  &:hover {
-    color: lighten(green, 25%);
-  }
+  // &:hover {
+  //   color: lighten(green, 25%);
+  // }
 }
 
 .imgs {
@@ -88,7 +88,7 @@ a {
 }
 ._hover {
   &:hover {
-    color: lighten(green, 25%);
+    color: $akzent;
     // text-shadow: 0 0  14px white;
   }
 }

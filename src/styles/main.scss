@@ -3,61 +3,60 @@
 // Переменные, миксины, функции
 // @import "helpers/variables";
 @import "helpers/mixins";
-@import "helpers/functions";
+// @import "helpers/functions";
 
 // Основное
 @import "base/colors";
 @import "base/common";
 @import "base/fonts";
-@import "base/select";
-@import "base/sliders-swiper";
+// @import "base/select";
+// @import "base/sliders-swiper";
 
-@import "base/vue/vue-check-in-out";
+// @import "base/vue/vue-check-in-out";
 
 // components buttons
-@import "../components/buttons/btn.scss";
-@import "../components/buttons/btn-success.scss";
-@import "../components/buttons/btn-empty.scss";
-@import "../components/buttons/btn-blue.scss";
-@import "../components/buttons/btn-wave.scss";
+// @import "../components/buttons/btn.scss";
+// @import "../components/buttons/btn-success.scss";
+// @import "../components/buttons/btn-empty.scss";
+// @import "../components/buttons/btn-blue.scss";
+// @import "../components/buttons/btn-wave.scss";
 
 // components inputs
-@import "../components/inputs/input-field.scss";
-@import "../components/inputs/textarea-fild.scss";
-@import "../components/inputs/search-field.scss";
-
-@import "../components/inputs/fildset-radio.scss";
-@import "../components/inputs/fildset-checkbox.scss";
-@import "../components/inputs/fildset-rating.scss";
-@import "../components/inputs/range.scss";
+// @import "../components/inputs/input-field.scss";
+// @import "../components/inputs/textarea-fild.scss";
+// @import "../components/inputs/search-field.scss";
+// @import "../components/inputs/fildset-radio.scss";
+// @import "../components/inputs/fildset-checkbox.scss";
+// @import "../components/inputs/fildset-rating.scss";
+// @import "../components/inputs/range.scss";
 
 // БЭМ-modules
 @import "../modules/burger/burger.scss";
 @import "../modules/header/header";
-@import "../modules/bunner/bunner";
-@import "../modules/bunner/bunner-slider";
-@import "../modules/do/do";
-@import "../modules/probe/probe";
-@import "../modules/wk/wk";
+// @import "../modules/bunner/bunner";
+// @import "../modules/bunner/bunner-slider";
+// @import "../modules/do/do";
+// @import "../modules/probe/probe";
+// @import "../modules/wk/wk";
 
 @import "../modules/best/best";
-@import "../modules/form/form";
+// @import "../modules/form/form";
 
-@import "../modules/marque/marque";
+// @import "../modules/marque/marque";
 
-@import "../modules/tab/tab";
-@import "../modules/side-menu/side-menu";
-@import "../modules/accord/accord";
-@import "../modules/accord/accord-gorizont";
-@import "../modules/galery/galery";
-@import "../modules/cases/cases";
-@import "../modules/galCases/galCases";
-@import "../modules/look/look";
-@import "../modules/swiper-1/swiper-1";
-@import "../modules/slider-full/slider-full";
-@import "../modules/slider-double/sdouble";
-@import "../modules/slider-scroll/slider-scroll";
+// @import "../modules/tab/tab";
+// @import "../modules/side-menu/side-menu";
+// @import "../modules/accord/accord";
+// @import "../modules/accord/accord-gorizont";
+// @import "../modules/galery/galery";
+// @import "../modules/cases/cases";
+// @import "../modules/galCases/galCases";
+// @import "../modules/look/look";
+// @import "../modules/swiper-1/swiper-1";
+// @import "../modules/slider-full/slider-full";
+// @import "../modules/slider-double/sdouble";
+// @import "../modules/slider-scroll/slider-scroll";
 
-@import "../modules/typed/typedHover";
+// @import "../modules/typed/typedHover";
 @import "../modules/footer/footer";
 @import "../modules/popup/popup";

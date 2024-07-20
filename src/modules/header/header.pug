@@ -1,9 +1,16 @@
 header#header.header
   .container
     .header__body 
-      a(href='#!').header__logo.logo
-        img(src='./img/logo.svg' alt='logo')
-        p slogan
+      .header__logo.logo
+        ._a
+          svg
+            use(xlink:href='#logo')
+        ._b 
+          svg
+            use(xlink:href='#logo-sab')
+          ._c
+            span Работа 
+            span в Европе
       .header__burger._burger
         span
 
@@ -12,41 +19,28 @@ header#header.header
           //- svg
           //-   use(xlink:href='#x-lg')
         ul.menu__list
-          li.menu__item.rel
-            .menu__link.menu-link-js.menu__link--active buy
-            .menu__tab.menu-tab
-              a(href="#!").menu-tab__item Category number one
-              a(href="#!").menu-tab__item Apartments in Dubai
-              a(href="#!").menu-tab__item Category number twenty five
+          li.menu__item
+            a.menu__link(href='#!' rel='#posts') ВАКАНСИИ
+          li.menu__item
+            a.menu__link(href='#!' rel='#galery') СТРАНЫ
+          li.menu__item
+            a.menu__link(href='#!' rel='#galery') ВОПРОСЫ
+          li.menu__item
+            a.menu__link(href='#!' rel='#galery') ПРО НАС
+          li.menu__item
+            a.menu__link(href='#!' rel='#galery') КОНТАКТЫ
 
-          li.menu__item
-            a.menu__link(href='#!' rel='#posts') Posts
-          li.menu__item
-            a.menu__link(href='#!' rel='#galery') Projects
-          li.menu__item.rel
-            .menu__link.menu-link-js buy
-              svg
-                use(xlink:href='#arrow-down')
-            .menu__tab.menu-tab
-              a(href="#!").menu-tab__item Category number one
-              include ../side-menu/side-menu.pug
       .header__info.info
-        a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
-        form.search-field
-          input#search1(type='text' placeholder='search' name="" )
-          label(for='search1') search
-          .search-field__submit
-            input(type='submit')
+        .info__soc 
+          a(href='#!')
             svg
-              use(xlink:href='#search')
-        .fildset-radio.fildset-radio--tiers
-          input(type="radio" id="tier+" name='tieres+-' value='yes' checked)
-          label(for="tier+")  Да
-          span /
-          input(type="radio" id="tier-" name='tieres+-' value='not')
-          label(for="tier-")  Нет
-
-        a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') popup
+              use(xlink:href='#tel')
+          a(href='#!')
+            svg
+              use(xlink:href='#inst')
+        span
+          .info__text Звоните, Пн-Пт с 10 до 18 
+          a.info__phone(href='#!')._hover +38 067 230 20 54
 
 
 
