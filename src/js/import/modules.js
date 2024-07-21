@@ -3,6 +3,7 @@ import { bunnerSwiper } from "../../modules/bunner/bunner";
 import { Tab } from "../../modules/tab/tab";
 import { Accords } from "../../modules/accord/accord";
 import { SideMenu } from "../../modules/side-menu/side-menu";
+import { DownMenu } from "../../modules/menu-down/menu-down";
 import { CasesInit } from "../../modules/cases/cases";
 import { GalleryInit } from "../../modules/galery/galery";
 import { GalCases } from "../../modules/galCases/galCases";
@@ -45,6 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   // =========sideMenu==============
   if (document.querySelector("._smenu-js")) {
     SideMenu();
+  }
+  if (document.querySelector("._down-js")) {
+    DownMenu();
   }
   //   // ====Accords=====
   if (document.querySelector(".accord")) {

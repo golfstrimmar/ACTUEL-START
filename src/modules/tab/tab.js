@@ -47,16 +47,19 @@ export const Tab = () => {
     if (!e.target.closest("._tabs-container-js ")) {
       MyTab.resetAll();
     }
- 
 
     if (e.target.closest("._tabs-container-js ")) {
       var tempContainer = e.target.closest("._tabs-container-js ");
 
       tabsConteiners.forEach((cell) => {
         if (cell !== tempContainer) {
-           [...cell.querySelectorAll("._kab-js")].forEach((item) => {
-             item.classList.remove("_is-active");
-           });
+          [...cell.querySelectorAll("._kab-js")].forEach((item) => {
+            item.classList.remove("_is-active");
+          });
+        } else if (e.target.closest("a")) {
+          [...cell.querySelectorAll("._kab-js")].forEach((item) => {
+            item.classList.remove("_is-active");
+          });
         }
       });
     }

@@ -62,9 +62,9 @@
 }
 
 .menu__link {
-  padding: 0 10px;
   @include transition;
   text-transform: uppercase;
+  background-color: transparent;
   color: rgb(253, 253, 253);
   cursor: pointer;
   svg {
@@ -82,33 +82,32 @@
   &--active {
     background: green;
   }
-
-  &._is-active {
-    & ~ .menu-tab {
-      background-color: black;
-      max-height: 190px;
-      height: 190px;
-      outline: solid 1px rgb(165, 10, 10);
-      animation: pul 0.3s linear;
-      animation-fill-mode: forwards;
-
-      .smenu__item:hover {
-        & > .smenu-title-js {
-          background: rgb(147, 240, 185);
-          svg {
-            transform: rotate(90deg);
-          }
-        }
-        & > .smenu__hidden {
-          animation: pulse 0.3s linear;
-          animation-fill-mode: forwards;
-        }
-      }
-    }
-    svg {
-      transform: rotate(180deg);
+  // ---------------------------
+  .kab__title {
+    padding: 0px;
+  }
+  ._kab-js {
+    outline: 1px solid transparent;
+    background-color: transparent;
+    width: 100%;
+  }
+  .kab {
+    &._is-active > .kab__title {
+      background-color: transparent;
+      box-shadow: none;
+      border-bottom: none;
     }
   }
+  .kab__hidden {
+    position: absolute;
+  }
+  .kab__hidden p {
+    padding: 0px;
+  }
+  ._down-item-js._is-active > ._down-title-js a {
+    width: 100%;
+  }
+  // ---------------------------
 }
 
 @keyframes pul {

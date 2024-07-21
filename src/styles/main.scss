@@ -30,7 +30,7 @@
 @import "../components/inputs/fildset-checkbox.scss";
 @import "../components/inputs/fildset-rating.scss";
 @import "../components/inputs/range.scss";
-
+@import "../modules/tab/tab";
 // БЭМ-modules
 @import "../modules/burger/burger.scss";
 @import "../modules/header/header";
@@ -45,8 +45,8 @@
 
 @import "../modules/marque/marque";
 
-@import "../modules/tab/tab";
 @import "../modules/side-menu/side-menu";
+@import "../modules/menu-down/menu-down";
 @import "../modules/accord/accord";
 @import "../modules/accord/accord-gorizont";
 @import "../modules/galery/galery";
