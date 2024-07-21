@@ -113,11 +113,12 @@
   }
 
   &:hover {
-    color: $akzent;
+    color: $red;
   }
 
   &--active {
-    background: green;
+    background: $akzent;
+    color: white;
   }
 
   &._is-active {
@@ -228,15 +229,6 @@
 /*=========@media==============*/
 
 /*===========*/
-.menu-active .menu__link {
-  border-radius: 10px;
-  padding: 5px;
-  background: transparent;
-  &--active {
-    color: $rgb255;
-    background: $akzent;
-  }
-}
 
 @media (min-width: 1112px) and (max-width: 1259px) {
   .logo {

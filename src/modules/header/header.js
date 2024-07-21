@@ -32,6 +32,9 @@ export const Header = () => {
         ? cell.classList.add("menu__link--active")
         : cell.classList.remove("menu__link--active");
     });
+    setTimeout(() => {
+      normalInfo();
+    }, 300);
   };
 
   document.addEventListener("click", function (event) {

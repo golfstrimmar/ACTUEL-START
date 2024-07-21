@@ -17,7 +17,7 @@ import { Header } from "../../modules/header/header";
 
 // import { Look } from "../../modules/look/look";
 // // import { TypedItem } from "%modules%/typed/typedHover";
-// import { Popup } from "../../modules/popup/popup";
+import { Popup } from "../../modules/popup/popup";
 
 document.addEventListener("DOMContentLoaded", function () {
   // =====Look==================
@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   bunnerSwiper();
   // }
   // // ========popup===============
-  // if (document.querySelector(".popups-init-js")) {
-  //   Popup();
-  // }
+  if (document.querySelector(".popups-init-js")) {
+    Popup();
+  }
   // //   // ======Tab=================
   // if (document.querySelector("._tabs-container-js")) {
   //   Tab();

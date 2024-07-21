@@ -3,7 +3,7 @@ section#bunner.bunner
     picture
       source(srcset='./img//bunner.webp ' type='image/webp' media='(min-width: 1200px)')
       source(srcset='./img//bunner.webp' type='image/webp' media='(min-width: 1000px) and (max-width: 1199px)')
-      source(srcset='./img//bunner.webp' type='image/webp' media='(max-width: 999px)')
+      source(srcset='./img/bunner-sm.webp' type='image/webp' media='(max-width: 999px)')
       img(src='./img/bunner.webp' alt='img')
 
   .container
@@ -17,38 +17,42 @@ section#bunner.bunner
         span или оплачиваются 
         br
         span с первой зароботной платы 
-      a#bunner-link( href='#best') scroll->#best
+      a#bunner-link.custom-link._hover( href='#best') ЛИСТАЙТЕ ВНИЗ
+        .marker
       .bunner__text
-        p Вакансии для мужчин, женщин, семейных пар,
-        p pазнорабочих и специалистов. Зарплата
-        span от 700 до 2500 евро/мес. 
-
+        .marker-host Вакансии для мужчин, женщин, семейных пар, pазнорабочих и специалистов. Зарплата 
+        span от 700 до 2500 евро/мес.
+        .marker
       ul.bunner__blocks
         li
           .bunner-block__img
-            svg
-              use(xlink:href='#bunner')
+            include ../svgbunner.pug
           p Проверенные 
-            span работодатели 
+          p.dunn работодатели 
         li
           .bunner-block__img
-            svg
-              use(xlink:href='#bunner')
+            include ../svgbunner.pug
           p Никаких
-
-          p предоплат 
-        li
-          .bunner-block__img 
-            svg
-              use(xlink:href='#bunner')
-          p Помощь
-            span по всем вопросам в течении 1 месяца
+          p.dunn предоплат 
         li
           .bunner-block__img
-            svg
-              use(xlink:href='#bunner')
+            include ../svgbunner.pug
+          p Помощь 
+            span по
+          p.dunn всем вопросам 
+          p.dunn в течении 1 
+          p.dunn месяца
+        li
+          .bunner-block__img
+            include ../svgbunner.pug
           p Гарантия  
-            span трудоустройства 
+          p.dunn трудоустройства 
           p 100% 
+      .bunner__wall
+        span Бесплатный 
+          p подбор вакансии
+        .marker
+        a.bunner-btn.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!')
+          p Подобрать вакансию
 
 

@@ -1,4 +1,4 @@
-// import { Button } from "../../components/buttons/btn-wave";
+import { Button } from "../../components/buttons/btn-wave";
 // import { Anim } from "../utils/animation";
 // import { Lazy } from "../utils/lazy";
 // import { myCopy } from "../utils/myCopy";
@@ -8,9 +8,9 @@ import { ScrollLink } from "../utils/scroll-link";
 
 document.addEventListener("DOMContentLoaded", function () {
   //   // ==========Button=============
-  // [...document.querySelectorAll(".but-wave")].forEach((cell) => {
-  //   cell.addEventListener("click", Button);
-  // });
+  [...document.querySelectorAll(".but-wave")].forEach((cell) => {
+    cell.addEventListener("click", Button);
+  });
 
   //   // ==========Button=============
   // if (document.querySelector(".copy")) {
