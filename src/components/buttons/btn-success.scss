@@ -1,6 +1,15 @@
 .btn-success {
   color: white;
   background-color: $red;
+  width: 254px;
+  height: 55px;
+  border-radius: 10px;
+  @include flex-center;
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+  }
   &:hover {
     color: $red;
     background-color: $akzent;

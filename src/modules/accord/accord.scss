@@ -18,9 +18,7 @@
       }
     }
   }
-  &__hidden {
-    background: rgb(134, 231, 125);
-  }
+
   &__content {
     height: 0;
     overflow: hidden;
@@ -35,7 +33,7 @@
   grid-template-rows: 0fr;
   overflow: hidden;
   @include transition;
-  
+
   &._is-active {
     grid-template-rows: 1fr;
   }

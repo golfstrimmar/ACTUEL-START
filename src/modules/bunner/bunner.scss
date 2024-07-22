@@ -10,6 +10,10 @@
     font-size: 12px;
     span {
       font-weight: 600;
+      span {
+        display: block;
+        font-weight: 400;
+      }
     }
     .marker {
       margin: 0 0 0 43px;
@@ -27,17 +31,9 @@
         transform: translate(0, -50%);
       }
     }
-    p {
-      font-weight: 400;
-    }
   }
 }
-.bunner-btn {
-  width: 254px;
-  height: 55px;
-  border-radius: 10px;
-  font-size: 14px;
-}
+
 .bunner .container {
   z-index: 2;
   position: relative;
@@ -82,6 +78,8 @@
 }
 .bunner__blocks {
   margin: 16px 0 0 0;
+}
+.blocks {
   display: grid;
   grid-template-columns: repeat(4, 190px);
 
@@ -106,28 +104,11 @@
       }
     }
   }
-}
-
-.bunner-block__img {
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.bunner__button {
-  display: inline-block;
-
-  svg {
-    width: 20px;
-    height: 20px;
-    fill: green;
-    margin: 0 0 0 10px;
-  }
-  &:hover {
-    svg {
-      fill: lighten(green, 25%);
-    }
+  &__img {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 

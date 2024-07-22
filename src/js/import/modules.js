@@ -1,7 +1,7 @@
 import { Header } from "../../modules/header/header";
 // import { bunnerSwiper } from "../../modules/bunner/bunner";
 // import { Tab } from "../../modules/tab/tab";
-// import { Accords } from "../../modules/accord/accord";
+import { Accords } from "../../modules/accord/accord";
 // import { SideMenu } from "../../modules/side-menu/side-menu";
 // import { CasesInit } from "../../modules/cases/cases";
 // import { GalleryInit } from "../../modules/galery/galery";
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
   //   SideMenu();
   // }
   // //   // ====Accords=====
-  // if (document.querySelector(".accord")) {
-  //   Accords();
-  // }
+  if (document.querySelector(".accord")) {
+    Accords();
+  }
   // //   // ========Cases=============
   // if (document.querySelector("._accord-cases-js")) {
   //   CasesInit();

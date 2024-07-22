@@ -1,0 +1,151 @@
+.vak {
+  &__title {
+    h3 {
+      font-size: 32px;
+      line-height: 44px;
+      display: inline-block;
+      font-weight: 600;
+    }
+    span {
+      font-size: 32px;
+      line-height: 44px;
+      font-weight: 400;
+    }
+  }
+
+  &__body {
+    padding: 20px 0 0 0;
+    .btn {
+      margin: 27px auto 0;
+    }
+  }
+
+  &__title {
+    margin: 40px 0 0 0;
+    font-size: 20px;
+    line-height: 24px;
+    span {
+      font-weight: 600;
+    }
+  }
+  &__text {
+    margin: 0 40px 0 0;
+    color: rgb(10, 7, 7);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+  }
+  .accord {
+    &__body {
+      border: none;
+    }
+    nav {
+      column-gap: 7px;
+      @include flex-aligne-center;
+      button {
+        @include flex-aligne-center;
+
+        svg {
+          margin: 0 7px 0 0;
+          width: 23px;
+          height: 15px;
+        }
+      }
+    }
+    .accord__nav button {
+      background-color: transparent;
+      padding: 0px;
+      border: none;
+      span {
+        color: rgb(10, 7, 7);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        &:hover {
+          color: $akzent;
+          @include transition;
+        }
+      }
+      &._is-active {
+        span {
+          color: $red;
+        }
+      }
+    }
+    .vak__blocks {
+    }
+    .vak-blocks {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 255px);
+      column-gap: 12px;
+      row-gap: 23px;
+      padding: 42px 0 0 0;
+      justify-content: space-between;
+      ._a {
+        grid-area: a;
+      }
+      ._b {
+        grid-area: b;
+      }
+      ._c {
+        grid-area: c;
+      }
+      li {
+        padding: 7px 15px 15px 50px;
+        width: 255px;
+        height: 146px;
+        border-radius: 10px;
+        background: rgb(243, 248, 249);
+        @include flex-column;
+        position: relative;
+        .vak__head {
+          @include flex-aligne-center;
+          margin: 0 0 3px 0;
+        }
+      }
+      .marker {
+        position: absolute;
+        width: 28px;
+        background-color: rgb(237, 0, 0);
+        left: 0px;
+        &::after {
+          background-color: rgb(237, 0, 0);
+          width: 10px;
+          height: 10px;
+        }
+      }
+      h3 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 44px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+      }
+      svg {
+        width: 39px;
+        height: 39px;
+        margin: 0 0 0 auto;
+      }
+      .btn {
+        width: 148px;
+        height: 28px;
+        margin: auto 0 0 0;
+        p {
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 15px;
+        }
+      }
+    }
+
+    &__ {
+    }
+    &__ {
+    }
+    &__ {
+    }
+  }
+}

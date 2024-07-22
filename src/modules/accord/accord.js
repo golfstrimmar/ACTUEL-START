@@ -61,6 +61,19 @@ export const Accords = () => {
         if (!e.target.closest("._accord-js")) {
           this.itemsReset();
           this.hiddenReset();
+          this.NavButtons[0].classList.add("_is-active");
+          this.NavButtons[0].setAttribute("disabled", true);
+          setTimeout(() => {
+            this.Accord.querySelector("._accord-content-js").classList.add(
+              "_is-active"
+            );
+            this.Accord.querySelector("._accord-hidden-js").classList.add(
+              "_is-active"
+            );
+            this.Accord.querySelector("._accord-hidden-wrap-js").classList.add(
+              "_is-active"
+            );
+          }, 300);
         }
       });
     }
@@ -99,7 +112,7 @@ export const Accords = () => {
   const accordAll = [...document.querySelectorAll("._accord-js")];
   var allClassAccords = [];
   var temp = {};
-  
+
   class AccordGefault extends Accord {
     constructor(accord) {
       super(accord);
