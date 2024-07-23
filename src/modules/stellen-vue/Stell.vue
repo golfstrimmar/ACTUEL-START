@@ -2,141 +2,81 @@
 .container
   .stell__title
     h2 вакансии (vue)
+    p {{staat.selectActivePlaza}}
     nav.stell__nav
-      button.btn.btn-empty(type='button', v-for='button in taskStell.staat' :key='button.id')  {{button.content}}
-    form(action="send" name="staat").send#staat-form.stell__form
-      .send__linia.input-field
-        input#staat(type='text' name='staat1' value='' placeholder=' Denzel Washington' v-model="staatName")
-        label.text-field__label(for='staat1') страна
-      .btn.btn-success.but-wave(type='submit' @click.prevent='AddStaat') add
+      button.btn.btn-empty(type='button' v-for='item in staat' :key='item.id' @click.prevent='ActiveStaat(item) ' :class="[(item.isVisible) ? '_is-active' : '' ]"
+)  {{item.title}}
+  transition(mode='easy-in-out' name='plaza')
+    ul.stell__plaza
+      Card(v-for="item in itemContent" :key="item.titleItem"    :card='item' :land='itemLand'   )
 
-//- .create-anzahl(@click="isFormActive = !isFormActive , isUsed = true")
-//-   span(:class=" (isFormActive == true ||  isUsed == true) ? '_is-active' : ''") Гости*
-//-   input.anzahl-field(type='hidden'   name='gasts' v-model="all" )
-//-   .create-anzahl__all( :class="(isFormActive == true ||  isUsed == true) ? 'create-anzahl__all  _is-active' : 'create-anzahl__all'") {{ all }}
-//-   div(:class="isFormActive ? 'form-field__area-svg _is-active' : 'form-field__area-svg'")
-//-     svg
-//-       use(xlink:href='#arrow-down')
-//- div(:class="isFormActive ? 'create-anzahl__body _is-active' : 'create-anzahl__body'")
-//-   .create-anzahl__title
-//-     h3 Количество гостей
-//-   div
-//-     .create-anzahl__section(v-for='todo in todos_asc' :key='todos.indexOf(todo)')
-//-       .create-anzahl__title--section
-//-         h4 НОМЕР {{ todos.indexOf(todo)+1 }}
-//-       .create-anzahl__items
-//-         .create-anzahl__item
-//-           span Взрослые
-//-           .create-anzahl__change 
-//-             button(type="button" @click.prevent='decrErwachsene(todo)').btn-blue &minus;
-//-             input(type='text'  :name="'adult-' + `${todos.indexOf(todo)+1}`" v-model='todo.content_erwachsene') 
-//-             button(type="button" @click.prevent='incrErwachsene(todo)').btn-blue +
-
-//-         .create-anzahl__item
-//-           span Дети младше 14 лет
-//-           .create-anzahl__change 
-//-             input(type='text'  :name="'kinder-' + `${todos.indexOf(todo)+1}`" v-model='todo.content_kinder')
-//-             button(type="button" @click.prevent='decrKinder(todo)').btn-blue &minus;
-//-             button(type="button" @click.prevent='incrKinder(todo)').btn-blue +
-//-       button.create-anzahl__delete.btn-blue(@click.prevent='removeTodo(todo)') Удалить номер из списка
-//-     .create-anzahl__buttons
-//-       button(type='button' @click.prevent='addTodo').create-anzahl__button.btn-blue  + Добавить ещё номер 
-//-       button(type='button' value='Готово' @click="isFormActive = !isFormActive").create-anzahl__fertig.btn-success.but-wave Готово
+  form(action="send" name="staat").send#staat-form.stell__form
+    .send__linia.input-field
+      input#staat(type='text' name='staat1' v-model="staatName" placeholder=' Denzel Washington' 
+      )
+      label.text-field__label(for='staat1') Staat
+    .send__linia.input-field
+      input#Beruf(type='text' name='staat2' v-model="Beruf" placeholder=' Denzel Washington' 
+      )
+      label.text-field__label(for='staat2') Beruf
+    .send__linia.input-field
+      input#Inhalt(type='text' name='staat3' v-model="Inhalt" placeholder=' Denzel Washington' 
+      )
+      label.text-field__label(for='staat3') Inhalt
+    .btn.btn-success.but-wave(type='submit' @click.prevent='AddStaat') Hinfügen
 
 
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 // import { ref, onMounted, computed, watch } from 'vue'
 import { useTaskStelle } from "../../js/store/taskStell"
 const taskStell = useTaskStelle();
+import Card from './Card.vue';
 let newStaat = ref({})
 let staatName = ref('')
+let Beruf = ref('')
+let Inhalt = ref('')
+let itemContent = ref([])
+let itemLand = ref('')
+let switchPlaza = ref(false)
+
+import { storeToRefs } from 'pinia';
+const { staat } = storeToRefs(taskStell)
 
 const AddStaat = () => {
-  taskStell.addStaat(taskStell.staat.length + 1, staatName),
-    staatName = "";
-
+  taskStell.addStaat(taskStell.staat.length + 1, staatName, Beruf, Inhalt);
+  staatName.value = "";
+  Beruf.value = "";
+  Inhalt.value = "";
 }
-// const id = ref(1);
-// const content_erwachsene = ref(2)
-// const content_kinder = ref(0)
-// let tempTodoes = ref([])
-// let isFormActive = ref(false)
-// let isUsed = ref(false)
-// const todos = ref([
-//   {
-//     id: 1,
-//     content_erwachsene: content_erwachsene.value,
-//     content_kinder: content_kinder.value
-//   }
-// ])
+const ActiveStaat = (item) => {
 
 
-// const incrErwachsene = (todo) => {
-//   todo.content_erwachsene += 1
-// }
-// const decrErwachsene = (todo) => {
-//   if (todo.content_erwachsene <= 0) {
-//     return
-//   }
-//   todo.content_erwachsene -= 1
-// }
-// const incrKinder = (todo) => {
-//   todo.content_kinder += 1
-// }
-// const decrKinder = (todo) => {
-//   if (todo.content_kinder <= 0) {
-//     return
-//   }
-//   todo.content_kinder -= 1
-// }
 
-// const todos_asc = computed(() => todos.value.sort((a, b) => {
-//   return a.createdAt - b.createdAt
-// }))
 
-// const all = computed(
-//   () => {
-//     tempTodoes = todos.value
-//     let summa = 0;
-//     for (let i = 0; i < tempTodoes.length; ++i) {
-//       summa = summa + tempTodoes[i].content_erwachsene + tempTodoes[i].content_kinder;
-//     }
-//     return summa;
+  let plaza = document.querySelector(".stell__plaza");
+  const anim = plaza.animate(
+    [{ opacity: 1 }, { opacity: 0 }],
+    {
+      duration: 200,
+      easing: "ease-in-out",
+    }
+  );
+  const beendet = () => {
+    plaza.style.opacity = 1; taskStell.ActiveStaat(item); itemContent.value = item.content;
+    itemLand.value = item.title;
+  };
+  anim.addEventListener("finish", (e) => { beendet(); });
+}
 
-//   }
-// )
 
-// watch(todos, (newVal) => {
-//   tempTodoes = todos.value
-//   // localStorage.setItem('todos', JSON.stringify(newVal))
-// }, {
-//   deep: true
-// })
-
-// const addTodo = () => {
-//   todos.value.push({
-//     id: id.value,
-//     content_erwachsene: content_erwachsene.value,
-//     content_kinder: content_kinder.value,
-//     createdAt: new Date().getTime()
-//   })
-// }
-
-// const removeTodo = (todo) => {
-//   todos.value = todos.value.filter((t) => t !== todo)
-// }
-
-// onMounted(() => {
-//   // localStorage.setItem('todos', JSON.stringify(todos.value))
-// })
-
-// document.addEventListener('click', (e) => {
-//   if (!e.target.closest(".rooms")) {
-//     isFormActive.value = false
-//   }
-// });
-
+onMounted(() => {
+  taskStell.staat[0].isVisible = true
+  itemContent.value = taskStell.staat[0].content;
+  itemLand.value = taskStell.staat[0].title;
+})
 </script>
+
+<style lang="scss" scoped></style>
