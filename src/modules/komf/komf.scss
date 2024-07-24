@@ -1,0 +1,49 @@
+.komf {
+  background: rgb(243, 248, 249);
+  &__img {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: -50px;
+    left: -146px;
+  }
+
+  &__body {
+    padding: 60px 0 50px 0;
+  }
+  &__title {
+    padding: 0 0 0 300px;
+  }
+  &__text {
+    margin: 30px 0 0 0;
+    font-size: 20px;
+    padding: 0 0 0 300px;
+    line-height: 24px;
+    span {
+      text-decoration: underline;
+    }
+  }
+  &__ruf {
+    margin: 46px 0 0 0;
+    @include flex-center;
+    a {
+      margin: 0 0 0 auto;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      &.dick {
+        font-weight: 600;
+      }
+      &.tel {
+        font-size: 19px;
+        font-weight: 500;
+      }
+    }
+  }
+  &__blocks {
+    margin: 60px 0 0 0;
+    padding: 0 0 0 155px;
+  }
+}

@@ -1,5 +1,5 @@
 .bunner {
-  min-height: 100vh;
+  min-height: calc(100vh - 68px);
   position: relative;
   margin: 70px 0 0 0;
   &__wall {
@@ -81,7 +81,7 @@
 }
 .blocks {
   display: grid;
-  grid-template-columns: repeat(4, 190px);
+  grid-template-columns: repeat(auto-fill, 190px);
 
   li {
     padding: 0 0 0 30px;

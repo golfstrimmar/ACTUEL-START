@@ -1,20 +1,9 @@
 .vak {
   &__title {
-    h3 {
-      font-size: 32px;
-      line-height: 44px;
-      display: inline-block;
-      font-weight: 600;
-    }
-    span {
-      font-size: 32px;
-      line-height: 44px;
-      font-weight: 400;
-    }
   }
 
   &__body {
-    padding: 20px 0 0 0;
+    padding: 50px 0;
     .btn {
       margin: 27px auto 0;
     }
