@@ -3,16 +3,34 @@
   }
 
   &__body {
+    margin: 0 0 40px 0;
+    max-width: 446px;
   }
-
+  .swiper-pagination-full {
+    @include flex-aligne-center;
+    justify-content: center;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgb(201, 201, 201);
+    &:hover {
+      background: $akzent;
+    }
+    &-active {
+      background: rgb(237, 0, 0);
+    }
+  }
   &__text {
   }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
+  #slider-full {
+    margin: 40px 0 20px;
+
+    .slider {
+      &__item {
+        width: 190px;
+        height: 347px;
+      }
+    }
   }
 }

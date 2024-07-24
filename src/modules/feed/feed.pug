@@ -1,44 +1,51 @@
 section(id='feed').feed.rel
-  .imgs
-    img.__img(src='./img/img-1.webp' alt='img')
   .container
     .feed__title.title
       h3  Отзывы 
       span  наших клиентов
     .feed__body
-      .galCases
-        .galCases__title.ttu
-          h2 galCases
-        .galCases__body.rel
-          ul._galCases-plaza-js
-            -
-              var blocks = [
-                {src: './img/img-3.webp',title:'title1',text:'text1'},
-                {src: './img/paralax.webp',title:'title2',text:'text2'},
-                {src: './img/img-1.webp',title:'title3',text:'text3'},
-                {src: './img/img-2.webp',title:'title4',text:'text4'},
-                {src: './img/img-2.webp',title:'title5',text:'text5'},
-                {src: './img/paralax.webp',title:'title6',text:'text6'},
-                {src: './img/img-3.webp',title:'title7',text:'text7'},
-                {src: './img/img-3.webp',title:'title8',text:'text8'},
-                {src: './img/paralax.webp',title:'title9',text:'text9'},
-                {src: './img/img-3.webp',title:'title10',text:'text10'},
-                {src: './img/paralax.webp',title:'title11',text:'text11'},
-                {src: './img/img-2.webp',title:'title12',text:'text12'},
-              ];
+      #slider-full.slider-full.swiper-container
+        .swiper-wrapper
+          -
+            var blocks = [
+              {
+                rel: '#popupPlyr1',
+                src: './img/feed1.webp',
+                srcPlyr: './img/video.webp',
+              },
+              {
+                rel: '#popupPlyr2',
+                src: './img/feed2.webp',
+                srcPlyr: './img/video.webp',
+              },
+              {
+                rel: '#popupPlyr1',
+                src: './img/feed1.webp',
+                srcPlyr: './img/video.webp',
+              },
+              {
+                rel: '#popupPlyr2',
+                src: './img/feed2.webp',
+                srcPlyr: './img/video.webp',
+              },
+              {
+                rel: '#popupPlyr1',
+                src: './img/feed1.webp',
+                srcPlyr: './img/video.webp',
+              },
+              {
+                rel: '#popupPlyr2',
+                src: './img/feed2.webp',
+                srcPlyr: './img/video.webp',
+              },
 
-            each block in blocks
-              li._galCases-item-js.rel.center
+            ];
+          each block in blocks
+            .slider__item.swiper-slide
+              .imgs
+                img(src=block.src)
+              a.popups-init-js.slider__control.controls(href='#!' rel=block.rel)
                 .imgs
-                  img(src=block.src alt='img')
-                .galCases__info
-                  h3=block.title
-                  p=block.text
-                  a.btn.btn-empty(href='#!') See project
-                    svg
-                      use(xlink:href='#chevron-right')
+                  img(src=block.srcPlyr alt='img')
 
-          button._galCases-button-js.btn.btn-success.but-wave
-            span more
-            svg
-              use(xlink:href='#load')
+      .swiper-pagination-full
