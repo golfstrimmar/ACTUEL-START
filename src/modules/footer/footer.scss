@@ -1,35 +1,161 @@
 .footer {
   position: relative;
-  background: rgb(161, 190, 243);
+  background: rgb(34, 34, 34);
   margin: auto 0 0 0;
-  padding: 30px 0;
-}
+  padding: 40px 0;
 
-.footer__body {
+  &__img {
+    position: relative;
+    width: 246px;
+    height: 337px;
+    z-index: 2;
+  }
+  &__title {
+    font-size: 32px;
+    line-height: 44px;
+    color: rgb(255, 255, 255);
+    p {
+      text-align: center;
+      font-weight: 600;
+    }
+    h2 {
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+  &__text {
+    margin: 16px 0 0 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  &__info {
+    color: rgb(255, 255, 255);
+    position: relative;
+    p {
+      text-align: center;
+      line-height: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+    span {
+      margin: 5px 0 0 0;
+      text-align: center;
+      white-space: nowrap;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+    }
+    .marker {
+      z-index: 4;
+      position: relative;
+      position: absolute;
+      width: 70px;
+      background: rgb(237, 0, 0);
+      height: 1px;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .marker::after {
+      background: rgb(237, 0, 0);
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+  &__item {
+    &:nth-child(1) {
+      @include flex-aligne-center;
+      column-gap: 30px;
+    }
+    &:nth-child(2) {
+      @include flex-column;
+      align-items: center;
+      color: rgb(255, 255, 255);
+      p {
+        margin: 38px 0 0 0;
+        line-height: 21px;
+        font-size: 17px;
+        font-weight: 400;
+      }
+      span {
+        &:last-of-type {
+          margin: 7px 0 0 0;
+        }
+        margin: 14px 0 0 0;
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+      }
+      a {
+        margin: 14px 0 0 0;
+        @include flex-aligne-center;
+        @include transition;
+        span {
+          color: rgb(255, 255, 255);
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 27px;
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    &__soc {
+    }
+  }
+}
+.footer__link {
+  white-space: nowrap;
+  a {
+    margin: 0 0 0 5px;
+    color: #d36666;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    width: 15px;
+  }
+}
+.footer-low {
+  &__body {
+    @include flex-aligne-center;
+    justify-content: space-between;
+  }
+  color: rgb(255, 255, 255);
+  height: 39px;
+
+  background: rgb(56, 56, 56);
+  span,
+  a {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    white-space: nowrap;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+.footer__items {
+  margin: 16px 0 0 0;
   display: grid;
-  grid-template-columns: 10% 20% 20% 20% 5%;
-  column-gap: 10px;
-  align-items: center;
-  justify-content: space-between;
+  grid-template-columns: 442px 1fr 350px;
+  column-gap: 0px;
+  row-gap: 0px;
 }
-
-.footer__cheap {
-  justify-self: right;
-  width: 50px;
-  height: 50px;
-}
-
-.footer__col--info {
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-}
-
-.footer__low {
-  text-align: center;
-  margin: 20px 0 0 0;
-}
-
 @media (min-width: 901px) and (max-width: 1024px) {
   .footer {
     padding: 30px 0;
