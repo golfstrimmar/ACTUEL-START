@@ -7,7 +7,6 @@
   // &:last-of-type {
   // margin: 0 0 0 0;
   // }
-  background: whitesmoke;
   width: 100%;
   position: relative;
   textarea {
@@ -18,7 +17,6 @@
     @include transition;
     display: block;
     padding: 0px 20px 0px;
-    border: 1px solid grey;
     cursor: pointer;
     z-index: 5;
     background: transparent;
@@ -39,12 +37,6 @@
       & + label {
         transform: translateY(-110%);
       }
-    }
-  }
-
-  &:hover {
-    label {
-      color: lighten(green, 25%);
     }
   }
 }

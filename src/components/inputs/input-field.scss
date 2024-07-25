@@ -22,7 +22,7 @@
     padding: 0px 20px 0px;
     &:not(:placeholder-shown) + label,
     &:focus + label {
-      transform: translateY(-150%);
+      transform: translateY(-246%);
     }
   }
 
@@ -40,7 +40,6 @@
   }
   &:hover {
     label {
-      color: lighten(green, 25%);
     }
   }
 }

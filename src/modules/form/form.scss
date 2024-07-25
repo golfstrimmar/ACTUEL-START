@@ -1,6 +1,5 @@
 .send {
   .input-field {
-    border: 1px solid gray;
     position: relative;
     span {
       position: absolute;
@@ -8,7 +7,6 @@
       left: 0;
       width: 100%;
       height: auto;
-      color: red;
       display: none;
     }
   }

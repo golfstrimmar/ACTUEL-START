@@ -22,7 +22,8 @@ footer(id="footer").footer
         p Свяжитесь с нами
         a.btn.btn-blue(href="#!") 
           svg 
-            use(xlink: href="#!" rel="phone")
+            use(xlink:href="#phonered")
+
           span +38 (095) 000 44 53
         span Пн-Пт: с 10:00 до 18:0 0
         span Сб-Вс: выходной
@@ -36,28 +37,27 @@ footer(id="footer").footer
               use(xlink:href='#inst')
 
       form.footer__item(action="#" name="send-form").send#send-form
-        p или пишите нам
-        .send__linia.input-field
-          input#firstname(type='text' name='text1' value='' placeholder=' Denzel Washington')
-          label.text-field__label(for='text1') Имя (обязательно) 
-        .send__linia.input-field
-          input#email(type='email' name='text1' value='' placeholder=' Denzel Washington')
-          label.text-field__label(for='text1') *обычный инпут email
-        .send__linia.input-field
-          input#tel(type='tel' name='text1' value='' placeholder=' Denzel Washington')
-          label.text-field__label(for='text1') Телефон (обязательно)
-        .send__linia.textarea-field
+        p._a или пишите нам
+        .send__linia.input-field._b
+          input#name(type='text' name='name1' value='' placeholder=' Denzel Washington')
+          label.text-field__label(for='name1') Имя (обязательно) 
+
+        .send__linia.input-field._c
+          input#tel(type='tel' name='name2' value='' placeholder=' Denzel Washington')
+          label.text-field__label(for='name2') Телефон (обязательно)
+        .send__linia.textarea-field._d 
           textarea#textarea4(name="textarea4" row='20' placeholder="Введите текст" )
           label(for='textarea4') Сообщение
-        button.btn.btn-success.but-wave(type="submit" name = "submit") Отправить
-        include ../svgbunner.pug
-        span Это бесплатно
+        .send__linia._e
+          button.btn.btn-success.but-wave(type="submit" name = "submit") Отправить
+          include ../svgbunner.pug
+          span Это бесплатно
 
 .footer-low
-  .container'
-    .footer-low__body
-      span Terra Work 2022
-      a.btn.btn-blue(href="#!") Политика конфиденциальности
-      .footer__link
-        span Разработано в 
-        a.btn.btn-blue(href="#!") IPR
+
+  .container.footer-low__body
+    span Terra Work 2022
+    a.btn.btn-blue(href="#!") Политика конфиденциальности
+    .footer__link
+      span Разработано в 
+      a.btn.btn-blue(href="#!") IPR
