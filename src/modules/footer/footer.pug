@@ -1,16 +1,30 @@
-footer#footer.footer
+footer(id="footer").footer
   .container
-    .footer__body
-      a(href="#!").footer__logo.logo
-        img(src='./img/logo.svg' alt='logo')
-        p.ttu slogan
-      .footer__col
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-      .footer__col
-        span Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-
-    .footer__low
-      a.footer__pol(href='#!') @Lorem ipsum dolor sit amet.
-a#_returnToTop(href="#header").btn-up_hide
-  svg
-    use(xlink:href='#chevron-right')
+    .footer__title
+      p
+      h2
+    .footer__items
+      .footer__item
+        .footer__img
+          .imgs 
+            img(src="./img/shef.webp" alt = "img")
+        .footer__info
+          p
+          span
+      .footer__item
+        p
+        a.btn.btn-blue(href="#!") 
+          svg 
+            use(xlink: href="#!" rel="phone")
+          span
+        span
+        span
+        p
+        .footer__soc
+      .footer__item
+      .footer__low
+        span
+        a.btn.btn-blue(href="#!") 
+        .footer__link
+          span
+          a.btn.btn-blue(href="#!") 
