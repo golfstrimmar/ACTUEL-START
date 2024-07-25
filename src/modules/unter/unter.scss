@@ -1,0 +1,106 @@
+.unter {
+  background: rgb(34, 34, 34);
+  padding: 45px 87px;
+  &__title {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    position: relative;
+    span {
+      font-weight: 400;
+      &.dick {
+        font-weight: 600;
+      }
+      .marker {
+        position: absolute;
+        right: -36%;
+        top: 27%;
+        transform: translate(0, -81%);
+        width: 597px;
+        background: #fff;
+        background: rgb(255, 255, 255);
+      }
+      .marker::after {
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        right: 100%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 17px;
+    row-gap: 34px;
+
+    li {
+      padding: 24px 0 0 0;
+      p {
+        margin: 10px 0 0 0;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 5px;
+      }
+      h2 {
+        position: relative;
+        z-index: 4;
+        margin: -21px 0 0 0;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 52px;
+      }
+      a {
+        margin: 43px 0 0 0;
+      }
+    }
+  }
+
+  &__img {
+  }
+
+  &__button {
+    position: absolute;
+    width: 196px;
+    height: 55px;
+    font-size: 14px;
+  }
+  .unter_nummer {
+    position: relative;
+    color: rgb(52, 52, 52);
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 44px;
+
+    &::after {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      background: rgb(237, 0, 0);
+      width: 10px;
+      height: 10px;
+      top: -4px;
+      left: 4px;
+    }
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+}
