@@ -2,114 +2,30 @@ header#header.header
   .container
     .header__body 
       a(href='#!').header__logo.logo
-        img(src='./img/logo.svg' alt='logo')
-        p slogan
+        svg
+          use(xlink:href="#logo")
       .header__burger._burger
         span
 
       nav.header__menu.menu
-        .header__close
-          //- svg
-          //-   use(xlink:href='#x-lg')
+        //- .header__close
+        //-   svg
+        //-     use(xlink:href='#x-lg')
         ul.menu__list
           li.menu__item
-            .tab._tabs-container-js.menu__link.menu-link-js.menu__link--active 
-              .tab__body._tab-body-js
-                .kab._kab-js
-                  .kab__title._kab-title-js
-                    h4 buy
-                    svg
-                      use(xlink:href='#arrow-down')
-                  .kab__hidden._kab-hidden-js 
-                    ._kab-wrap-js
-                      a(href="#!").menu-tab__item Apartments in Dubai
-                      a(href="#!").menu-tab__item Apartments in Paris
-                      a(href="#!").menu-tab__item Apartments in Berlin
-
-          li.menu__item.rel
-            .menu__link.menu-link-js sidebuy
-            .menu__tab.menu-tab
-              include ../side-menu/side-menu.pug
+            a.menu__link(href='#!' rel='#galery') Рассчитать доставку
           li.menu__item
-            a.menu__link(href='#!' rel='#galery') Projects
-          li.menu__item.rel
-            .tab._tabs-container-js.menu__link.menu-link-js
-              .tab__body._tab-body-js
-                .kab._kab-js
-                  .kab__title._kab-title-js
-                    h4 downbuy
-                    svg
-                      use(xlink:href='#arrow-down')
-                  .kab__hidden._kab-hidden-js 
-                    ._kab-wrap-js
-
-                      ._down-js.rel 
-                        .down__item._down-item-js
-                          .down__title._down-title-js 
-                            p Название-1
-                            span._down-action  развернуть
-                          .down__hidden._down-hidden-js
-                            .down__wrap
-                              ._down-js
-                                .down__item._down-item-js 
-                                  .down__title._down-title-js 
-
-                                .down__item._down-item-js 
-                                  .down__title._down-title-js 
-                                    a(href="#!")  ссылка
-                        .down__item._down-item-js
-                          .down__title._down-title-js 
-                            p  Название-2
-                            span._down-action  развернуть
-                          .down__hidden._down-hidden-js
-                            .down__wrap
-                              ._down-js
-                                .down__item._down-item-js 
-                                  .down__title
-                                    a(href="#!")  ссылка
-                                  .down__title._down-title-js 
-                                    a(href="#!")  Название ссылка -3
-                                    span._down-action  развернуть
-                                  .down__hidden._down-hidden-js
-                                    .down__wrap
-                                      ._down-js
-                                        .down__item._down-item-js 
-                                          .down__title._down-title-js 
-                                            a(href="#!")  ссылка
-                                            span._down-action  развернуть
-                                          .down__hidden._down-hidden-js
-                                            .down__wrap
-                                              ._down-js
-                                                .down__item._down-item-js 
-                                                  .down__title._down-title-js 
-                                                    h4  не ссылка 
-                                                    span._down-action  развернуть
-                                                  .down__hidden._down-hidden-js
-                                                    .down__wrap
-                                                      ._down-js
-                                                        .down__item._down-item-js 
-                                                          .down__title._down-title-js 
-                                                            a(href="#!")  ссылка 
-                                                          .down__hidden._down-hidden-js
-                                                            .down__wrap
+            a.menu__link(href='#!' rel='#galery') Дополнительные услуги
+          li.menu__item
+            a.menu__link(href='#!' rel='#galery') Контакты
+          li.menu__item
+            a.menu__link(href='#!' rel='#galery') Заказать
 
       .header__info.info
-        a.info__phone(href='#!')._hover +7(000) 123 45 65 67 
-        form.search-field
-          input#search1(type='text' placeholder='search' name="" )
-          label(for='search1') search
-          .search-field__submit
-            input(type='submit')
-            svg
-              use(xlink:href='#search')
-        .fildset-radio.fildset-radio--tiers
-          input(type="radio" id="tier+" name='tieres+-' value='yes' checked)
-          label(for="tier+")  Да
-          span /
-          input(type="radio" id="tier-" name='tieres+-' value='not')
-          label(for="tier-")  Нет
+        a.info__phone(href='#!')._hover +7 (495) 260 68 53
+        a.info__email(href='#!')._hover info@A5-EXPRESS.ru
 
-        a.btn.btn-success.but-wave.popups-init-js(rel='#popup1' href='#!') popup
+
 
 
 

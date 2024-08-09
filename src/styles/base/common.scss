@@ -7,16 +7,16 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: "Work Sans", sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   //   background:rgb(225, 228, 250);
-  background-color: white;
+  background: rgb(255, 255, 255);
 }
 
 .container {
   // outline: 1px solid #4164ff;
-  max-width: 1160px;
+  max-width: 1170px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -32,9 +32,11 @@ a {
   display: inline-block;
   @include transition;
   cursor: pointer;
-  color: green;
+  color: rgb(95, 95, 95);
+  line-height: 160%;
+  letter-spacing: 0px;
   &:hover {
-    color: lighten(green, 25%);
+    color: $akzent;
   }
 }
 
