@@ -1,0 +1,116 @@
+.safe {
+  background: rgb(243, 248, 249);
+  max-height: 400px;
+  margin: 300px 0 0 0;
+  .safe__img {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    top: -12%;
+    left: -222px;
+  }
+  .safe__body {
+    padding: 60px 50px;
+
+    .safe__info {
+      margin: 20px 0 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-items: center;
+      .safe__info-common {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        column-gap: 5px;
+        a {
+          display: inline;
+          font-size: 19px;
+          font-weight: 500;
+          line-height: 21px;
+          white-space: nowrap;
+        }
+      }
+      button {
+        border-radius: 10px;
+        background: rgb(237, 0, 0);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 17px;
+        width: 196px;
+        height: 55px;
+        color: rgb(255, 255, 255);
+      }
+
+      span {
+        white-space: nowrap;
+        display: inline;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        &.line {
+          font-weight: 400;
+        }
+      }
+    }
+    .safe__text {
+      margin: 20px 0 0 0;
+
+      padding: 0 0 0 355px;
+      span {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 44px;
+      }
+
+      a {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 44px;
+        text-decoration: underline !important;
+      }
+    }
+    .safe__items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 185px);
+      column-gap: 34px;
+      justify-content: center;
+      margin: 40px auto 0;
+
+      li {
+        display: flex;
+        column-gap: 12px;
+        align-items: center;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+        p {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+      }
+    }
+    .safe__title.title {
+      display: inline-flex;
+      padding: 0 0 0 355px;
+      margin: 0 auto;
+      h2 {
+        font-size: 32px;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 600;
+        line-height: 44px;
+        padding: 0 5px 0 0;
+      }
+      span {
+        padding: 0 5px 0 0;
+        line-height: 44px;
+        font-size: 32px;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+      }
+    }
+  }
+}

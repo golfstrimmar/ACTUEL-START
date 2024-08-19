@@ -1,7 +1,7 @@
 .input-field {
   // float: left;
   position: relative;
-  @include transition;
+  transition: all 0.2s;
   width: 100%;
 
   input[type="text"],
@@ -12,17 +12,15 @@
     cursor: pointer;
     position: relative;
     background: transparent;
-    @include transition;
+    transition: all 0.2s;
     z-index: 5;
-    border: 1px solid grey;
     // border: none;
     &::placeholder {
       opacity: 0;
     }
-    padding: 0px 20px 0px;
     &:not(:placeholder-shown) + label,
     &:focus + label {
-      transform: translateY(-150%);
+      transform: translateY(-230%);
     }
   }
 
@@ -33,8 +31,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 20px;
-      @include transition;
+      transition: all 0.2s;
       z-index: 2;
     }
   }

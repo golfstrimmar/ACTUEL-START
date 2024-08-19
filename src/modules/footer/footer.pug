@@ -1,16 +1,46 @@
 footer#footer.footer
   .container
     .footer__body
-      a(href="#!").footer__logo.logo
-        img(src='./img/logo.svg' alt='logo')
-        p.ttu slogan
-      .footer__col
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
-      .footer__col
-        span Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, error.
+      .footer__title.title
+        h2 Агентство по трудоустройству «TeRRa Work»
+      p.footer__text Компания, созданная с целью помощи трудовым мигрантам найти  
 
-    .footer__low
-      a.footer__pol(href='#!') @Lorem ipsum dolor sit amet.
-a#_returnToTop(href="#header").btn-up_hide
-  svg
-    use(xlink:href='#chevron-right')
+      p.footer__text работу за границей. Мы предоставляем работу в строительных
+      p.footer__text компаниях, фабриках, заводах, складах, отелях и ресторанах.
+      .footer__content
+        .footer__column
+          .footer__img.rel
+            .imgs
+              img(src="./img/bg.webp" alt = "img")
+          .footer__block.rel
+            .imgs
+              img(src="./img/bg.webp" alt = "img").footer__info
+          .footer__info
+            h3 Сергей Сергев
+            p Менеджер компании
+        .footer__column
+          h4 Свяжитесь с нами
+          .footer__phone
+            svg
+              use(xlink:href="#flag")
+            a.btn-blue.btn(href="#!") +38 (095) 000 44 53
+          p.footer__line Пн-Пт: с 10:00 до 18:00
+          p.footer__line Сб-Вс: выходной
+          p Пишите нам
+          .footer__blocks
+            .footer__block
+              a.btn-blue.btn(href="#!")
+                svg
+                  use(xlink:href="#flag")
+            .footer__block
+              a.btn-blue.btn(href="#!")
+                svg
+                  use(xlink:href="#flag")
+        .footer__column
+        .footer__hidden
+          span Terra Work 2022
+          a.btn-blue.btn(href="#!") Политика конфиденциальности
+          p Разработано в 
+            a.btn-blue.btn(href="#!") IPR
+
+

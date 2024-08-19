@@ -15,7 +15,7 @@
     height: 100%;
     outline: none;
     resize: none;
-    @include transition;
+    transition: all 0.2s;
     display: block;
     padding: 0px 20px 0px;
     border: 1px solid grey;
@@ -29,7 +29,7 @@
     & + label {
       position: absolute;
       transform: translateY(0%);
-      @include transition;
+      transition: all 0.2s;
       padding: 0px 20px 0px;
       top: 0;
       z-index: 2;

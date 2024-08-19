@@ -19,7 +19,7 @@
     padding: 0 0 0 46px;
     line-height: 26px;
     cursor: pointer;
-    @include transition;
+    transition: all 0.2s;
     &:hover {
       color: lighten(green, 25%);
     }
@@ -32,7 +32,7 @@
     left: 0px;
     top: 0px;
     background-color: transparent;
-    @include transition;
+    transition: all 0.2s;
   }
 
   input[type="checkbox"]:not(:checked) + label::before {
@@ -60,7 +60,7 @@
     transform: translate(6px, 6px);
     border: solid 2px green;
     background-color: green;
-    @include transition;
+    transition: all 0.2s;
   }
   input[type="checkbox"]:checked + label::after {
     opacity: 1;
