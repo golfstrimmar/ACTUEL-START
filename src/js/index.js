@@ -16,3 +16,4 @@ import "./import/components";
 // [...document.querySelectorAll(".stell")].forEach((cell) => {
 //   createApp(Stell).use(createPinia()).mount(cell);
 // });
+    
