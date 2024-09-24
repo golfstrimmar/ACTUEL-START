@@ -59,7 +59,6 @@
   }
 
   p {
-    @include Text-Style-31;
     @include transition;
     position: absolute;
     top: 50%;
@@ -104,5 +103,3 @@
   //   }
   // }
 }
-
-

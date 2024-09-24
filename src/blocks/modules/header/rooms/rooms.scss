@@ -9,13 +9,13 @@
   z-index: 25;
   background-color: white;
   &:hover {
-    span{
-     color: lighten($jungle-green, 25%);
+    span {
+      color: lighten($jungle-green, 25%);
     }
   }
   span {
     padding: 0 0 0 12px;
-    @include Text-Style-7;
+
     opacity: 1;
     position: absolute;
     top: 50%;
@@ -36,8 +36,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-2%);
-      @include Text-Style-8;
-      font-size: 16px;
     }
   }
   input.anzahl-field {
@@ -153,7 +151,7 @@
       font-weight: 400;
       line-height: 1.9;
       color: #3d3d3d;
-      padding: 0 0 0 0!important;
+      padding: 0 0 0 0 !important;
       width: 51%;
       text-align: center;
       &:hover {

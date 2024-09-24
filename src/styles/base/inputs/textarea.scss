@@ -9,13 +9,12 @@ textarea {
   border-radius: 5px;
   border: solid 1px $greyish;
   background-color: $white;
-          padding: 15px 20px;
-        min-height: 85px;
-        max-width: 570px;
-        @include Text-Style-32;
+  padding: 15px 20px;
+  min-height: 85px;
+  max-width: 570px;
+
   &::placeholder {
     @include transition;
-    @include Text-Style-31;
   }
   &:hover {
     cursor: pointer;

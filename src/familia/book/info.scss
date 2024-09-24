@@ -9,7 +9,6 @@
     @include flex-aligne-center;
     margin: 0px 0 10px 0;
     p {
-      @include Text-Style-36;
       margin: 0 22px 0 0;
       white-space: nowrap;
     }
@@ -32,7 +31,6 @@
   }
   &__title {
     h3 {
-      @include Text-Style-37;
     }
   }
 }
@@ -42,8 +40,8 @@
     display: block;
   }
   .book-section-form-line--text textarea {
-  width: 570px;
-}
+    width: 570px;
+  }
   .book-section-form-line {
     row-gap: 9px;
   }

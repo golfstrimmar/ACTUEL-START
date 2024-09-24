@@ -1,5 +1,4 @@
 .btn--empty {
-  @include Text-Style-38;
   @include flex-center;
   border-radius: 5px;
   border: solid 1px $jungle-green;
@@ -9,4 +8,3 @@
     border: solid 1px lighten($jungle-green, 25%);
   }
 }
-

@@ -1,5 +1,4 @@
 .fildset-checkbox {
-
   input[type="checkbox"]:checked,
   input[type="checkbox"]:not(:checked) {
     position: fixed !important;
@@ -13,10 +12,7 @@
     display: inline-block;
     position: relative;
     padding-left: 46px;
-    // line-height: 20px;
-    @include Text-Style-36;
     padding: 0 0 0 46px;
-    line-height: 26px;
     cursor: pointer;
     @include transition;
     &:hover {
@@ -68,4 +64,3 @@
     opacity: 0;
   }
 }
-
