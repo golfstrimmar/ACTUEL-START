@@ -1,4 +1,6 @@
-// import { Header } from "%modules%/header/header";
+import { Header } from "%modules%/header/header";
+import { Select } from "%modules%/select/select";
+import { FormFields } from "../../familia/book/book";
 // import { bunnerSwiper } from "%modules%/bunner/bunner";
 // import { Tab } from "%modules%/tab/tab";
 // import { Accords } from "%modules%/accord/accord";
@@ -13,8 +15,7 @@
 // import { SwiperScroll } from "%modules%/slider-scroll/slider-scroll";
 // import { Double } from "%modules%/slider-double/sdouble.js";
 // import { MyRange } from "%modules%/range/range";
-import { Select } from "%modules%/select/select";
-import { FormFields } from "../../familia/book/book";
+
 
 // import { Rooms } from "%modules%/rooms/rooms";
 // import { Look } from "%modules%/look/look";
@@ -30,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     FormFields();
   }
   // =====Header==================
-  // if (document.querySelector("header")) {
-  //   Header();
-  // }
+  if (document.querySelector("header")) {
+    Header();
+  }
   // ===Look=======
   // if (document.querySelector("#app")) {
   // Rooms();

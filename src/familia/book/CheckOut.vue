@@ -5,12 +5,12 @@
     name='date-out'
     v-model= 'date' 
     )
-  p(:class="[{ '_empty-data': date === '' }]") Выезд *
+  p(:class="[{ '_empty-data': date === '' }]") Departure *
   VueDatePicker(
     v-model='date' 
     :format='format' 
     :enable-time-picker='false'    
-    locale='ru' position='left' 
+    locale='en' position='left'
     :offset='10' 
     auto-apply='' 
     @closed='closedFn'   

@@ -66,18 +66,18 @@ export const Header = () => {
     }
   });
   // --------------------------
-  // if (window.pageYOffset > 100) {
-  //   header.classList.add("responciveHeader");
-  // }
+   if (window.pageYOffset > 100) {
+     header.classList.add("responciveHeader");
+   }
   // --------------------------
 
-  // window.addEventListener("scroll", function (event) {
-  //   if (window.pageYOffset > 100) {
-  //     header.classList.add("responciveHeader");
-  //   } else {
-  //     header.classList.remove("responciveHeader");
-  //   }
-  // });
+   window.addEventListener("scroll", function (event) {
+    if (window.pageYOffset > 100) {
+      header.classList.add("responciveHeader");
+     } else {
+       header.classList.remove("responciveHeader");
+     }
+   });
 
   // ---------------------------------------------
   window.onresize = function () {

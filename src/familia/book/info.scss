@@ -1,13 +1,13 @@
 .book-section-form {
   &__field--info {
-    padding: 34px 0 29px 0;
+    padding: 0 0 0 0;
   }
   &__title {
-    margin: 0 0 39px 0;
+    margin: 0 0 20px 0;
   }
   &-line {
     @include flex-aligne-center;
-    margin: 0px 0 30px 0;
+    margin: 0px 0 10px 0;
     p {
       @include Text-Style-36;
       margin: 0 22px 0 0;

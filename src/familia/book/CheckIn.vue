@@ -5,12 +5,12 @@
     name='date-in'
     v-model= 'date' 
     )
-  p(:class="[{ '_empty-data': date === '' }]") Заезд *
+  p(:class="[{ '_empty-data': date === '' }]") Check-in*
   VueDatePicker(
     v-model='date' 
     :format='format' 
     :enable-time-picker='false'    
-    locale='ru' position='left' 
+    locale='en' position='left'
     :offset='10' 
     auto-apply='' 
     @closed='closedFn'   
