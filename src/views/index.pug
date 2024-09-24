@@ -2,43 +2,16 @@ extends layouts/default
 include components/mixins
 
 block variables
-  - const title = "INDEX"
+  - const title = "ROOM"
 
 block content
-  //- include ../blocks/modules/header/header
   main.inner
-      //- include ../blocks/modules/bunner/bunner
-      //- include ../blocks/modules/shild/shild
-      //- include ../blocks/modules/book/book
-
-      //- include ../blocks/modules/marque/marque
-      //- include ../blocks/modules/title/title
-      //- include ../blocks/modules/do/do
-      //- include ../blocks/modules/wk/wk
-
-      //- include ../blocks/modules/tab/tab
-      //- include ../blocks/modules/side-menu/side-menu
-      //- include ../blocks/modules/accord/accord
-      //- include ../blocks/modules/galery/galery
-      //- include ../blocks/modules/cases/cases
-      //- include ../blocks/modules/galCases/galCases
-
-      //- include ../blocks/modules/look/look
-
-      //- include ../blocks/modules/swiper-1/swiper-1
-      //- include ../blocks/modules/slider-full/slider-full
-      //- include ../blocks/modules/slider-double/sdouble
-      //- include ../blocks/modules/slider-scroll/slider-scroll
-      //- include ../blocks/modules/range/range
-      //- include ../blocks/modules/select/select
-      //- include ../blocks/modules/form/popup-form
-      //- include ../blocks/modules/typed/typedHover
-      //- include ../blocks/modules/typed/typedScroll
-      //- include ../blocks/modules/footer/footer
-      //- include ../blocks/modules/popup/popup
+    //- include ../blocks/modules/header/header
+    include ../familia/shild/shild
+    include ../familia/book/book
+    //- include ../blocks/modules/footer/footer
 block scripts
   script(src="js/main.js" )
-
 block spriteSvg 
   .hidden
     include ../img/svg/sprite.svg
