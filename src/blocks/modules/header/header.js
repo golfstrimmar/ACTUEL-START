@@ -30,18 +30,18 @@ export const Header = () => {
     var temp = event.target.closest(".menu__link");
     [...document.querySelectorAll(".menu__link ")].forEach((cell) => {
       temp == cell
-        ? cell.classList.add("menu__link--active")
-        : cell.classList.remove("menu__link--active");
+          ? cell.classList.add("menu__link--active")
+          : cell.classList.remove("menu__link--active");
     });
   };
 
   document.addEventListener("click", function (event) {
     if (event.target.closest(".header__burger")) {
-        if (header.classList.contains("responciveHeader")) {
-          normalInfo();
-        } else {
-          activeInfo();
-        }
+      if (header.classList.contains("responciveHeader")) {
+        normalInfo();
+      } else {
+        activeInfo();
+      }
     }
 
     if (event.target.closest(".menu__link")) {
@@ -53,8 +53,8 @@ export const Header = () => {
       [...document.querySelectorAll(".menu-link-js")].forEach((cell) => {
         if (temp == cell) {
           cell.classList.contains("_is-active")
-            ? cell.classList.remove("_is-active")
-            : cell.classList.add("_is-active");
+              ? cell.classList.remove("_is-active")
+              : cell.classList.add("_is-active");
         } else {
           cell.classList.remove("_is-active");
         }
