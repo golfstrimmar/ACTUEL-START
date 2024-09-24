@@ -1,0 +1,101 @@
+.select {
+  position: relative;
+  border: none;
+  width: 100%;
+  height: 100%;
+  @include flex-column;
+  justify-content: center;
+  .dropdown-button {
+    position: relative;
+    background: $white;
+    text-align: left;
+    z-index: 2;
+    border-radius: 5px;
+    @include transition;
+    padding: 10px 20px;
+    @include flex-column;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    min-height: 48px;
+    p {
+      position: relative;
+      transform: translateY(0);
+      padding: 0 0 0 0;
+    }
+    &:hover {
+      p {
+        color: lighten($jungle-green, 25%);
+      }
+    }
+    &._is-new {
+      padding: 14px 20px 0px;
+      p {
+        transform: translateY(-6px);
+      }
+    }
+    span {
+      @include transition;
+      display: flex;
+      color: #000;
+      font-family: "PTSerif-Regular", serif;
+      font-size: 0;
+      font-weight: 400;
+      line-height: 34px;
+      &._is-new {
+        font-size: 26px;
+        opacity: 1;
+        width: 80%;
+      }
+    }
+  }
+  .form-field__area-svg {
+    &._is-active {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+  .dropdown-list {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    width: 100%;
+    text-align: left;
+    background: $white;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: top;
+    @include transition;
+    max-height: 0;
+    overflow: hidden;
+    // position: absolute;
+  }
+
+  .dropdown-list._is-active {
+    transform: scaleY(1);
+    // position: relative;
+    overflow: auto;
+    max-height: 155px;
+    border-top: solid 1px $greyish;
+  }
+
+  .dropdown-list__item {
+    padding: 10px 20px;
+    cursor: pointer;
+    @include transition;
+  }
+
+  .dropdown-list__item._item-active {
+    background: $focus;
+  }
+
+  .dropdown-list__item:hover {
+    background: $focus;
+  }
+
+  // .drop__input {
+  // margin: 10px 0 0 0;
+  // border: 1px solid #545553;
+  /* opacity: 0;
+visibility: hidden; */
+  // }
+}

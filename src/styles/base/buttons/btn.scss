@@ -1,0 +1,8 @@
+.btn {
+  border: 1px solid transparent;
+  outline: none;
+  @include flex-center;
+  cursor: pointer;
+  @include transition;
+  display: inline-block;
+}

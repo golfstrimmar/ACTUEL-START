@@ -1,0 +1,10 @@
+.btn--empty {
+  @include flex-center;
+  border-radius: 5px;
+  border: solid 1px $jungle-green;
+  background-color: $white;
+  &:hover {
+    color: lighten($jungle-green, 25%);
+    border: solid 1px lighten($jungle-green, 25%);
+  }
+}
